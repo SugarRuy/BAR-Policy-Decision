@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "release": "original",
+      "population": "train",
+      "rows": 47997,
+      "unique_inputs": 39176,
+      "conflicting_groups": 196,
+      "rows_in_conflicting_groups": 531,
+      "minimum_label_edits": 220,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/original-train-groups.json"
+    },
+    {
+      "release": "original",
+      "population": "test",
+      "rows": 12000,
+      "unique_inputs": 11010,
+      "conflicting_groups": 22,
+      "rows_in_conflicting_groups": 49,
+      "minimum_label_edits": 22,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/original-test-groups.json"
+    },
+    {
+      "release": "original",
+      "population": "pooled",
+      "rows": 59997,
+      "unique_inputs": 47572,
+      "conflicting_groups": 279,
+      "rows_in_conflicting_groups": 780,
+      "minimum_label_edits": 324,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/original-pooled-groups.json"
+    },
+    {
+      "release": "strict",
+      "population": "train",
+      "rows": 48452,
+      "unique_inputs": 38301,
+      "conflicting_groups": 219,
+      "rows_in_conflicting_groups": 637,
+      "minimum_label_edits": 263,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/strict-train-groups.json"
+    },
+    {
+      "release": "strict",
+      "population": "test",
+      "rows": 11545,
+      "unique_inputs": 9271,
+      "conflicting_groups": 60,
+      "rows_in_conflicting_groups": 143,
+      "minimum_label_edits": 61,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/strict-test-groups.json"
+    },
+    {
+      "release": "strict",
+      "population": "pooled",
+      "rows": 59997,
+      "unique_inputs": 47572,
+      "conflicting_groups": 279,
+      "rows_in_conflicting_groups": 780,
+      "minimum_label_edits": 324,
+      "evidence": "output/community-audit/native-sara-impact-20261028/policyguardbench/strict-pooled-groups.json"
+    }
+  ],
+  "meaning": "Minimum label edits for consistency, not adjudicated label errors."
+}

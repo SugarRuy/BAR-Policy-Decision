@@ -1,0 +1,42 @@
+[
+  {
+    "record": "cross-suite.json",
+    "sha256": "951981831c9618979e7cecdd81fa87a1d5c6d9e7ba47648798d0511e02cd92ed"
+  },
+  {
+    "record": "audit.json",
+    "sha256": "27a26fed81a707cecb8786a6259ee518632806e7567533a5f109da4dbd93a7a0"
+  },
+  {
+    "record": "audit.json",
+    "sha256": "2e2f31ad003a08f4a97bb9bad6dc9d7f178cfbe9cda7166d4cf2593befb2ab8f"
+  },
+  {
+    "record": "audit.json",
+    "sha256": "e849c3c80c35c8ea61b602cb8c8ad85ec178e555959184f2727c8dda79f7d62d"
+  },
+  {
+    "record": "source-manifest.json",
+    "sha256": "feb7bc5e52aae347d7e80d5e2925e0768dfb890e25782b444e2a17948e5f5465"
+  },
+  {
+    "record": "structural-audit.json",
+    "sha256": "a6554b73edf190f1cad0e652830d2363a24d4a65fd6322e0badae78444a7bf63"
+  },
+  {
+    "record": "replay.json",
+    "sha256": "610ea7e2015842cf8b3a310bed00b53af707bc6322107ff7af995df488582276"
+  },
+  {
+    "record": "verification.json",
+    "sha256": "533189cc56a275bc13bb51c787622e5ccf0e8896d4c4709c1a1e47fcd59b9b79"
+  },
+  {
+    "record": "source-manifest.json",
+    "sha256": "dce19c379ff424d87da428231c1386eb9ad27444c9e112acb90739ed51d00364"
+  },
+  {
+    "record": "safeofflineverify-result.json",
+    "sha256": "d741a89bee07c93f17fec3e3c13a611a28a8d8fedec054c97f484493c83e4e4c"
+  }
+]

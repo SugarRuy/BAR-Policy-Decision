@@ -1,0 +1,1332 @@
+{
+  "schema_version": 1,
+  "frozen_corrected_scorer_sha256": "928d66dd5d3f8e75ee807f4eb030db2153dbea7c4b648d203fe305410e7e4c0b",
+  "purpose": "Behavioral oracle from the accepted frozen scorer, not redistributed source code or labels.",
+  "vectors": [
+    {
+      "predictions": [
+        "$1,234.00"
+      ],
+      "references": [
+        "$1234"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-$1,234.00"
+      ],
+      "references": [
+        "$1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "$12.50"
+      ],
+      "references": [
+        "$1250"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "$1250"
+      ],
+      "references": [
+        "$1250"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "0"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "$0.00"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "no answer"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        ""
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.01"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-0.01"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-$100.00"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "0.000000000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.989989000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.990000000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.990011000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1.100000000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1.209989000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1.210000000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1.210011000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "2.200000000000"
+      ],
+      "references": [
+        "1"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.000000000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "9.089899000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "9.090000000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "9.090101000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "10.100000000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "11.109899000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "11.110000000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "11.110101000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "20.200000000000"
+      ],
+      "references": [
+        "10"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.000000000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "90.088999000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "90.090000000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "90.091001000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "100.100000000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "110.108999000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "110.110000000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "110.111001000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "200.200000000000"
+      ],
+      "references": [
+        "100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.000000000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "1110.677659000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "1110.690000000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1110.702341000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1234.100000000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1357.497659000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "1357.510000000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "1357.522341000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "2468.200000000000"
+      ],
+      "references": [
+        "1234"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "0.000000000000"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "89999.089999000003"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "90000.090000000011"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "90001.090001000004"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "100000.100000000006"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "109999.109999000008"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "110000.110000000015"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "110001.110000999994"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "200000.200000000012"
+      ],
+      "references": [
+        "100000"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-0.000000000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-89.909001000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-89.910000000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-89.910999000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-99.900000000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-109.889001000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-109.890000000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-109.890999000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-199.800000000000"
+      ],
+      "references": [
+        "-100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+ $1,234.50"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "+ $1,234.50"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+ $1,234.50"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+ $1,234.50"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "- $100.00"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "- $100.00"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "- $100.00"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "- $100.00"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-\n$100"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-\n$100"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-\n$100"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-\n$100"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "refund -100; tax 1234"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "refund -100; tax 1234"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "refund -100; tax 1234"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "refund -100; tax 1234"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "amount 1234 then 2"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "amount 1234 then 2"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "amount 1234 then 2"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "amount 1234 then 2"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "USD +1234"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "USD +1234"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "USD +1234"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "USD +1234"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "12.50"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "12.50"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "12.50"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "12.50"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-0"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-0"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "-0"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "-0"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+0.00"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+0.00"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "+0.00"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 1.0
+    },
+    {
+      "predictions": [
+        "+0.00"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "missing"
+      ],
+      "references": [
+        "$1234.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "missing"
+      ],
+      "references": [
+        "-$100"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "missing"
+      ],
+      "references": [
+        "$0"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "missing"
+      ],
+      "references": [
+        "$12.50"
+      ],
+      "score": 0.0
+    },
+    {
+      "predictions": [
+        "no answer",
+        "0",
+        "0"
+      ],
+      "references": [
+        "0",
+        "0",
+        "0"
+      ],
+      "score": 0.6666666666666666
+    },
+    {
+      "predictions": [
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer"
+      ],
+      "references": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "score": 0.5714285714285714
+    },
+    {
+      "predictions": [
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0"
+      ],
+      "references": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "score": 0.6363636363636364
+    },
+    {
+      "predictions": [
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0",
+        "no answer",
+        "0",
+        "0"
+      ],
+      "references": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "score": 0.6666666666666666
+    }
+  ],
+  "label_echo_diagnostic": {
+    "train": {
+      "count": 4,
+      "original_accepts": 3,
+      "revised_accepts": 4,
+      "case_ids": [
+        "tax_case_33",
+        "tax_case_54",
+        "tax_case_24",
+        "tax_case_1"
+      ]
+    },
+    "test": {
+      "count": 96,
+      "original_accepts": 92,
+      "revised_accepts": 96,
+      "case_ids": [
+        "tax_case_25",
+        "tax_case_55",
+        "tax_case_42",
+        "tax_case_32",
+        "tax_case_40",
+        "tax_case_98",
+        "tax_case_2",
+        "tax_case_27",
+        "tax_case_100",
+        "tax_case_56",
+        "tax_case_3",
+        "tax_case_79",
+        "tax_case_26",
+        "tax_case_99",
+        "tax_case_41",
+        "tax_case_22",
+        "tax_case_7",
+        "tax_case_52",
+        "tax_case_45",
+        "tax_case_35",
+        "tax_case_44",
+        "tax_case_23",
+        "tax_case_6",
+        "tax_case_51",
+        "tax_case_4",
+        "tax_case_21",
+        "tax_case_89",
+        "tax_case_36",
+        "tax_case_19",
+        "tax_case_47",
+        "tax_case_18",
+        "tax_case_37",
+        "tax_case_5",
+        "tax_case_88",
+        "tax_case_20",
+        "tax_case_50",
+        "tax_case_11",
+        "tax_case_61",
+        "tax_case_96",
+        "tax_case_81",
+        "tax_case_29",
+        "tax_case_76",
+        "tax_case_59",
+        "tax_case_58",
+        "tax_case_80",
+        "tax_case_97",
+        "tax_case_60",
+        "tax_case_10",
+        "tax_case_62",
+        "tax_case_95",
+        "tax_case_12",
+        "tax_case_74",
+        "tax_case_83",
+        "tax_case_13",
+        "tax_case_94",
+        "tax_case_63",
+        "tax_case_87",
+        "tax_case_70",
+        "tax_case_67",
+        "tax_case_38",
+        "tax_case_17",
+        "tax_case_16",
+        "tax_case_91",
+        "tax_case_39",
+        "tax_case_66",
+        "tax_case_71",
+        "tax_case_86",
+        "tax_case_84",
+        "tax_case_73",
+        "tax_case_14",
+        "tax_case_64",
+        "tax_case_92",
+        "tax_case_65",
+        "tax_case_15",
+        "tax_case_8",
+        "tax_case_72",
+        "tax_case_43",
+        "tax_case_30",
+        "tax_case_78",
+        "tax_case_57",
+        "tax_case_31",
+        "tax_case_34",
+        "tax_case_53",
+        "tax_case_69",
+        "tax_case_46",
+        "tax_case_68",
+        "tax_case_77",
+        "tax_case_28",
+        "tax_case_82",
+        "tax_case_75",
+        "tax_case_90",
+        "tax_case_48",
+        "tax_case_49",
+        "tax_case_9",
+        "tax_case_93",
+        "tax_case_85"
+      ]
+    }
+  },
+  "native_labels_exported": false,
+  "model_calls": 0
+}

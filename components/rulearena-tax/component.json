@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "id": "rulearena-tax",
+  "kind": "reference",
+  "source_component": "reference",
+  "accepted_scope": "Retain the existing floor-only patch and 27 affected reference records. Frozen original reference output is not certified gold; T2/T3 dependencies remain on affected records.",
+  "issue_attribution": "source_reference_program",
+  "adjudication_status": "accepted_scoped_reference_correction",
+  "remaining_limits": [
+    "Only line-22 descendants are corrected. Saved-output agreement changes are measured separately from legal task correctness."
+  ],
+  "patches": [
+    {
+      "patch": "components/rulearena-tax/line22.patch",
+      "patch_sha256": "4eb40dced1dfc8c7d03f20bca5d0cf9513e8e17d041c0b1caa121dfc12406f9b",
+      "upstream_path": "tax/micro_evaluation.py",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/micro_evaluation.py",
+      "before_sha256": "866e44f16a817c0c415e1c2640ebdf0d58e046f9d8f3d60fc7da201ff9a4d026",
+      "after_sha256": "ce89a1d870ed4103444642f7f7601c5793a42f8ca459e85b2cb958ccb2435b01"
+    }
+  ],
+  "payload_files": [
+    "components/rulearena-tax/UPSTREAM-LICENSE",
+    "components/rulearena-tax/labels.json",
+    "components/rulearena-tax/corrections.json",
+    "components/rulearena-tax/reference_pairs.jsonl"
+  ],
+  "public_release_ready": true,
+  "selected_for_first_release": true,
+  "distribution_status": "reviewed_selected_payload",
+  "recorded_code_notice": "MIT",
+  "dataset": {
+    "asset_name": "BAR-RuleArena-Tax-line22-only-2",
+    "revision": "line22-only-2",
+    "upstream_repository": "SkyRiver-2000/RuleArena",
+    "upstream_commit": "59f60f6b4eb93a9b6d187ec781349d4f15618903",
+    "record_count": 300,
+    "changed_reference_count": 27,
+    "reference_file": "components/rulearena-tax/labels.json",
+    "reference_sha256": "85c47060550cc52f342eb68facdac5bbb400c8cebd02a731578613e29b69f23c",
+    "reference_pairs": "components/rulearena-tax/reference_pairs.jsonl",
+    "source_files": [
+      {
+        "path": "tax/prompt.py",
+        "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/prompt.py",
+        "sha256": "90ee4a72e4486312e0bc739b294320edfe6d011600328da18562ab23869d0a2e"
+      },
+      {
+        "path": "tax/auto_test.py",
+        "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/auto_test.py",
+        "sha256": "90a01c09422068f5689a2d658b5def2cfc58e18473dfc104c2b5b5d134fa27f3"
+      },
+      {
+        "path": "tax/synthesized_problems/comp_0.json",
+        "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_0.json",
+        "sha256": "2142495068970cfd47ca505f290867c43f137024325e31170362a1baa43f405c"
+      },
+      {
+        "path": "tax/synthesized_problems/comp_1.json",
+        "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_1.json",
+        "sha256": "7f8d8b5175a4710764700322a0ceb89c2e9839aa7a2228b539f86fbec832c063"
+      },
+      {
+        "path": "tax/synthesized_problems/comp_2.json",
+        "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_2.json",
+        "sha256": "4041bde8f1db40c138ce47cf618b9144447b07e5c55e450e5f7a30dc4acda26f"
+      }
+    ],
+    "input_contract": "Native zero-shot system and user prompts, distractor=False, textual=False; original case facts, policies and question retained.",
+    "build_command": "scripts/bar.py dataset rulearena-tax",
+    "raw_source_data_bundled": false,
+    "scope": "Only Form 1040 line 22 and its downstream amount; other policy and reference concerns remain.",
+    "dependency_definitions": {
+      "T3_schedule3_line15_default_zero": "Reference assumes zero for an input absent from the case schema; preserved in every floor-repaired amount.",
+      "T2_unstated_self_employment_threshold": "Case reaches the reference's low-earnings branch, whose threshold is not fully exposed in the policy packet."
+    }
+  },
+  "payload_status": "reference_pairs_native_input_builder_and_code_patch",
+  "evidence_bindings": [
+    {
+      "sha256": "3b199afe4494de2a2eb9a21c60fb8ca7fb769ff151a23495b7946948fbe85444",
+      "pointer": "/entries/0"
+    },
+    {
+      "sha256": "e672f9515ec31ad8262b11382d8f162147b955b224b5bd48da6c8d1d264ba8f7",
+      "pointer": "/entries/rulearena-tax"
+    },
+    {
+      "sha256": "a894d78e96e43d5c6e3aab627ff0e2ed091e5a4512e9f6865cfe470abde03a0e"
+    }
+  ],
+  "source_repository": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "notices": [
+    "components/rulearena-tax/UPSTREAM-LICENSE"
+  ],
+  "source_files": [
+    {
+      "path": "tax/structured_forms.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/structured_forms.py",
+      "sha256": "4d5a01ae0998f5cb965f00b62f2a1aba98e979649ecc88f6c2977ddb6b04a8ad",
+      "repository": "code"
+    },
+    {
+      "path": "tax/micro_evaluation.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/micro_evaluation.py",
+      "sha256": "866e44f16a817c0c415e1c2640ebdf0d58e046f9d8f3d60fc7da201ff9a4d026",
+      "repository": "code"
+    },
+    {
+      "path": "tax/prompt.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/prompt.py",
+      "sha256": "90ee4a72e4486312e0bc739b294320edfe6d011600328da18562ab23869d0a2e",
+      "repository": "code"
+    },
+    {
+      "path": "tax/auto_test.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/auto_test.py",
+      "sha256": "90a01c09422068f5689a2d658b5def2cfc58e18473dfc104c2b5b5d134fa27f3",
+      "repository": "code"
+    },
+    {
+      "path": "tax/synthesized_problems/comp_0.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_0.json",
+      "sha256": "2142495068970cfd47ca505f290867c43f137024325e31170362a1baa43f405c",
+      "repository": "code"
+    },
+    {
+      "path": "tax/synthesized_problems/comp_1.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_1.json",
+      "sha256": "7f8d8b5175a4710764700322a0ceb89c2e9839aa7a2228b539f86fbec832c063",
+      "repository": "code"
+    },
+    {
+      "path": "tax/synthesized_problems/comp_2.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/tax/synthesized_problems/comp_2.json",
+      "sha256": "4041bde8f1db40c138ce47cf618b9144447b07e5c55e450e5f7a30dc4acda26f",
+      "repository": "code"
+    }
+  ],
+  "license": "MIT; upstream notice retained",
+  "upstream_notice": {
+    "path": "components/rulearena-tax/UPSTREAM-LICENSE",
+    "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+    "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/LICENSE"
+  }
+}

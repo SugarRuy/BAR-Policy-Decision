@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "date": "2026-11-01",
+  "python": "3.12.3",
+  "replay_script_sha256": "dff00102f27284a9ab6714eb11b62f58d3cbab22162e7099a98bdcba52b1e4df",
+  "exporter_sha256": "e4ccbd30ed63912bb1444625bf8ec23ef0d4e23345e9e2c695e66660eee427f1",
+  "study_assets": [
+    {
+      "id": "rulearena-tax",
+      "archive": "BAR-study-rulearena-tax-v1.tar.gz",
+      "sha256": "388dbbfa659316905db933696aa15aa421ab417269b0bee425a5b71d0042da12",
+      "bytes": 1244244,
+      "retained_responses": 900
+    },
+    {
+      "id": "legalbench-sara-numeric",
+      "archive": "BAR-study-legalbench-sara-numeric-v1.tar.gz",
+      "sha256": "027a049d74c59ce38e9af75a3921626aabc0f20cafd71474e9a027e78a124e21",
+      "bytes": 187373,
+      "retained_responses": 288
+    },
+    {
+      "id": "conditionalqa",
+      "archive": "BAR-study-conditionalqa-v1.tar.gz",
+      "sha256": "cc8f712931ea0ef5d02c2764eae9e8b0df6eb89e6ea9ffc7ce05d68e945695d1",
+      "bytes": 508886,
+      "retained_responses": 855
+    },
+    {
+      "id": "openexempt",
+      "archive": "BAR-study-openexempt-v1.tar.gz",
+      "sha256": "4c610402c50c202651bcaa6fa74097658b3293fabbbd88125a6f2fb5c2b6f735",
+      "bytes": 421063,
+      "retained_responses": 621
+    }
+  ],
+  "total_compressed_bytes": 2361566,
+  "total_retained_responses": 2664,
+  "clean_temporary_copy": true,
+  "private_project_access_blocked": true,
+  "socket_network_access_blocked": true,
+  "standard_library_only_score_replay": true,
+  "all_per_case_scores_and_parsed_submissions_match": true,
+  "input_verification": {
+    "rulearena-tax": {
+      "unique_inputs": 300,
+      "requests": 900,
+      "wire_requests": 300,
+      "status": "passed"
+    },
+    "legalbench-sara-numeric": {
+      "unique_inputs": 96,
+      "requests": 288,
+      "wire_requests": 96,
+      "status": "passed"
+    },
+    "conditionalqa": {
+      "unique_inputs": 285,
+      "requests": 855,
+      "wire_requests": 285,
+      "status": "passed"
+    },
+    "openexempt": {
+      "unique_inputs": 207,
+      "requests": 621,
+      "wire_requests": 207,
+      "status": "passed"
+    }
+  },
+  "native_cqa_checks": {
+    "all_submitted_answer_pairs_checked": true,
+    "literal_permutation_cases": 3050
+  },
+  "published_complete_controls": 8,
+  "native_equivalence_and_negative_tests": {
+    "native_tax_responses": 900,
+    "native_sara_S0_S2_responses": 288,
+    "numpy_version": "2.3.5",
+    "archive_hash_rejections": 4,
+    "boundary_checks": 7,
+    "private_project_imports": 0,
+    "network_calls": 0
+  },
+  "source_files_unchanged": true,
+  "archive_members": {
+    "rulearena-tax": [
+      "attributions.json",
+      "expected.json",
+      "inputs.json",
+      "references.json",
+      "responses.json"
+    ],
+    "legalbench-sara-numeric": [
+      "expected.json",
+      "inputs.json",
+      "responses.json"
+    ],
+    "conditionalqa": [
+      "controls.json",
+      "expected.json",
+      "inputs.json",
+      "responses.json"
+    ],
+    "openexempt": [
+      "expected.json",
+      "inputs.json",
+      "overlap.json",
+      "responses.json",
+      "targets.json"
+    ]
+  },
+  "negative_tests_passed": [
+    "rulearena-tax",
+    "legalbench-sara-numeric",
+    "conditionalqa",
+    "openexempt",
+    "source_hash"
+  ],
+  "source_availability_followup": {
+    "report": "studies/upstream-availability.json",
+    "report_sha256": "6a5d21dc91e15cb851ad4376f4d0745da1815e27fccea2628ccc7da166cd36cb",
+    "previous_full_validation_sha256": "86096a86b3117dca641c0cb1f32981d9d7062d2368002cc057d6ced080bb1d41",
+    "only_oe_manifest_changed": true,
+    "other_three_archives_unchanged": true,
+    "oe_response_rescoring": 621,
+    "cqa_control_records_rescored": 2280,
+    "both_oe_source_layouts_verified": true,
+    "docs_sha256": "0f8c10aba42c873bc89ef0f449f18865ae03d8e8deca187b9789c489924cebf2"
+  }
+}

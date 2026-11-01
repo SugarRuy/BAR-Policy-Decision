@@ -1,0 +1,119 @@
+{
+  "kind": "Selected original runtime records; no service rerun by this export.",
+  "source_records": [
+    {
+      "record": "results.json",
+      "sha256": "439d3d0fe1ea220274edaf8eff1d0efe83b0d55ca17380b2d5583d2cb8aa7f74"
+    },
+    {
+      "record": "source-binding.json",
+      "sha256": "09ee9687a81e58aae5ec4624f8b420880346fcf214836c8d685a058c20d631fb"
+    },
+    {
+      "record": "runtime-binding.json",
+      "sha256": "1478d6cdac039c8c460e0b19a1f55c1b6b147d1bb081880a4bc5e9c2bf525611"
+    },
+    {
+      "record": "environment.json",
+      "sha256": "9f0607b44e14f5d5155edd9dda8cabd4055c3cf0cfc0d782e5e295c9406927c1"
+    },
+    {
+      "record": "trajectory.json",
+      "sha256": "6bfd3dbb7ed5b4be882f0ec4d8c49415f5ab6c721dc0da378315420bd0507d1b"
+    },
+    {
+      "record": "conditions/A/messages.json",
+      "sha256": "27ee66798d0fd32aaabc6ac9c35c98dfb125436aa566a0adb14df51dd637b41a"
+    },
+    {
+      "record": "conditions/A/native-readback.json",
+      "sha256": "4072e44758b1095c2570d275d5b723dd42cd263a72966b063b2a03376aaaf6a7"
+    },
+    {
+      "record": "conditions/A/eval-result.json",
+      "sha256": "76d122f35cb9241217ad8e91b604a3013ff872b6968908a3fcd2a61c64dfd1df"
+    },
+    {
+      "record": "conditions/A/converted.json",
+      "sha256": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7"
+    },
+    {
+      "record": "conditions/B/messages.json",
+      "sha256": "cd49e68bdb81bf98b49188bb8364ce3ee6391f546fc3eae870aea323669fd010"
+    },
+    {
+      "record": "conditions/B/native-readback.json",
+      "sha256": "6590f4928a3baa5c3fca027478678ca624baf865fe42fc42550f1c3f945e5dfd"
+    },
+    {
+      "record": "conditions/B/eval-result.json",
+      "sha256": "76d122f35cb9241217ad8e91b604a3013ff872b6968908a3fcd2a61c64dfd1df"
+    },
+    {
+      "record": "conditions/B/converted.json",
+      "sha256": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7"
+    },
+    {
+      "record": "conditions/C/messages.json",
+      "sha256": "88f62427f28c5c7561de817177bb408b2ac9a83898099c392650306cf89062e8"
+    },
+    {
+      "record": "conditions/C/native-readback.json",
+      "sha256": "1caae92353fc1b76540c8615702396ef23b1478fae0b52f11b2c6d2939feec6c"
+    },
+    {
+      "record": "conditions/C/eval-result.json",
+      "sha256": "76d122f35cb9241217ad8e91b604a3013ff872b6968908a3fcd2a61c64dfd1df"
+    },
+    {
+      "record": "conditions/C/converted.json",
+      "sha256": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7"
+    },
+    {
+      "record": "conditions/D/messages.json",
+      "sha256": "0a76003fd0ae0fea74951bed8a852f40ab3c3dd67f49e1fb70614c8ef6072a67"
+    },
+    {
+      "record": "conditions/D/native-readback.json",
+      "sha256": "cb2bbfb435332ff40c5ddd21ba2f6261c780418ad6f7ca0ae0b80b4e079ec02d"
+    },
+    {
+      "record": "conditions/D/eval-result.json",
+      "sha256": "56fdca18bea575635bdebd12aa407920a98a68153dafbf70849b913929f455f6"
+    },
+    {
+      "record": "conditions/D/converted.json",
+      "sha256": "7ffefbec7fea81bf35528f6ce27abc01c2930ffdbb7eba306fbb2c1c7cba7f45"
+    }
+  ],
+  "exported_records": {
+    "runtime-binding.json": "1478d6cdac039c8c460e0b19a1f55c1b6b147d1bb081880a4bc5e9c2bf525611",
+    "results.json": "439d3d0fe1ea220274edaf8eff1d0efe83b0d55ca17380b2d5583d2cb8aa7f74",
+    "images.json": "39d2afb521d59f26fcb2e9b7e5becd6bb8a7a05b546f4fb5f7896f1af6bcdd8f",
+    "source-binding.json": "09ee9687a81e58aae5ec4624f8b420880346fcf214836c8d685a058c20d631fb",
+    "trajectory.json": "6bfd3dbb7ed5b4be882f0ec4d8c49415f5ab6c721dc0da378315420bd0507d1b",
+    "D/messages.json": "0a76003fd0ae0fea74951bed8a852f40ab3c3dd67f49e1fb70614c8ef6072a67",
+    "D/eval-result.json": "acfe59381fa994f5d161abb53a5dd57a903b4a44dec47b5a6346c5a2927f17e3",
+    "D/converted.json": "7ffefbec7fea81bf35528f6ce27abc01c2930ffdbb7eba306fbb2c1c7cba7f45",
+    "D/native-readback.json": "cb2bbfb435332ff40c5ddd21ba2f6261c780418ad6f7ca0ae0b80b4e079ec02d",
+    "B/messages.json": "cd49e68bdb81bf98b49188bb8364ce3ee6391f546fc3eae870aea323669fd010",
+    "B/eval-result.json": "89ba0cff1c5b528d2a94eb6697221c6926e5592736447a2757d2483598e2fd38",
+    "B/converted.json": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7",
+    "B/native-readback.json": "6590f4928a3baa5c3fca027478678ca624baf865fe42fc42550f1c3f945e5dfd",
+    "A/messages.json": "27ee66798d0fd32aaabc6ac9c35c98dfb125436aa566a0adb14df51dd637b41a",
+    "A/eval-result.json": "89ba0cff1c5b528d2a94eb6697221c6926e5592736447a2757d2483598e2fd38",
+    "A/converted.json": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7",
+    "A/native-readback.json": "4072e44758b1095c2570d275d5b723dd42cd263a72966b063b2a03376aaaf6a7",
+    "C/messages.json": "88f62427f28c5c7561de817177bb408b2ac9a83898099c392650306cf89062e8",
+    "C/eval-result.json": "89ba0cff1c5b528d2a94eb6697221c6926e5592736447a2757d2483598e2fd38",
+    "C/converted.json": "c712fcc6dde98ef94848cea5101c53d9b350f93292c2fc2d9849cd4bc7a3ebf7",
+    "C/native-readback.json": "1caae92353fc1b76540c8615702396ef23b1478fae0b52f11b2c6d2939feec6c"
+  },
+  "omitted": [
+    "API login responses",
+    "environment credentials",
+    "database dump",
+    "operational logs",
+    "container command histories"
+  ]
+}

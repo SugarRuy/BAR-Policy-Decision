@@ -1,0 +1,17 @@
+{
+  "source_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+  "images": {
+    "task": "ghcr.io/theagentcompany/admin-check-employees-budget-and-reply-image@sha256:6587142983ae9d9211aad00a8fc817262688329eb2590a28ad4edce88cb37444",
+    "chat": "registry.rocket.chat/rocketchat/rocket.chat@sha256:55e17e7ee850c0757c66b53bd0adf49bcea349fb985f4bec2cdcf8c7a7276ec4",
+    "mongo": "docker.io/bitnamilegacy/mongodb@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f",
+    "seed": "ghcr.io/theagentcompany/servers-api-server@sha256:fc162044d7062323c1fc5699569b1483e134accdc9c12af6816f991a040c9b5c"
+  },
+  "source_declared_tags": {
+    "task": "1.0.0",
+    "chat": "5.3.0",
+    "mongo": "5.0",
+    "seed": "1.0.0"
+  },
+  "model_calls": 0,
+  "mock_used": false
+}

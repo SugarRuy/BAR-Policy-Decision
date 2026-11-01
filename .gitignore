@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+downloads/
+upstream/
+generated/
+*.tar.gz
+*.zip
+*.pdf
+.DS_Store

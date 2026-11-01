@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "status": "three_selected_components",
+  "components": [
+    {
+      "id": "rulearena-tax",
+      "kind": "reference",
+      "payload_status": "reference_pairs_native_input_builder_and_code_patch",
+      "manifest": "components/rulearena-tax/component.json"
+    },
+    {
+      "id": "legalbench-sara-numeric",
+      "kind": "scorer",
+      "payload_status": "bar_original_numeric_evaluator_and_in_memory_adapter",
+      "manifest": "components/legalbench-sara-numeric/component.json"
+    },
+    {
+      "id": "conditionalqa-scoring",
+      "kind": "scorer",
+      "payload_status": "code_patch_packaged",
+      "manifest": "components/conditionalqa-scoring/component.json"
+    }
+  ],
+  "inventory_scope": "Component payloads, component documentation and component scripts only.",
+  "model_calls": 0
+}

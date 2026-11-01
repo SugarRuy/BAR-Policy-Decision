@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "scope": "The three components and their scripts/docs; study archives and the complete release have separate inventories.",
+  "files": {
+    "THIRD_PARTY.md": {
+      "sha256": "7644e58380475ce177e14bb8ba7e0a10ebc2abeccee0c200534de8ce849a7c44",
+      "bytes": 5144
+    },
+    "components/conditionalqa-scoring/README.md": {
+      "sha256": "843c388ff907b82cea763565945f22a9aa1e63f83344c74cb410ef1ed98d46e1",
+      "bytes": 586
+    },
+    "components/conditionalqa-scoring/UPSTREAM-LICENSE": {
+      "sha256": "62a47f90ddb8fda1bbf1e731a5861d827c109a3570b86b371f9d927cbc75aa14",
+      "bytes": 1319
+    },
+    "components/conditionalqa-scoring/component.json": {
+      "sha256": "c35ee13dbc026be7ce603ad2b99cb2c5a085c65720352e827171ab0200170283",
+      "bytes": 3021
+    },
+    "components/conditionalqa-scoring/denominator.patch": {
+      "sha256": "bd33104d57e9a03a8dfeb31b597fe97a89d772d5375a7859fe60105549a3adc4",
+      "bytes": 1420
+    },
+    "components/legalbench-sara-numeric/README.md": {
+      "sha256": "e8ba496083442464564bb9d41b3ba3f8a05dd27660269a03115a2a820db64bbd",
+      "bytes": 731
+    },
+    "components/legalbench-sara-numeric/component.json": {
+      "sha256": "29adcc24ea7e8b4fe406ffdf7bcc383a0528bf802c0c0c7e29567a9b11a7441c",
+      "bytes": 3887
+    },
+    "components/legalbench-sara-numeric/conformance.json": {
+      "sha256": "8a7664efd3d43eb4f438e3a35306d15d15bfb2877a76a5ab7524f3a89c0145c7",
+      "bytes": 20686
+    },
+    "components/legalbench-sara-numeric/evaluator.py": {
+      "sha256": "b5f714b026a032617aaead251dde9df13e3589a2e91a521d70b333cffbb7b9fa",
+      "bytes": 2669
+    },
+    "components/rulearena-tax/README.md": {
+      "sha256": "ae4a0faa160c108f927c7719a9e2c9f47c46a16ab830774881ae61072b5b7d5d",
+      "bytes": 474
+    },
+    "components/rulearena-tax/UPSTREAM-LICENSE": {
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "bytes": 1068
+    },
+    "components/rulearena-tax/component.json": {
+      "sha256": "c541739e1a9f5f58e0ca74561eb63dfc95e2ed76a3bb0ba3378c560a985baf7c",
+      "bytes": 7480
+    },
+    "components/rulearena-tax/corrections.json": {
+      "sha256": "2e149dd6919d06bd0cbe6bc40475bbe7d1d963016955b1d3f4c432e6b6c9177d",
+      "bytes": 19332
+    },
+    "components/rulearena-tax/labels.json": {
+      "sha256": "85c47060550cc52f342eb68facdac5bbb400c8cebd02a731578613e29b69f23c",
+      "bytes": 133892
+    },
+    "components/rulearena-tax/line22.patch": {
+      "sha256": "4eb40dced1dfc8c7d03f20bca5d0cf9513e8e17d041c0b1caa121dfc12406f9b",
+      "bytes": 554
+    },
+    "components/rulearena-tax/reference_pairs.jsonl": {
+      "sha256": "5c4b4b2b5d3983be53416851c6ed994d3730a9f51245700c3e710049f5466481",
+      "bytes": 110539
+    },
+    "components.json": {
+      "sha256": "d66f2d8a40949d92e75fe945fe7f84ee520a52550d54fd30c7567fcfe8849d8c",
+      "bytes": 828
+    },
+    "docs/COMPONENTS.md": {
+      "sha256": "ec609f681dc74c4a0e0d4bb587bf44f0d601b34259af6f3eb3a15b8f3684ca92",
+      "bytes": 8833
+    },
+    "scripts/bar.py": {
+      "sha256": "720ef69e3a83280b9c61c849e625659e0e5eca8805ad437ac93ff5f716984d02",
+      "bytes": 14777
+    },
+    "scripts/check_components.py": {
+      "sha256": "67de9dc878b6fc9e3f7a5104726336ca2568148c54f717317bc0ea3a72c06095",
+      "bytes": 24983
+    }
+  }
+}

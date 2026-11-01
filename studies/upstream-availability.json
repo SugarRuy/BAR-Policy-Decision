@@ -1,0 +1,148 @@
+{
+  "verified_at_utc": "2026-11-01T06:59:40.315826+00:00",
+  "codeprompting": {
+    "repository": "UKPLab/emnlp2024-code-prompting",
+    "commit": "34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d",
+    "commit_api": "https://api.github.com/repos/UKPLab/emnlp2024-code-prompting/commits/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d",
+    "commit_api_status": 200,
+    "commit_message": "Update citation",
+    "commit_date": "2024-11-13T02:51:45Z",
+    "git_ls_remote": [
+      "34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d\tHEAD",
+      "34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d\trefs/heads/main"
+    ],
+    "cached_and_fetched_tree_sha256": "3037e9a15a3dbdba7d5c70b733a4f78872152d6c2a3c58b207d7fbf210471c64",
+    "pin_changed": false,
+    "controls": [
+      {
+        "name": "gpt35-codeprompt-icl2-run0",
+        "upstream_path": "outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_0/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_0/output.json",
+        "status": 200,
+        "bytes": 3980479,
+        "sha256": "7fde27336f0b166438878df9c39b0d6823ede6a3453454252f25f210bce2c636",
+        "git_blob_sha1": "7be79c0e3014eb7568fe39c12267d907860471dc",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "gpt35-codeprompt-icl2-run1",
+        "upstream_path": "outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_1/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_1/output.json",
+        "status": 200,
+        "bytes": 3913569,
+        "sha256": "bb853ad179719c85c8dee6d91ac6142e7a6ddd779537b4d9b3e3bb085512acc8",
+        "git_blob_sha1": "159e4f0f7541123d24ba02190c3e33719322b40b",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "gpt35-codeprompt-icl2-run2",
+        "upstream_path": "outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_2/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/CodePrompt/gpt-35-turbo-0613-16k/transl_icl4_interp_icl2/dev0_285/w_txt_rationales/run_2/output.json",
+        "status": 200,
+        "bytes": 4049797,
+        "sha256": "136dab6a97cf1cc479d4623304ed9de5d154af6e6e03a17e3f0212c87ee08d02",
+        "git_blob_sha1": "31324b07ad685b5a166717f3355b47ac38f6be90",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "mistral7b-codeprompt-icl2-run0",
+        "upstream_path": "outputs/ConditionalQA/ICL/CodePrompt/models--mistralai--Mistral-7B-v0.1-complete/q_trns_icl_6_doc_trns_icl_4_interp_icl2/dev/w_txt_rationales/run_0/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/CodePrompt/models--mistralai--Mistral-7B-v0.1-complete/q_trns_icl_6_doc_trns_icl_4_interp_icl2/dev/w_txt_rationales/run_0/output.json",
+        "status": 200,
+        "bytes": 5274895,
+        "sha256": "473cbcdc32ebad9c4544a54497687b504d9c627ef3baadbea8d88897c2910979",
+        "git_blob_sha1": "9855f8f3220b7ea0d0c987648f96640c46d265a8",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "mistral7b-textprompt-icl2-run0",
+        "upstream_path": "outputs/ConditionalQA/ICL/TextPrompt/models--mistralai--Mistral-7B-v0.1-complete/ICL_2/dev/w_txt_rationales/run_0/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/TextPrompt/models--mistralai--Mistral-7B-v0.1-complete/ICL_2/dev/w_txt_rationales/run_0/output.json",
+        "status": 200,
+        "bytes": 2254100,
+        "sha256": "547109761e52b801174fc605d21b4b3c71dfda462e55b1b74e6e9a128567bb18",
+        "git_blob_sha1": "7004df89aac02017407976d0d83daac05e7222e8",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "textprompt-icl2-run0",
+        "upstream_path": "outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_0/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_0/output.json",
+        "status": 200,
+        "bytes": 2292355,
+        "sha256": "dcff53d06f38d5c88de2fa49010ce0fe4fe83d040e5daaa04f0558d8cb042069",
+        "git_blob_sha1": "e325454e3fc0509826292536bbc2b10d60d0fe58",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "textprompt-icl2-run1",
+        "upstream_path": "outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_1/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_1/output.json",
+        "status": 200,
+        "bytes": 2179382,
+        "sha256": "7de46670e02b305b535a5347d7787aef9a0d1d2a338fe3ca57daa5c5ea6fd1d7",
+        "git_blob_sha1": "8431df6d96281e6fe6b007fc5198fe86bd8603b7",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      },
+      {
+        "name": "textprompt-icl2-run2",
+        "upstream_path": "outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_2/output.json",
+        "url": "https://raw.githubusercontent.com/UKPLab/emnlp2024-code-prompting/34b3d0d2f8b7f1f5a5cabeb216d5b9d62884da0d/outputs/ConditionalQA/ICL/TextPrompt/gpt-35-turbo-0613-16k/ICL_2/dev0_285/w_txt_rationales/run_2/output.json",
+        "status": 200,
+        "bytes": 2118614,
+        "sha256": "93d03547947d26bae929fe8ff43485de0354cfefe7444b3293db800efb72509a",
+        "git_blob_sha1": "f82497b638e2bf012120d8b8278bc6b793563e44",
+        "records": 285,
+        "all_per_case_metrics_match": true,
+        "all_aggregate_metrics_match": true,
+        "zero_effect": true
+      }
+    ]
+  },
+  "openexempt": {
+    "repository": "SergioServantez/OpenExempt",
+    "revision": "842cedec770ff2e45636fb5cb526ba0708ceb908",
+    "upstream_path": "data/reasoning_decomposition/rd_optimal_exemptions_4/test.parquet",
+    "url": "https://huggingface.co/datasets/SergioServantez/OpenExempt/resolve/842cedec770ff2e45636fb5cb526ba0708ceb908/data/reasoning_decomposition/rd_optimal_exemptions_4/test.parquet",
+    "status": 200,
+    "bytes": 114322,
+    "sha256": "805b490c6991116764f6cd8f1fed513292745c95f751c030cd98584bb86daa27",
+    "lfs_oid": "805b490c6991116764f6cd8f1fed513292745c95f751c030cd98584bb86daa27",
+    "local_alias": "rd_optimal_exemptions_4-test.parquet",
+    "native_layout_reconstruction": {
+      "unique_inputs": 207,
+      "requests": 621,
+      "wire_requests": 207,
+      "status": "passed"
+    },
+    "alias_layout_reconstruction": {
+      "unique_inputs": 207,
+      "requests": 621,
+      "wire_requests": 207,
+      "status": "passed"
+    },
+    "retained_response_rescoring": "passed"
+  },
+  "scope": "Read-only public source availability and targeted offline replay. No new performance experiments; historical evidence unchanged."
+}

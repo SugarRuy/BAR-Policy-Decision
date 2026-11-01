@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "studies": [
+    {
+      "id": "rulearena-tax",
+      "archive": "BAR-study-rulearena-tax-v1.tar.gz",
+      "sha256": "388dbbfa659316905db933696aa15aa421ab417269b0bee425a5b71d0042da12",
+      "bytes": 1244244,
+      "retained_responses": 900
+    },
+    {
+      "id": "legalbench-sara-numeric",
+      "archive": "BAR-study-legalbench-sara-numeric-v1.tar.gz",
+      "sha256": "027a049d74c59ce38e9af75a3921626aabc0f20cafd71474e9a027e78a124e21",
+      "bytes": 187373,
+      "retained_responses": 288
+    },
+    {
+      "id": "conditionalqa",
+      "archive": "BAR-study-conditionalqa-v1.tar.gz",
+      "sha256": "cc8f712931ea0ef5d02c2764eae9e8b0df6eb89e6ea9ffc7ce05d68e945695d1",
+      "bytes": 508886,
+      "retained_responses": 855
+    },
+    {
+      "id": "openexempt",
+      "archive": "BAR-study-openexempt-v1.tar.gz",
+      "sha256": "4c610402c50c202651bcaa6fa74097658b3293fabbbd88125a6f2fb5c2b6f735",
+      "bytes": 421063,
+      "retained_responses": 621
+    }
+  ]
+}

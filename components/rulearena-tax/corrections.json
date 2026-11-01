@@ -1,0 +1,585 @@
+{
+  "upstream_repository": "SkyRiver-2000/RuleArena",
+  "upstream_commit": "59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "repair_version": "line22-only-2",
+  "scope": "Only Form 1040 line 22 and its downstream amount; other policy and reference concerns remain.",
+  "sign_convention": "Positive = owed; negative = refund.",
+  "dependency_definitions": {
+    "T3_schedule3_line15_default_zero": "Reference assumes zero for an input absent from the case schema; preserved in every floor-repaired amount.",
+    "T2_unstated_self_employment_threshold": "Case reaches the reference's low-earnings branch, whose threshold is not fully exposed in the policy packet."
+  },
+  "records": [
+    {
+      "case_id": "tax/comp_0/17",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 17,
+      "case_sha256": "c3a43d1cf709b89d1cb0ff74df7df72d611cabff3eee267b9f09a6def8b2311a",
+      "original_signed_answer": -387.0,
+      "line22_repaired_signed_answer": 703.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 7102.0,
+      "line21": 8192.0,
+      "old_line22": -1090.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_0/21",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 21,
+      "case_sha256": "290ac441a8a3b16849247ccf3ab02898efdf4622c86593e126fd0c1cc15fbf57",
+      "original_signed_answer": -7628.0,
+      "line22_repaired_signed_answer": -4465.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 8917.0,
+      "line21": 12080.0,
+      "old_line22": -3163.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_0/34",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 34,
+      "case_sha256": "2388a6dd92f1019fef26defc576e37b926cfacef4efae4160764a45eb28c8a5b",
+      "original_signed_answer": -16552.0,
+      "line22_repaired_signed_answer": -16387.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 10310.0,
+      "line21": 10475.0,
+      "old_line22": -165.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/7",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 7,
+      "case_sha256": "d18b1f5f5acfabe7fc0a05d51ad58f856b537b5ff3c2fac03f24f3338ec5cf5e",
+      "original_signed_answer": -12726.0,
+      "line22_repaired_signed_answer": -10579.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 8592.0,
+      "line21": 10739.0,
+      "old_line22": -2147.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/13",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 13,
+      "case_sha256": "bbfbf2a7c480d4657d3642886fb302f5a5be54928a597cc7748c6050b7605b24",
+      "original_signed_answer": -20088.2,
+      "line22_repaired_signed_answer": -15561.2,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero",
+        "T2_unstated_self_employment_threshold"
+      ],
+      "line18": 8625.0,
+      "line21": 13152.0,
+      "old_line22": -4527.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/42",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 42,
+      "case_sha256": "5d27897e1d86d3510cbd6d09f5050b2290a708532bf1a2534ae514adb985b1f6",
+      "original_signed_answer": -9204.0,
+      "line22_repaired_signed_answer": -6486.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 6382.0,
+      "line21": 9100.0,
+      "old_line22": -2718.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/48",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 48,
+      "case_sha256": "870d0067f3cdf8be67c08eefa811019d2bcf5addb492f2f0c01f72e632140920",
+      "original_signed_answer": -24981.0,
+      "line22_repaired_signed_answer": -18293.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 10981.0,
+      "line21": 17669.0,
+      "old_line22": -6688.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/53",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 53,
+      "case_sha256": "a05ea9ca0e00d5a0482e633849a0f42d3e6c3ae289bad4924c4607b70eb4fa97",
+      "original_signed_answer": -14074.6,
+      "line22_repaired_signed_answer": -12890.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 8643.0,
+      "line21": 9827.6,
+      "old_line22": -1184.6000000000004,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/54",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 54,
+      "case_sha256": "7070e9b4502dddcb092910354ce21836f9a6ca5e98fb62192da549f33a943c36",
+      "original_signed_answer": -8070.0,
+      "line22_repaired_signed_answer": -6604.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 10170.0,
+      "line21": 11636.0,
+      "old_line22": -1466.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/66",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 66,
+      "case_sha256": "0521f6cedbce7aa9ef2bb6b2cf85c75becbe510fbd0961c5e6676d4ec46f1efa",
+      "original_signed_answer": -22560.0,
+      "line22_repaired_signed_answer": -18587.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 4399.0,
+      "line21": 8372.0,
+      "old_line22": -3973.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/69",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 69,
+      "case_sha256": "7347162564b7e86cf37138c1185f69e9dc09f85d0979a68168f752548515b2dd",
+      "original_signed_answer": -10771.0,
+      "line22_repaired_signed_answer": -8528.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 9938.0,
+      "line21": 12181.0,
+      "old_line22": -2243.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/73",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 73,
+      "case_sha256": "739eee1beaf5124b1e04bc05317b01b92d8cbc1bb0cb3de7427b1c18fa25efb4",
+      "original_signed_answer": -6625.0,
+      "line22_repaired_signed_answer": -5414.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 6899.0,
+      "line21": 8110.0,
+      "old_line22": -1211.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/87",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 87,
+      "case_sha256": "da0332f08ea86aab6ecf6d9e385801d2827b39c35092a9bf2920a9bb8b91024d",
+      "original_signed_answer": -15321.0,
+      "line22_repaired_signed_answer": -14200.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 8443.0,
+      "line21": 9564.0,
+      "old_line22": -1121.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/95",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 95,
+      "case_sha256": "271204467c6674d319ef4c3c89e60b23888bac858f7c1febd5f57585d9d583b6",
+      "original_signed_answer": -18033.6,
+      "line22_repaired_signed_answer": -13621.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 10751.0,
+      "line21": 15163.6,
+      "old_line22": -4412.6,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/36",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 36,
+      "case_sha256": "11aac835c935c1f910ddc1347412581c93b4b079ec10a86b45ada78211f1daa6",
+      "original_signed_answer": -21040.6,
+      "line22_repaired_signed_answer": -18928.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 7591.0,
+      "line21": 9703.6,
+      "old_line22": -2112.6000000000004,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/41",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 41,
+      "case_sha256": "edd325b788f3d67313ec8f86cad84b95339685cf2621cbbd33c2d3253df28491",
+      "original_signed_answer": -12327.0,
+      "line22_repaired_signed_answer": -4748.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 11490.0,
+      "line21": 19069.0,
+      "old_line22": -7579.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/42",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 42,
+      "case_sha256": "584d7e6af388e54e8cfdcd99dca5978365d9b8ff63d125dc6bdb5e7a60c89cea",
+      "original_signed_answer": -21521.8210215,
+      "line22_repaired_signed_answer": -18583.8210215,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 10769.0,
+      "line21": 13707.0,
+      "old_line22": -2938.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/54",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 54,
+      "case_sha256": "72aff64806d3649a79eb825af0c7fe3bcef24344b5ecffb8836a1fad13090a7f",
+      "original_signed_answer": -3945.4000000000005,
+      "line22_repaired_signed_answer": -1188.1999999999998,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 9947.0,
+      "line21": 12704.2,
+      "old_line22": -2757.2000000000007,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/56",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 56,
+      "case_sha256": "0a0cd705ad17e36cae465e0520ddcb0b6a15bdb5dce5f0a596ceff90cd48b382",
+      "original_signed_answer": -9570.31809,
+      "line22_repaired_signed_answer": -3297.7180900000003,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 9907.0,
+      "line21": 16179.6,
+      "old_line22": -6272.6,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/61",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 61,
+      "case_sha256": "37945cb84881d03f55ec59a9a5a1f6ac3bf2d660f2497b5702ebb05d02c98c6a",
+      "original_signed_answer": -8109.0,
+      "line22_repaired_signed_answer": -3157.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero",
+        "T2_unstated_self_employment_threshold"
+      ],
+      "line18": 2286.5,
+      "line21": 7238.5,
+      "old_line22": -4952.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/67",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 67,
+      "case_sha256": "8bb8d177af0c440e9ec16bfbc530847f2153aa46b9370928df0ecc24aa1428cc",
+      "original_signed_answer": -3198.0,
+      "line22_repaired_signed_answer": 870.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 5644.0,
+      "line21": 9712.0,
+      "old_line22": -4068.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/69",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 69,
+      "case_sha256": "4692df98aba4795018e6d3c8f38a42e6fac43be7bbe0aa600e5ae43cb678b1ad",
+      "original_signed_answer": -19796.5,
+      "line22_repaired_signed_answer": -13414.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 9624.0,
+      "line21": 16006.0,
+      "old_line22": -6382.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/71",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 71,
+      "case_sha256": "96ebcd66efccb30f388dfb30da301767c572f3cf1ea05d2beb52581b699fffc7",
+      "original_signed_answer": -9699.32468,
+      "line22_repaired_signed_answer": -4307.32468,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 11918.0,
+      "line21": 17310.0,
+      "old_line22": -5392.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/74",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 74,
+      "case_sha256": "d2c67a33ac89738eca2f2c0c32dd65afc827ac08fec654bfdb46fcd9cb1e6ad6",
+      "original_signed_answer": -6878.200000000001,
+      "line22_repaired_signed_answer": -5181.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero",
+        "T2_unstated_self_employment_threshold"
+      ],
+      "line18": 12373.8,
+      "line21": 14071.0,
+      "old_line22": -1697.2000000000007,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/77",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 77,
+      "case_sha256": "48c08f14a28d5d5c95b6f00bf846fbbf375113abf12dab3c27c132732dfda1fe",
+      "original_signed_answer": -13458.7,
+      "line22_repaired_signed_answer": -9070.7,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero",
+        "T2_unstated_self_employment_threshold"
+      ],
+      "line18": 7373.0,
+      "line21": 11761.0,
+      "old_line22": -4388.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/85",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 85,
+      "case_sha256": "a4d84fa1d537277f98570fc46e6183bc95b106f69705f7e4e6e3dfa49f25a168",
+      "original_signed_answer": -19803.0,
+      "line22_repaired_signed_answer": -18544.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "line18": 6352.0,
+      "line21": 7611.0,
+      "old_line22": -1259.0,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/92",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 92,
+      "case_sha256": "f58e73b198d558e7c8a04b95212730730dc3a89a0d8b6d41f6c4b76ecb94237d",
+      "original_signed_answer": -15027.8,
+      "line22_repaired_signed_answer": -14421.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero",
+        "T2_unstated_self_employment_threshold"
+      ],
+      "line18": 16134.2,
+      "line21": 16741.0,
+      "old_line22": -606.7999999999993,
+      "new_line22": 0,
+      "changed_fields": [
+        "computed_amount_owed_or_overpaid",
+        "computed_taxes_after_credits",
+        "computed_total_tax"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+--- a/evaluate.py
++++ b/evaluate.py
+@@ -37,24 +37,27 @@
+       em, conditional_em, f1, conditional_f1 = compute_metrics(
+           qid2predictions[qid], qid2references[qid])
+ 
+-      total_em.append(em)
+-      total_conditional_em.append(conditional_em)
+-      total_f1.append(f1)
+-      total_conditional_f1.append(conditional_f1)
+-
+-      if not qid2references[qid]:
+-        pass
+-      elif any(ans[0] in ["yes", "no"] for ans in qid2references[qid]):
+-        yesno_questions.append(i)
+-      else:
+-        extractive_questions.append(i)
+-
+-      if any(ans[1] for ans in qid2references[qid]):
+-        conditional_questions.append(i)
+-      
+-      i += 1
++    total_em.append(em)
++    total_conditional_em.append(conditional_em)
++    total_f1.append(f1)
++    total_conditional_f1.append(conditional_f1)
++
++    if not qid2references[qid]:
++      pass
++    elif any(ans[0] in ["yes", "no"] for ans in qid2references[qid]):
++      yesno_questions.append(i)
++    else:
++      extractive_questions.append(i)
++
++    if any(ans[1] for ans in qid2references[qid]):
++      conditional_questions.append(i)
++    
++    i += 1
+ 
+   def update_metrics(questions, prefix=""):
++    if not questions:
++      return {prefix + name: None for name in
++              ["EM", "EM_with_conditions", "F1", "F1_with_conditions"]}
+     return {
+         prefix + "EM": 
+             sum(total_em[i] for i in questions) / len(questions), 

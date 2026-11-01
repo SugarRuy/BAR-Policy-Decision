@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "reporting_units": 9,
+  "independent_source_corpora": false,
+  "selection": "Purposive task fit, source accessibility and verified use; not a prevalence sample.",
+  "entries": [
+    {
+      "benchmark": "RuleArena",
+      "source": {
+        "repository": "https://github.com/SkyRiver-2000/RuleArena",
+        "revision": "59f60f6b4eb93a9b6d187ec781349d4f15618903"
+      },
+      "confirmed": [
+        "Tax line-22 zero floor is omitted in the reference program.",
+        "The native first-number parser can select an earlier amount.",
+        "Selected NBA location targets and rule-attribution vocabulary do not match their source contracts."
+      ],
+      "scope": "Tax: all 300 cases; NBA: released 216 records and selected source-backed witnesses; Airline: allocation contract and source controls.",
+      "controls_and_limits": [
+        "Tax revision changes 27 references and preserves 273; retained defaults still matter.",
+        "A passing final number may mask intermediate errors.",
+        "Airline allocation ambiguity does not establish an incorrect minimum-cost reference.",
+        "NBA binary verdicts are not overturned by a location-only correction."
+      ],
+      "revision": "components/rulearena-tax/component.json",
+      "paper_cases": [
+        {
+          "label": "fig:opening-witness",
+          "number": 1
+        },
+        {
+          "label": "case:tax-floor",
+          "number": 7
+        },
+        {
+          "label": "case:tax-residual",
+          "number": 8
+        },
+        {
+          "label": "case:nba-team",
+          "number": 9
+        },
+        {
+          "label": "case:airline-allocation",
+          "number": 10
+        },
+        {
+          "label": "case:tax-native-parser",
+          "number": 24
+        },
+        {
+          "label": "case:tax-masked-output",
+          "number": 25
+        },
+        {
+          "label": "case:tax-compensation",
+          "number": 26
+        }
+      ]
+    },
+    {
+      "benchmark": "OpenExempt",
+      "source": {
+        "repository": "https://github.com/servantez/OpenExempt",
+        "github_revision": "ec6fa2547431096588ce2d3ef107b8adc33cd4fe",
+        "dataset": "https://huggingface.co/datasets/SergioServantez/OpenExempt",
+        "dataset_revision": "842cedec770ff2e45636fb5cb526ba0708ceb908"
+      },
+      "confirmed": [
+        "Single-allocation valuation and terminal allocations can disagree for the same pair.",
+        "Released downstream prompts expose the supplied valuation amounts."
+      ],
+      "scope": "100 EV1 records in each of three competency suites; 100 each in NA4/OE4/OE5; selected semantic witnesses.",
+      "controls_and_limits": [
+        "Amount screens conditional on applicability annotations are not a semantic error rate.",
+        "The 69-case intervention adds ownership, eligibility and objective premises; 65 changed tables are not 65 adjudicated native errors.",
+        "Responses under revised steps show both gains and losses; no fully repaired native key is released."
+      ],
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:oe-downstream",
+          "number": 2
+        },
+        {
+          "label": "case:oe-arizona",
+          "number": 11
+        },
+        {
+          "label": "case:oe-boundaries",
+          "number": 12
+        },
+        {
+          "label": "case:oe-step-response",
+          "number": 27
+        }
+      ]
+    },
+    {
+      "benchmark": "LegalBench SARA",
+      "source": {
+        "repository": "https://github.com/HazyResearch/legalbench",
+        "revision": "b46bf4ffae90524b2b72aaa30e7745fe9db64481",
+        "dataset": "https://huggingface.co/datasets/nguha/legalbench",
+        "dataset_revision": "daec8237410aa23e3faf4bc41ad8b3a7e1696826"
+      },
+      "confirmed": [
+        "Decimal removal changes parsed amounts.",
+        "The original integer parser and acceptance rule cannot credit zero references.",
+        "A selected model-visible snippet omits a source rate needed for policy-only answering."
+      ],
+      "scope": "100 numeric records, including 96 test cases; selected complete-input semantic checks.",
+      "controls_and_limits": [
+        "Scorer defects do not invalidate original SARA labels.",
+        "Reference echoes are evaluator probes, not model performance.",
+        "The parsing-only stage remains pathological for zero references.",
+        "Original SARA and DeonticBench are related source material, not independent corpora."
+      ],
+      "prior_report": "https://github.com/HazyResearch/legalbench/issues/56",
+      "revision": "components/legalbench-sara-numeric/component.json",
+      "paper_cases": [
+        {
+          "label": "case:lb-summary",
+          "number": 4
+        },
+        {
+          "label": "case:lb-scorer",
+          "number": 15
+        },
+        {
+          "label": "case:lb-context",
+          "number": 16
+        }
+      ]
+    },
+    {
+      "benchmark": "DeonticBench",
+      "source": {
+        "repository": "https://github.com/guangyaodou/DeonticBench",
+        "github_revision": "3c168f943880fcbd3a3d717a516500312534273b",
+        "dataset_revision": "805fb0529d7ae295679c5c1730765ec07d2c20ac"
+      },
+      "confirmed": [
+        "A duplicated dependent proof and omitted taxpayer allowance compensate in an accepted calculation.",
+        "Checking one proposition does not test unsupported additional consequences.",
+        "A requested delivery date is stored under a mailing-date predicate."
+      ],
+      "scope": "100 numeric SARA, 276 binary SARA and 242 USCIS records screened; selected source/program witnesses.",
+      "controls_and_limits": [
+        "Program defects do not automatically establish wrong terminal labels.",
+        "The date case does not establish incorrect arithmetic or appeal disposition.",
+        "Model-assisted semantic screening and candidate review are not expert certification."
+      ],
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:deontic-tax",
+          "number": 3
+        },
+        {
+          "label": "case:deontic-probes",
+          "number": 13
+        },
+        {
+          "label": "case:deontic-date",
+          "number": 14
+        }
+      ]
+    },
+    {
+      "benchmark": "ConditionalQA",
+      "source": {
+        "repository": "https://github.com/haitian-sun/ConditionalQA",
+        "revision": "77bd295952daf415548b3244db10880d3d55cfe0",
+        "release": "v1_0"
+      },
+      "confirmed": [
+        "Absent prediction IDs are excluded from the original aggregate denominator.",
+        "Selected references disregard exclusions in the question."
+      ],
+      "scope": "All 285 development questions for scorer checks; 41 selected train/dev semantic cases.",
+      "controls_and_limits": [
+        "A missing prediction ID differs from a submitted empty answer.",
+        "Eight complete published prediction files are unchanged by the aggregation revision.",
+        "Missing submissions in our study arise under our output interface; they are not native label defects.",
+        "Consultation sufficiency and missing case facts leave a proposed label flip unconfirmed.",
+        "The local semantic correction is not applied in the unchanged-label rescoring study."
+      ],
+      "revision": "components/conditionalqa-scoring/component.json",
+      "paper_cases": [
+        {
+          "label": "case:cqa-companions",
+          "number": 6
+        },
+        {
+          "label": "case:cqa-scorer",
+          "number": 17
+        },
+        {
+          "label": "case:cqa-consultation",
+          "number": 18
+        }
+      ]
+    },
+    {
+      "benchmark": "ShARC",
+      "source": {
+        "archive": "sharc1-official.zip",
+        "archive_sha256": "72dca3f4f3ba73b1d796b40e952a80d53cd2011ef90b2168b8bcaa818f5edd1e",
+        "paper": "https://aclanthology.org/D18-1233/"
+      },
+      "confirmed": [
+        "Identical complete visible inputs have incompatible targets in selected train/dev groups."
+      ],
+      "scope": "21,890 train; 2,270 dev; 8,276 test. Exact inputs include snippet, question, scenario and history.",
+      "controls_and_limits": [
+        "No exact-input conflict was found in the test split.",
+        "Five involved train/dev records in two groups do not determine replacement answers or semantic error prevalence."
+      ],
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:sharc",
+          "number": 19
+        }
+      ]
+    },
+    {
+      "benchmark": "PolicyGuardBench",
+      "source": {
+        "original": {
+          "url": "https://huggingface.co/datasets/Rakancorle1/PolicyGuardBench",
+          "revision": "c7672703c1f27268300615afc0f78a845f5a342e"
+        },
+        "strict_control": {
+          "url": "https://huggingface.co/datasets/Rakancorle1/policyguardbench-ss",
+          "revision": "3ed0d946c2341481e450b46a4ea696825e9d6715"
+        }
+      },
+      "confirmed": [
+        "Identical complete policy/trajectory inputs receive both binary targets, including within the strict test split."
+      ],
+      "scope": "59,997 rows per release, with train/test/pooled checks for each release.",
+      "controls_and_limits": [
+        "Both releases contain the same labeled multiset.",
+        "Minimum label edits are consistency lower bounds, not adjudicated wrong-label counts.",
+        "No exact deployed scorer binding or unique corrected labels is claimed."
+      ],
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:pgb-conflict",
+          "number": 20
+        }
+      ]
+    },
+    {
+      "benchmark": "WorkArena++",
+      "source": {
+        "repository": "https://github.com/ServiceNow/WorkArena",
+        "revision": "e885130962f61fb64ac305497996a46cfc7d18f0"
+      },
+      "confirmed": [
+        "The selected tight-priority task requires at most one hour but its validator chooses a 24-hour gap limit."
+      ],
+      "scope": "Selected task class at L2/L3; native-method execution with supplied states.",
+      "controls_and_limits": [
+        "The accepted two-hour witness uses risk-3/two-day requests.",
+        "The rejecting plain-tight control uses risk-4/one-day requests; their full states differ.",
+        "A one-hour passing control exists for the selected class.",
+        "No live ServiceNow episode or failure-frequency estimate is reported."
+      ],
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:workarena-gap",
+          "number": 5
+        }
+      ]
+    },
+    {
+      "benchmark": "TheAgentCompany",
+      "source": {
+        "repository": "https://github.com/TheAgentCompany/TheAgentCompany",
+        "revision": "98b68ef82a47690c316f42fddb05baafaab56851"
+      },
+      "confirmed": [
+        "The official budget scoring chain accepts omitted and reversed budget judgments with expected totals.",
+        "The separate HR file predicate counts rows without enforcing distinct-user coverage."
+      ],
+      "scope": "Budget runtime audit with four constructed conditions; separate static HR checks.",
+      "controls_and_limits": [
+        "A/B/C obtain 4/4 and converted 1.0; one total change in D yields 2/4 and 0.25.",
+        "Replies and trajectory marker are constructed; the chat store and evaluator are real.",
+        "Reference prices remain unverified; no model episode frequency or published agent score is inferred.",
+        "The HR finding is not upgraded to runtime-verified by the budget experiment."
+      ],
+      "prior_report": "https://github.com/TheAgentCompany/TheAgentCompany/pull/888",
+      "revision": null,
+      "paper_cases": [
+        {
+          "label": "case:tac-budget",
+          "number": 21
+        },
+        {
+          "label": "case:tac-users",
+          "number": 22
+        }
+      ]
+    }
+  ],
+  "supplementary_controls": [
+    {
+      "name": "tau banking",
+      "status": "historical upstream repair",
+      "scope": "Frozen before/after state-comparison control; not a current defect or tenth reporting unit.",
+      "sources": [
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/domains/banking_knowledge/tools.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/domains/banking_knowledge/tools.py",
+          "sha256": "deb0132254516d00b9eefcc4b178462ef656759f2d445c8930623e3d4219799d",
+          "bytes": 184671
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/domains/banking_knowledge/data_model.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/domains/banking_knowledge/data_model.py",
+          "sha256": "8451829795c7cf18668b26adc2db06c10426f4e69b553824ea886c40765ee3c4",
+          "bytes": 7735
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/domains/banking_knowledge/db_query.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/domains/banking_knowledge/db_query.py",
+          "sha256": "0f42b5cba53fdb8f41984af160bd6f2bc20416460973b3256542785fd318065a",
+          "bytes": 17039
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/domains/banking_knowledge/utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/domains/banking_knowledge/utils.py",
+          "sha256": "ff116aef99e023d7492690fafff54fc24e9b6f3d3af18b7402a26b974b41fc66",
+          "bytes": 11497
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/domains/banking_knowledge/environment.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/domains/banking_knowledge/environment.py",
+          "sha256": "62d1a8e880a1c0c998b8f1feba4653d82def987ac4f80635ea7cc262a465c74d",
+          "bytes": 3578
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/environment/db.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/environment/db.py",
+          "sha256": "49e12f900a8aabe62d6137a9baa1e7d471f9b3e516cf7c85fb61ecde8a65154c",
+          "bytes": 1267
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/environment/tool.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/environment/tool.py",
+          "sha256": "6dd74021ba95a6f8dfa0971546b768b90e15b212f8f9051156ae6bcdd24b77d3",
+          "bytes": 8092
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/environment/toolkit.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/environment/toolkit.py",
+          "sha256": "3e897891e8878c3399aec72e42eb0eb5546642420c0c902b225421fc936b924a",
+          "bytes": 11313
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/environment/environment.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/environment/environment.py",
+          "sha256": "ba862a9e5b8aa9e0360cf313b5d0f26bb8f7eea53a93bdfe75d22d6627244f8a",
+          "bytes": 17410
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/evaluator/evaluator_env.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/evaluator/evaluator_env.py",
+          "sha256": "e932ea5f675d7a172557350f30b73d66474659d9b4d976ecd763ca2929017633",
+          "bytes": 13426
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/utils/__init__.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/utils/__init__.py",
+          "sha256": "e255aeff0258cf0042f57283c5375cd78b034509b886ba827cd927a2a6d27c6a",
+          "bytes": 353
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/utils/pydantic_utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/utils/pydantic_utils.py",
+          "sha256": "618dfc39b619bb0f623151682962ddc52bf2ea70bc2562dded884f118c84b78a",
+          "bytes": 994
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/utils/io_utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/utils/io_utils.py",
+          "sha256": "ce66fb275b9bbf09a17be2cb2092bf2e696ab07655bf7571fe53ba8db4ed3015",
+          "bytes": 5890
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "src/tau2/utils/utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/src/tau2/utils/utils.py",
+          "sha256": "e0c39544b01700e60a3a26c7cf2c2d17e37e3852d5f0fa466b8517f82b83622b",
+          "bytes": 2957
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "data/tau2/domains/banking_knowledge/tasks.json",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/data/tau2/domains/banking_knowledge/tasks.json",
+          "sha256": "3c6e2123a7290c4a3d94a234f3adba1cf4a9883b1323291bfd29ae14f65199ac",
+          "bytes": 1129317
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "data/tau2/domains/banking_knowledge/db.json",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/data/tau2/domains/banking_knowledge/db.json",
+          "sha256": "4141d5cadd0ca3d764a5958c5190cff3938c02784a0ca6594511f2cfdddef73d",
+          "bytes": 270840
+        },
+        {
+          "version": "before",
+          "revision": "b51a6d69e26f0e94a9173e2e80fe8735a8dff650",
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/b51a6d69e26f0e94a9173e2e80fe8735a8dff650/LICENSE",
+          "sha256": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+          "bytes": 1072
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/domains/banking_knowledge/tools.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/domains/banking_knowledge/tools.py",
+          "sha256": "e7287dc76ab74f7c172a9b632b6ebdb067a85bbc0cb7c769f7bdf08ec18aa1c0",
+          "bytes": 189257
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/domains/banking_knowledge/data_model.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/domains/banking_knowledge/data_model.py",
+          "sha256": "8451829795c7cf18668b26adc2db06c10426f4e69b553824ea886c40765ee3c4",
+          "bytes": 7735
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/domains/banking_knowledge/db_query.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/domains/banking_knowledge/db_query.py",
+          "sha256": "0f42b5cba53fdb8f41984af160bd6f2bc20416460973b3256542785fd318065a",
+          "bytes": 17039
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/domains/banking_knowledge/utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/domains/banking_knowledge/utils.py",
+          "sha256": "ff116aef99e023d7492690fafff54fc24e9b6f3d3af18b7402a26b974b41fc66",
+          "bytes": 11497
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/domains/banking_knowledge/environment.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/domains/banking_knowledge/environment.py",
+          "sha256": "3e68a4adec87a2b32cb7a6f367c050a25bbd331c85a14d13fa22fda98bd60cfe",
+          "bytes": 4034
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/environment/db.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/environment/db.py",
+          "sha256": "49e12f900a8aabe62d6137a9baa1e7d471f9b3e516cf7c85fb61ecde8a65154c",
+          "bytes": 1267
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/environment/tool.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/environment/tool.py",
+          "sha256": "6dd74021ba95a6f8dfa0971546b768b90e15b212f8f9051156ae6bcdd24b77d3",
+          "bytes": 8092
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/environment/toolkit.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/environment/toolkit.py",
+          "sha256": "3e897891e8878c3399aec72e42eb0eb5546642420c0c902b225421fc936b924a",
+          "bytes": 11313
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/environment/environment.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/environment/environment.py",
+          "sha256": "b5357f11e2914c11ce0372af919cc1d726191b91cd97f776b8fb388ae0615350",
+          "bytes": 18486
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/evaluator/evaluator_env.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/evaluator/evaluator_env.py",
+          "sha256": "b53ebfe6b0b06d7a2071b5f9dd03ee6ca8ac6000b0ef44f3bd345b346c30d8ac",
+          "bytes": 14100
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/utils/__init__.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/utils/__init__.py",
+          "sha256": "e255aeff0258cf0042f57283c5375cd78b034509b886ba827cd927a2a6d27c6a",
+          "bytes": 353
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/utils/pydantic_utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/utils/pydantic_utils.py",
+          "sha256": "618dfc39b619bb0f623151682962ddc52bf2ea70bc2562dded884f118c84b78a",
+          "bytes": 994
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/utils/io_utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/utils/io_utils.py",
+          "sha256": "ce66fb275b9bbf09a17be2cb2092bf2e696ab07655bf7571fe53ba8db4ed3015",
+          "bytes": 5890
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "src/tau2/utils/utils.py",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/src/tau2/utils/utils.py",
+          "sha256": "e0c39544b01700e60a3a26c7cf2c2d17e37e3852d5f0fa466b8517f82b83622b",
+          "bytes": 2957
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "data/tau2/domains/banking_knowledge/tasks.json",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/data/tau2/domains/banking_knowledge/tasks.json",
+          "sha256": "213c7f3e6dc0420b1184ee271e39e38c6ece3c43edfa362db49a560828ebd543",
+          "bytes": 1138204
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "data/tau2/domains/banking_knowledge/db.json",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/data/tau2/domains/banking_knowledge/db.json",
+          "sha256": "e692feb797c659f0e21ff7380aa87beb4e95a0694d7bb7945f073102f0293d28",
+          "bytes": 270542
+        },
+        {
+          "version": "after",
+          "revision": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/fc0055dc4e0a316c3f83133267fbd6faaa770992/LICENSE",
+          "sha256": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+          "bytes": 1072
+        }
+      ]
+    },
+    {
+      "name": "SOP-Bench",
+      "status": "decision-contract control",
+      "paper_case": 23,
+      "case_label": "case:sop-referral",
+      "scope": "Permitted discretion does not justify turning one reference preference into an exclusive policy decision."
+    },
+    {
+      "name": "LegalBench diversity",
+      "status": "no confirmed label mismatch",
+      "scope": "Reconstructed rules match under the documented convention; retained as a negative check."
+    },
+    {
+      "name": "Retail static adaptation",
+      "status": "our adaptation ambiguity",
+      "scope": "A yes response confirming the item list does not unambiguously authorize the entire operation; not a native tau-bench label error."
+    }
+  ]
+}

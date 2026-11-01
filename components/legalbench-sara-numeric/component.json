@@ -1,0 +1,81 @@
+{
+  "schema_version": 2,
+  "id": "legalbench-sara-numeric",
+  "kind": "scorer",
+  "source_component": "scorer",
+  "accepted_scope": "Parse signed decimal amounts, retain the exact native nonzero floating-point acceptance formula, special-case exact zero, and explicitly reject unequal or empty reference populations.",
+  "issue_attribution": "source_scorer_with_prior_public_report",
+  "adjudication_status": "accepted_scoped_scorer_correction",
+  "remaining_limits": [
+    "First-number extraction is retained. A line-leading minus before an amount is interpreted as a sign even if it could be a Markdown bullet. Unicode minus, European separators, scientific notation and general free-form financial parsing are not certified.",
+    "No reference tax amount is certified by the 100-label echo diagnostic."
+  ],
+  "patches": [],
+  "payload_files": [
+    "components/legalbench-sara-numeric/evaluator.py",
+    "components/legalbench-sara-numeric/conformance.json"
+  ],
+  "public_release_ready": true,
+  "selected_for_first_release": true,
+  "distribution_status": "BAR_original_only_upstream_source_terms_unresolved",
+  "payload_status": "bar_original_numeric_evaluator_and_in_memory_adapter",
+  "evidence_bindings": [
+    {
+      "sha256": "3b199afe4494de2a2eb9a21c60fb8ca7fb769ff151a23495b7946948fbe85444",
+      "pointer": "/entries/2"
+    },
+    {
+      "sha256": "e672f9515ec31ad8262b11382d8f162147b955b224b5bd48da6c8d1d264ba8f7",
+      "pointer": "/entries/legalbench-sara-numeric"
+    }
+  ],
+  "source_repository": "HazyResearch/legalbench@b46bf4ffae90524b2b72aaa30e7745fe9db64481",
+  "notices": [],
+  "frozen_corrected_scorer_sha256": "928d66dd5d3f8e75ee807f4eb030db2153dbea7c4b648d203fe305410e7e4c0b",
+  "replacement": {
+    "implementation": "components/legalbench-sara-numeric/evaluator.py",
+    "upstream_path": "evaluation.py",
+    "before_sha256": "7bbae257d64ea9f29d97a25d92bbfca4343f3d2d495fd5c724f75b3ab0671e1a",
+    "after_sha256": "b5f714b026a032617aaead251dde9df13e3589a2e91a521d70b333cffbb7b9fa",
+    "operation": "install_original_BAR_implementation_in_new_directory"
+  },
+  "license": "MIT for BAR code only; no license grant for upstream source/data",
+  "source_files": [
+    {
+      "path": "evaluation.py",
+      "url": "https://raw.githubusercontent.com/HazyResearch/legalbench/b46bf4ffae90524b2b72aaa30e7745fe9db64481/evaluation.py",
+      "sha256": "7bbae257d64ea9f29d97a25d92bbfca4343f3d2d495fd5c724f75b3ab0671e1a",
+      "repository": "code"
+    },
+    {
+      "path": "tasks/sara_numeric/base_prompt.txt",
+      "url": "https://raw.githubusercontent.com/HazyResearch/legalbench/b46bf4ffae90524b2b72aaa30e7745fe9db64481/tasks/sara_numeric/base_prompt.txt",
+      "sha256": "a9b5b4555b5695418ac26de2676b3acb7d03f1084238065f32bd13ae4f3d2000",
+      "repository": "code"
+    },
+    {
+      "path": "data/sara_numeric/train.tsv",
+      "url": "https://huggingface.co/datasets/nguha/legalbench/resolve/daec8237410aa23e3faf4bc41ad8b3a7e1696826/data/sara_numeric/train.tsv",
+      "sha256": "d258e56561efb23e297d6f415bc113032581dc920fd23ca5318ad1e06bdd87a6",
+      "repository": "data"
+    },
+    {
+      "path": "data/sara_numeric/test.tsv",
+      "url": "https://huggingface.co/datasets/nguha/legalbench/resolve/daec8237410aa23e3faf4bc41ad8b3a7e1696826/data/sara_numeric/test.tsv",
+      "sha256": "8a2387c79048bfb5d82ccdaf60d638a489dbcb2d1ab020d4ddda391cf6a1a723",
+      "repository": "data"
+    }
+  ],
+  "data_repository": "nguha/legalbench@daec8237410aa23e3faf4bc41ad8b3a7e1696826",
+  "population": {
+    "train": 4,
+    "test": 96,
+    "label_echo_diagnostic": 100,
+    "performance_scope": "The 96 test rows only; train echoes are a parser diagnostic.",
+    "labels_changed": false
+  },
+  "excluded": [
+    "LegalBench source-context patch and full upstream evaluation.py",
+    "SARA statutes, case text, labels, prompts, and input-restoration text"
+  ]
+}

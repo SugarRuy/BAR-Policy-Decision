@@ -1,0 +1,35 @@
+{
+  "official_result": {
+    "checkpoints": [
+      {
+        "total": 1,
+        "result": 1
+      },
+      {
+        "total": 1,
+        "result": 1
+      },
+      {
+        "total": 2,
+        "result": 2
+      }
+    ],
+    "final_score": {
+      "total": 4,
+      "result": 4
+    }
+  },
+  "checkpoint_sum_before_bonus": 4,
+  "score_after_bonus": {
+    "result": 4,
+    "total": 4
+  },
+  "converted_score": 1.0,
+  "perfect_completion": true,
+  "conversion_module_sha256": "649f0b5df9a12676597a5249c120fcf6ed2bfe08a66364d130902b0e09ae1a91",
+  "conversion_functions": [
+    "analyze_eval_json_file",
+    "calculate_score",
+    "is_perfect_completion"
+  ]
+}

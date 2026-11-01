@@ -1,0 +1,11 @@
+--- a/tax/micro_evaluation.py
++++ b/tax/micro_evaluation.py
+@@ -449,7 +449,7 @@
+     
+     tax_payer.computed_accumulated_credits = tax_payer.schedule_3_line_8 + tax_payer.computed_ctc_or_other_dependent_credit
+ 
+-    tax_payer.computed_taxes_after_credits = tax_payer.f1040_line_18 - tax_payer.computed_accumulated_credits
++    tax_payer.computed_taxes_after_credits = max(0, tax_payer.f1040_line_18 - tax_payer.computed_accumulated_credits)
+ 
+     tax_payer.computed_other_taxes = tax_payer.other_additional_taxes + tax_payer.self_employment_tax
+     

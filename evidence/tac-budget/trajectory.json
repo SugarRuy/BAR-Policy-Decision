@@ -1,0 +1,11 @@
+{
+  "kind": "constructed evaluator input, not an observed browser trajectory",
+  "model_generated": false,
+  "price_document_verified": false,
+  "events": [
+    {
+      "url": "http://the-agent-company.com:8092/remote.php/webdav/Documents/Administrative%20Specialist",
+      "purpose": "fixed directory-visit marker for native checkpoint2"
+    }
+  ]
+}

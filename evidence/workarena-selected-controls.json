@@ -1,0 +1,889 @@
+{
+  "source_commit": "e885130962f61fb64ac305497996a46cfc7d18f0",
+  "mode": "offline_source_method_execution_with_explicit_fixtures",
+  "claim_boundary": "All reward tuples below are results of native method bodies on harness-provided state; none are live ServiceNow or agent-episode traces.",
+  "schedule_selected_witnesses": [
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": 60,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 01:00:00",
+          "end_date": "2027-01-05 01:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "4",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-02 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "4",
+          "start_date": "2027-01-02 02:00:00",
+          "end_date": "2027-01-03 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-05 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "priority",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": 1441,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-04 00:01:00",
+          "end_date": "2027-01-06 00:01:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": -1,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-02 23:59:00",
+          "end_date": "2027-01-04 23:59:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": 60,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 01:00:00",
+          "end_date": "2027-01-05 01:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        },
+        {
+          "table": "vtb_task",
+          "params": {
+            "sysparm_query": "task_effective_number=PTSK-OFFLINE"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        },
+        {
+          "table": "vtb_task",
+          "params": {
+            "sysparm_query": "task_effective_number=PTSK-OFFLINE"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "4",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-02 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "4",
+          "start_date": "2027-01-02 02:00:00",
+          "end_date": "2027-01-03 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-05 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "priority",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        },
+        {
+          "table": "vtb_task",
+          "params": {
+            "sysparm_query": "task_effective_number=PTSK-OFFLINE"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": 1441,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-04 00:01:00",
+          "end_date": "2027-01-06 00:01:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": -1,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-02 23:59:00",
+          "end_date": "2027-01-04 23:59:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change requests are overlapping or not respecting the maximum spacing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": 120,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        1,
+        true,
+        "Nice work, thank you!",
+        {
+          "message": "Task completed successfully."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        },
+        {
+          "table": "vtb_task",
+          "params": {
+            "sysparm_query": "task_effective_number=PTSK-OFFLINE"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 3,
+      "goal_type": "tight priority",
+      "gap_minutes": 120,
+      "private_state": "7",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 02:00:00",
+          "end_date": "2027-01-05 02:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "Step 1: ",
+        {
+          "message": "Step 1: Private task not closed appropriately."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        },
+        {
+          "table": "vtb_task",
+          "params": {
+            "sysparm_query": "task_effective_number=PTSK-OFFLINE"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": 60,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 00:00:00",
+          "end_date": "2027-01-01 20:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-01 21:00:00",
+          "end_date": "2027-01-02 17:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change request duration is not within 5% of the expected duration."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    },
+    {
+      "level": 2,
+      "goal_type": "tight priority",
+      "gap_minutes": 60,
+      "private_state": "3",
+      "case_records": [
+        {
+          "sys_id": "CHG-0",
+          "number": "CHG-OFFLINE-0",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "",
+          "end_date": "2027-01-03 00:00:00",
+          "work_start": "",
+          "work_end": ""
+        },
+        {
+          "sys_id": "CHG-1",
+          "number": "CHG-OFFLINE-1",
+          "short_description": "Audit fixture #OFFLINE",
+          "impact": "2",
+          "risk": "3",
+          "start_date": "2027-01-03 01:00:00",
+          "end_date": "2027-01-05 01:00:00",
+          "work_start": "",
+          "work_end": ""
+        }
+      ],
+      "bounds": [
+        "2027-01-01 00:00:00",
+        "2027-01-07 00:01:00"
+      ],
+      "verdict": [
+        0,
+        false,
+        "",
+        {
+          "message": "Change request start date or end date is missing."
+        }
+      ],
+      "api_calls": [
+        {
+          "table": "change_request",
+          "params": {
+            "sysparm_query": "short_descriptionLIKE#OFFLINE",
+            "sysparm_fields": "impact,start_date,end_date,risk"
+          }
+        }
+      ],
+      "native_generator_admissible_impacts": true
+    }
+  ],
+  "schedule_witness_constructor": {
+    "goal_type": "tight priority",
+    "uniform_risk": false
+  },
+  "runtime_assumptions": [
+    "ServiceNow persists intended task records and computes problem priority from the source impact/urgency mapping.",
+    "Table API returns the complete intended record set and preserves documented reference/display shapes.",
+    "EditRecordTask page URL, readiness, metadata and change-monitor gates are fixtures; the bad-field gate is also checked as a negative control.",
+    "Private-task state is a fixture; its native validator is executed. No GUI action or lifecycle feasibility is established.",
+    "Object setup attributes and synthetic identifiers are harness-owned; workload setup_goal and _get_config run with captured API/helper stubs.",
+    "NumPy randint upper-exclusive semantics are represented by bounded controlled draws; no native seed-to-case identity is claimed."
+  ],
+  "not_performed": [
+    "network access",
+    "package imports",
+    "browser/environment launch",
+    "LLM calls",
+    "live API calls",
+    "source or benchmark-result modifications"
+  ]
+}

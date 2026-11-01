@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the BAR paper and the original benchmark, and identify the component version used."
+type: software
+title: "BAR: Benchmark Audit and Revision"
+version: 0.1.0
+authors:
+  - family-names: Xiao
+    given-names: Yanru
+    email: sugarruy@gmail.com
+  - family-names: Cai
+    given-names: Yifei
+    affiliation: Iowa State University
+    email: yifeic@iastate.edu
+repository-code: "https://github.com/SugarRuy/BAR-Policy-Decision"
+url: "https://github.com/SugarRuy/BAR-Policy-Decision"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks"
+  authors:
+    - family-names: Xiao
+      given-names: Yanru
+    - family-names: Cai
+      given-names: Yifei
+  year: 2026
+  notes: "Preprint prepared for arXiv; identifier not yet assigned."

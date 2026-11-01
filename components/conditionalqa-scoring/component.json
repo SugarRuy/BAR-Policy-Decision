@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "id": "conditionalqa-scoring",
+  "kind": "scorer",
+  "source_component": "scorer",
+  "accepted_scope": "Preserve the existing full-reference denominator correction and explicit null convention for undefined categories.",
+  "issue_attribution": "source_scorer",
+  "adjudication_status": "accepted_scoped_scorer_correction",
+  "remaining_limits": [
+    "Per-question scoring and all reference labels remain unchanged.",
+    "Explicit [] and a missing prediction are distinct inputs.",
+    "Duplicate IDs and malformed answers retain upstream behavior.",
+    "No raw documents, references or dataset license grant are distributed."
+  ],
+  "patches": [
+    {
+      "patch": "components/conditionalqa-scoring/denominator.patch",
+      "patch_sha256": "bd33104d57e9a03a8dfeb31b597fe97a89d772d5375a7859fe60105549a3adc4",
+      "upstream_path": "evaluate.py",
+      "source": "haitian-sun/ConditionalQA@77bd295952daf415548b3244db10880d3d55cfe0",
+      "upstream_url": "https://raw.githubusercontent.com/haitian-sun/ConditionalQA/77bd295952daf415548b3244db10880d3d55cfe0/evaluate.py",
+      "before_sha256": "417d662aa21b5affafe4d45e0da04fb885e29bd4c26cb7fb3062523a69409fcc",
+      "after_sha256": "c1e9eefba2f4e39b7474e2e4fc79e108775f88a82390bb8e50adc3794d5bbb4f"
+    }
+  ],
+  "payload_files": [
+    "components/conditionalqa-scoring/UPSTREAM-LICENSE"
+  ],
+  "public_release_ready": true,
+  "selected_for_first_release": true,
+  "distribution_status": "reviewed_selected_payload",
+  "recorded_code_notice": "BSD-2-Clause",
+  "payload_status": "code_patch_packaged",
+  "evidence_bindings": [
+    {
+      "sha256": "3b199afe4494de2a2eb9a21c60fb8ca7fb769ff151a23495b7946948fbe85444",
+      "pointer": "/entries/1"
+    },
+    {
+      "sha256": "e672f9515ec31ad8262b11382d8f162147b955b224b5bd48da6c8d1d264ba8f7",
+      "pointer": "/entries/conditionalqa-scoring"
+    }
+  ],
+  "source_repository": "haitian-sun/ConditionalQA@77bd295952daf415548b3244db10880d3d55cfe0",
+  "notices": [
+    "components/conditionalqa-scoring/UPSTREAM-LICENSE"
+  ],
+  "source_files": [
+    {
+      "path": "evaluate.py",
+      "url": "https://raw.githubusercontent.com/haitian-sun/ConditionalQA/77bd295952daf415548b3244db10880d3d55cfe0/evaluate.py",
+      "sha256": "417d662aa21b5affafe4d45e0da04fb885e29bd4c26cb7fb3062523a69409fcc",
+      "repository": "code"
+    },
+    {
+      "path": "v1_0/dev.json",
+      "url": "https://raw.githubusercontent.com/haitian-sun/ConditionalQA/77bd295952daf415548b3244db10880d3d55cfe0/v1_0/dev.json",
+      "sha256": "a06cfe3e8b3ffe04f2652a2dbd912b647eb4448b724585c891539344b02fb7c7",
+      "repository": "code"
+    }
+  ],
+  "license": "BSD-2-Clause for evaluator patch; dataset terms separate",
+  "upstream_notice": {
+    "path": "components/conditionalqa-scoring/UPSTREAM-LICENSE",
+    "sha256": "62a47f90ddb8fda1bbf1e731a5861d827c109a3570b86b371f9d927cbc75aa14",
+    "url": "https://raw.githubusercontent.com/haitian-sun/ConditionalQA/77bd295952daf415548b3244db10880d3d55cfe0/LISCENSE"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20",
+  "archive_sha256": "72dca3f4f3ba73b1d796b40e952a80d53cd2011ef90b2168b8bcaa818f5edd1e",
+  "key": [
+    "snippet",
+    "question",
+    "scenario",
+    "history"
+  ],
+  "normalization": "None; dict keys sorted, list order retained.",
+  "scope": "Within-split exact-visible-input check; no semantic certification or relabeling.",
+  "splits": [
+    {
+      "split": "train",
+      "records": 21890,
+      "conflicts": [
+        {
+          "visible_input_sha256": "8cb847e7d656fb37ea96d3e6b69e8810a428208b33c1804adfce6c555452a4a0",
+          "records": [
+            {
+              "source_index": 2099,
+              "utterance_id": "19301a20857d54535d691159c0a18179c937caa1",
+              "answer": "Yes"
+            },
+            {
+              "source_index": 19656,
+              "utterance_id": "e5f5e3f2dffd605381d48ffa21e701c58a057fed",
+              "answer": "Yes"
+            },
+            {
+              "source_index": 21420,
+              "utterance_id": "fa78200783b8392a430433293728bebecd0d4f4e",
+              "answer": "Do you live in the UK?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "split": "dev",
+      "records": 2270,
+      "conflicts": [
+        {
+          "visible_input_sha256": "ba130e98448f04d053d355bba46a41f3265a0bbc0565f00de9ac53c83d522607",
+          "records": [
+            {
+              "source_index": 960,
+              "utterance_id": "70d6a5db3771a462cb10810a7da6171a2f6ceb9d",
+              "answer": "Are you a Native American/American Indian?"
+            },
+            {
+              "source_index": 2106,
+              "utterance_id": "ec8edf4dae49f02088926ac997fe09cfce99db44",
+              "answer": "No"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "records": 8276,
+      "conflicts": []
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "pre": {
+    "jessica_lee": [
+      {
+        "_id": "JtbaKsDp3vjiLQdYC",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:38.687Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+        "_updatedAt": "2026-11-01T03:35:38.741Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "huang_jie": [
+      {
+        "_id": "y2ztuAvsJnPhWPDoN",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:39.078Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+        "_updatedAt": "2026-11-01T03:35:39.112Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "chen_xinyi": [
+      {
+        "_id": "4SGqbSPvaF5pdEd66",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:39.567Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+        "_updatedAt": "2026-11-01T03:35:39.599Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sent": {
+    "jessica_lee": {
+      "ts": 1793504250804,
+      "channel": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+      "message": {
+        "alias": "",
+        "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:30.743Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+        "_id": "MmSJ559k4DHozaXnB",
+        "_updatedAt": "2026-11-01T03:37:30.797Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      "success": true
+    },
+    "huang_jie": {
+      "ts": 1793504250934,
+      "channel": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+      "message": {
+        "alias": "",
+        "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:30.899Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+        "_id": "yWSYat2e4LLn2Jdau",
+        "_updatedAt": "2026-11-01T03:37:30.929Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      "success": true
+    },
+    "chen_xinyi": {
+      "ts": 1793504251053,
+      "channel": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+      "message": {
+        "alias": "",
+        "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:31.014Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+        "_id": "DNRd7iRnweA8ctnkZ",
+        "_updatedAt": "2026-11-01T03:37:31.049Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      "success": true
+    }
+  },
+  "post": {
+    "jessica_lee": [
+      {
+        "_id": "MmSJ559k4DHozaXnB",
+        "alias": "",
+        "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:30.743Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+        "_updatedAt": "2026-11-01T03:37:30.797Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_id": "JtbaKsDp3vjiLQdYC",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:38.687Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+        "_updatedAt": "2026-11-01T03:35:38.741Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "huang_jie": [
+      {
+        "_id": "yWSYat2e4LLn2Jdau",
+        "alias": "",
+        "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:30.899Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+        "_updatedAt": "2026-11-01T03:37:30.929Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_id": "y2ztuAvsJnPhWPDoN",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:39.078Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+        "_updatedAt": "2026-11-01T03:35:39.112Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "chen_xinyi": [
+      {
+        "_id": "DNRd7iRnweA8ctnkZ",
+        "alias": "",
+        "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:37:31.014Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+        "_updatedAt": "2026-11-01T03:37:31.049Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_id": "4SGqbSPvaF5pdEd66",
+        "alias": "",
+        "msg": "Please confirm your department's equipment requests.",
+        "attachments": [],
+        "parseUrls": true,
+        "groupable": false,
+        "ts": "2026-11-01T03:35:39.567Z",
+        "u": {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "username": "theagentcompany",
+          "name": "theagentcompany"
+        },
+        "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+        "_updatedAt": "2026-11-01T03:35:39.599Z",
+        "urls": [],
+        "mentions": [],
+        "channels": [],
+        "md": [
+          {
+            "type": "PARAGRAPH",
+            "value": [
+              {
+                "type": "PLAIN_TEXT",
+                "value": "Please confirm your department's equipment requests."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "baseline_equal": true,
+  "only_one_final_message_added_per_manager": true,
+  "pre_has_no_reference_totals": true,
+  "trajectory_sha256": "6bfd3dbb7ed5b4be882f0ec4d8c49415f5ab6c721dc0da378315420bd0507d1b"
+}

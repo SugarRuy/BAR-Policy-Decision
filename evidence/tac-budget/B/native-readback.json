@@ -1,0 +1,1201 @@
+{
+  "client_type": "RocketChat",
+  "test_mode": false,
+  "managers": {
+    "jessica_lee": {
+      "user_returned_by_official_list": true,
+      "user_id": "4qnpxztMbfyYn3rQA",
+      "native_user_id_request": {
+        "status": 200,
+        "json": {
+          "messages": [
+            {
+              "_id": "MmSJ559k4DHozaXnB",
+              "alias": "",
+              "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:37:30.743Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+              "_updatedAt": "2026-11-01T03:37:30.797Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_id": "JtbaKsDp3vjiLQdYC",
+              "alias": "",
+              "msg": "Please confirm your department's equipment requests.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:35:38.687Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+              "_updatedAt": "2026-11-01T03:35:38.741Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Please confirm your department's equipment requests."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "success": true
+        }
+      },
+      "official_content": {
+        "ok": true,
+        "value": [
+          "Please confirm your department's equipment requests.",
+          "Total cost: 11917 USD. Department budget: 10000 USD."
+        ]
+      },
+      "official_full": {
+        "ok": true,
+        "value": [
+          {
+            "_id": "JtbaKsDp3vjiLQdYC",
+            "alias": "",
+            "msg": "Please confirm your department's equipment requests.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:35:38.687Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+            "_updatedAt": "2026-11-01T03:35:38.741Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Please confirm your department's equipment requests."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_id": "MmSJ559k4DHozaXnB",
+            "alias": "",
+            "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:30.743Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+            "_updatedAt": "2026-11-01T03:37:30.797Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "actual_room_diagnostic": [
+        {
+          "room_id": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+          "status": 200,
+          "json": {
+            "messages": [
+              {
+                "_id": "MmSJ559k4DHozaXnB",
+                "alias": "",
+                "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:37:30.743Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+                "_updatedAt": "2026-11-01T03:37:30.797Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "_id": "JtbaKsDp3vjiLQdYC",
+                "alias": "",
+                "msg": "Please confirm your department's equipment requests.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:35:38.687Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+                "_updatedAt": "2026-11-01T03:35:38.741Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Please confirm your department's equipment requests."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "success": true
+          },
+          "role": "Real API diagnosis only; not substituted into native helper or score"
+        }
+      ]
+    },
+    "huang_jie": {
+      "user_returned_by_official_list": true,
+      "user_id": "TAh4ug5jgz97QthJ2",
+      "native_user_id_request": {
+        "status": 200,
+        "json": {
+          "messages": [
+            {
+              "_id": "yWSYat2e4LLn2Jdau",
+              "alias": "",
+              "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:37:30.899Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+              "_updatedAt": "2026-11-01T03:37:30.929Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_id": "y2ztuAvsJnPhWPDoN",
+              "alias": "",
+              "msg": "Please confirm your department's equipment requests.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:35:39.078Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+              "_updatedAt": "2026-11-01T03:35:39.112Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Please confirm your department's equipment requests."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "success": true
+        }
+      },
+      "official_content": {
+        "ok": true,
+        "value": [
+          "Please confirm your department's equipment requests.",
+          "Total cost: 5001 USD. Department budget: 10000 USD."
+        ]
+      },
+      "official_full": {
+        "ok": true,
+        "value": [
+          {
+            "_id": "y2ztuAvsJnPhWPDoN",
+            "alias": "",
+            "msg": "Please confirm your department's equipment requests.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:35:39.078Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+            "_updatedAt": "2026-11-01T03:35:39.112Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Please confirm your department's equipment requests."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_id": "yWSYat2e4LLn2Jdau",
+            "alias": "",
+            "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:30.899Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+            "_updatedAt": "2026-11-01T03:37:30.929Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "actual_room_diagnostic": [
+        {
+          "room_id": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+          "status": 200,
+          "json": {
+            "messages": [
+              {
+                "_id": "yWSYat2e4LLn2Jdau",
+                "alias": "",
+                "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:37:30.899Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+                "_updatedAt": "2026-11-01T03:37:30.929Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "_id": "y2ztuAvsJnPhWPDoN",
+                "alias": "",
+                "msg": "Please confirm your department's equipment requests.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:35:39.078Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+                "_updatedAt": "2026-11-01T03:35:39.112Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Please confirm your department's equipment requests."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "success": true
+          },
+          "role": "Real API diagnosis only; not substituted into native helper or score"
+        }
+      ]
+    },
+    "chen_xinyi": {
+      "user_returned_by_official_list": true,
+      "user_id": "c2uqaen3naCexvzDE",
+      "native_user_id_request": {
+        "status": 200,
+        "json": {
+          "messages": [
+            {
+              "_id": "DNRd7iRnweA8ctnkZ",
+              "alias": "",
+              "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:37:31.014Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+              "_updatedAt": "2026-11-01T03:37:31.049Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_id": "4SGqbSPvaF5pdEd66",
+              "alias": "",
+              "msg": "Please confirm your department's equipment requests.",
+              "attachments": [],
+              "parseUrls": true,
+              "groupable": false,
+              "ts": "2026-11-01T03:35:39.567Z",
+              "u": {
+                "_id": "CZYWHd5bCmhj5YcFe",
+                "username": "theagentcompany",
+                "name": "theagentcompany"
+              },
+              "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+              "_updatedAt": "2026-11-01T03:35:39.599Z",
+              "urls": [],
+              "mentions": [],
+              "channels": [],
+              "md": [
+                {
+                  "type": "PARAGRAPH",
+                  "value": [
+                    {
+                      "type": "PLAIN_TEXT",
+                      "value": "Please confirm your department's equipment requests."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "success": true
+        }
+      },
+      "official_content": {
+        "ok": true,
+        "value": [
+          "Please confirm your department's equipment requests.",
+          "Total cost: 18780 USD. Department budget: 10000 USD."
+        ]
+      },
+      "official_full": {
+        "ok": true,
+        "value": [
+          {
+            "_id": "4SGqbSPvaF5pdEd66",
+            "alias": "",
+            "msg": "Please confirm your department's equipment requests.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:35:39.567Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+            "_updatedAt": "2026-11-01T03:35:39.599Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Please confirm your department's equipment requests."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_id": "DNRd7iRnweA8ctnkZ",
+            "alias": "",
+            "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:31.014Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+            "_updatedAt": "2026-11-01T03:37:31.049Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "actual_room_diagnostic": [
+        {
+          "room_id": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+          "status": 200,
+          "json": {
+            "messages": [
+              {
+                "_id": "DNRd7iRnweA8ctnkZ",
+                "alias": "",
+                "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:37:31.014Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+                "_updatedAt": "2026-11-01T03:37:31.049Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "_id": "4SGqbSPvaF5pdEd66",
+                "alias": "",
+                "msg": "Please confirm your department's equipment requests.",
+                "attachments": [],
+                "parseUrls": true,
+                "groupable": false,
+                "ts": "2026-11-01T03:35:39.567Z",
+                "u": {
+                  "_id": "CZYWHd5bCmhj5YcFe",
+                  "username": "theagentcompany",
+                  "name": "theagentcompany"
+                },
+                "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+                "_updatedAt": "2026-11-01T03:35:39.599Z",
+                "urls": [],
+                "mentions": [],
+                "channels": [],
+                "md": [
+                  {
+                    "type": "PARAGRAPH",
+                    "value": [
+                      {
+                        "type": "PLAIN_TEXT",
+                        "value": "Please confirm your department's equipment requests."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "success": true
+          },
+          "role": "Real API diagnosis only; not substituted into native helper or score"
+        }
+      ]
+    }
+  },
+  "users_list": {
+    "status": 200,
+    "json": {
+      "users": [
+        {
+          "_id": "54igTQ65f4wr3xkag",
+          "username": "alex_turner",
+          "emails": [
+            {
+              "address": "alexturner@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Alex Turner",
+          "nameInsensitive": "alex turner"
+        },
+        {
+          "_id": "c2uqaen3naCexvzDE",
+          "username": "chen_xinyi",
+          "emails": [
+            {
+              "address": "chenxinyi@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Chen Xinyi",
+          "nameInsensitive": "chen xinyi"
+        },
+        {
+          "_id": "GTcEyGXzbKiLmQxFc",
+          "username": "david_wong",
+          "emails": [
+            {
+              "address": "davidwong@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "David Wong",
+          "nameInsensitive": "david wong"
+        },
+        {
+          "_id": "ppuM42XhPD79wwxMv",
+          "username": "emily_zhou",
+          "emails": [
+            {
+              "address": "emilyzhou@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Emily Zhou",
+          "nameInsensitive": "emily zhou"
+        },
+        {
+          "_id": "hDhbakBmvM8WmraTA",
+          "username": "emma_lewis",
+          "emails": [
+            {
+              "address": "emmalewis@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Emma Lewis",
+          "nameInsensitive": "emma lewis"
+        },
+        {
+          "_id": "TAh4ug5jgz97QthJ2",
+          "username": "huang_jie",
+          "emails": [
+            {
+              "address": "huangjie@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Huang Jie",
+          "nameInsensitive": "huang jie"
+        },
+        {
+          "_id": "3MRHEqTDdiEeonq4s",
+          "username": "jessica_chen",
+          "emails": [
+            {
+              "address": "jessicachen@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Jessica Chen",
+          "nameInsensitive": "jessica chen"
+        },
+        {
+          "_id": "4qnpxztMbfyYn3rQA",
+          "username": "jessica_lee",
+          "emails": [
+            {
+              "address": "jessicalee@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Jessica Lee",
+          "nameInsensitive": "jessica lee"
+        },
+        {
+          "_id": "7My8YbErQi3E7vd35",
+          "username": "li_ming",
+          "emails": [
+            {
+              "address": "liming@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Li Ming",
+          "nameInsensitive": "li ming"
+        },
+        {
+          "_id": "GYMYHQKtWPAr47ZsE",
+          "username": "liu_qiang",
+          "emails": [
+            {
+              "address": "liuqiang@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Liu Qiang",
+          "nameInsensitive": "liu qiang"
+        },
+        {
+          "_id": "RGZyENbrjkxjosMCH",
+          "username": "mark_johnson",
+          "emails": [
+            {
+              "address": "markjohnson@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Mark Johnson",
+          "nameInsensitive": "mark johnson"
+        },
+        {
+          "_id": "srntB7X62AR3t9CsA",
+          "username": "mike_chen",
+          "emails": [
+            {
+              "address": "mikechen@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Mike Chen",
+          "lastLogin": "2024-10-19T10:01:58.644Z",
+          "nameInsensitive": "mike chen"
+        },
+        {
+          "_id": "ZAEHxYYg6XYWCvJTp",
+          "username": "priya_sharma",
+          "emails": [
+            {
+              "address": "priyasharma@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Priya Sharma",
+          "nameInsensitive": "priya sharma"
+        },
+        {
+          "_id": "rocket.cat",
+          "name": "Rocket.Cat",
+          "username": "rocket.cat",
+          "status": "online",
+          "active": true,
+          "type": "bot",
+          "roles": [
+            "bot"
+          ],
+          "avatarETag": null,
+          "nameInsensitive": "rocket.cat"
+        },
+        {
+          "_id": "XerH6mXGTwiFEmgCh",
+          "username": "sarah_johnson",
+          "emails": [
+            {
+              "address": "sarahjohnson@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Sarah Johnson",
+          "nameInsensitive": "sarah johnson"
+        },
+        {
+          "_id": "fkBBPzFhQGSQRxZFX",
+          "username": "sophia_rodriguez",
+          "emails": [
+            {
+              "address": "sophiarodriguez@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Sophia Rodriguez",
+          "nameInsensitive": "sophia rodriguez"
+        },
+        {
+          "_id": "CZYWHd5bCmhj5YcFe",
+          "name": "theagentcompany",
+          "username": "theagentcompany",
+          "status": "online",
+          "active": true,
+          "emails": [
+            {
+              "address": "theagentcompany@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "roles": [
+            "admin"
+          ],
+          "lastLogin": "2026-11-01T03:37:33.112Z",
+          "nameInsensitive": "theagentcompany"
+        },
+        {
+          "_id": "3nNZeRZPRrrtFuJ8v",
+          "username": "wang_fang",
+          "emails": [
+            {
+              "address": "wangfang@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Wang Fang",
+          "nameInsensitive": "wang fang"
+        },
+        {
+          "_id": "uPsPimbJGg5gK3Eut",
+          "username": "zhang_wei",
+          "emails": [
+            {
+              "address": "zhangwei@example.com",
+              "verified": false
+            }
+          ],
+          "type": "user",
+          "status": "offline",
+          "active": true,
+          "roles": [
+            "user"
+          ],
+          "name": "Zhang Wei",
+          "nameInsensitive": "zhang wei"
+        }
+      ],
+      "count": 19,
+      "offset": 0,
+      "total": 19,
+      "success": true
+    }
+  },
+  "im_list": {
+    "status": 200,
+    "json": {
+      "ims": [
+        {
+          "_id": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+          "t": "d",
+          "usernames": [
+            "jessica_lee",
+            "theagentcompany"
+          ],
+          "usersCount": 2,
+          "msgs": 2,
+          "ts": "2026-11-01T03:35:38.502Z",
+          "uids": [
+            "4qnpxztMbfyYn3rQA",
+            "CZYWHd5bCmhj5YcFe"
+          ],
+          "default": false,
+          "ro": false,
+          "sysMes": true,
+          "_updatedAt": "2026-11-01T03:37:30.810Z",
+          "_USERNAMES": [
+            "jessica_lee",
+            "theagentcompany"
+          ],
+          "lastMessage": {
+            "alias": "",
+            "msg": "Total cost: 11917 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:30.743Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "4qnpxztMbfyYn3rQACZYWHd5bCmhj5YcFe",
+            "_id": "MmSJ559k4DHozaXnB",
+            "_updatedAt": "2026-11-01T03:37:30.797Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 11917 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          },
+          "lm": "2026-11-01T03:37:30.743Z"
+        },
+        {
+          "_id": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+          "t": "d",
+          "usernames": [
+            "huang_jie",
+            "theagentcompany"
+          ],
+          "usersCount": 2,
+          "msgs": 2,
+          "ts": "2026-11-01T03:35:38.909Z",
+          "uids": [
+            "CZYWHd5bCmhj5YcFe",
+            "TAh4ug5jgz97QthJ2"
+          ],
+          "default": false,
+          "ro": false,
+          "sysMes": true,
+          "_updatedAt": "2026-11-01T03:37:30.937Z",
+          "_USERNAMES": [
+            "huang_jie",
+            "theagentcompany"
+          ],
+          "lastMessage": {
+            "alias": "",
+            "msg": "Total cost: 5001 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:30.899Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFeTAh4ug5jgz97QthJ2",
+            "_id": "yWSYat2e4LLn2Jdau",
+            "_updatedAt": "2026-11-01T03:37:30.929Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 5001 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          },
+          "lm": "2026-11-01T03:37:30.899Z"
+        },
+        {
+          "_id": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+          "t": "d",
+          "usernames": [
+            "chen_xinyi",
+            "theagentcompany"
+          ],
+          "usersCount": 2,
+          "msgs": 2,
+          "ts": "2024-10-19T09:45:57.119Z",
+          "uids": [
+            "CZYWHd5bCmhj5YcFe",
+            "c2uqaen3naCexvzDE"
+          ],
+          "default": false,
+          "ro": false,
+          "sysMes": true,
+          "_updatedAt": "2026-11-01T03:37:31.056Z",
+          "_USERNAMES": [
+            "chen_xinyi",
+            "jobbench"
+          ],
+          "lm": "2026-11-01T03:37:31.014Z",
+          "lastMessage": {
+            "alias": "",
+            "msg": "Total cost: 18780 USD. Department budget: 10000 USD.",
+            "attachments": [],
+            "parseUrls": true,
+            "groupable": false,
+            "ts": "2026-11-01T03:37:31.014Z",
+            "u": {
+              "_id": "CZYWHd5bCmhj5YcFe",
+              "username": "theagentcompany",
+              "name": "theagentcompany"
+            },
+            "rid": "CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE",
+            "_id": "DNRd7iRnweA8ctnkZ",
+            "_updatedAt": "2026-11-01T03:37:31.049Z",
+            "urls": [],
+            "mentions": [],
+            "channels": [],
+            "md": [
+              {
+                "type": "PARAGRAPH",
+                "value": [
+                  {
+                    "type": "PLAIN_TEXT",
+                    "value": "Total cost: 18780 USD. Department budget: 10000 USD."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "_id": "CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA",
+          "t": "d",
+          "usernames": [
+            "theagentcompany",
+            "mike_chen"
+          ],
+          "usersCount": 2,
+          "msgs": 0,
+          "ts": "2024-10-19T09:51:27.913Z",
+          "uids": [
+            "CZYWHd5bCmhj5YcFe",
+            "srntB7X62AR3t9CsA"
+          ],
+          "default": false,
+          "ro": false,
+          "sysMes": true,
+          "_updatedAt": "2024-10-23T09:29:12.891Z",
+          "_USERNAMES": [
+            "jobbench",
+            "mike_chen"
+          ],
+          "lm": "2024-10-19T10:03:51.622Z"
+        }
+      ],
+      "offset": 0,
+      "count": 4,
+      "total": 4,
+      "success": true
+    }
+  }
+}

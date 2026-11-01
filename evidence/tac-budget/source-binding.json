@@ -1,0 +1,67 @@
+{
+  "commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+  "archive_root": "TheAgentCompany-98b68ef82a47690c316f42fddb05baafaab56851",
+  "archive_sha256": "97a9b36996f052c9c81dd16ff2215c1645a1c0fb1a5a0a7220606916a4635d7b",
+  "files": [
+    {
+      "path": "workspaces/tasks/admin-check-employees-budget-and-reply/task.md",
+      "sha256": "6c69a348743702f9ba5635d29c555f58ac6fb132b6ec2ffc90876e68dbf92417",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/tasks/admin-check-employees-budget-and-reply/evaluator.py",
+      "sha256": "917374ed94f9023340ae256e4ded6712bff1610ef35ce50d7f870790f007d16d",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/tasks/admin-check-employees-budget-and-reply/scenarios.json",
+      "sha256": "58d924fab88200d0c5c98a397be3339f9fd1129adbda747c66bac6f8fd095300",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/tasks/admin-check-employees-budget-and-reply/dependencies.yml",
+      "sha256": "253bc794aac3d49f848632c5408b52b2abc6ca2af45cf37a7241af5a80e0af19",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/tasks/admin-check-employees-budget-and-reply/Dockerfile",
+      "sha256": "4c693925c7829d368037b7615fca98a40a89a173258e6bd31cc86579d5af4d8b",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/base_image/common.py",
+      "sha256": "32f5365249e5995f417c8fadf337572a8748222f5c812ae1dfe87367a60c4adc",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/base_image/config.py",
+      "sha256": "14847b12c4cd4cb888900617baf29b26f0e2263cdbf4c7e354b7a412b9ca708a",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/base_image/scoring.py",
+      "sha256": "446dec4587f0e2f6d65968cbc13f01be099939de01d0045bb8b37419140b7ecb",
+      "matches_archive": true
+    },
+    {
+      "path": "workspaces/base_image/eval.py",
+      "sha256": "e39d25b08d14af3f5a6ec70e5d3982c857a9398a304f2c089e5b464fc267ebae",
+      "matches_archive": true
+    },
+    {
+      "path": "evaluation/run_eval.py",
+      "sha256": "21d46479149bfbb959ded50499cf2888f8e3ae93ad440b2a947bec8798f85c20",
+      "matches_archive": true
+    },
+    {
+      "path": "evaluation/summarise_results.py",
+      "sha256": "649f0b5df9a12676597a5249c120fcf6ed2bfe08a66364d130902b0e09ae1a91",
+      "matches_archive": true
+    },
+    {
+      "path": "servers/docker-compose.yml",
+      "sha256": "da46a8200800776e1aae0b585005f860cdb1db808e3320b9041bd594c2846c4d",
+      "matches_archive": true
+    }
+  ]
+}

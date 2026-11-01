@@ -1,0 +1,55 @@
+{
+  "bindings": [
+    {
+      "file": "common.py",
+      "runtime_sha256": "32f5365249e5995f417c8fadf337572a8748222f5c812ae1dfe87367a60c4adc",
+      "frozen_sha256": "32f5365249e5995f417c8fadf337572a8748222f5c812ae1dfe87367a60c4adc",
+      "equal": true
+    },
+    {
+      "file": "config.py",
+      "runtime_sha256": "14847b12c4cd4cb888900617baf29b26f0e2263cdbf4c7e354b7a412b9ca708a",
+      "frozen_sha256": "14847b12c4cd4cb888900617baf29b26f0e2263cdbf4c7e354b7a412b9ca708a",
+      "equal": true
+    },
+    {
+      "file": "scoring.py",
+      "runtime_sha256": "446dec4587f0e2f6d65968cbc13f01be099939de01d0045bb8b37419140b7ecb",
+      "frozen_sha256": "446dec4587f0e2f6d65968cbc13f01be099939de01d0045bb8b37419140b7ecb",
+      "equal": true
+    },
+    {
+      "file": "eval.py",
+      "runtime_sha256": "e39d25b08d14af3f5a6ec70e5d3982c857a9398a304f2c089e5b464fc267ebae",
+      "frozen_sha256": "e39d25b08d14af3f5a6ec70e5d3982c857a9398a304f2c089e5b464fc267ebae",
+      "equal": true
+    },
+    {
+      "file": "evaluator.py.enc (decrypted)",
+      "runtime_sha256": "917374ed94f9023340ae256e4ded6712bff1610ef35ce50d7f870790f007d16d",
+      "frozen_sha256": "917374ed94f9023340ae256e4ded6712bff1610ef35ce50d7f870790f007d16d",
+      "equal": true
+    },
+    {
+      "file": "/instruction/task.md",
+      "runtime_sha256": "6c69a348743702f9ba5635d29c555f58ac6fb132b6ec2ffc90876e68dbf92417",
+      "frozen_sha256": "6c69a348743702f9ba5635d29c555f58ac6fb132b6ec2ffc90876e68dbf92417",
+      "equal": true
+    },
+    {
+      "file": "/npc/scenarios.json",
+      "runtime_sha256": "58d924fab88200d0c5c98a397be3339f9fd1129adbda747c66bac6f8fd095300",
+      "frozen_sha256": "58d924fab88200d0c5c98a397be3339f9fd1129adbda747c66bac6f8fd095300",
+      "equal": true
+    }
+  ],
+  "all_equal": true,
+  "test_mode_variable_present": false,
+  "model_credentials_present": false,
+  "dependencies": {
+    "rocketchat_API": "1.32.0",
+    "requests": "2.32.3",
+    "cryptography": "44.0.0",
+    "litellm": "1.23.16"
+  }
+}

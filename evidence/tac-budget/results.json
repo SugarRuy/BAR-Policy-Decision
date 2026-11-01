@@ -1,0 +1,102 @@
+{
+  "task": "admin-check-employees-budget-and-reply",
+  "source_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+  "kind": "constructed-state runtime scorer audit",
+  "conditions": [
+    {
+      "condition": "A",
+      "description": "Reference totals + consistent explicit budget judgments",
+      "status": "executed",
+      "checkpoint_results": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_totals": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_sum_before_bonus": 4,
+      "official_score_after_bonus": {
+        "result": 4,
+        "total": 4
+      },
+      "official_converted_score": 1.0,
+      "official_perfect_completion": true,
+      "official_reader_received_final_messages": true
+    },
+    {
+      "condition": "B",
+      "description": "Same totals; explicit budget judgments omitted",
+      "status": "executed",
+      "checkpoint_results": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_totals": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_sum_before_bonus": 4,
+      "official_score_after_bonus": {
+        "result": 4,
+        "total": 4
+      },
+      "official_converted_score": 1.0,
+      "official_perfect_completion": true,
+      "official_reader_received_final_messages": true
+    },
+    {
+      "condition": "C",
+      "description": "Same totals; all explicit budget judgments reversed",
+      "status": "executed",
+      "checkpoint_results": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_totals": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_sum_before_bonus": 4,
+      "official_score_after_bonus": {
+        "result": 4,
+        "total": 4
+      },
+      "official_converted_score": 1.0,
+      "official_perfect_completion": true,
+      "official_reader_received_final_messages": true
+    },
+    {
+      "condition": "D",
+      "description": "A with Jessica's total changed from 11917 to 11918 only",
+      "status": "executed",
+      "checkpoint_results": [
+        1,
+        1,
+        0
+      ],
+      "checkpoint_totals": [
+        1,
+        1,
+        2
+      ],
+      "checkpoint_sum_before_bonus": 2,
+      "official_score_after_bonus": {
+        "result": 2,
+        "total": 4
+      },
+      "official_converted_score": 0.25,
+      "official_perfect_completion": false,
+      "official_reader_received_final_messages": true
+    }
+  ],
+  "budget_judgment_omission_pattern_observed": true,
+  "amount_gt_certified": false,
+  "agent_frequency_estimated": false
+}
