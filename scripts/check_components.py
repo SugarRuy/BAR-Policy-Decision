@@ -29,6 +29,7 @@ import urllib.request
 sys.dont_write_bytecode = True
 import numpy as np
 import pydantic
+import pandas as pd
 import bar
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -382,8 +383,8 @@ def hash_rejections(roots, work):
     for identifier in ("rulearena-tax", "legalbench-sara-numeric", "conditionalqa-scoring"):
         package = work / ("bad-after-" + identifier)
         shutil.copytree(ROOT / "components", package / "components", ignore=shutil.ignore_patterns("__pycache__"))
-        for relative in ("scripts/bar.py", "scripts/check_components.py", "docs/COMPONENTS.md",
-                         "THIRD_PARTY.md", "components.json", "inventory.json"):
+        for relative in [name for name in bar.read_json(ROOT / "inventory.json")["files"]
+                         if not name.startswith("components/")] + ["inventory.json"]:
             dst = package / relative
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, dst)
@@ -438,24 +439,29 @@ def main():
             "legalbench_sara_numeric": sara(roots[("legalbench-sara-numeric", "code")],
                                           roots[("legalbench-sara-numeric", "data")], work),
             "conditionalqa": cqa(roots[("conditionalqa-scoring", "code")], work),
-            "rejection_checks": hash_rejections(roots, work),
         }
+        import check_rulearena
+        results["added_rulearena"] = check_rulearena.check(roots, work)
+        results["rejection_checks"] = hash_rejections(roots, work)
     require(pins == {name: sha(sources / name) for name in pins}, "Upstream inputs changed")
     quiet(bar.verify)
     results.update({
         "source_preservation": {"checked_files": len(pins), "all_unchanged": True},
         "source_bindings": pins, "checker_sha256": sha(Path(__file__)),
+        "component_inventory_sha256": sha(ROOT / "inventory.json"),
+        "script_sha256": {str(p.relative_to(ROOT)): sha(p) for p in
+                          sorted((ROOT / "scripts").glob("*.py"))},
         "model_calls": 0,
         "environment": {"python": sys.version.split()[0], "numpy": np.__version__,
-                        "pydantic": pydantic.__version__},
+                        "pydantic": pydantic.__version__, "pandas": pd.__version__},
     })
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("x") as stream:
         json.dump(results, stream, indent=2, allow_nan=False)
         stream.write("\n")
-    print(json.dumps({name: {k: v for k, v in values.items() if k not in ("records", "omitted_ids")}
-                      if isinstance(values, dict) else values
-                      for name, values in results.items() if name != "source_bindings"}, indent=2))
+    print(json.dumps({"status": "passed", "components": len(bar.catalog()),
+                      "checked_source_files": len(pins), "model_calls": 0,
+                      "output": str(args.output)}, indent=2))
 
 
 if __name__ == "__main__":

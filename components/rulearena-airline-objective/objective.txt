@@ -1,0 +1,1 @@
+For the described journey and listed items, compute the quoted ticket price plus the minimum baggage charges under the supplied policy. Minimize only over permitted assignments of those items to baggage-fee positions; the listed item order does not prescribe those positions. Keep the supplied passenger, journey and item facts fixed.

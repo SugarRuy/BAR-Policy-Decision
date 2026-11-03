@@ -1,0 +1,55 @@
+--- a/airline/reference_rules_textual.txt
++++ b/airline/reference_rules_textual.txt
+@@ -104,7 +104,7 @@
+ 
+ ### Second Bag
+ 
+-Decide the fee of your first checked bag according to the following:
++Decide the fee of your second checked bag according to the following:
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Basic Economy class passenger, the fee should be $45
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Main Cabin^ class passenger, the fee should be $45
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Premium Economy class passenger, the fee should be $0
+@@ -120,11 +120,11 @@
+ * If your flight is Between Mexico, Caribbean (excluding Cuba/Haiti) or Central America (excluding Panama and Honduras) and U.S., Puerto Rico, U.S. Virgin Islands, Canada AND you are a Premium Economy class passenger, the fee should be $0
+ * If your flight is Between Mexico, Caribbean (excluding Cuba/Haiti) or Central America (excluding Panama and Honduras) and U.S., Puerto Rico, U.S. Virgin Islands, Canada AND you are a Business class passenger, the fee should be $0
+ * If your flight is Between Mexico, Caribbean (excluding Cuba/Haiti) or Central America (excluding Panama and Honduras) and U.S., Puerto Rico, U.S. Virgin Islands, Canada AND you are a First class passenger, the fee should be $0
+-* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) to Cuba AND you are a Basic Economy class passenger, the fee should be $65
+-* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) to Cuba AND you are a Main Cabin^ class passenger, the fee should be $65
+-* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) to Cuba AND you are a Premium Economy class passenger, the fee should be $0
+-* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) to Cuba AND you are a Business class passenger, the fee should be $0
+-* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) to Cuba AND you are a First class passenger, the fee should be $0
++* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) AND you are a Basic Economy class passenger, the fee should be $65
++* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) AND you are a Main Cabin^ class passenger, the fee should be $65
++* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) AND you are a Premium Economy class passenger, the fee should be $0
++* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) AND you are a Business class passenger, the fee should be $0
++* If your flight is Between Haiti and U.S., Puerto Rico, U.S. Virgin Islands, Canada, Mexico, Caribbean (excluding Cuba), Central America (excluding Panama) AND you are a First class passenger, the fee should be $0
+ * If your flight is From all regions to Cuba AND you are a Basic Economy class passenger, the fee should be $150
+ * If your flight is From all regions to Cuba AND you are a Main Cabin^ class passenger, the fee should be $150
+ * If your flight is From all regions to Cuba AND you are a Premium Economy class passenger, the fee should be $0
+@@ -165,7 +165,7 @@
+ 
+ ### Third Bag
+ 
+-Decide the fee of your first checked bag according to the following:
++Decide the fee of your third checked bag according to the following:
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Basic Economy class passenger, the fee should be $150
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Main Cabin^ class passenger, the fee should be $150
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Premium Economy class passenger, the fee should be $150
+@@ -189,7 +189,7 @@
+ 
+ ### Fourth Bag +
+ 
+-Decide the fee of your first checked bag according to the following:
++Decide the fee of your fourth or subsequent checked bag according to the following:
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Basic Economy class passenger, the fee should be $200
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Main Cabin^ class passenger, the fee should be $200
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Premium Economy class passenger, the fee should be $200
+@@ -327,7 +327,7 @@
+ 
+ ##### Over 70 lbs / 32kgs to 100 lbs / 45 kgs
+ 
+-Decide the fee of your overweight bag (Over 53 lbs / 24 kgs to 70 lbs / 32 kgs) according to the following:
++Decide the fee of your overweight bag (Over 70 lbs / 32kgs to 100 lbs / 45 kgs) according to the following:
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Basic Economy Class passenger, the fee should be $200.
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Main Cabin Class passenger, the fee should be $200.
+ * If your flight is Within and between U.S., Canada, Puerto Rico and U.S. Virgin Islands AND you are a Premium Economy Class passenger, the fee should be $200.

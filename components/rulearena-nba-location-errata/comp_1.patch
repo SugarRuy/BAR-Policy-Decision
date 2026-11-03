@@ -1,0 +1,11 @@
+--- a/nba/annotated_problems/comp_1.json
++++ b/nba/annotated_problems/comp_1.json
+@@ -2676,7 +2676,7 @@
+         ],
+         "answer": true,
+         "illegal_operation": "B",
+-        "problematic_team": "H",
++        "problematic_team": "Q",
+         "relevant_rules": [
+             "contract_length_at_most_2_year_taxpayer_mid_level_exception",
+             "salary_cap_no_exceed_without_exception",

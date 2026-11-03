@@ -1,0 +1,17 @@
+--- a/airline/auto_test.py
++++ b/airline/auto_test.py
+@@ -108,11 +108,11 @@
+      - For the fourth checked bag, the checking fee is $200.
+    - Total Fee for Item 5: $200 (checking) + $0 (No overweight or oversize fees) = $200
+ Summary of Baggage Fees:
+-  - Item 2: $200
+-  - Item 3: $150
++  - Item 2: $150
++  - Item 3: $200
+   - Item 4: $200
+   - Item 5: $200
+-Total Baggage Fees: $200 (Item 2) + $150 (Item 3) + $200 (Item 4) + $200 (Item 5) = $750
++Total Baggage Fees: $150 (Item 2) + $200 (Item 3) + $200 (Item 4) + $200 (Item 5) = $750
+ Total Cost:
+ - Flight Ticket: $448
+ - Total Baggage Fees: $750

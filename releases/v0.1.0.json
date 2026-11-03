@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "BAR: Benchmark Audit and Revision",
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "repository": "https://github.com/SugarRuy/BAR-Policy-Decision",
+  "visibility_at_creation": "private",
+  "created_at_utc": "2026-11-01T07:04:18.039433+00:00",
+  "paper": {
+    "title": "Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks",
+    "source_sha256": "b2f7efb776f1b2322b48fb88b41e47961fe6ec3ccc58a773b515c21794424940",
+    "pdf_sha256": "d32af41c9d3510db96ff1f558fe5229b2742fc6dc7a8ce6014fa3a01f34f6760",
+    "pages": 32,
+    "arxiv_source_archive_sha256": "4b4873886950dc4bcdca7db6567eebe960d02c5b54e5b8fd31a60ad4ccf899d4",
+    "arxiv_id": null
+  },
+  "components": [
+    "rulearena-tax",
+    "legalbench-sara-numeric",
+    "conditionalqa-scoring"
+  ],
+  "reporting_units": 9,
+  "component_inventory": "inventory.json",
+  "study_inventory": "studies/index.json",
+  "study_inventory_sha256": "210cedbf950bf7763cb7f43c58971e17aeabd5d8a4b636de0cba07024bc3821d",
+  "evidence_index": "evidence/audit-index.json",
+  "study_responses": 2664,
+  "model_performance_experiments_added_by_packaging": 0,
+  "boundaries": [
+    "Component-level corrections, not complete benchmark correctness certification.",
+    "SARA and ConditionalQA source labels are unchanged and obtained separately.",
+    "OpenExempt study targets use amended premises and are not a replacement native key.",
+    "TAC runtime observations use constructed replies and trajectory input; no live-agent frequency or price correctness is measured."
+  ]
+}

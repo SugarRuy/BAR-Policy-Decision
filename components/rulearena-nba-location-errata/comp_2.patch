@@ -1,0 +1,11 @@
+--- a/nba/annotated_problems/comp_2.json
++++ b/nba/annotated_problems/comp_2.json
+@@ -231,7 +231,7 @@
+             "C. Team C signs a 3-year contract with Player E providing annual salary $7,000,000 in the first Salary Cap Year (2024-2025) and 5% increase per year."
+         ],
+         "answer": true,
+-        "illegal_operation": "C",
++        "illegal_operation": "D",
+         "problematic_team": "A",
+         "relevant_rules": [
+             "contract_length_at_most_4_year_except_qualifying_veteran_free_agent_5_year",

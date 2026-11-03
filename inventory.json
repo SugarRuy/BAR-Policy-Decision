@@ -1,10 +1,14 @@
 {
   "schema_version": 2,
-  "scope": "The three components and their scripts/docs; study archives and the complete release have separate inventories.",
+  "scope": "Seven scoped components and their scripts/docs; study archives and the complete release have separate inventories.",
   "files": {
     "THIRD_PARTY.md": {
-      "sha256": "7644e58380475ce177e14bb8ba7e0a10ebc2abeccee0c200534de8ce849a7c44",
-      "bytes": 5144
+      "sha256": "40488c37cd8c201d8e50b4deebd896306a0f5bd3360a3d7c68b47cc6d3e9866e",
+      "bytes": 5698
+    },
+    "components.json": {
+      "sha256": "db2231a1618b8b9b0ad3df48e722cee8bde8d0b901e21f43d0e56f84223f25c9",
+      "bytes": 1716
     },
     "components/conditionalqa-scoring/README.md": {
       "sha256": "843c388ff907b82cea763565945f22a9aa1e63f83344c74cb410ef1ed98d46e1",
@@ -38,6 +42,90 @@
       "sha256": "b5f714b026a032617aaead251dde9df13e3589a2e91a521d70b333cffbb7b9fa",
       "bytes": 2669
     },
+    "components/rulearena-airline-objective/README.md": {
+      "sha256": "74106f3787f73c1eb04ba4711c1b90a4a1bf09b55b497b4487babd8323aecd31",
+      "bytes": 2292
+    },
+    "components/rulearena-airline-objective/UPSTREAM-LICENSE": {
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "bytes": 1068
+    },
+    "components/rulearena-airline-objective/component.json": {
+      "sha256": "365041f3132e447224d0a0d21ba0cfc297f3db9c88788bbcd9a6f02b40f7d3f7",
+      "bytes": 7885
+    },
+    "components/rulearena-airline-objective/objective.txt": {
+      "sha256": "96ea75ef703e70bca21f2ef460e115872489ec82f87b8a85441ec7c50449e3fc",
+      "bytes": 335
+    },
+    "components/rulearena-airline-objective/references.jsonl": {
+      "sha256": "e425ed5ff88d60dbc25c1bbb21ccf69209d60af665b8b19fb90b547e3d772c7b",
+      "bytes": 180937
+    },
+    "components/rulearena-airline-prompt-errata/README.md": {
+      "sha256": "21d63b8ef50e9070c70a8570338ee58d6a96cee2bdbf90e4fa79eac2fec564e7",
+      "bytes": 1748
+    },
+    "components/rulearena-airline-prompt-errata/UPSTREAM-LICENSE": {
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "bytes": 1068
+    },
+    "components/rulearena-airline-prompt-errata/component.json": {
+      "sha256": "d9ce36f8ca72b0b5388970a547ef66af36b6e1ac03bbd8ab4db0acab2e7e0152",
+      "bytes": 8605
+    },
+    "components/rulearena-airline-prompt-errata/example.patch": {
+      "sha256": "f1c02bea2fff4ad6fa8d3feecbbe3eff8b378bbd984d7be8faf6894c94cc1347",
+      "bytes": 605
+    },
+    "components/rulearena-airline-prompt-errata/textual-policy.patch": {
+      "sha256": "3926a45d95df4d4577e5488cf7f575d8d34e82381c24c3a1b91f770e16814f0d",
+      "bytes": 6147
+    },
+    "components/rulearena-airline-scoring/README.md": {
+      "sha256": "ccee63af3c8b525ebd3f70fa0339a4761bd3711fe3c6737b825c54841dfb07b6",
+      "bytes": 2866
+    },
+    "components/rulearena-airline-scoring/UPSTREAM-LICENSE": {
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "bytes": 1068
+    },
+    "components/rulearena-airline-scoring/component.json": {
+      "sha256": "bcd4586ba562d4c1dfe97304106b869a875a16638ed875494c6c789f68f2953a",
+      "bytes": 2611
+    },
+    "components/rulearena-airline-scoring/evaluator.py": {
+      "sha256": "83a523a82c1fdb0be402186e555cb67536ec1d49ec1065a99601f9fb9c1dcd89",
+      "bytes": 2458
+    },
+    "components/rulearena-airline-scoring/scoring.patch": {
+      "sha256": "41da1bc7acd639e0cbe1a8f7e96ddbdc4240188ea5f58b41034c379d23d9b59e",
+      "bytes": 1780
+    },
+    "components/rulearena-nba-location-errata/README.md": {
+      "sha256": "a34e76aa7756a43ad084966e8bdf57d0211e39562cf0f1de7747522b95e44ac4",
+      "bytes": 1616
+    },
+    "components/rulearena-nba-location-errata/UPSTREAM-LICENSE": {
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "bytes": 1068
+    },
+    "components/rulearena-nba-location-errata/comp_1.patch": {
+      "sha256": "ecde6bc966ca969d6cf94526aeffb047cd4a4c067949d0afd751322355108b8b",
+      "bytes": 404
+    },
+    "components/rulearena-nba-location-errata/comp_2.patch": {
+      "sha256": "17d9b1c2bc3cca850847d36a896ea26730adbdb743753ef584eea4b8de2e6dcc",
+      "bytes": 528
+    },
+    "components/rulearena-nba-location-errata/component.json": {
+      "sha256": "1496111909fb97061cb658fafe9fe989fe5aa1225035a10f808650af3baa58a1",
+      "bytes": 4189
+    },
+    "components/rulearena-nba-location-errata/errata.json": {
+      "sha256": "d1e56c066f277c987f41d477c1791270720bc12ae7a6c1945adc26a2467d2c2d",
+      "bytes": 2315
+    },
     "components/rulearena-tax/README.md": {
       "sha256": "ae4a0faa160c108f927c7719a9e2c9f47c46a16ab830774881ae61072b5b7d5d",
       "bytes": 474
@@ -66,21 +154,41 @@
       "sha256": "5c4b4b2b5d3983be53416851c6ed994d3730a9f51245700c3e710049f5466481",
       "bytes": 110539
     },
-    "components.json": {
-      "sha256": "d66f2d8a40949d92e75fe945fe7f84ee520a52550d54fd30c7567fcfe8849d8c",
-      "bytes": 828
-    },
     "docs/COMPONENTS.md": {
-      "sha256": "ec609f681dc74c4a0e0d4bb587bf44f0d601b34259af6f3eb3a15b8f3684ca92",
-      "bytes": 8833
+      "sha256": "b3741778a373bc25527c06e8e69d4a510b6a07e60667cadfee31b88d49bfe623",
+      "bytes": 12407
+    },
+    "release.json": {
+      "sha256": "847048cd09298c29e3c09e3831f6a814606720636b2aff4e7c7219813b6c6271",
+      "bytes": 2413
+    },
+    "scripts/airline_policy_check.py": {
+      "sha256": "d05146c2ef8da64676915bf3709044f0098c2cbb46436e2ce7a6c348fe722614",
+      "bytes": 6338
     },
     "scripts/bar.py": {
-      "sha256": "720ef69e3a83280b9c61c849e625659e0e5eca8805ad437ac93ff5f716984d02",
-      "bytes": 14777
+      "sha256": "b8732bb09bf9c3f2c03d4d93ade42ae26cf616970f6c6d75e7c0d1c7200bfd1a",
+      "bytes": 15668
+    },
+    "scripts/check_audit_records.py": {
+      "sha256": "75f5eaf2e9ad87fab5a68e62e7e528da494f54318c1eeb129dfafd932b415ea1",
+      "bytes": 3785
     },
     "scripts/check_components.py": {
-      "sha256": "67de9dc878b6fc9e3f7a5104726336ca2568148c54f717317bc0ea3a72c06095",
-      "bytes": 24983
+      "sha256": "01b8a927b4a75cec3ab034de1787f4f256de47e3156b0b2656668a65ad33f806",
+      "bytes": 25290
+    },
+    "scripts/check_rulearena.py": {
+      "sha256": "a88b859ad6095a8b9727a11c7b8331e0f642668b3327ca6268c5a37ae4f53f79",
+      "bytes": 19579
+    },
+    "scripts/reproduce_results.py": {
+      "sha256": "dff00102f27284a9ab6714eb11b62f58d3cbab22162e7099a98bdcba52b1e4df",
+      "bytes": 31817
+    },
+    "scripts/rulearena.py": {
+      "sha256": "3b0d218fab8864b6c3fc4e5a72e29b75d572b5ac0facc13c432bef380624a630",
+      "bytes": 6722
     }
   }
 }

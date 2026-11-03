@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "id": "rulearena-airline-prompt-errata",
+  "kind": "input",
+  "source_repository": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "accepted_scope": "Correct the native example item-cost summary and textual-policy transcription; preserve amounts, cases, calculator, scoring and the allocation ambiguity.",
+  "remaining_limits": [
+    "Affects one-shot and/or textual policy variants: 900 of 1200 assembled prompts; Markdown zero-shot remains identical.",
+    "No model-score effect measured; regenerate predictions for modified inputs.",
+    "Nine Markdown Premium Economy dash cells remain explicit $0 clauses in the textual policy, following the native calculator interpretation. For four native PE cases the textual input is more explicit than Markdown; this erratum does not resolve or change that difference."
+  ],
+  "patches": [
+    {
+      "patch": "components/rulearena-airline-prompt-errata/example.patch",
+      "patch_sha256": "f1c02bea2fff4ad6fa8d3feecbbe3eff8b378bbd984d7be8faf6894c94cc1347",
+      "upstream_path": "airline/auto_test.py",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/auto_test.py",
+      "before_sha256": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+      "after_sha256": "7ba3458bcfa76cb6bbf701c980dcdf7e6a28073d3981d818a2d386956a1bcffe"
+    },
+    {
+      "patch": "components/rulearena-airline-prompt-errata/textual-policy.patch",
+      "patch_sha256": "3926a45d95df4d4577e5488cf7f575d8d34e82381c24c3a1b91f770e16814f0d",
+      "upstream_path": "airline/reference_rules_textual.txt",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/reference_rules_textual.txt",
+      "before_sha256": "155b310742726d3e1d580f77aeabd5347005b331d89f0f4b0e711bcce436869b",
+      "after_sha256": "03df78ee820d2f65234db0fe325e6882081a088635081b5ab9f4338a2f219e50"
+    }
+  ],
+  "payload_files": [
+    "components/rulearena-airline-prompt-errata/UPSTREAM-LICENSE"
+  ],
+  "notices": [
+    "components/rulearena-airline-prompt-errata/UPSTREAM-LICENSE"
+  ],
+  "source_files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/LICENSE",
+      "sha256": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+      "repository": "code"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/README.md",
+      "sha256": "0a3b1071c3cc27c3e837d586abd72dc2792d45f80a2100fb5773f5104adf3ec4",
+      "repository": "code"
+    },
+    {
+      "path": "airline/auto_test.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/auto_test.py",
+      "sha256": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+      "repository": "code"
+    },
+    {
+      "path": "airline/compute_answer.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/compute_answer.py",
+      "sha256": "5d1703f35df56ef2cbcb38f4eeb43c418feef4200c247e7894cd6b4846f80a14",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_1/0.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_1/0.csv",
+      "sha256": "c45ebc4609403656e542ea7691500703921107571b01b2c1d1b79999f758677b",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_1/1.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_1/1.csv",
+      "sha256": "8a43e162de7497aa63e449cad31593fc9288c53888e21a90f4564baca132b7c8",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_2/0.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_2/0.csv",
+      "sha256": "df0f600a5549887cdbc10516aefb62d41f14008af4813242967467e302438371",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_2/1.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_2/1.csv",
+      "sha256": "9aca4bc0e03afc2c24099e18c2568a8ebf6944e03ec7282b31fecf5cc6faf8f4",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_3/0.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_3/0.csv",
+      "sha256": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_3/1.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_3/1.csv",
+      "sha256": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_4/0.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_4/0.csv",
+      "sha256": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+      "repository": "code"
+    },
+    {
+      "path": "airline/fee_tables/bag_4/1.csv",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/fee_tables/bag_4/1.csv",
+      "sha256": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+      "repository": "code"
+    },
+    {
+      "path": "airline/gen_questions.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/gen_questions.py",
+      "sha256": "81fbab5332d2a5078458ebbf339192afc81b1260bbae8107c70f9572248da949",
+      "repository": "code"
+    },
+    {
+      "path": "airline/reference_rules.txt",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/reference_rules.txt",
+      "sha256": "24d38221ec6d4eff4b8d81312e4e9e1542bc141891cab128d9d7b13c19311c71",
+      "repository": "code"
+    },
+    {
+      "path": "airline/reference_rules_textual.txt",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/reference_rules_textual.txt",
+      "sha256": "155b310742726d3e1d580f77aeabd5347005b331d89f0f4b0e711bcce436869b",
+      "repository": "code"
+    },
+    {
+      "path": "airline/structure.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/structure.py",
+      "sha256": "860056d4c5defea5bea1faff60f21e9087c2646867d102dd65084c3704285181",
+      "repository": "code"
+    },
+    {
+      "path": "airline/synthesized_problems/comp_0.jsonl",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/synthesized_problems/comp_0.jsonl",
+      "sha256": "8525ef3fa392180c993cec3cb9f56938a552b5198a5ec380195a5e505762bb35",
+      "repository": "code"
+    },
+    {
+      "path": "airline/synthesized_problems/comp_1.jsonl",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/synthesized_problems/comp_1.jsonl",
+      "sha256": "ca205ee9da77f4f35d9330d1a92af94f861ce6ef2a583477cbb3c5e3d474c8c3",
+      "repository": "code"
+    },
+    {
+      "path": "airline/synthesized_problems/comp_2.jsonl",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/synthesized_problems/comp_2.jsonl",
+      "sha256": "63b738c52bfe5a012ba2ae637fc796bf94cd3f368cf8924bb72563d4c569d83d",
+      "repository": "code"
+    }
+  ],
+  "license": "MIT; upstream notice retained",
+  "distribution_status": "local_update_not_published",
+  "model_calls": 0,
+  "population": {
+    "cases": 300,
+    "prompt_variants": 1200,
+    "changed_prompts": 900,
+    "changed_references": 0
+  }
+}

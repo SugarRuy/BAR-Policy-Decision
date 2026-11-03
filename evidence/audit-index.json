@@ -56,6 +56,17 @@
           "label": "case:tax-compensation",
           "number": 26
         }
+      ],
+      "additional_revisions": [
+        "components/rulearena-airline-prompt-errata/component.json",
+        "components/rulearena-airline-objective/component.json",
+        "components/rulearena-airline-scoring/component.json",
+        "components/rulearena-nba-location-errata/component.json"
+      ],
+      "supplemental_artifact_checks": [
+        "Airline example/textual-policy errata and minimum-cost objective amendment are separately versioned.",
+        "Airline amount scoring has constructed-response witnesses for decimal stripping and substring acceptance; see the new scorer component.",
+        "NBA has two guarded localization corrections, with binary verdicts unchanged."
       ]
     },
     {

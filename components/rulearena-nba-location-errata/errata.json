@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "id": "BAR-RuleArena-NBA-location-errata-v1",
+  "artifact_kind": "two-entry source-bound erratum; not a revised dataset",
+  "source_commit": "59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "record_hash_encoding": "SHA256 of UTF-8 json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(comma, colon))",
+  "changes": [
+    {
+      "case_id": "nba/comp_1/62",
+      "source_file": "nba/annotated_problems/comp_1.json",
+      "source_index_zero_based": 62,
+      "record_sha256": "54ad66b6f6c2346a6b5df2571514814e4ec75ae52642d50635d811bcf0219bb7",
+      "json_pointer": "/62/problematic_team",
+      "field": "problematic_team",
+      "old": "H",
+      "new": "Q",
+      "classification": "localization-reference erratum",
+      "reason": "Q signs and trades G with a 6% annual increase; VII.5(a)(2) explicitly redirects this contract to the 5% limit in VII.5(a)(1). H does not exist in the source case.",
+      "binary_verdict_changed": false,
+      "rules_changed": false,
+      "inputs_changed": false
+    },
+    {
+      "case_id": "nba/comp_2/4",
+      "source_file": "nba/annotated_problems/comp_2.json",
+      "source_index_zero_based": 4,
+      "record_sha256": "ca1c699c9f42c676eb523130a44be5bea302261947d2435f999ab6bd87134d44",
+      "json_pointer": "/4/illegal_operation",
+      "field": "illegal_operation",
+      "old": "C",
+      "new": "D",
+      "classification": "localization-reference erratum",
+      "reason": "The literal D operation is the Team A signing. Over-38 allocation raises the first-year charge to 172000000/21 dollars, taking Team A above the first apron by 1228000/21 dollars.",
+      "binary_verdict_changed": false,
+      "rules_changed": false,
+      "inputs_changed": false
+    }
+  ],
+  "excluded_from_patch": [
+    "nba/comp_1/81",
+    "all relevant_rules annotations",
+    "policy and task assumptions",
+    "native scorer code",
+    "all model outputs and historical scores",
+    "all constructed 40-case controls"
+  ],
+  "release_decision": "Accepted as two source-supported localization corrections; not a complete NBA answer-key repair.",
+  "patch_semantics": "Apply guarded replacements to a copy of the exact frozen records. Preserve every other field and record. Reject wrong source hashes, mismatched records and repeat application."
+}

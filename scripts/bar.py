@@ -44,9 +44,9 @@ def verify():
         if (not path.is_file() or digest(path.read_bytes()) != expected["sha256"]
                 or path.stat().st_size != expected["bytes"]):
             raise ValueError(f"Missing or changed packaged file: {name}")
-    if len(catalog()) != 3 or {c["id"] for c in catalog()} != {
-            "rulearena-tax", "legalbench-sara-numeric", "conditionalqa-scoring"}:
-        raise ValueError("The release must contain exactly the three selected components")
+    ids = [c["id"] for c in catalog()]
+    if len(ids) != len(set(ids)) or set(ids) != set(read_json(ROOT / "release.json")["components"]):
+        raise ValueError("The component catalog differs from release metadata")
     actual = {str(p.relative_to(ROOT)) for p in (ROOT / "components").rglob("*")
               if p.is_file() and "__pycache__" not in p.parts}
     if actual != {name for name in inventory if name.startswith("components/")}:
@@ -133,6 +133,15 @@ def prepare(identifier, source, output):
             target = child(tree, patch["upstream_path"])
             if digest(target.read_bytes()) != patch["after_sha256"]:
                 raise ValueError(f"Revised source mismatch: {patch['upstream_path']}")
+        for addition in manifest.get("additional_files", []):
+            data = child(ROOT, addition["payload"]).read_bytes()
+            if digest(data) != addition["sha256"]:
+                raise ValueError("Additional implementation hash mismatch")
+            destination = child(tree, addition["output_path"])
+            if destination.exists():
+                raise ValueError("Additional implementation would replace a patched file")
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(data)
         for name, original in staged.items():
             if child(source, name).read_bytes() != original:
                 raise ValueError(f"Source changed during preparation: {name}")
@@ -146,6 +155,8 @@ def prepare(identifier, source, output):
             "files": {name: digest(child(tree, name).read_bytes()) for name in staged},
             "original_files": {name: digest(data) for name, data in staged.items()},
             "source_repository": manifest["source_repository"],
+            "additional_files": {item["output_path"]: item["sha256"]
+                                 for item in manifest.get("additional_files", [])},
             "model_calls": 0,
         }
         (tree / "bar-preparation.json").write_text(json.dumps(receipt, indent=2) + "\n")
@@ -186,8 +197,12 @@ def tax_prompt_renderer(sources):
 
 
 def dataset(identifier, source, output):
+    if identifier in ("rulearena-airline-objective", "rulearena-nba-location-errata"):
+        import rulearena
+        import sys
+        return rulearena.dataset(sys.modules[__name__], identifier, source, output)
     if identifier != "rulearena-tax":
-        raise ValueError("Only rulearena-tax has a reference-dataset builder. "
+        raise ValueError("This component has no dataset builder. "
                          "Scorer corrections retain the upstream dataset labels.")
     verify()
     entry = next(c for c in catalog() if c["id"] == identifier)

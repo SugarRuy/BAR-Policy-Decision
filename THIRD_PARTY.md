@@ -2,7 +2,7 @@
 
 BAR-original code is MIT under the repository's root license. That license does
 not replace third-party notices or grant rights to upstream datasets. This
-document covers the three component exports and the accompanying study and
+document covers the seven component exports and the accompanying study and
 audit records. It does not grant a new license to upstream material.
 
 | Files | Terms and attribution | Distribution decision |
@@ -10,6 +10,8 @@ audit records. It does not grant a new license to upstream material.
 | `scripts/bar.py`, `scripts/check_components.py`, `components/legalbench-sara-numeric/evaluator.py` | BAR-original code, MIT; Yanru Xiao and Yifei Cai (2026) | Included. The SARA evaluator independently implements the stated parsing/math contract. |
 | Component manifests, component documentation and SARA synthetic conformance vectors | BAR-original metadata/documentation; native source identities preserved | Included. SARA fixtures contain synthetic amounts and native IDs/diagnostic counts, not native labels or source text. |
 | `components/rulearena-tax/line22.patch`, `labels.json`, `corrections.json`, `reference_pairs.jsonl` | RuleArena upstream MIT notice, copyright (c) 2024 Ruiwen Zhou, plus BAR's scoped revision | Included with `components/rulearena-tax/UPSTREAM-LICENSE`. All 300 source-bound reference pairs and 27 changes retain IDs, pins and dependency flags. Raw case/prompt files are obtained separately. |
+| Airline and NBA native patches, source-bound reference/errata records | Same frozen RuleArena MIT source as Tax, plus BAR corrections | Included with an unchanged upstream notice in each component. Raw policies, cases, CSV tables and whole programs are still obtained separately. |
+| Airline objective text, decimal scoring helper, RuleArena builders and offline checkers | BAR-original code, calculations and documentation, MIT | Included. Reference calculations are conditional on the declared native workload; no new model responses are included. |
 | `components/conditionalqa-scoring/denominator.patch` | Upstream BSD-2-Clause notice, copyright (c) 2017 Bhuwan Dhingra, plus BAR's aggregation revision | Included with the unmodified `components/conditionalqa-scoring/UPSTREAM-LICENSE`. Notice also accompanies prepared output. |
 | LegalBench `evaluation.py`, its source-context patch, and source-input restoration text | File-level source redistribution terms unresolved at the pinned revision | Excluded. The release does not contain the former `evaluation.py.patch` or full upstream module. Users supply their own pinned source for optional in-memory adaptation. |
 | SARA statutes, cases, prompts and labels | The pinned LegalBench SARA task README says MIT for that task. This does not establish a license for all LegalBench code or independently settle the original SARA archive's terms. | Excluded; fetched by users from the pinned official source. No original SARA labels are repaired or relicensed. |

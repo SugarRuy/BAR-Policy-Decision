@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "name": "BAR: Benchmark Audit and Revision",
-  "version": "0.1.0",
-  "tag": "v0.1.0",
+  "version": "0.2.0",
+  "tag": null,
   "repository": "https://github.com/SugarRuy/BAR-Policy-Decision",
   "visibility_at_creation": "private",
   "created_at_utc": "2026-11-01T07:04:18.039433+00:00",
@@ -17,7 +17,11 @@
   "components": [
     "rulearena-tax",
     "legalbench-sara-numeric",
-    "conditionalqa-scoring"
+    "conditionalqa-scoring",
+    "rulearena-airline-prompt-errata",
+    "rulearena-airline-objective",
+    "rulearena-airline-scoring",
+    "rulearena-nba-location-errata"
   ],
   "reporting_units": 9,
   "component_inventory": "inventory.json",
@@ -30,6 +34,15 @@
     "Component-level corrections, not complete benchmark correctness certification.",
     "SARA and ConditionalQA source labels are unchanged and obtained separately.",
     "OpenExempt study targets use amended premises and are not a replacement native key.",
-    "TAC runtime observations use constructed replies and trajectory input; no live-agent frequency or price correctness is measured."
-  ]
+    "TAC runtime observations use constructed replies and trajectory input; no live-agent frequency or price correctness is measured.",
+    "Airline objective amendment changes model-visible inputs but retains conditional native reference amounts.",
+    "NBA changes two localization fields only; Airline amount-scoring probes are constructed, not model performance."
+  ],
+  "status": "validated_unreleased",
+  "based_on_release": "v0.1.0",
+  "prepared_at_utc": "2026-11-03T16:59:02.417622+00:00",
+  "paper_binding_scope": "Paper and reported studies associated with v0.1.0; the new component checks are not new manuscript performance results.",
+  "validation_record": "evidence/rulearena-component-checks.json",
+  "validation_completed_at_utc": "2026-11-03T17:21:32.449949+00:00",
+  "implementation_review": "accepted_after_fixes"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "status": "three_selected_components",
+  "status": "seven_scoped_components_validated_unreleased",
   "components": [
     {
       "id": "rulearena-tax",
@@ -19,6 +19,30 @@
       "kind": "scorer",
       "payload_status": "code_patch_packaged",
       "manifest": "components/conditionalqa-scoring/component.json"
+    },
+    {
+      "id": "rulearena-airline-prompt-errata",
+      "kind": "input",
+      "payload_status": "validated_and_reviewed_unreleased",
+      "manifest": "components/rulearena-airline-prompt-errata/component.json"
+    },
+    {
+      "id": "rulearena-airline-objective",
+      "kind": "input",
+      "payload_status": "validated_and_reviewed_unreleased",
+      "manifest": "components/rulearena-airline-objective/component.json"
+    },
+    {
+      "id": "rulearena-airline-scoring",
+      "kind": "scorer",
+      "payload_status": "validated_and_reviewed_unreleased",
+      "manifest": "components/rulearena-airline-scoring/component.json"
+    },
+    {
+      "id": "rulearena-nba-location-errata",
+      "kind": "reference",
+      "payload_status": "validated_and_reviewed_unreleased",
+      "manifest": "components/rulearena-nba-location-errata/component.json"
     }
   ],
   "inventory_scope": "Component payloads, component documentation and component scripts only.",

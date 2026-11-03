@@ -1,0 +1,47 @@
+--- a/airline/auto_test.py
++++ b/airline/auto_test.py
+@@ -1,4 +1,5 @@
+ import os
++from bar_airline_scoring import parse_total, score_total, score_saved_log
+ import json
+ import argparse
+ import openai
+@@ -215,18 +216,9 @@
+             response = llm(args.llm, prompt)
+             response = response.replace("**", "")
+             
+-            start_idx = response.find("The total cost is")
+-            if start_idx != -1:
+-                conclusion = response[start_idx:]
+-                value_idx = conclusion.find("$")
+-                if value_idx != -1:
+-                    value = conclusion[value_idx+1:].replace(",", "").replace(".", "")
+-                    if value.isnumeric():
+-                        value = int(value)
+-                    pred = value
+-                    if value == fee or (isinstance(value, str) and str(fee) in value):
+-                        acc = True
+-            
++            pred = parse_total(response)
++            acc = score_total(response, fee)
++
+             rule_app_checklist, structured_response = \
+                 check_rule_application(question_prompt, info_dict, response)
+             break
+@@ -314,15 +306,7 @@
+     for i in range(args.start_idx):
+         with open(os.path.join(log_path, f"{i}.log"), "r") as f:
+             lines = f.readlines()
+-        for j in range(len(lines)):
+-            if "GPT Predicted: " in lines[j]:
+-                break
+-        pred = lines[j][15:-1]
+-        for j in range(len(lines)):
+-            if "Rule Calculated: " in lines[j]:
+-                break
+-        truth = lines[j][17:-1]
+-        if truth in pred:
++        if score_saved_log("".join(lines)):
+             total_acc += 1
+         for j in range(len(lines)):
+             if any([lines[j].startswith(tag) \

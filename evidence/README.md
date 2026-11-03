@@ -5,7 +5,14 @@ to source versions, case numbers, confirmed findings, controls and unresolved
 questions. It is a compact reader index, not an estimated error rate or a
 replacement answer key. LegalBench SARA and DeonticBench share source material.
 
-The three selected repair components live separately under `components/`.
+The seven scoped repair components live separately under `components/`.
+The four added RuleArena components are an unreleased update; their
+offline checks are separate from the paper's saved-response studies.
+[`rulearena-component-checks.json`](rulearena-component-checks.json) records
+their population checks and constructed scoring controls, with source and
+implementation hashes. All seven components passed the offline checker;
+the four additions also passed in a clean copy with network access and access
+to the private workspaces blocked.
 Other findings remain audit findings; their presence in this index does not
 promise a repaired dataset.
 

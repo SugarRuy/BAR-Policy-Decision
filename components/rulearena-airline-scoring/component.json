@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "id": "rulearena-airline-scoring",
+  "kind": "scorer",
+  "source_repository": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "accepted_scope": "Use exact terminal-amount comparison in native live scoring and resumed log scoring; resumed scoring reparses the saved raw response rather than inheriting old GPT Predicted errors.",
+  "remaining_limits": [
+    "Constructed-response and amount-echo validation only; no observed model-performance effect.",
+    "Requires the native terminal phrase, US numeric format, at most two decimal places, optional USD and terminal period. Other prose/symbol formats are rejected.",
+    "Does not repair rule-attribution scoring, policy ambiguity or reference amounts.",
+    "The first marker must begin the terminal amount statement. Colon variants, space after $, closing quotes/parentheses, earlier non-answer markers and post-answer prose are rejected even when the numeric answer is correct; these are interface failures, not policy-reasoning failures."
+  ],
+  "patches": [
+    {
+      "patch": "components/rulearena-airline-scoring/scoring.patch",
+      "patch_sha256": "41da1bc7acd639e0cbe1a8f7e96ddbdc4240188ea5f58b41034c379d23d9b59e",
+      "upstream_path": "airline/auto_test.py",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/auto_test.py",
+      "before_sha256": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+      "after_sha256": "6e3cc9c0d80f45bbdf5773daf4a52abd06919acb54127763eeeb5a5ac725dc8f"
+    }
+  ],
+  "payload_files": [
+    "components/rulearena-airline-scoring/UPSTREAM-LICENSE",
+    "components/rulearena-airline-scoring/evaluator.py"
+  ],
+  "notices": [
+    "components/rulearena-airline-scoring/UPSTREAM-LICENSE"
+  ],
+  "source_files": [
+    {
+      "path": "airline/auto_test.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/airline/auto_test.py",
+      "sha256": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+      "repository": "code"
+    }
+  ],
+  "license": "MIT; upstream notice retained",
+  "distribution_status": "local_update_not_published",
+  "model_calls": 0,
+  "additional_files": [
+    {
+      "payload": "components/rulearena-airline-scoring/evaluator.py",
+      "output_path": "airline/bar_airline_scoring.py",
+      "sha256": "83a523a82c1fdb0be402186e555cb67536ec1d49ec1065a99601f9fb9c1dcd89"
+    }
+  ]
+}

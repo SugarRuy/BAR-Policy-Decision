@@ -5,8 +5,16 @@ a second manuscript here. The approved remote is
 `SugarRuy/BAR-Policy-Decision` and MUST remain private. Only the user changes
 visibility. Initial import, commit, push and a private Release are authorized.
 
-Package only RuleArena Tax, LegalBench SARA numeric and ConditionalQA revisions,
-plus the evidence and saved-response reproduction used by the current article.
+The November 3 expansion retains the three released
+components and add RuleArena Airline prompt errata, a minimum-cost objective
+amendment, Airline amount scoring, and NBA localization errata. Validate the
+actual distributed artifacts offline, then obtain Claude Code Opus 5.5 review.
+After validation and Opus review, the user authorized committing and pushing
+this update to the private repository. Do not create a release or change
+visibility in this pass. Keep BAR version identifiers in repository metadata;
+the manuscript names BAR and links the repository without a BAR version number.
+Keep v0.1.0 and its saved-response results unchanged; label the update unreleased.
+Package these scoped revisions plus the evidence and saved-response reproduction.
 Do not launch model experiments. Preserve upstream sources and old results.
 BAR-original code uses MIT; preserve file-specific third-party terms and omit
 source material whose redistribution terms are unresolved.

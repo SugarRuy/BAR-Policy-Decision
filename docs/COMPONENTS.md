@@ -1,6 +1,6 @@
-# Three scoped BAR components
+# Seven scoped BAR components
 
-The release contains only the three revisions below. Original labels, policies,
+The update contains the seven revisions below. Original labels, policies,
 case text and saved model outputs are not overwritten. These revisions do not
 certify complete benchmark correctness. The four saved-response studies are
 documented separately and are not part of this component inventory.
@@ -10,6 +10,10 @@ documented separately and are not part of this component inventory.
 | `rulearena-tax` | MIT native patch, 300 reference pairs, unchanged native-input builder | Form 1040 line 22 is floored at zero; 27 references change and 273 do not. Earlier intermediates and T2/T3 dependencies remain conditional. |
 | `legalbench-sara-numeric` | BAR-original MIT numeric evaluator, in-memory adapter, synthetic conformance vectors | Signed decimal parsing and zero-reference handling; original reference labels retained. The 100 label echoes comprise 4 train and 96 test rows; performance scope is the 96 test rows. |
 | `conditionalqa-scoring` | BSD-2-Clause evaluator patch and upstream notice | All reference IDs remain in denominators; absent predictions contribute zero; empty categories return JSON `null`. Per-item answer and condition metrics remain native. |
+| `rulearena-airline-prompt-errata` | Two native prompt patches | Example attribution and textual-policy transcription; 900/1,200 prompt variants change, amounts do not. |
+| `rulearena-airline-objective` | Objective text, 300 reference/hash records and input builder | Explicit minimum-cost objective in Markdown zero-shot inputs; 94 allocation-sensitive cases, four separately flagged PE cases; no amount changes. |
+| `rulearena-airline-scoring` | Native scoring patch and BAR-original decimal helper | Exact terminal-amount comparison, with native first-marker selection; no substring acceptance. |
+| `rulearena-nba-location-errata` | Two native JSON patches, guarded errata and 216-record builder | Two localization fields only; binary verdicts and other labels unchanged. |
 
 Each `components/<id>/component.json` binds the exact upstream revision and
 SHA-256 of all source inputs, patches and prepared programs. Preparation rejects
@@ -19,7 +23,8 @@ directories and output paths inside source or artifact trees.
 ## Requirements and source acquisition
 
 Use Python 3.11 or newer and the `patch` command. The checked environment uses
-Python 3.12.3, NumPy 2.3.5 and Pydantic 2.13.1. Full LegalBench adapter verification
+Python 3.12.3, NumPy 2.3.5 and Pydantic 2.13.1. Airline calculator replay
+additionally uses pandas. Full LegalBench adapter verification
 also uses scikit-learn 1.8.0 and NLTK 3.9.4. No NLTK data download is needed.
 The standalone SARA numeric function needs only NumPy; the CQA scorer needs
 only the Python standard library. No model SDKs, credentials or model calls
@@ -27,7 +32,7 @@ are required.
 
 ```bash
 python3 -m venv /tmp/bar-env
-/tmp/bar-env/bin/pip install numpy==2.3.5 pydantic==2.13.1 scikit-learn==1.8.0 nltk==3.9.4
+/tmp/bar-env/bin/pip install numpy==2.3.5 pydantic==2.13.1 scikit-learn==1.8.0 nltk==3.9.4 pandas==2.3.3
 python3 scripts/bar.py list
 python3 scripts/bar.py verify
 /tmp/bar-env/bin/python scripts/check_components.py \
@@ -54,6 +59,7 @@ their repository roots to this layout:
 | `legalbench-sara-numeric-code` | `HazyResearch/legalbench@b46bf4ffae90524b2b72aaa30e7745fe9db64481` |
 | `legalbench-sara-numeric-data` | `nguha/legalbench@daec8237410aa23e3faf4bc41ad8b3a7e1696826` on Hugging Face |
 | `conditionalqa-scoring-code` | `haitian-sun/ConditionalQA@77bd295952daf415548b3244db10880d3d55cfe0` |
+| `rulearena-airline-prompt-errata-code`, `rulearena-airline-objective-code`, `rulearena-airline-scoring-code`, `rulearena-nba-location-errata-code` | Each points to `SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903`. All may reference the same complete pinned checkout. |
 
 The manifests contain the exact official file URLs and expected hashes.
 Data acquisition and use remain subject to upstream terms; no raw SARA or
@@ -154,6 +160,36 @@ An explicit `answers: []` is a valid prediction for an unanswerable question;
 an absent ID receives zero. Duplicate-ID and malformed-answer handling retain
 upstream behavior and are outside this repair.
 
+## Added Airline and NBA components
+
+Use the same pinned RuleArena checkout with each command, and a different fresh
+output directory each time:
+
+```bash
+python3 scripts/bar.py prepare rulearena-airline-prompt-errata \
+  --source /path/to/pinned/RuleArena --output /tmp/airline-prompt-overlay
+python3 scripts/bar.py dataset rulearena-airline-objective \
+  --source /path/to/pinned/RuleArena --output /tmp/airline-objective-data
+python3 scripts/bar.py prepare rulearena-airline-scoring \
+  --source /path/to/pinned/RuleArena --output /tmp/airline-scoring-overlay
+python3 scripts/bar.py prepare rulearena-nba-location-errata \
+  --source /path/to/pinned/RuleArena --output /tmp/nba-location-overlay
+python3 scripts/bar.py dataset rulearena-nba-location-errata \
+  --source /path/to/pinned/RuleArena --output /tmp/nba-location-data
+```
+
+The objective builder returns original and amended messages, unchanged references,
+source IDs/hashes and per-case ambiguity flags. It implements only Markdown
+zero-shot and does not apply the other components. The two Airline code overlays
+both modify `auto_test.py`; they must not be combined by overwriting one another.
+For objective-data scoring, the standalone `parse_total` and `score_total`
+functions in `components/rulearena-airline-scoring/evaluator.py` can be used
+directly. The NBA builder returns all original/revised records and change flags.
+
+Component READMEs give the exact parser contract, conditional reference
+interpretations and residual issues. The new checks use constructed responses;
+they make no claim about model gains or losses.
+
 ## Verification coverage
 
 The portable checker executes the distributed outputs. It checks all 300 Tax
@@ -168,5 +204,19 @@ empty submissions and empty categories.
 Deliberately wrong before/after hashes, reapplication and changed Tax prompt
 inputs must fail. Every checked upstream file and packaged payload is verified
 again after the run. Results include source hashes, IDs, counts, runtime versions
-and `model_calls: 0`. The component inventory covers these three revisions;
+and `model_calls: 0`.
+
+Additional checks replay all 300 Airline references against the native calculator
+and independent policy arithmetic, enumerate 6,145 free-bag subsets with a second
+dynamic-program check, compare all 1,200 prompt variants, and verify the exact
+input amendment and its hash bindings. Airline scoring tests execute the patched
+native branch plus its installed helper, with decimal, grouping, wrong-value,
+multiple-answer and substring controls and 1,200 native amount echoes. Native log
+replay uses the same parser and is checked against live scores for completed
+responses, including old logs with incorrect stored parser values. Upstream
+execution-failure handling is outside this repair. NBA checks
+compare all 216 records, both native score witnesses, and unchanged binary labels.
+Wrong-source tests must reject each new component before writing output.
+
+The component inventory covers these seven revisions;
 the study archives and complete release have separate inventories.

@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "id": "rulearena-nba-location-errata",
+  "kind": "reference",
+  "source_repository": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "accepted_scope": "Correct two native localization fields: comp_1/62 team H to Q and comp_2/4 operation C to D; retain all binary verdicts, rule annotations, inputs and other records.",
+  "remaining_limits": [
+    "Supported violating locations are not a claim of unique or exhaustive violations. The receiving-team Room question in comp_1/62 remains unresolved.",
+    "comp_2/4 follows the native first-year linear-raise and transaction-order convention.",
+    "Other semantic cases, comp_1/81 and the rule-attribution vocabulary remain unresolved."
+  ],
+  "patches": [
+    {
+      "patch": "components/rulearena-nba-location-errata/comp_1.patch",
+      "patch_sha256": "ecde6bc966ca969d6cf94526aeffb047cd4a4c067949d0afd751322355108b8b",
+      "upstream_path": "nba/annotated_problems/comp_1.json",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/annotated_problems/comp_1.json",
+      "before_sha256": "b2fc84e1f9467505d950fa68c5db4f7e91fcbbde846a2393570a7cefac8ada33",
+      "after_sha256": "7719e0921561f1cf3c2652aa7367e1fa5a94c24b886863326d40bd55b5e99279"
+    },
+    {
+      "patch": "components/rulearena-nba-location-errata/comp_2.patch",
+      "patch_sha256": "17d9b1c2bc3cca850847d36a896ea26730adbdb743753ef584eea4b8de2e6dcc",
+      "upstream_path": "nba/annotated_problems/comp_2.json",
+      "source": "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903",
+      "upstream_url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/annotated_problems/comp_2.json",
+      "before_sha256": "60a32c7f9c8413c1d3e529098c3788efe07c436b74a33673817f099f01108e39",
+      "after_sha256": "db4bce964077de6368c47eda9691f9c072140768aa02a0124a5e72d2bad04597"
+    }
+  ],
+  "payload_files": [
+    "components/rulearena-nba-location-errata/UPSTREAM-LICENSE",
+    "components/rulearena-nba-location-errata/errata.json"
+  ],
+  "notices": [
+    "components/rulearena-nba-location-errata/UPSTREAM-LICENSE"
+  ],
+  "source_files": [
+    {
+      "path": "nba/annotated_problems/comp_0.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/annotated_problems/comp_0.json",
+      "sha256": "4af08b38d01a60e9206865b44bca6e05bb7c37d3cb7fbb294acd489e16a8cc3c",
+      "repository": "code"
+    },
+    {
+      "path": "nba/annotated_problems/comp_1.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/annotated_problems/comp_1.json",
+      "sha256": "b2fc84e1f9467505d950fa68c5db4f7e91fcbbde846a2393570a7cefac8ada33",
+      "repository": "code"
+    },
+    {
+      "path": "nba/annotated_problems/comp_2.json",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/annotated_problems/comp_2.json",
+      "sha256": "60a32c7f9c8413c1d3e529098c3788efe07c436b74a33673817f099f01108e39",
+      "repository": "code"
+    },
+    {
+      "path": "nba/auto_test.py",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/auto_test.py",
+      "sha256": "8a8677c36579dd945f978da8cd8eed264d5072cb719fa6f1e260ef9aceb2e29c",
+      "repository": "code"
+    },
+    {
+      "path": "nba/reference_rules.txt",
+      "url": "https://raw.githubusercontent.com/SkyRiver-2000/RuleArena/59f60f6b4eb93a9b6d187ec781349d4f15618903/nba/reference_rules.txt",
+      "sha256": "eae4dbb7d7ec5847bb56b9280fe811ca275edc34431fad855d330cfb7d1db0ed",
+      "repository": "code"
+    }
+  ],
+  "license": "MIT; upstream notice retained",
+  "distribution_status": "local_update_not_published",
+  "model_calls": 0,
+  "dataset": {
+    "asset_name": "BAR-RuleArena-NBA-location-errata-v1",
+    "record_count": 216,
+    "changed_records": 2,
+    "changed_binary_verdicts": 0
+  }
+}

@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite the BAR paper and the original benchmark, and identify the component version used."
+message: "This is the unreleased 0.2.0 update. Please cite the BAR paper and original benchmark, and identify the component version used. The last released tag is v0.1.0."
 type: software
 title: "BAR: Benchmark Audit and Revision"
-version: 0.1.0
+version: 0.2.0
 authors:
   - family-names: Xiao
     given-names: Yanru

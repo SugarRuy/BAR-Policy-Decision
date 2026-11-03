@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "status": "passed",
+  "recorded_at_utc": "2026-11-03T17:21:32.436085+00:00",
+  "scope": "Offline component validation; no model calls or estimates of model accuracy. Airline reference comparisons retain the conditional interpretations documented by the component.",
+  "command": "python3 -B scripts/check_components.py --sources /path/to/pinned-sources --output /path/to/checks.json",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "pydantic": "2.13.1",
+    "pandas": "2.3.3"
+  },
+  "components_checked": 7,
+  "source_bindings": {
+    "rulearena-tax-code/tax/structured_forms.py": "4d5a01ae0998f5cb965f00b62f2a1aba98e979649ecc88f6c2977ddb6b04a8ad",
+    "rulearena-tax-code/tax/micro_evaluation.py": "866e44f16a817c0c415e1c2640ebdf0d58e046f9d8f3d60fc7da201ff9a4d026",
+    "rulearena-tax-code/tax/prompt.py": "90ee4a72e4486312e0bc739b294320edfe6d011600328da18562ab23869d0a2e",
+    "rulearena-tax-code/tax/auto_test.py": "90a01c09422068f5689a2d658b5def2cfc58e18473dfc104c2b5b5d134fa27f3",
+    "rulearena-tax-code/tax/synthesized_problems/comp_0.json": "2142495068970cfd47ca505f290867c43f137024325e31170362a1baa43f405c",
+    "rulearena-tax-code/tax/synthesized_problems/comp_1.json": "7f8d8b5175a4710764700322a0ceb89c2e9839aa7a2228b539f86fbec832c063",
+    "rulearena-tax-code/tax/synthesized_problems/comp_2.json": "4041bde8f1db40c138ce47cf618b9144447b07e5c55e450e5f7a30dc4acda26f",
+    "legalbench-sara-numeric-code/evaluation.py": "7bbae257d64ea9f29d97a25d92bbfca4343f3d2d495fd5c724f75b3ab0671e1a",
+    "legalbench-sara-numeric-code/tasks/sara_numeric/base_prompt.txt": "a9b5b4555b5695418ac26de2676b3acb7d03f1084238065f32bd13ae4f3d2000",
+    "legalbench-sara-numeric-data/data/sara_numeric/train.tsv": "d258e56561efb23e297d6f415bc113032581dc920fd23ca5318ad1e06bdd87a6",
+    "legalbench-sara-numeric-data/data/sara_numeric/test.tsv": "8a2387c79048bfb5d82ccdaf60d638a489dbcb2d1ab020d4ddda391cf6a1a723",
+    "conditionalqa-scoring-code/evaluate.py": "417d662aa21b5affafe4d45e0da04fb885e29bd4c26cb7fb3062523a69409fcc",
+    "conditionalqa-scoring-code/v1_0/dev.json": "a06cfe3e8b3ffe04f2652a2dbd912b647eb4448b724585c891539344b02fb7c7",
+    "rulearena-airline-prompt-errata-code/LICENSE": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+    "rulearena-airline-prompt-errata-code/README.md": "0a3b1071c3cc27c3e837d586abd72dc2792d45f80a2100fb5773f5104adf3ec4",
+    "rulearena-airline-prompt-errata-code/airline/auto_test.py": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+    "rulearena-airline-prompt-errata-code/airline/compute_answer.py": "5d1703f35df56ef2cbcb38f4eeb43c418feef4200c247e7894cd6b4846f80a14",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_1/0.csv": "c45ebc4609403656e542ea7691500703921107571b01b2c1d1b79999f758677b",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_1/1.csv": "8a43e162de7497aa63e449cad31593fc9288c53888e21a90f4564baca132b7c8",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_2/0.csv": "df0f600a5549887cdbc10516aefb62d41f14008af4813242967467e302438371",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_2/1.csv": "9aca4bc0e03afc2c24099e18c2568a8ebf6944e03ec7282b31fecf5cc6faf8f4",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_3/0.csv": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_3/1.csv": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_4/0.csv": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+    "rulearena-airline-prompt-errata-code/airline/fee_tables/bag_4/1.csv": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+    "rulearena-airline-prompt-errata-code/airline/gen_questions.py": "81fbab5332d2a5078458ebbf339192afc81b1260bbae8107c70f9572248da949",
+    "rulearena-airline-prompt-errata-code/airline/reference_rules.txt": "24d38221ec6d4eff4b8d81312e4e9e1542bc141891cab128d9d7b13c19311c71",
+    "rulearena-airline-prompt-errata-code/airline/reference_rules_textual.txt": "155b310742726d3e1d580f77aeabd5347005b331d89f0f4b0e711bcce436869b",
+    "rulearena-airline-prompt-errata-code/airline/structure.py": "860056d4c5defea5bea1faff60f21e9087c2646867d102dd65084c3704285181",
+    "rulearena-airline-prompt-errata-code/airline/synthesized_problems/comp_0.jsonl": "8525ef3fa392180c993cec3cb9f56938a552b5198a5ec380195a5e505762bb35",
+    "rulearena-airline-prompt-errata-code/airline/synthesized_problems/comp_1.jsonl": "ca205ee9da77f4f35d9330d1a92af94f861ce6ef2a583477cbb3c5e3d474c8c3",
+    "rulearena-airline-prompt-errata-code/airline/synthesized_problems/comp_2.jsonl": "63b738c52bfe5a012ba2ae637fc796bf94cd3f368cf8924bb72563d4c569d83d",
+    "rulearena-airline-objective-code/LICENSE": "092b7bdd17849a625533c288b1bbb03a95bb5dfd9324f4aa4990222fa2bf950f",
+    "rulearena-airline-objective-code/README.md": "0a3b1071c3cc27c3e837d586abd72dc2792d45f80a2100fb5773f5104adf3ec4",
+    "rulearena-airline-objective-code/airline/auto_test.py": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+    "rulearena-airline-objective-code/airline/compute_answer.py": "5d1703f35df56ef2cbcb38f4eeb43c418feef4200c247e7894cd6b4846f80a14",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_1/0.csv": "c45ebc4609403656e542ea7691500703921107571b01b2c1d1b79999f758677b",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_1/1.csv": "8a43e162de7497aa63e449cad31593fc9288c53888e21a90f4564baca132b7c8",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_2/0.csv": "df0f600a5549887cdbc10516aefb62d41f14008af4813242967467e302438371",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_2/1.csv": "9aca4bc0e03afc2c24099e18c2568a8ebf6944e03ec7282b31fecf5cc6faf8f4",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_3/0.csv": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_3/1.csv": "8960377620304ed3c10fa82872a81d5061764ea0105ef0b31a4f3dfccd849b80",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_4/0.csv": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+    "rulearena-airline-objective-code/airline/fee_tables/bag_4/1.csv": "59c2a38fd575d3741d4c58146dd6852cafc4f64ff273ab300a19065e66b949e3",
+    "rulearena-airline-objective-code/airline/gen_questions.py": "81fbab5332d2a5078458ebbf339192afc81b1260bbae8107c70f9572248da949",
+    "rulearena-airline-objective-code/airline/reference_rules.txt": "24d38221ec6d4eff4b8d81312e4e9e1542bc141891cab128d9d7b13c19311c71",
+    "rulearena-airline-objective-code/airline/reference_rules_textual.txt": "155b310742726d3e1d580f77aeabd5347005b331d89f0f4b0e711bcce436869b",
+    "rulearena-airline-objective-code/airline/structure.py": "860056d4c5defea5bea1faff60f21e9087c2646867d102dd65084c3704285181",
+    "rulearena-airline-objective-code/airline/synthesized_problems/comp_0.jsonl": "8525ef3fa392180c993cec3cb9f56938a552b5198a5ec380195a5e505762bb35",
+    "rulearena-airline-objective-code/airline/synthesized_problems/comp_1.jsonl": "ca205ee9da77f4f35d9330d1a92af94f861ce6ef2a583477cbb3c5e3d474c8c3",
+    "rulearena-airline-objective-code/airline/synthesized_problems/comp_2.jsonl": "63b738c52bfe5a012ba2ae637fc796bf94cd3f368cf8924bb72563d4c569d83d",
+    "rulearena-airline-scoring-code/airline/auto_test.py": "445eef96c24b59807958ed8728d3ed3b7687186d6b184ba76bf79f55b6e315d5",
+    "rulearena-nba-location-errata-code/nba/annotated_problems/comp_0.json": "4af08b38d01a60e9206865b44bca6e05bb7c37d3cb7fbb294acd489e16a8cc3c",
+    "rulearena-nba-location-errata-code/nba/annotated_problems/comp_1.json": "b2fc84e1f9467505d950fa68c5db4f7e91fcbbde846a2393570a7cefac8ada33",
+    "rulearena-nba-location-errata-code/nba/annotated_problems/comp_2.json": "60a32c7f9c8413c1d3e529098c3788efe07c436b74a33673817f099f01108e39",
+    "rulearena-nba-location-errata-code/nba/auto_test.py": "8a8677c36579dd945f978da8cd8eed264d5072cb719fa6f1e260ef9aceb2e29c",
+    "rulearena-nba-location-errata-code/nba/reference_rules.txt": "eae4dbb7d7ec5847bb56b9280fe811ca275edc34431fad855d330cfb7d1db0ed"
+  },
+  "script_sha256": {
+    "scripts/airline_policy_check.py": "d05146c2ef8da64676915bf3709044f0098c2cbb46436e2ce7a6c348fe722614",
+    "scripts/bar.py": "b8732bb09bf9c3f2c03d4d93ade42ae26cf616970f6c6d75e7c0d1c7200bfd1a",
+    "scripts/check_audit_records.py": "75f5eaf2e9ad87fab5a68e62e7e528da494f54318c1eeb129dfafd932b415ea1",
+    "scripts/check_components.py": "01b8a927b4a75cec3ab034de1787f4f256de47e3156b0b2656668a65ad33f806",
+    "scripts/check_rulearena.py": "a88b859ad6095a8b9727a11c7b8331e0f642668b3327ca6268c5a37ae4f53f79",
+    "scripts/reproduce_results.py": "dff00102f27284a9ab6714eb11b62f58d3cbab22162e7099a98bdcba52b1e4df",
+    "scripts/rulearena.py": "3b0d218fab8864b6c3fc4e5a72e29b75d572b5ac0facc13c432bef380624a630"
+  },
+  "component_payload_sha256": {
+    "components/conditionalqa-scoring/component.json": "c35ee13dbc026be7ce603ad2b99cb2c5a085c65720352e827171ab0200170283",
+    "components/conditionalqa-scoring/denominator.patch": "bd33104d57e9a03a8dfeb31b597fe97a89d772d5375a7859fe60105549a3adc4",
+    "components/legalbench-sara-numeric/component.json": "29adcc24ea7e8b4fe406ffdf7bcc383a0528bf802c0c0c7e29567a9b11a7441c",
+    "components/legalbench-sara-numeric/evaluator.py": "b5f714b026a032617aaead251dde9df13e3589a2e91a521d70b333cffbb7b9fa",
+    "components/rulearena-airline-objective/component.json": "365041f3132e447224d0a0d21ba0cfc297f3db9c88788bbcd9a6f02b40f7d3f7",
+    "components/rulearena-airline-objective/objective.txt": "96ea75ef703e70bca21f2ef460e115872489ec82f87b8a85441ec7c50449e3fc",
+    "components/rulearena-airline-objective/references.jsonl": "e425ed5ff88d60dbc25c1bbb21ccf69209d60af665b8b19fb90b547e3d772c7b",
+    "components/rulearena-airline-prompt-errata/component.json": "d9ce36f8ca72b0b5388970a547ef66af36b6e1ac03bbd8ab4db0acab2e7e0152",
+    "components/rulearena-airline-prompt-errata/example.patch": "f1c02bea2fff4ad6fa8d3feecbbe3eff8b378bbd984d7be8faf6894c94cc1347",
+    "components/rulearena-airline-prompt-errata/textual-policy.patch": "3926a45d95df4d4577e5488cf7f575d8d34e82381c24c3a1b91f770e16814f0d",
+    "components/rulearena-airline-scoring/component.json": "bcd4586ba562d4c1dfe97304106b869a875a16638ed875494c6c789f68f2953a",
+    "components/rulearena-airline-scoring/evaluator.py": "83a523a82c1fdb0be402186e555cb67536ec1d49ec1065a99601f9fb9c1dcd89",
+    "components/rulearena-airline-scoring/scoring.patch": "41da1bc7acd639e0cbe1a8f7e96ddbdc4240188ea5f58b41034c379d23d9b59e",
+    "components/rulearena-nba-location-errata/comp_1.patch": "ecde6bc966ca969d6cf94526aeffb047cd4a4c067949d0afd751322355108b8b",
+    "components/rulearena-nba-location-errata/comp_2.patch": "17d9b1c2bc3cca850847d36a896ea26730adbdb743753ef584eea4b8de2e6dcc",
+    "components/rulearena-nba-location-errata/component.json": "1496111909fb97061cb658fafe9fe989fe5aa1225035a10f808650af3baa58a1",
+    "components/rulearena-nba-location-errata/errata.json": "d1e56c066f277c987f41d477c1791270720bc12ae7a6c1945adc26a2467d2c2d",
+    "components/rulearena-tax/component.json": "c541739e1a9f5f58e0ca74561eb63dfc95e2ed76a3bb0ba3378c560a985baf7c",
+    "components/rulearena-tax/line22.patch": "4eb40dced1dfc8c7d03f20bca5d0cf9513e8e17d041c0b1caa121dfc12406f9b",
+    "components/rulearena-tax/reference_pairs.jsonl": "5c4b4b2b5d3983be53416851c6ed994d3730a9f51245700c3e710049f5466481"
+  },
+  "original_components": {
+    "rulearena_tax": {
+      "replayed": 300,
+      "changed": 27,
+      "unchanged": 273,
+      "native_inputs_preserved": 300,
+      "native_grading_ast_unchanged": true
+    },
+    "legalbench_sara_numeric": {
+      "echo_counts": {
+        "train": {
+          "count": 4,
+          "original_accepts": 3,
+          "revised_accepts": 4
+        },
+        "test": {
+          "count": 96,
+          "original_accepts": 92,
+          "revised_accepts": 96
+        }
+      },
+      "labels_changed": false
+    },
+    "conditionalqa": {
+      "reference_count": 285,
+      "single_id_omission_checks": 285,
+      "all_four_metrics_all_categories_exact": true,
+      "complete_echo_unchanged": true,
+      "labels_changed": false
+    }
+  },
+  "added_components": {
+    "airline": {
+      "cases": 300,
+      "native_and_policy_minima_match": 300,
+      "allocation_sensitive_ids": [
+        "airline/comp_0/1",
+        "airline/comp_0/2",
+        "airline/comp_0/6",
+        "airline/comp_0/12",
+        "airline/comp_0/13",
+        "airline/comp_0/15",
+        "airline/comp_0/20",
+        "airline/comp_0/27",
+        "airline/comp_0/28",
+        "airline/comp_0/33",
+        "airline/comp_0/45",
+        "airline/comp_0/51",
+        "airline/comp_0/55",
+        "airline/comp_0/58",
+        "airline/comp_0/63",
+        "airline/comp_0/65",
+        "airline/comp_0/66",
+        "airline/comp_0/72",
+        "airline/comp_0/74",
+        "airline/comp_0/75",
+        "airline/comp_0/84",
+        "airline/comp_0/95",
+        "airline/comp_1/1",
+        "airline/comp_1/6",
+        "airline/comp_1/7",
+        "airline/comp_1/9",
+        "airline/comp_1/12",
+        "airline/comp_1/15",
+        "airline/comp_1/19",
+        "airline/comp_1/22",
+        "airline/comp_1/24",
+        "airline/comp_1/27",
+        "airline/comp_1/29",
+        "airline/comp_1/41",
+        "airline/comp_1/42",
+        "airline/comp_1/48",
+        "airline/comp_1/55",
+        "airline/comp_1/56",
+        "airline/comp_1/61",
+        "airline/comp_1/66",
+        "airline/comp_1/70",
+        "airline/comp_1/71",
+        "airline/comp_1/72",
+        "airline/comp_1/73",
+        "airline/comp_1/78",
+        "airline/comp_1/79",
+        "airline/comp_1/82",
+        "airline/comp_1/86",
+        "airline/comp_1/87",
+        "airline/comp_1/88",
+        "airline/comp_1/90",
+        "airline/comp_1/99",
+        "airline/comp_2/0",
+        "airline/comp_2/1",
+        "airline/comp_2/4",
+        "airline/comp_2/10",
+        "airline/comp_2/11",
+        "airline/comp_2/12",
+        "airline/comp_2/15",
+        "airline/comp_2/19",
+        "airline/comp_2/24",
+        "airline/comp_2/25",
+        "airline/comp_2/27",
+        "airline/comp_2/29",
+        "airline/comp_2/32",
+        "airline/comp_2/34",
+        "airline/comp_2/37",
+        "airline/comp_2/38",
+        "airline/comp_2/39",
+        "airline/comp_2/40",
+        "airline/comp_2/45",
+        "airline/comp_2/48",
+        "airline/comp_2/49",
+        "airline/comp_2/51",
+        "airline/comp_2/53",
+        "airline/comp_2/55",
+        "airline/comp_2/57",
+        "airline/comp_2/58",
+        "airline/comp_2/59",
+        "airline/comp_2/60",
+        "airline/comp_2/65",
+        "airline/comp_2/66",
+        "airline/comp_2/68",
+        "airline/comp_2/69",
+        "airline/comp_2/74",
+        "airline/comp_2/80",
+        "airline/comp_2/85",
+        "airline/comp_2/86",
+        "airline/comp_2/92",
+        "airline/comp_2/95",
+        "airline/comp_2/96",
+        "airline/comp_2/97",
+        "airline/comp_2/98",
+        "airline/comp_2/99"
+      ],
+      "listed_order_above_minimum_ids": [
+        "airline/comp_0/1",
+        "airline/comp_0/2",
+        "airline/comp_0/12",
+        "airline/comp_0/13",
+        "airline/comp_0/20",
+        "airline/comp_0/45",
+        "airline/comp_0/51",
+        "airline/comp_0/58",
+        "airline/comp_0/66",
+        "airline/comp_0/72",
+        "airline/comp_0/74",
+        "airline/comp_0/75",
+        "airline/comp_0/84",
+        "airline/comp_0/95",
+        "airline/comp_1/1",
+        "airline/comp_1/6",
+        "airline/comp_1/7",
+        "airline/comp_1/9",
+        "airline/comp_1/12",
+        "airline/comp_1/15",
+        "airline/comp_1/19",
+        "airline/comp_1/22",
+        "airline/comp_1/24",
+        "airline/comp_1/29",
+        "airline/comp_1/41",
+        "airline/comp_1/42",
+        "airline/comp_1/48",
+        "airline/comp_1/55",
+        "airline/comp_1/56",
+        "airline/comp_1/61",
+        "airline/comp_1/70",
+        "airline/comp_1/72",
+        "airline/comp_1/73",
+        "airline/comp_1/78",
+        "airline/comp_1/79",
+        "airline/comp_1/87",
+        "airline/comp_1/88",
+        "airline/comp_1/90",
+        "airline/comp_1/99",
+        "airline/comp_2/0",
+        "airline/comp_2/1",
+        "airline/comp_2/10",
+        "airline/comp_2/11",
+        "airline/comp_2/12",
+        "airline/comp_2/15",
+        "airline/comp_2/19",
+        "airline/comp_2/24",
+        "airline/comp_2/25",
+        "airline/comp_2/27",
+        "airline/comp_2/29",
+        "airline/comp_2/32",
+        "airline/comp_2/39",
+        "airline/comp_2/40",
+        "airline/comp_2/45",
+        "airline/comp_2/48",
+        "airline/comp_2/49",
+        "airline/comp_2/51",
+        "airline/comp_2/53",
+        "airline/comp_2/55",
+        "airline/comp_2/57",
+        "airline/comp_2/58",
+        "airline/comp_2/59",
+        "airline/comp_2/65",
+        "airline/comp_2/66",
+        "airline/comp_2/68",
+        "airline/comp_2/74",
+        "airline/comp_2/80",
+        "airline/comp_2/85",
+        "airline/comp_2/86",
+        "airline/comp_2/92",
+        "airline/comp_2/95",
+        "airline/comp_2/97",
+        "airline/comp_2/98",
+        "airline/comp_2/99"
+      ],
+      "pe_dash_ids": [
+        "airline/comp_1/14",
+        "airline/comp_1/17",
+        "airline/comp_1/18",
+        "airline/comp_1/46"
+      ],
+      "enumerated_subsets": 6145,
+      "changed_prompt_variants": {
+        "(False, False)": 0,
+        "(False, True)": 300,
+        "(True, False)": 300,
+        "(True, True)": 300
+      },
+      "reference_amounts_changed": 0,
+      "model_calls": 0
+    },
+    "airline_scoring": {
+      "scope": "Patched native amount-scoring and resume branches with the installed helper; constructed responses, not model-performance results.",
+      "constructed_cases": [
+        {
+          "response": "The total cost is $1,198.",
+          "reference": 1198,
+          "expected": true,
+          "original_score": true,
+          "revised_score": true,
+          "original_parsed": "1198",
+          "revised_parsed": "1198"
+        },
+        {
+          "response": "The total cost is $1,198.00",
+          "reference": 1198,
+          "expected": true,
+          "original_score": false,
+          "revised_score": true,
+          "original_parsed": "119800",
+          "revised_parsed": "1198.00"
+        },
+        {
+          "response": "The total cost is $1,198.00.\n",
+          "reference": 1198,
+          "expected": true,
+          "original_score": true,
+          "revised_score": true,
+          "original_parsed": "119800\n",
+          "revised_parsed": "1198.00"
+        },
+        {
+          "response": "The total cost is $11,980 USD",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "11980 USD",
+          "revised_parsed": "11980"
+        },
+        {
+          "response": "The total cost is $1198.01.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "119801",
+          "revised_parsed": "1198.01"
+        },
+        {
+          "response": "The total cost is $1198.01.",
+          "reference": "1198.01",
+          "expected": true,
+          "original_score": false,
+          "revised_score": true,
+          "original_parsed": "119801",
+          "revised_parsed": "1198.01"
+        },
+        {
+          "response": "The total cost is $0.00.",
+          "reference": 0,
+          "expected": true,
+          "original_score": true,
+          "revised_score": true,
+          "original_parsed": "0",
+          "revised_parsed": "0.00"
+        },
+        {
+          "response": "The total cost is $0.01.",
+          "reference": 0,
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "1",
+          "revised_parsed": "0.01"
+        },
+        {
+          "response": "**The total cost is $1,198.00.**",
+          "reference": 1198,
+          "expected": true,
+          "original_score": false,
+          "revised_score": true,
+          "original_parsed": "119800",
+          "revised_parsed": "1198.00"
+        },
+        {
+          "response": "Reasoning: 44 + 1154.\nThe total cost is $1198.",
+          "reference": 1198,
+          "expected": true,
+          "original_score": true,
+          "revised_score": true,
+          "original_parsed": "1198",
+          "revised_parsed": "1198"
+        },
+        {
+          "response": "The total cost is $-1198.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "-1198",
+          "revised_parsed": "-1198"
+        },
+        {
+          "response": "The total cost is $1,19,8.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1.198e3.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198e3",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1198 or $999.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198 or $999",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $999. The total cost is $1198.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "999 The total cost is $1198",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "1198",
+          "reference": 1198,
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "None",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $NaN.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "NaN",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1198.0001.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "11980001",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1198. A different total is $999.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198 A different total is $999",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1198,50.",
+          "reference": "1198.5",
+          "expected": false,
+          "original_score": false,
+          "revised_score": false,
+          "original_parsed": "119850",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is calculated below. The total cost is $1,198.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is: $1,198.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $ 1,198.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": " 1198",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "\"The total cost is $1,198.\"",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198\"",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "(The total cost is $1,198.)",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198)",
+          "revised_parsed": "None"
+        },
+        {
+          "response": "The total cost is $1,198. Thank you.",
+          "reference": 1198,
+          "expected": false,
+          "original_score": true,
+          "revised_score": false,
+          "original_parsed": "1198 Thank you",
+          "revised_parsed": "None"
+        }
+      ],
+      "reference_amount_echoes": 1200,
+      "wrong_amount_controls": 300,
+      "native_log_replays": [
+        {
+          "fixture": 0,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 1,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 2,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 3,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 4,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 5,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 6,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 7,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 8,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 9,
+          "expected": true,
+          "resumed_score": true
+        },
+        {
+          "fixture": 10,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 11,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 12,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 13,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 14,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 15,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 16,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 17,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 18,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 19,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 20,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 21,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 22,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 23,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 24,
+          "expected": false,
+          "resumed_score": false
+        },
+        {
+          "fixture": 25,
+          "expected": false,
+          "resumed_score": false
+        }
+      ],
+      "unrelated_ast_preserved": true,
+      "model_calls": 0
+    },
+    "nba": {
+      "records": 216,
+      "changes": [
+        [
+          "nba/comp_1/62",
+          [
+            "problematic_team"
+          ]
+        ],
+        [
+          "nba/comp_2/4",
+          [
+            "illegal_operation"
+          ]
+        ]
+      ],
+      "binary_changes": 0,
+      "synthetic_native_score_probes": [
+        {
+          "id": "nba/comp_1/62",
+          "response": "Answer: True. Illegal Operation: B. Problematic Team: Q",
+          "scores": [
+            false,
+            true
+          ]
+        },
+        {
+          "id": "nba/comp_2/4",
+          "response": "Answer: True. Illegal Operation: D. Problematic Team: A",
+          "scores": [
+            false,
+            true
+          ]
+        }
+      ],
+      "model_calls": 0
+    },
+    "rejections": [
+      "rulearena-airline-prompt-errata:source_hash",
+      "rulearena-airline-scoring:source_hash",
+      "rulearena-nba-location-errata:source_hash",
+      "rulearena-airline-objective:source_hash"
+    ]
+  },
+  "source_preservation": {
+    "checked_files": 57,
+    "all_unchanged": true
+  },
+  "rejection_checks": [
+    "rulearena-tax:before_hash",
+    "rulearena-tax:already_revised",
+    "legalbench-sara-numeric:before_hash",
+    "legalbench-sara-numeric:already_revised",
+    "conditionalqa-scoring:before_hash",
+    "conditionalqa-scoring:already_revised",
+    "rulearena-tax:after_hash",
+    "legalbench-sara-numeric:after_hash",
+    "conditionalqa-scoring:after_hash",
+    "existing_output",
+    "unsafe_paths",
+    "tax_native_input_hash"
+  ],
+  "clean_copy_validation": {
+    "private_workspaces_blocked": true,
+    "network_blocked": true,
+    "reapplication_rejected": 3,
+    "model_calls": 0
+  },
+  "model_calls": 0
+}
