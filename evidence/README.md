@@ -6,7 +6,7 @@ questions. It is a compact reader index, not an estimated error rate or a
 replacement answer key. LegalBench SARA and DeonticBench share source material.
 
 The seven scoped repair components live separately under `components/`.
-The four added RuleArena components are an unreleased update; their
+The four added RuleArena components are included in v0.2.0; their
 offline checks are separate from the paper's saved-response studies.
 [`rulearena-component-checks.json`](rulearena-component-checks.json) records
 their population checks and constructed scoring controls, with source and

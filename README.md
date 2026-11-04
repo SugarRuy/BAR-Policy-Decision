@@ -1,80 +1,55 @@
 # BAR — Benchmark Audit and Revision
 
 Resources for **Follow the Policy, Fail the Benchmark: Auditing and Revising
-Policy-Based Decision Benchmarks**, by Yanru Xiao and Yifei Cai
-(Iowa State University).
+Policy-Based Decision Benchmarks**, by Yanru Xiao and Yifei Cai.
 
-BAR provides scoped benchmark revisions and evidence for reassessing policy-based
-decisions. The paper studies whether model-visible policies, cases, references,
-supplied intermediate answers and scoring conditions represent the same decision.
-An accepted answer is not automatically a correct derivation, and a revised
-component does not certify an entire dataset.
+Policy-based decision benchmarks ask a model to apply a written policy to a
+case, but the policy, the case, the reference answer, any supplied intermediate
+answers and the scoring rule do not always describe the same decision. When
+they disagree, a policy-supported response can be rejected and an incomplete
+one accepted. BAR publishes the audit evidence behind these findings, along
+with scoped revisions for reevaluating models.
 
-## Start here
+**[Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)**
+· [Usage and setup](docs/COMPONENTS.md)
+· [Audit evidence](evidence/README.md)
+· [Reproduce the studies](docs/REPRODUCING.md)
 
-- [Seven scoped revision components](docs/COMPONENTS.md): the three released
-  components plus Airline input/scoring revisions and NBA localization errata.
-- [Reproduce the four reported studies](docs/REPRODUCING.md): score saved
-  responses without generating new model answers.
-- [Audit evidence index](evidence/README.md): nine reporting units, source
-  versions, case locators, controls and unresolved findings.
-- [Distribution notices](THIRD_PARTY.md): BAR-original code uses MIT;
-  third-party code and data retain their own terms.
+## Revised resources
 
-## Revisions
+Each revision targets the specific reference, scorer or task text that it
+changes. Usage and detailed scope are in the [component guide](docs/COMPONENTS.md).
 
-[Version 0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
-freezes all seven components. See [the changelog](CHANGELOG.md) for the version
-boundary. Offline validation and implementation review are complete; the
-[component check record](evidence/rulearena-component-checks.json) binds the
-tests to their sources and implementation, and the
-[release validation](releases/v0.2.0-validation.json) records the final replay.
+| Benchmark / task | What BAR provides |
+|---|---|
+| RuleArena Tax | 300 original/revised reference pairs (27 changed amounts), an input builder and a scoped correction to the reference program |
+| LegalBench SARA numeric | A revised numeric scorer; original labels unchanged |
+| ConditionalQA | A revised scorer that counts missing predictions as zero instead of dropping them; original labels unchanged |
+| RuleArena Airline | Separate revisions for policy transcription and examples, amount scoring, and an explicit minimum-cost objective that amends the task specification |
+| RuleArena NBA | Corrections to two team/operation localization fields among 216 records; all binary verdicts unchanged |
 
-| Component | What changes | What remains fixed |
-|---|---|---|
-| RuleArena Tax | Apply the required line-22 zero floor; provide all 300 original/revised reference pairs, with 27 changed amounts. | Native inputs and other reference assumptions, including unresolved dependencies. |
-| LegalBench SARA numeric | Preserve signed decimal amounts and correctly handle an exact-zero answer to a zero reference. | Original SARA labels and the native nonzero tolerance. |
-| ConditionalQA | Keep all reference questions in the denominator and assign zero to missing predictions. | Reference labels and per-question scoring. An explicit empty answer is still a submitted answer. |
-| Airline prompt errata | Correct the example summary and textual-policy transcription. | All 300 reference amounts, case facts, calculator and scoring. |
-| Airline objective | Explicitly request minimum ticket-plus-baggage cost in all 300 Markdown zero-shot inputs. | Case facts, policy, system prompt and conditional native reference amounts. |
-| Airline scoring | Compare complete decimal amounts instead of deleting decimal points and accepting substrings. | Reference calculation, inputs and separate rule-attribution checks. |
-| NBA localization errata | Correct two team/operation fields among 216 records. | All binary verdicts, case text, rule annotations and 214 complete records. |
+## Audit evidence
 
-These are component revisions, not newly authored source datasets.
-No OpenExempt replacement key or fully repaired workflow environment is
-claimed. Original source material is fetched separately at the revisions
-specified in each component manifest.
+The [evidence index](evidence/README.md) covers nine audit entries, including
+controls and unresolved findings: RuleArena, OpenExempt, LegalBench SARA,
+DeonticBench, ConditionalQA, ShARC, PolicyGuardBench, WorkArena++ and
+TheAgentCompany. Findings differ across entries. Where no revision is listed
+above, including the workflow environments, the entry is documented as audit
+evidence.
 
-## Saved-response studies
+## Reproducing the studies
 
-The versioned response archive accompanies the
-[v0.2.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0).
-It supports the reported Tax, SARA, ConditionalQA and supplied-step comparisons.
-The reproduction guide identifies which pinned upstream inputs are additionally
-required. Files retain failed/missing submissions and all evaluation denominators.
-No model credentials or model calls are needed to rescore them.
-The new Airline and NBA components have offline checks, not new model results.
-The four v0.1.0 archives and all their scores remain unchanged.
-Their identical bytes are attached to v0.2.0 for a single download location.
+Four saved-response studies cover RuleArena Tax, LegalBench SARA numeric,
+ConditionalQA and an amended OpenExempt task with supplied intermediate
+answers. The reported results can be rescored from the saved outputs in the
+v0.2.0 release by following the [reproduction guide](docs/REPRODUCING.md).
+Some upstream inputs are obtained separately under their original terms. The
+Airline and NBA revisions come without new performance results.
 
-The constructed TheAgentCompany budget states and official runtime records are
-under [evidence/tac-budget](evidence/tac-budget/README.md). Verifying those saved
-records does not rerun an agent or the service environment.
+## Citation and license
 
-## Citation and status
-
-Use [CITATION.cff](CITATION.cff) for authorship and repository metadata.
-Please cite the original benchmark as well as this paper, and report the
-component and source revision used. The arXiv identifier will be added after
-submission; this repository is not a second manuscript repository.
-`release.json` binds v0.2.0 to the current paper source, PDF and arXiv source
-package by SHA-256. The v0.1.0 paper binding remains in `releases/v0.1.0.json`.
-These hashes identify exact file contents; they are not model scores.
-
-The older tag's documentation checksums have a
-[separate correction](releases/v0.1.0-inventory-amendment.json) following an
-author-metadata edit. Its code, data, study archives and results are unchanged.
-
-This repository is staged privately. Its owner will make it public manually.
-The paper repository, draft history, full source caches, operational logs and
-model-review conversations are not distributed here.
+Please cite this paper using [CITATION.cff](CITATION.cff), cite the original
+benchmarks you use, and report which BAR revisions and source versions your
+results are based on. BAR-original code is released under the
+[MIT License](LICENSE). Third-party code and data keep their own terms, listed
+in [THIRD_PARTY.md](THIRD_PARTY.md).

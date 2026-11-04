@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "status": "seven_scoped_components_validated_unreleased",
+  "status": "seven_scoped_components_released",
   "components": [
     {
       "id": "rulearena-tax",
@@ -23,25 +23,25 @@
     {
       "id": "rulearena-airline-prompt-errata",
       "kind": "input",
-      "payload_status": "validated_and_reviewed_unreleased",
+      "payload_status": "validated_and_reviewed_released",
       "manifest": "components/rulearena-airline-prompt-errata/component.json"
     },
     {
       "id": "rulearena-airline-objective",
       "kind": "input",
-      "payload_status": "validated_and_reviewed_unreleased",
+      "payload_status": "validated_and_reviewed_released",
       "manifest": "components/rulearena-airline-objective/component.json"
     },
     {
       "id": "rulearena-airline-scoring",
       "kind": "scorer",
-      "payload_status": "validated_and_reviewed_unreleased",
+      "payload_status": "validated_and_reviewed_released",
       "manifest": "components/rulearena-airline-scoring/component.json"
     },
     {
       "id": "rulearena-nba-location-errata",
       "kind": "reference",
-      "payload_status": "validated_and_reviewed_unreleased",
+      "payload_status": "validated_and_reviewed_released",
       "manifest": "components/rulearena-nba-location-errata/component.json"
     }
   ],
