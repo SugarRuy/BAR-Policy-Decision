@@ -7,8 +7,19 @@ Policy-based decision benchmarks ask a model to apply a written policy to a
 case, but the policy, the case, the reference answer, any supplied intermediate
 answers and the scoring rule do not always describe the same decision. When
 they disagree, a policy-supported response can be rejected and an incomplete
-one accepted. BAR publishes the audit evidence behind these findings, along
-with scoped revisions for reevaluating models.
+one accepted.
+
+Rescoring unchanged model responses shows how these defects change scores.
+In RuleArena Tax, restoring the required zero floor changes 27 of 300
+reference amounts and narrows one observed model gap from 14 to 4
+accepted cases. In LegalBench's SARA numeric task, correcting decimal parsing
+and zero-reference scoring raises accepted answers from 8–9 to 87–91 out of
+96 across three models, with reference answers unchanged. The
+[full results](docs/REPRODUCING.md#expected-results) give the per-model
+comparisons.
+
+BAR publishes the audit evidence behind these findings, along with scoped
+revisions for reevaluating models.
 
 **[Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)**
 · [Usage and setup](docs/COMPONENTS.md)
@@ -17,8 +28,10 @@ with scoped revisions for reevaluating models.
 
 ## Revised resources
 
-Each revision targets the specific reference, scorer or task text that it
-changes. Usage and detailed scope are in the [component guide](docs/COMPONENTS.md).
+BAR provides seven revision components across the five tasks below. Airline
+has three separate components. Each revision targets a specific reference,
+scorer or task text; usage and scope are in the
+[component guide](docs/COMPONENTS.md).
 
 | Benchmark / task | What BAR provides |
 |---|---|
