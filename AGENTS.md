@@ -9,14 +9,18 @@ a second manuscript here. The approved remote is
 visibility. Initial import, commit, push and a private Release are authorized.
 
 The November 3 expansion retains the three released
-components and add RuleArena Airline prompt errata, a minimum-cost objective
+components and adds RuleArena Airline prompt errata, a minimum-cost objective
 amendment, Airline amount scoring, and NBA localization errata. Validate the
 actual distributed artifacts offline, then obtain Claude Code Opus 5.5 review.
 After validation and Opus review, the user authorized committing and pushing
-this update to the private repository. Do not create a release or change
-visibility in this pass. Keep BAR version identifiers in repository metadata;
+this update to the private repository. On November 4, the user authorized
+freezing v0.2.0, its commit, tag, push and private Release, current-paper binding,
+and documentation-inventory corrections. Do not change repository visibility.
+Keep BAR version identifiers in repository metadata;
 the manuscript names BAR and links the repository without a BAR version number.
-Keep v0.1.0 and its saved-response results unchanged; label the update unreleased.
+Preserve v0.1.0's current tag and scientific payloads. Its documentation-only
+inventory correction is a separate addendum, not another history rewrite.
+Preserve all saved-response archives and results byte for byte.
 Package these scoped revisions plus the evidence and saved-response reproduction.
 Do not launch model experiments. Preserve upstream sources and old results.
 BAR-original code uses MIT; preserve file-specific third-party terms and omit

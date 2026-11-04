@@ -2,17 +2,19 @@
   "schema_version": 1,
   "name": "BAR: Benchmark Audit and Revision",
   "version": "0.2.0",
-  "tag": null,
+  "tag": "v0.2.0",
   "repository": "https://github.com/SugarRuy/BAR-Policy-Decision",
   "visibility_at_creation": "private",
   "created_at_utc": "2026-11-01T07:04:18.039433+00:00",
   "paper": {
     "title": "Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks",
-    "source_sha256": "b2f7efb776f1b2322b48fb88b41e47961fe6ec3ccc58a773b515c21794424940",
-    "pdf_sha256": "d32af41c9d3510db96ff1f558fe5229b2742fc6dc7a8ce6014fa3a01f34f6760",
-    "pages": 32,
-    "arxiv_source_archive_sha256": "4b4873886950dc4bcdca7db6567eebe960d02c5b54e5b8fd31a60ad4ccf899d4",
-    "arxiv_id": null
+    "source_sha256": "5247d6be8d8a6cf9e228b5abaea30b6eff666263945cfbc0380ad7b8bdc71567",
+    "pdf_sha256": "22b3fe9cdfce0647995adc39da7fd46d46450d79de033cd1dabe6248de4503f5",
+    "pages": 28,
+    "arxiv_source_archive_sha256": "435dd73455c2ceb2d793576c20c9c5295811fcf96d8e2e974a6ab2e92c9994b6",
+    "arxiv_id": null,
+    "arxiv_package_tex_sha256": "4d7167acbc968234e66ae93970656dae385baf7b0caf488258d4433a121c72f3",
+    "arxiv_source_preparation": "LaTeX comment contents removed; compiled page text and rendered pages verified identical."
   },
   "components": [
     "rulearena-tax",
@@ -38,11 +40,13 @@
     "Airline objective amendment changes model-visible inputs but retains conditional native reference amounts.",
     "NBA changes two localization fields only; Airline amount-scoring probes are constructed, not model performance."
   ],
-  "status": "validated_unreleased",
+  "status": "released",
   "based_on_release": "v0.1.0",
   "prepared_at_utc": "2026-11-03T16:59:02.417622+00:00",
-  "paper_binding_scope": "Paper and reported studies associated with v0.1.0; the new component checks are not new manuscript performance results.",
-  "validation_record": "evidence/rulearena-component-checks.json",
-  "validation_completed_at_utc": "2026-11-03T17:21:32.449949+00:00",
-  "implementation_review": "accepted_after_fixes"
+  "paper_binding_scope": "Current 28-page arXiv manuscript, PDF and source package. Earlier paper binding is preserved in releases/v0.1.0.json. Airline/NBA component validation adds no model-performance results.",
+  "validation_record": "releases/v0.2.0-validation.json",
+  "validation_completed_at_utc": "2026-11-04T18:15:01.677182+00:00",
+  "implementation_review": "accepted_after_fixes",
+  "release_date": "2026-11-04",
+  "historical_inventory_amendment": "releases/v0.1.0-inventory-amendment.json"
 }

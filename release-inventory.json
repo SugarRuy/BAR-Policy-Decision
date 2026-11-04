@@ -10,24 +10,24 @@
       "bytes": 105
     },
     "AGENTS.md": {
-      "sha256": "1d5e16c4362f9e87b438aef3aa18aaccbb50e96131ed9d5814ecadc9656fd872",
-      "bytes": 1587
+      "sha256": "0160e6103d1f704d4532a4bbea2cb17025a2841f620d1cf037d74d72d16b3e7d",
+      "bytes": 2016
     },
     "CHANGELOG.md": {
-      "sha256": "e441105b1576b243990fb30867cbb0bae43becaf5057e4540c87387ed387f333",
-      "bytes": 927
+      "sha256": "0a61f4f1091c8ad40d6dcfbf4548ebe2d610d2af27c953318b5574cd8bd4f82f",
+      "bytes": 1374
     },
     "CITATION.cff": {
-      "sha256": "22113487a74eee7be93be6d530946d8513edb295d45a76511c3e033486c500ba",
-      "bytes": 956
+      "sha256": "c14af9d40e70f54d067265d56e96640eb7e5349895a1da7ed663e668ce0591c3",
+      "bytes": 919
     },
     "LICENSE": {
       "sha256": "cdfffebb25a5b3daaceff6d777b12f5e814651b3a35bde105aadf5c5e89d1007",
       "bytes": 1081
     },
     "README.md": {
-      "sha256": "bcb26338daac907ab807092db5ef6522f11ee881ebf98ae1eb01b4ce0bd9025c",
-      "bytes": 4495
+      "sha256": "6e8719a62ac89b55b5ae6392e951fbabc848eb363e95f66b089833757ccd14ac",
+      "bytes": 5073
     },
     "THIRD_PARTY.md": {
       "sha256": "40488c37cd8c201d8e50b4deebd896306a0f5bd3360a3d7c68b47cc6d3e9866e",
@@ -186,8 +186,8 @@
       "bytes": 12407
     },
     "docs/REPRODUCING.md": {
-      "sha256": "0f8c10aba42c873bc89ef0f449f18865ae03d8e8deca187b9789c489924cebf2",
-      "bytes": 15096
+      "sha256": "33bf2802a715e664c42e408a0fd5538dfbea2fd3149a7a7419d3cc102f022339",
+      "bytes": 15157
     },
     "evidence/README.md": {
       "sha256": "08d51ea312a346b1b74717dc5c0bfdb70e4fd4cc5f9f3fa2ede450d3cb1d3a07",
@@ -310,16 +310,28 @@
       "bytes": 24247
     },
     "inventory.json": {
-      "sha256": "19e36a4f55fcac950b0f33d2237aee67485f279f1744c40e6ad2a2f9b033751d",
+      "sha256": "56e10e89ea4de77e976847698d6349b405b6468eed76456ca66b32b73c794713",
       "bytes": 7871
     },
     "release.json": {
-      "sha256": "847048cd09298c29e3c09e3831f6a814606720636b2aff4e7c7219813b6c6271",
-      "bytes": 2413
+      "sha256": "b0bc9eac10e4294b4518b87b222cacadec48aca09625674519ef36bbbee20f1d",
+      "bytes": 2799
+    },
+    "releases/v0.1.0-inventory-amendment.json": {
+      "sha256": "6962700cb5c8bdd24eb78286b292e2f0949ebae6a9b8ce00fe56c69461834e12",
+      "bytes": 10668
     },
     "releases/v0.1.0.json": {
       "sha256": "959178c38e63779d312c496acc96207d16fbd54204de62ff5245aa32d31a7527",
       "bytes": 1580
+    },
+    "releases/v0.2.0-validation.json": {
+      "sha256": "9fa0a1c36ec9abf3e4962589ad546143009600ea55b4fd9917a4bf6cd2b435b6",
+      "bytes": 45008
+    },
+    "releases/v0.2.0.json": {
+      "sha256": "b0bc9eac10e4294b4518b87b222cacadec48aca09625674519ef36bbbee20f1d",
+      "bytes": 2799
     },
     "scripts/airline_policy_check.py": {
       "sha256": "d05146c2ef8da64676915bf3709044f0098c2cbb46436e2ce7a6c348fe722614",
@@ -350,8 +362,8 @@
       "bytes": 6722
     },
     "studies/README.md": {
-      "sha256": "a63c894a041e7f3d717c55f3ba8c6c00e9111daf7cdf4c2323aaefacd6d0cbad",
-      "bytes": 803
+      "sha256": "479e5be7c384dadaffcd6d3791145e956b80f58f2caf3e37c7157d919d913609",
+      "bytes": 869
     },
     "studies/SHA256SUMS": {
       "sha256": "2c64bdc2dfb61ec70d6e1a0c22ba548b7becc978ce24c5943671e83f1f637fa2",

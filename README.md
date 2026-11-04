@@ -23,11 +23,12 @@ component does not certify an entire dataset.
 
 ## Revisions
 
-Version 0.1.0 is the existing private Release. The 0.2.0 development update adds
-four components and has not yet been tagged as a Release. See
-[the changelog](CHANGELOG.md) for the version boundary. Offline validation and
-implementation review are complete; the [check record](evidence/rulearena-component-checks.json)
-binds the tests to their sources and implementation.
+[Version 0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
+freezes all seven components. See [the changelog](CHANGELOG.md) for the version
+boundary. Offline validation and implementation review are complete; the
+[component check record](evidence/rulearena-component-checks.json) binds the
+tests to their sources and implementation, and the
+[release validation](releases/v0.2.0-validation.json) records the final replay.
 
 | Component | What changes | What remains fixed |
 |---|---|---|
@@ -47,13 +48,14 @@ specified in each component manifest.
 ## Saved-response studies
 
 The versioned response archive accompanies the
-[v0.1.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.1.0).
+[v0.2.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0).
 It supports the reported Tax, SARA, ConditionalQA and supplied-step comparisons.
 The reproduction guide identifies which pinned upstream inputs are additionally
 required. Files retain failed/missing submissions and all evaluation denominators.
 No model credentials or model calls are needed to rescore them.
 The new Airline and NBA components have offline checks, not new model results.
 The four v0.1.0 archives and all their scores remain unchanged.
+Their identical bytes are attached to v0.2.0 for a single download location.
 
 The constructed TheAgentCompany budget states and official runtime records are
 under [evidence/tac-budget](evidence/tac-budget/README.md). Verifying those saved
@@ -65,6 +67,13 @@ Use [CITATION.cff](CITATION.cff) for authorship and repository metadata.
 Please cite the original benchmark as well as this paper, and report the
 component and source revision used. The arXiv identifier will be added after
 submission; this repository is not a second manuscript repository.
+`release.json` binds v0.2.0 to the current paper source, PDF and arXiv source
+package by SHA-256. The v0.1.0 paper binding remains in `releases/v0.1.0.json`.
+These hashes identify exact file contents; they are not model scores.
+
+The older tag's documentation checksums have a
+[separate correction](releases/v0.1.0-inventory-amendment.json) following an
+author-metadata edit. Its code, data, study archives and results are unchanged.
 
 This repository is staged privately. Its owner will make it public manually.
 The paper repository, draft history, full source caches, operational logs and

@@ -5,8 +5,9 @@ compressed; the independent CLI reads them directly. `SHA256SUMS` provides
 the same archive checksums for standard file-verification tools.
 
 Download the four `BAR-study-*-v1.tar.gz` assets from the
-[v0.1.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.1.0)
+[v0.2.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
 and put them in this directory, next to `index.json`.
+These are the same archive bytes originally released with v0.1.0.
 
 ```bash
 python3 scripts/reproduce_results.py --sources /data/bar-sources.json

@@ -8,10 +8,11 @@ No model service, credential, network connection, or private project import
 is needed to replay them.
 
 Download the four `BAR-study-*-v1.tar.gz` assets from the
-[v0.1.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.1.0)
+[v0.2.0 Release](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
 before going offline. Place all four archives **next to
 `studies/index.json`**, inside `studies/`; do not unpack them. The tag is the
 download location, and the archive names retain the study-format version `v1`.
+The attached archives are byte-identical to those in v0.1.0.
 
 `scripts/reproduce_results.py` is an independent CLI. It reads the archives
 without extracting them, checks their hashes against `studies/index.json`,

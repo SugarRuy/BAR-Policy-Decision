@@ -159,8 +159,8 @@
       "bytes": 12407
     },
     "release.json": {
-      "sha256": "847048cd09298c29e3c09e3831f6a814606720636b2aff4e7c7219813b6c6271",
-      "bytes": 2413
+      "sha256": "b0bc9eac10e4294b4518b87b222cacadec48aca09625674519ef36bbbee20f1d",
+      "bytes": 2799
     },
     "scripts/airline_policy_check.py": {
       "sha256": "d05146c2ef8da64676915bf3709044f0098c2cbb46436e2ce7a6c348fe722614",
