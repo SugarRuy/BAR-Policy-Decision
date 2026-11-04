@@ -1,5 +1,8 @@
 # BAR artifact repository
 
+Credit Yanru Xiao without an institutional affiliation in repository author
+metadata and documentation. The manuscript retains its separate author metadata.
+
 This independent artifact repository accompanies one paper; do not maintain
 a second manuscript here. The approved remote is
 `SugarRuy/BAR-Policy-Decision` and MUST remain private. Only the user changes
