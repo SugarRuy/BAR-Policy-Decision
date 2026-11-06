@@ -12,7 +12,8 @@
     "pdf_sha256": "22b3fe9cdfce0647995adc39da7fd46d46450d79de033cd1dabe6248de4503f5",
     "pages": 28,
     "arxiv_source_archive_sha256": "435dd73455c2ceb2d793576c20c9c5295811fcf96d8e2e974a6ab2e92c9994b6",
-    "arxiv_id": null,
+    "arxiv_id": "2611.07042",
+    "arxiv_url": "https://arxiv.org/abs/2611.07042",
     "arxiv_package_tex_sha256": "4d7167acbc968234e66ae93970656dae385baf7b0caf488258d4433a121c72f3",
     "arxiv_source_preparation": "LaTeX comment contents removed; compiled page text and rendered pages verified identical."
   },

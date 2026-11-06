@@ -16,7 +16,7 @@ repository-code: "https://github.com/SugarRuy/BAR-Policy-Decision"
 url: "https://github.com/SugarRuy/BAR-Policy-Decision"
 license: MIT
 preferred-citation:
-  type: unpublished
+  type: article
   title: "Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks"
   authors:
     - family-names: Xiao
@@ -24,4 +24,9 @@ preferred-citation:
     - family-names: Cai
       given-names: Yifei
   year: 2026
-  notes: "Preprint prepared for arXiv; identifier not yet assigned."
+  journal: arXiv
+  url: "https://arxiv.org/abs/2611.07042"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.07042"
+      description: arXiv preprint identifier

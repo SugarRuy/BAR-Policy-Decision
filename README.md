@@ -21,10 +21,16 @@ comparisons.
 BAR publishes the audit evidence behind these findings, along with scoped
 revisions for reevaluating models.
 
-**[Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)**
+**[Paper — arXiv:2611.07042](https://arxiv.org/abs/2611.07042)**
+· [Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
 · [Usage and setup](docs/COMPONENTS.md)
 · [Audit evidence](evidence/README.md)
 · [Reproduce the studies](docs/REPRODUCING.md)
+
+![Four benchmark failure mechanisms: reference answers violate requirements; faulty programs pass evaluation; scoring errors and incomplete checks; targets unsupported by visible inputs.](docs/assets/audit-overview.png)
+
+*Figure 1 from the paper. Independent variants of a hypothetical
+equipment-budget task illustrate the four classes of findings.*
 
 ## Revised resources
 
@@ -61,8 +67,22 @@ Airline and NBA revisions come without new performance results.
 
 ## Citation and license
 
-Please cite this paper using [CITATION.cff](CITATION.cff), cite the original
+Please cite [the paper](https://arxiv.org/abs/2611.07042) and the original
 benchmarks you use, and report which BAR revisions and source versions your
-results are based on. BAR-original code is released under the
+results are based on. GitHub's citation menu uses [CITATION.cff](CITATION.cff).
+
+```bibtex
+@misc{xiao2026followpolicy,
+  title         = {Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks},
+  author        = {Xiao, Yanru and Cai, Yifei},
+  year          = {2026},
+  eprint        = {2611.07042},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2611.07042}
+}
+```
+
+BAR-original code is released under the
 [MIT License](LICENSE). Third-party code and data keep their own terms, listed
 in [THIRD_PARTY.md](THIRD_PARTY.md).

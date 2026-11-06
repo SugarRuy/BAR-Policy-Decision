@@ -18,16 +18,16 @@
       "bytes": 1374
     },
     "CITATION.cff": {
-      "sha256": "c14af9d40e70f54d067265d56e96640eb7e5349895a1da7ed663e668ce0591c3",
-      "bytes": 919
+      "sha256": "7cf8aba16d1d1b1909c241216625a9e127b354c3e56ca7367130b3b8d8db3f7c",
+      "bytes": 1015
     },
     "LICENSE": {
       "sha256": "cdfffebb25a5b3daaceff6d777b12f5e814651b3a35bde105aadf5c5e89d1007",
       "bytes": 1081
     },
     "README.md": {
-      "sha256": "7d0333c2a1886a68c719c768e97bc42eb11b284e5088069d1ece862ba8b78a24",
-      "bytes": 3548
+      "sha256": "7b67ce8a0dd7731f3c0512a032e7a6d945781a5906cb9ba774925b1dbd272819",
+      "bytes": 4395
     },
     "THIRD_PARTY.md": {
       "sha256": "40488c37cd8c201d8e50b4deebd896306a0f5bd3360a3d7c68b47cc6d3e9866e",
@@ -189,6 +189,10 @@
       "sha256": "33bf2802a715e664c42e408a0fd5538dfbea2fd3149a7a7419d3cc102f022339",
       "bytes": 15157
     },
+    "docs/assets/audit-overview.png": {
+      "sha256": "7a7aaed5ca3a11f1d4f233065fab9a6c89bb2681f731413378a77fef2eada881",
+      "bytes": 227048
+    },
     "evidence/README.md": {
       "sha256": "830c2a545cdf89e3ba9e5a3382f02a2787c08cb337d195fb640aabfad94d98c6",
       "bytes": 2341
@@ -314,8 +318,8 @@
       "bytes": 7871
     },
     "release.json": {
-      "sha256": "b0bc9eac10e4294b4518b87b222cacadec48aca09625674519ef36bbbee20f1d",
-      "bytes": 2799
+      "sha256": "fc217bee6c792e5b7d10118ffe45cefedb36da023a304e0019edea922a248546",
+      "bytes": 2860
     },
     "releases/v0.1.0-inventory-amendment.json": {
       "sha256": "6962700cb5c8bdd24eb78286b292e2f0949ebae6a9b8ce00fe56c69461834e12",
