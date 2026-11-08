@@ -1,5 +1,18 @@
 # BAR changes
 
+## Unreleased — Python package
+
+- Add the installable `bar-policy-decision` package (`bar_policy`, package
+  version 1.0.0.dev0) for BAR asset release 0.2.0: integrated revised Tax and
+  Airline datasets with verbatim model-visible messages, separate references
+  and provenance, existing scorers, component access and a `bar-policy`
+  command. See `docs/API.md`.
+- Move the `scripts/bar.py` and `scripts/rulearena.py` implementation into the
+  shared `src/bar_policy/_core.py` without changing CLI behavior or outputs.
+  The component inventory now also covers the package code and API guide.
+- No change to components, references, patches, scoring semantics, study
+  archives, saved responses or frozen release records. No model calls.
+
 ## 0.2.0 — 2026-11-04
 
 - Add RuleArena Airline prompt errata, a 300-case Markdown zero-shot minimum-cost

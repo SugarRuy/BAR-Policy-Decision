@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "scope": "Seven scoped components and their scripts/docs; study archives and the complete release have separate inventories.",
+  "scope": "Seven scoped components, their scripts/docs and the shared Python package code; study archives and the complete release have separate inventories.",
   "files": {
     "THIRD_PARTY.md": {
-      "sha256": "40488c37cd8c201d8e50b4deebd896306a0f5bd3360a3d7c68b47cc6d3e9866e",
-      "bytes": 5698
+      "sha256": "65d8e5254fbd9fc9c1f8961cd51a1f2b423e57e8211aa630a32367821ab35421",
+      "bytes": 5717
     },
     "components.json": {
       "sha256": "d59a1141c6cc4cb92785693611127128148c4692ca82a75a8482c749c968c3f2",
@@ -154,21 +154,25 @@
       "sha256": "5c4b4b2b5d3983be53416851c6ed994d3730a9f51245700c3e710049f5466481",
       "bytes": 110539
     },
+    "docs/API.md": {
+      "sha256": "f5938d32d290a1d2a7c9a4b9f341d6e32473cb1497ab4c5c37ded129117bd6ae",
+      "bytes": 16735
+    },
     "docs/COMPONENTS.md": {
-      "sha256": "b3741778a373bc25527c06e8e69d4a510b6a07e60667cadfee31b88d49bfe623",
-      "bytes": 12407
+      "sha256": "ec4539d254a06ae6da4f8f0f715474034911037377713067e97b24fab43b8814",
+      "bytes": 12679
     },
     "release.json": {
-      "sha256": "b0bc9eac10e4294b4518b87b222cacadec48aca09625674519ef36bbbee20f1d",
-      "bytes": 2799
+      "sha256": "fc217bee6c792e5b7d10118ffe45cefedb36da023a304e0019edea922a248546",
+      "bytes": 2860
     },
     "scripts/airline_policy_check.py": {
       "sha256": "d05146c2ef8da64676915bf3709044f0098c2cbb46436e2ce7a6c348fe722614",
       "bytes": 6338
     },
     "scripts/bar.py": {
-      "sha256": "b8732bb09bf9c3f2c03d4d93ade42ae26cf616970f6c6d75e7c0d1c7200bfd1a",
-      "bytes": 15668
+      "sha256": "7b67119824456877adaba1e4bc1f340bf1d7ecab79e68f9c2f87cae122f7456f",
+      "bytes": 1254
     },
     "scripts/check_audit_records.py": {
       "sha256": "75f5eaf2e9ad87fab5a68e62e7e528da494f54318c1eeb129dfafd932b415ea1",
@@ -187,8 +191,44 @@
       "bytes": 31817
     },
     "scripts/rulearena.py": {
-      "sha256": "3b0d218fab8864b6c3fc4e5a72e29b75d572b5ac0facc13c432bef380624a630",
-      "bytes": 6722
+      "sha256": "8782110fea9b7846671ec101bb9c0eb4aae8bfdd91824144140b4bdf6beecf92",
+      "bytes": 1148
+    },
+    "src/bar_policy/__init__.py": {
+      "sha256": "8314d8283c917b26a9792592544eb8ababb244b19d235e07d74855d4fa752b75",
+      "bytes": 2170
+    },
+    "src/bar_policy/_assets.py": {
+      "sha256": "1a96062d3239e7e315702f682dc45b8a11af086b7d8318210bcc786cc47c9a33",
+      "bytes": 4560
+    },
+    "src/bar_policy/_core.py": {
+      "sha256": "70833f4a89431f17b8d6a995b5216feaf9e9e8078e6481e740963ccf3519a625",
+      "bytes": 27666
+    },
+    "src/bar_policy/_sources.py": {
+      "sha256": "063e3e7e7406b10940225827b1261fa38f53d82e23ce6265145d3f80218feed5",
+      "bytes": 1723
+    },
+    "src/bar_policy/cli.py": {
+      "sha256": "9fc80a55d6b804fcea11cdf67e60818562c8d3580ca43e6a06423fd26b54aa81",
+      "bytes": 473
+    },
+    "src/bar_policy/components.py": {
+      "sha256": "3feedaa9f00f2cfb7b007de9c6307ddd8b3ea53ee2d7a4db00db723ed88c55dd",
+      "bytes": 9271
+    },
+    "src/bar_policy/datasets.py": {
+      "sha256": "cd0ac8218486da64bee983a83309e7b98eafcb66f356f466302fb0e4ed96eb35",
+      "bytes": 28670
+    },
+    "src/bar_policy/errors.py": {
+      "sha256": "5745bc467e90b4caa2d97356fb544a085813d7cce9d166f23e0600f388beab9d",
+      "bytes": 801
+    },
+    "src/bar_policy/scoring.py": {
+      "sha256": "512e7ec923e00df9bd6b324132a55ad343aa444ab52f9e66f4aa0412ecb36cec",
+      "bytes": 10396
     }
   }
 }

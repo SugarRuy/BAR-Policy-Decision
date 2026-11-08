@@ -7,7 +7,7 @@ audit records. It does not grant a new license to upstream material.
 
 | Files | Terms and attribution | Distribution decision |
 | --- | --- | --- |
-| `scripts/bar.py`, `scripts/check_components.py`, `components/legalbench-sara-numeric/evaluator.py` | BAR-original code, MIT; Yanru Xiao and Yifei Cai (2026) | Included. The SARA evaluator independently implements the stated parsing/math contract. |
+| `scripts/bar.py`, `scripts/check_components.py`, `src/bar_policy/`, `components/legalbench-sara-numeric/evaluator.py` | BAR-original code, MIT; Yanru Xiao and Yifei Cai (2026) | Included. The SARA evaluator independently implements the stated parsing/math contract. |
 | Component manifests, component documentation and SARA synthetic conformance vectors | BAR-original metadata/documentation; native source identities preserved | Included. SARA fixtures contain synthetic amounts and native IDs/diagnostic counts, not native labels or source text. |
 | `components/rulearena-tax/line22.patch`, `labels.json`, `corrections.json`, `reference_pairs.jsonl` | RuleArena upstream MIT notice, copyright (c) 2024 Ruiwen Zhou, plus BAR's scoped revision | Included with `components/rulearena-tax/UPSTREAM-LICENSE`. All 300 source-bound reference pairs and 27 changes retain IDs, pins and dependency flags. Raw case/prompt files are obtained separately. |
 | Airline and NBA native patches, source-bound reference/errata records | Same frozen RuleArena MIT source as Tax, plus BAR corrections | Included with an unchanged upstream notice in each component. Raw policies, cases, CSV tables and whole programs are still obtained separately. |

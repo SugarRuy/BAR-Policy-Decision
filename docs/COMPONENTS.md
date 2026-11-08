@@ -15,6 +15,10 @@ documented separately and are not part of this component inventory.
 | `rulearena-airline-scoring` | Native scoring patch and BAR-original decimal helper | Exact terminal-amount comparison, with native first-marker selection; no substring acceptance. |
 | `rulearena-nba-location-errata` | Two native JSON patches, guarded errata and 216-record builder | Two localization fields only; binary verdicts and other labels unchanged. |
 
+The [Python API](API.md) provides the same operations from Python and loads
+the Tax and Airline revisions as integrated datasets; `scripts/bar.py` and the
+API share one implementation.
+
 Each `components/<id>/component.json` binds the exact upstream revision and
 SHA-256 of all source inputs, patches and prepared programs. Preparation rejects
 wrong source versions, changed payloads, wrong result hashes, existing output
@@ -180,7 +184,8 @@ python3 scripts/bar.py dataset rulearena-nba-location-errata \
 
 The objective builder returns original and amended messages, unchanged references,
 source IDs/hashes and per-case ambiguity flags. It implements only Markdown
-zero-shot and does not apply the other components. The two Airline code overlays
+zero-shot and does not apply the other components; the Python API's
+`rulearena-airline` dataset integrates all three Airline components. The two Airline code overlays
 both modify `auto_test.py`; they must not be combined by overwriting one another.
 For objective-data scoring, the standalone `parse_total` and `score_total`
 functions in `components/rulearena-airline-scoring/evaluator.py` can be used

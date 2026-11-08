@@ -10,3 +10,6 @@ generated/
 *.zip
 *.pdf
 .DS_Store
+build/
+dist/
+*.egg-info/

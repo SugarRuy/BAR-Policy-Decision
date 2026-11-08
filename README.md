@@ -24,6 +24,7 @@ revisions for reevaluating models.
 **[Paper — arXiv:2611.07042](https://arxiv.org/abs/2611.07042)**
 · [Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
 · [Usage and setup](docs/COMPONENTS.md)
+· [Python API](docs/API.md)
 · [Audit evidence](evidence/README.md)
 · [Reproduce the studies](docs/REPRODUCING.md)
 
@@ -46,6 +47,28 @@ scorer or task text; usage and scope are in the
 | ConditionalQA | A revised scorer that counts missing predictions as zero instead of dropping them; original labels unchanged |
 | RuleArena Airline | Separate revisions for policy transcription and examples, amount scoring, and an explicit minimum-cost objective that amends the task specification |
 | RuleArena NBA | Corrections to two team/operation localization fields among 216 records; all binary verdicts unchanged |
+
+## Python API
+
+The `bar_policy` package loads the integrated revised Tax and Airline datasets
+from your local pinned RuleArena checkout, keeping model-visible messages
+separate from references and provenance, and exposes the BAR and native
+scorers. Nothing is downloaded.
+
+```bash
+python3 -m pip install .
+```
+
+```python
+import bar_policy as bar
+
+airline = bar.load_dataset("rulearena-airline", "/data/RuleArena")
+example = airline[0]
+example.messages                          # send only these to a model
+example.score("The total cost is $1,245.")
+```
+
+See the [API guide](docs/API.md) for datasets, scoring, versions and errors.
 
 ## Audit evidence
 
