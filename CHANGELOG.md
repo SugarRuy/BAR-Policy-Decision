@@ -2,6 +2,28 @@
 
 ## Unreleased — Python package
 
+- Package `1.0.0.dev1` adds post-publication API corrections:
+  - Validate ConditionalQA prediction/reference IDs and answer structure
+    before evaluation. Unknown or duplicate prediction IDs and malformed
+    submissions now raise; absent predictions for reference IDs count as zero and
+    legal empty answers retain native scoring. Results expose full-denominator
+    coverage, missing/empty-answer IDs and the prediction hash.
+    Validation and evaluator file reads both use UTF-8, preventing locale
+    defaults from corrupting non-ASCII answers and conditions.
+  - Default new Tax API evaluations to `rulearena-tax-numeric-v1`, which
+    fixes truncated ungrouped amounts and rejects malformed grouping.
+    The native phrase, sign and tolerance remain. The amount after the first
+    answer phrase must be valid; a malformed amount is not skipped in favor
+    of a later one.
+    `scorer="rulearena-tax-native"` retains the previous parser exactly.
+    This changes the API default, not the paper's frozen reproduction path.
+  - Clarify nullable component revisions, per-scorer argument types and
+    metadata for unapplied Airline errata.
+- Correct the stale `release.json` entry in the current component inventory
+  left by the paper-link update. No frozen release record is rewritten.
+
+### Initial API (`1.0.0.dev0`)
+
 - Add the installable `bar-policy-decision` package (`bar_policy`, package
   version 1.0.0.dev0) for BAR asset release 0.2.0: integrated revised Tax and
   Airline datasets with verbatim model-visible messages, separate references
@@ -10,8 +32,9 @@
 - Move the `scripts/bar.py` and `scripts/rulearena.py` implementation into the
   shared `src/bar_policy/_core.py` without changing CLI behavior or outputs.
   The component inventory now also covers the package code and API guide.
-- No change to components, references, patches, scoring semantics, study
-  archives, saved responses or frozen release records. No model calls.
+- The initial API preserved the component scoring semantics. All component
+  payloads, references, patches, study archives, saved responses and frozen
+  release records remain unchanged in both API revisions. No model calls.
 
 ## 0.2.0 — 2026-11-04
 

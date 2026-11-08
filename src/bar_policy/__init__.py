@@ -42,7 +42,7 @@ from .scoring import (
     score_tax_response,
 )
 
-__version__ = "1.0.0.dev0"  # Python package version; distinct from ASSET_RELEASE.
+__version__ = "1.0.0.dev1"  # Python package version; distinct from ASSET_RELEASE.
 
 
 def release_info(*, release=ASSET_RELEASE):

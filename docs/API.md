@@ -39,9 +39,14 @@ Three identifiers are kept separate:
 
 | Identifier | Where | Current value |
 | --- | --- | --- |
-| Python package version | `bar_policy.__version__` | `1.0.0.dev0` |
+| Python package version | `bar_policy.__version__` | `1.0.0.dev1` |
 | BAR asset release | `bar_policy.ASSET_RELEASE`, `release_info()["version"]` | `0.2.0` |
 | Component revision and manifest hash | `get_component(id).revision`, `.manifest_sha256` | e.g. Tax `line22-only-2` |
+
+Some upstream-bound components have no named revision (`revision is None`);
+their manifest hash and source pins identify the material. No revision is
+inferred. Report the package version, asset release and selected scorer with
+new results: package scoring can evolve without changing the frozen assets.
 
 Every loader accepts `release=`. Only the releases in
 `bar_policy.SUPPORTED_RELEASES` (`("0.2.0",)`) are accepted; anything else,
@@ -75,17 +80,22 @@ tax = bar.load_dataset("rulearena-tax", "/data/RuleArena")
 airline = bar.load_dataset("rulearena-airline", "/data/RuleArena")
 ```
 
-`load_dataset(name, source, *, release="0.2.0", variant=None, mode=None)`.
+`load_dataset(name, source, *, release="0.2.0", variant=None, mode=None, scorer=None)`.
 The default variant is the final integrated revised configuration; users do
 not combine components themselves. Release, variant and mode are validated
 before any source is read.
 
 | Dataset | Variant | Model-visible input | Reference | Scorer |
 | --- | --- | --- | --- | --- |
-| `rulearena-tax` | `revised` (default) | Native | Line-22 floor revision (27 of 300 differ) | Native Tax scorer |
-| `rulearena-tax` | `original` | Native | Original RuleArena reference | Native Tax scorer |
+| `rulearena-tax` | `revised` (default) | Native | Line-22 floor revision (27 of 300 differ) | BAR numeric parser (native scorer optional) |
+| `rulearena-tax` | `original` | Native | Original RuleArena reference | BAR numeric parser (native scorer optional) |
 | `rulearena-airline` | `revised` (default) | Native + minimum-cost objective amendment; prompt errata applied | Native amounts (unchanged) | BAR exact amount scorer |
 | `rulearena-airline` | `original-input` | Native, without the objective | Native amounts (unchanged) | BAR exact amount scorer |
+
+Scorer selection is independent of reference selection. Tax accepts
+`rulearena-tax-numeric-v1` (default) and `rulearena-tax-native`; Airline accepts
+only `rulearena-airline-scoring`. `capabilities()["datasets"]` lists each
+default and its supported scorers.
 
 Supported modes are `zero-shot` for Tax (native `distractor=False`,
 `textual=False`, no example) and `markdown-zero-shot` for Airline. The Tax
@@ -191,15 +201,36 @@ bar.score_airline_response("The total cost is $1,198.00", 1198)
 `ItemScore` has `accepted`, `parsed` (`None` if no answer was found),
 `reference` and `scorer`.
 
-- **Tax** uses the original/native RuleArena Tax scoring, not a scorer
-  repair: `decode_tax` and `tax_accept` from `scripts/reproduce_results.py`
-  (the exact native final-answer regex after removing `**`, overpaid amounts
-  negative, and a standard-library scalar equivalent of native `numpy.isclose`
-  with `rtol=1e-5`, `atol=1e-8`). Tax scoring does not require NumPy.
+- **Tax** defaults to `rulearena-tax-numeric-v1`. It reads the complete amount
+  in the native answer phrase, with or without correctly grouped commas:
+  `$1234.50` and `$1,234.50` both parse as `1234.5`. Malformed grouping,
+  such as `$1,23`, is rejected. Currency suffixes require a separator, as in
+  `$1234 USD`. The native case-sensitive phrase, removal of
+  `**`, negative sign for overpayment, and tolerance (`rtol=1e-5`, `atol=1e-8`,
+  reference as second argument) are retained. The parser validates the amount
+  immediately after the first native answer phrase. If that amount is
+  malformed, the response is rejected even if a later phrase has a valid
+  amount. It does not select the last conclusion. Tax scoring needs no NumPy.
 - **Airline** uses the bundled `rulearena-airline-scoring` evaluator
   unchanged; see its [README](../components/rulearena-airline-scoring/README.md)
-  for the exact terminal-format contract. The native substring scorer is not
-  exposed.
+  for the exact terminal-format contract. References may be finite numeric
+  amounts or numeric strings. The native substring scorer is not exposed.
+
+The numeric parser is a post-publication API revision. To reproduce the
+paper's Tax scores, select the unchanged native scorer explicitly:
+
+```python
+tax_native = bar.load_dataset(
+    "rulearena-tax", "/data/RuleArena", scorer="rulearena-tax-native"
+)
+bar.score_tax_response(
+    "The total tax owed is $1234.", 1234, scorer="rulearena-tax-native"
+)  # parsed=123.0, accepted=False: an inherited native parsing defect
+```
+
+Native mode calls `decode_tax` and `tax_accept` from
+`scripts/reproduce_results.py` unchanged, including partial-number matching.
+The published reproduction scripts and saved results retain this mode.
 
 A whole dataset, with the full dataset as denominator:
 
@@ -237,16 +268,41 @@ bar.score_conditionalqa([{"id": "dev-0", "answers": []}, ...], source="/data/Con
 
 The user's `evaluate.py` is hash-checked, `denominator.patch` is applied in
 memory and the result is checked against its pinned hash before it runs; its
-progress message is suppressed. All reference IDs stay in every denominator:
+progress message is suppressed and file reads explicitly use UTF-8, matching
+validation regardless of the system locale. All reference IDs stay in every denominator:
 absent IDs score zero, `answers: []` is a valid submission, and categories
 without references are `None`. Aggregation is the native one, not a mean of
 per-example scores. The default references are the pinned `v1_0/dev.json`;
 another `reference_file` requires `allow_unpinned_reference=True` and is
 reported in `result.reference_pinned` and `result.reference_sha256`.
 
-Invalid, non-finite or wrongly typed references, wrong argument types, and
-source or asset problems always raise. They are never scored as incorrect
-responses.
+Before evaluation, the API validates both files as UTF-8 JSON without a byte
+order mark. Each ID must be unique and
+each prediction ID must occur in the selected references. `answers` must be
+a list of `[answer_text, [condition_text, ...]]` pairs, with string text.
+Malformed JSON, duplicate object keys, duplicate record IDs, unknown IDs and
+invalid answer shapes raise `ResponseError`; invalid reference files raise
+`ConfigurationError`. Additional native metadata fields are permitted.
+No IDs or answers are silently rewritten.
+
+`ConditionalQAResult` includes `denominator`, `submitted`, `missing` IDs,
+`empty_answers` IDs and `prediction_sha256`. The file API hashes the exact
+submitted bytes; the in-memory API hashes its generated UTF-8 JSON, which
+can differ from an equivalent file's formatting. A completely empty prediction
+list is valid: all reference cases remain in the denominator and score zero.
+An explicit empty answer list is distinct and can receive credit for an
+unanswerable case. Empty reference files are rejected.
+
+These input checks (`input_validation="conditionalqa-input-v1"`) were added
+during the public API review after publication; they are not additional
+label-error findings from the paper. Valid submissions use the unchanged
+full-denominator evaluator. The `prepare_component` CLI still produces the
+frozen scorer patch; use the API for these additional validation checks.
+
+Tax references must be finite `int` or `float` values (not booleans).
+SARA references may be finite numeric values or numeric strings accepted by
+its currency parser. Wrong scalar types, invalid numeric references, and
+source or asset problems raise rather than count as model errors.
 
 ## Components and low-level access
 
@@ -301,16 +357,18 @@ built-in exception.
 | Exception | Also a | Raised for |
 | --- | --- | --- |
 | `ConfigurationError` | `ValueError` | Unknown dataset, component, variant or mode; bad argument; invalid or non-finite reference; unusable output directory |
-| `UnsupportedError` | `ConfigurationError` | Unsupported release, mode or operation |
+| `UnsupportedError` | `ConfigurationError` | Unsupported release, mode, scorer or operation |
 | `SourceNotFoundError` | `FileNotFoundError` | Missing source directory or pinned file |
 | `SourceMismatchError` | `ValueError` | Source file or record differs from its pin (raised before any upstream code runs) |
 | `AssetIntegrityError` | `ValueError` | Bundled BAR file missing or changed |
 | `PatchError` | `ValueError` | A distributed patch does not produce its pinned result |
-| `ResponseError` / `MissingResponsesError` | `ValueError` | Unknown or absent response IDs in batch scoring |
+| `ResponseError` | `ValueError` | Unknown dataset response IDs; malformed ConditionalQA submissions, unknown or duplicate IDs |
+| `MissingResponsesError` | `ResponseError` | Missing IDs in `Dataset.score` unless `allow_missing=True`; ConditionalQA always counts missing predictions as zero |
 | `DependencyError` | `ImportError` | NumPy missing for SARA scoring |
 
-Arguments of the wrong type, including non-string responses and boolean or
-string Tax references, raise `TypeError`.
+Wrong response or scalar reference types, including non-string responses and
+boolean or string Tax references, raise `TypeError`. Wrong types for dataset
+selection options or scorer IDs raise `ConfigurationError`.
 
 ## Command line
 
@@ -331,3 +389,8 @@ run when the environment variables documented in `tests/_support.py` point to
 local pinned sources and reference outputs; `BAR_TEST_PACKAGING=1`
 additionally builds the sdist and wheel and reruns the suite against the
 installed wheel outside the source tree. No test calls a model or the network.
+
+The pre-API CLI at `bca817a` has a stale `release.json` checksum in
+`inventory.json`. For baseline parity tests, use a scratch copy with only
+that inventory entry recalculated; leave the source commit and its payloads
+unchanged. Current inventories already include that correction.

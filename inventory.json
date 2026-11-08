@@ -155,8 +155,8 @@
       "bytes": 110539
     },
     "docs/API.md": {
-      "sha256": "f5938d32d290a1d2a7c9a4b9f341d6e32473cb1497ab4c5c37ded129117bd6ae",
-      "bytes": 16735
+      "sha256": "91271009f21f30cbb9478ed8b2d1b838176f5ed4380a095768273cf668bbb7d7",
+      "bytes": 20611
     },
     "docs/COMPONENTS.md": {
       "sha256": "ec4539d254a06ae6da4f8f0f715474034911037377713067e97b24fab43b8814",
@@ -195,7 +195,7 @@
       "bytes": 1148
     },
     "src/bar_policy/__init__.py": {
-      "sha256": "8314d8283c917b26a9792592544eb8ababb244b19d235e07d74855d4fa752b75",
+      "sha256": "c9bda717a23e0d932d0e20d19dd695e2f6e68be491fbd12bb04faef99e89edf8",
       "bytes": 2170
     },
     "src/bar_policy/_assets.py": {
@@ -219,16 +219,16 @@
       "bytes": 9271
     },
     "src/bar_policy/datasets.py": {
-      "sha256": "cd0ac8218486da64bee983a83309e7b98eafcb66f356f466302fb0e4ed96eb35",
-      "bytes": 28670
+      "sha256": "a8d9b9e98a380b4c1b5e14f220befffda16a613d20a593886fb18be438368d3b",
+      "bytes": 29882
     },
     "src/bar_policy/errors.py": {
       "sha256": "5745bc467e90b4caa2d97356fb544a085813d7cce9d166f23e0600f388beab9d",
       "bytes": 801
     },
     "src/bar_policy/scoring.py": {
-      "sha256": "512e7ec923e00df9bd6b324132a55ad343aa444ab52f9e66f4aa0412ecb36cec",
-      "bytes": 10396
+      "sha256": "c1091f9d063231b698f307e8041e23cd27ea29fa365ef0372c24e212402767cf",
+      "bytes": 15269
     }
   }
 }

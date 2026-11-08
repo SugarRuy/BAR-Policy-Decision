@@ -10,6 +10,7 @@ raw native record are kept outside the model-visible input.
 """
 import copy
 from dataclasses import dataclass
+from functools import partial
 from types import MappingProxyType
 from typing import Mapping, Optional, Tuple
 
@@ -24,11 +25,13 @@ _DATASETS = {
         "description": "RuleArena Tax, 300 native cases with the scoped line-22 reference revision.",
         "default_variant": "revised",
         "variants": {
-            "revised": "Native inputs; line-22 floor-revised references; native Tax scorer.",
-            "original": "Native inputs; original RuleArena references; native Tax scorer.",
+            "revised": "Native inputs; line-22 floor-revised references.",
+            "original": "Native inputs; original RuleArena references.",
         },
         "modes": ("zero-shot",),
         "default_mode": "zero-shot",
+        "default_scorer": scoring.TAX_SCORER,
+        "scorers": (scoring.TAX_SCORER, scoring.TAX_NATIVE_SCORER),
         "unsupported_modes": {
             "one-shot": "the native one-shot example is not built by BAR",
             "textual": "the native textual forms are not built by BAR",
@@ -48,6 +51,8 @@ _DATASETS = {
         },
         "modes": ("markdown-zero-shot",),
         "default_mode": "markdown-zero-shot",
+        "default_scorer": scoring.AIRLINE_SCORER,
+        "scorers": (scoring.AIRLINE_SCORER,),
         "unsupported_modes": {
             "markdown-one-shot": "the objective builder implements Markdown zero-shot only",
             "textual-zero-shot": "the objective builder implements Markdown zero-shot only",
@@ -85,6 +90,8 @@ def dataset_capabilities():
             "description": spec["description"], "default_variant": spec["default_variant"],
             "variants": dict(spec["variants"]), "modes": list(spec["modes"]),
             "default_mode": spec["default_mode"],
+            "default_scorer": spec["default_scorer"],
+            "scorers": list(spec["scorers"]),
             "unsupported_modes": dict(spec["unsupported_modes"]),
             "components": list(spec["components"]),
         }
@@ -341,7 +348,7 @@ def _assets_component(identifier):
     return get_component(identifier).provenance()
 
 
-def _tax(source, variant):
+def _tax(source, variant, scorer):
     root = _assets.root()
     manifest = _assets.manifest("rulearena-tax")
     spec = manifest["dataset"]
@@ -395,14 +402,22 @@ def _tax(source, variant):
             {"remaining_dependencies": row["remaining_dependencies"]},
             {**_upstream(manifest, row["source_file"], sources, record=row["source_index"]),
              "case_sha256": row["case_sha256"]},
-            row["native_case"], scoring.score_tax_response))
+            row["native_case"], partial(scoring.score_tax_response, scorer=scorer)))
+    is_native = scorer == scoring.TAX_NATIVE_SCORER
     info = {
         "components": [_component_info("rulearena-tax", "reference revision",
                                        variant == "revised")],
         "amendments": [],
-        "scorer": {"id": scoring.TAX_SCORER, "kind": "original/native RuleArena Tax scoring",
-                   "implementation": "decode_tax and tax_accept in scripts/reproduce_results.py",
-                   "is_repair": False},
+        "scorer": {
+            "id": scorer,
+            "kind": ("original/native RuleArena Tax scoring" if is_native
+                     else "BAR complete numeric parsing with native sign and tolerance"),
+            "implementation": ("decode_tax and tax_accept in scripts/reproduce_results.py"
+                               if is_native else "src/bar_policy/scoring.py"),
+            "is_repair": not is_native,
+            "answer_selection": ("first matching native final-answer pattern" if is_native
+                                 else "first native answer phrase; reject an invalid amount"),
+        },
         "reference_kind": ("line22_repaired_signed_answer" if variant == "revised"
                            else "original_signed_answer"),
         "record_count": len(examples),
@@ -417,7 +432,7 @@ def _tax(source, variant):
         "not_complete_ground_truth_certification": True,
         "model_calls": 0,
     }
-    return examples, info, scoring.TAX_SCORER
+    return examples, info, scorer
 
 
 def _verify_errata_no_effect(sources, rows, objective):
@@ -446,7 +461,7 @@ def _verify_errata_no_effect(sources, rows, objective):
     return applied
 
 
-def _airline(source, variant):
+def _airline(source, variant, scorer):
     root = _assets.root()
     manifest = _assets.manifest("rulearena-airline-objective")
     expected = manifest["source_repository"]
@@ -533,7 +548,7 @@ def _airline(source, variant):
                             "input amendment and source-bound reference records", revised,
                             "adds the minimum-cost objective" if revised else None),
             _component_info("rulearena-airline-prompt-errata", "prompt errata", revised,
-                            errata_effect),
+                            errata_effect if revised else None),
             _component_info("rulearena-airline-scoring", "amount scorer", True),
         ],
         "amendments": ([{"component": "rulearena-airline-objective", "kind": "objective amendment",
@@ -565,12 +580,15 @@ def _airline(source, variant):
 _BUILDERS = {"rulearena-tax": _tax, "rulearena-airline": _airline}
 
 
-def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, mode=None):
+def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, mode=None,
+                 scorer=None):
     """Load an integrated, versioned policy-decision dataset.
 
     ``source`` is the local root of the pinned upstream checkout. The default
     ``variant`` is the final integrated revised configuration. Unsupported
-    releases, variants and modes raise before any source is read.
+    releases, variants, modes and scorers raise before any source is read.
+    Tax defaults to ``rulearena-tax-numeric-v1``; select
+    ``rulearena-tax-native`` to reproduce published scores.
     """
     if not isinstance(name, str):
         raise _core.ConfigurationError("dataset name must be a string")
@@ -583,7 +601,8 @@ def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, m
     spec = _DATASETS[name]
     variant = spec["default_variant"] if variant is None else variant
     mode = spec["default_mode"] if mode is None else mode
-    for label, value in (("variant", variant), ("mode", mode)):
+    scorer = spec["default_scorer"] if scorer is None else scorer
+    for label, value in (("variant", variant), ("mode", mode), ("scorer", scorer)):
         if not isinstance(value, str):
             raise _core.ConfigurationError(f"{label} must be a string, not {type(value).__name__}")
     if variant not in spec["variants"]:
@@ -596,8 +615,11 @@ def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, m
     if mode not in spec["modes"]:
         raise _core.ConfigurationError(
             f"Unknown mode {mode!r} for {name}; supported: {', '.join(spec['modes'])}")
+    if scorer not in spec["scorers"]:
+        raise _core.UnsupportedError(
+            f"Unsupported scorer {scorer!r} for {name}; supported: {', '.join(spec['scorers'])}")
     _assets.verify()
-    examples, info, scorer = _BUILDERS[name](source, variant)
+    examples, info, scorer = _BUILDERS[name](source, variant, scorer)
     info.update({"dataset": name, "release": release, "variant": variant, "mode": mode,
                  "variant_description": spec["variants"][variant]})
     return Dataset(name, release, variant, mode, examples, info, scorer)

@@ -87,7 +87,7 @@ class Tax(unittest.TestCase):
         info = self.revised.info
         self.assertEqual(info["changed_references"], 27)
         self.assertTrue(info["not_complete_ground_truth_certification"])
-        self.assertFalse(info["scorer"]["is_repair"])
+        self.assertTrue(info["scorer"]["is_repair"])
         self.assertEqual(info["components"][0]["revision"], "line22-only-2")
 
     def test_frozen_study_input_hashes(self):
@@ -153,9 +153,26 @@ class Tax(unittest.TestCase):
         cases = json.loads(golden("score-golden.json").read_text())["tax"]
         self.assertGreater(len(cases), 0)
         for case in cases:
-            score = bp.score_tax_response(case["response"], case["reference"])
+            score = bp.score_tax_response(case["response"], case["reference"],
+                                          scorer="rulearena-tax-native")
             self.assertEqual((score.parsed, score.accepted), (case["parsed"], case["score"]), case)
             self.assertEqual(self.revised[case["id"]].reference, case["reference"])
+
+    def test_native_mode_reproduces_all_saved_study_responses(self):
+        with tarfile.open(tax_study()) as archive:
+            responses = json.load(archive.extractfile("responses.json"))
+            references = {r["id"]: r for r in
+                          json.load(archive.extractfile("references.json"))}
+        self.assertEqual(len(responses), 900)
+        for response in responses:
+            self.assertEqual(sha256(response["raw_text"].encode()),
+                             response["raw_text_sha256"])
+            for index, key in enumerate(("original", "revised")):
+                result = bp.score_tax_response(
+                    response["raw_text"], references[response["id"]][key],
+                    scorer="rulearena-tax-native")
+                self.assertEqual(result.parsed, response["parsed"], response["id"])
+                self.assertEqual(result.accepted, response["scores"][index], response["id"])
 
 
 class Airline(unittest.TestCase):

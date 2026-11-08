@@ -69,6 +69,9 @@ example.score("The total cost is $1,245.")
 ```
 
 See the [API guide](docs/API.md) for datasets, scoring, versions and errors.
+The API also checks ConditionalQA prediction IDs and answer structure, and
+defaults to complete numeric parsing for Tax. An explicit native Tax mode
+preserves reproduction of the paper's scores; see the [change log](CHANGELOG.md).
 
 ## Audit evidence
 

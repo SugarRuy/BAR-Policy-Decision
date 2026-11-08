@@ -204,7 +204,7 @@ class TaxScorer(unittest.TestCase):
         ]
         for text, parsed, accepted in cases:
             with self.subTest(text=text):
-                score = bp.score_tax_response(text, 1234.5)
+                score = bp.score_tax_response(text, 1234.5, scorer="rulearena-tax-native")
                 self.assertEqual(score.parsed, parsed)
                 self.assertIs(score.accepted, accepted)
                 self.assertEqual(score.scorer, "rulearena-tax-native")
