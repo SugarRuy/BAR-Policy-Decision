@@ -1,8 +1,32 @@
 # BAR changes
 
-## Unreleased — Python package
+## 0.3.0 — 2026-11-12
 
-- Package `1.0.0.dev1` adds post-publication API corrections:
+- Add Tax reference revision `t1-t2-1`. Keep the T1 line-22 floor and remove
+  only the unsupported adjusted-self-employment-earnings `< $400` branch.
+  Recompute the downstream fields from unchanged cases and supplied policies,
+  with no added zero floor or rounding rule.
+- Relative to `line22-only-2`, 21 labels change and 279 remain identical.
+  These are exactly the T2-marked cases. Five overlap T1, giving 43 changed
+  labels relative to the original key.
+- The affected population includes 20 losses and one positive earnings amount
+  below $400. Applying the supplied formulas yields negative self-employment
+  tax and deductions in the loss cases. Other taxes are negative in 15 cases,
+  total tax in five, and three final amounts change from owed to refund.
+  T3's Schedule 3 line-15 zero default remains; this is a policy-packet consistency revision.
+- Ship all 300 three-way reference comparisons, the 21 field-level changes,
+  a composed source-bound patch and an offline checker with independent
+  Schedule SE arithmetic and 18 boundary controls.
+- Package `0.3.0` defaults to asset release `0.3.0`; API and CLI accept
+  explicit `0.2.0` for the unchanged T1-only references and patch.
+  Original references remain available. Existing scorers, tolerances, frozen
+  release tags, saved responses and published results are unchanged.
+- Include the public Python API and its previously documented maintenance
+  changes below in a tagged release. No model experiments were run.
+
+### Python API maintenance included in this release
+
+- Include the post-publication API corrections:
   - Validate ConditionalQA prediction/reference IDs and answer structure
     before evaluation. Unknown or duplicate prediction IDs and malformed
     submissions now raise; absent predictions for reference IDs count as zero and
@@ -22,10 +46,9 @@
 - Correct the stale `release.json` entry in the current component inventory
   left by the paper-link update. No frozen release record is rewritten.
 
-### Initial API (`1.0.0.dev0`)
+### Public Python API
 
-- Add the installable `bar-policy-decision` package (`bar_policy`, package
-  version 1.0.0.dev0) for BAR asset release 0.2.0: integrated revised Tax and
+- Add the installable `bar-policy-decision` package (`bar_policy`): integrated revised Tax and
   Airline datasets with verbatim model-visible messages, separate references
   and provenance, existing scorers, component access and a `bar-policy`
   command. See `docs/API.md`.
@@ -34,7 +57,7 @@
   The component inventory now also covers the package code and API guide.
 - The initial API preserved the component scoring semantics. All component
   payloads, references, patches, study archives, saved responses and frozen
-  release records remain unchanged in both API revisions. No model calls.
+  release records remain unchanged by the API additions. No model calls.
 
 ## 0.2.0 — 2026-11-04
 

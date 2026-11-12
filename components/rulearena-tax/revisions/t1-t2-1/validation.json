@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "revision": "t1-t2-1",
+    "records": 300,
+    "original_exact_replay": 300,
+    "line22_exact_replay": 300,
+    "revised_exact_replay": 300,
+    "changed_from_line22": 21,
+    "unchanged_from_line22": 279,
+    "changed_from_original": 43,
+    "t1_t2_overlap": 5,
+    "negative_earnings_affected": 20,
+    "positive_earnings_below_400_affected": 1,
+    "negative_self_employment_tax": 20,
+    "negative_other_taxes": 15,
+    "negative_total_tax": 5,
+    "owed_to_refund_from_line22": 3,
+    "native_inputs_unchanged": 300,
+    "unmarked_intermediates_unchanged": 279,
+    "changed_ids_equal_t2_flags": true,
+    "only_t2_branch_removed_from_t1": true,
+    "remaining_dependency": "T3_schedule3_line15_default_zero",
+    "model_calls": 0
+  },
+  "source_pins": {
+    "tax/structured_forms.py": "4d5a01ae0998f5cb965f00b62f2a1aba98e979649ecc88f6c2977ddb6b04a8ad",
+    "tax/micro_evaluation.py": "866e44f16a817c0c415e1c2640ebdf0d58e046f9d8f3d60fc7da201ff9a4d026",
+    "tax/prompt.py": "90ee4a72e4486312e0bc739b294320edfe6d011600328da18562ab23869d0a2e",
+    "tax/auto_test.py": "90a01c09422068f5689a2d658b5def2cfc58e18473dfc104c2b5b5d134fa27f3",
+    "tax/synthesized_problems/comp_0.json": "2142495068970cfd47ca505f290867c43f137024325e31170362a1baa43f405c",
+    "tax/synthesized_problems/comp_1.json": "7f8d8b5175a4710764700322a0ceb89c2e9839aa7a2228b539f86fbec832c063",
+    "tax/synthesized_problems/comp_2.json": "4041bde8f1db40c138ce47cf618b9144447b07e5c55e450e5f7a30dc4acda26f"
+  },
+  "boundary_controls": [
+    {
+      "net_profit": -100,
+      "social_security_wages": 160199,
+      "self_employment_tax": -15.3
+    },
+    {
+      "net_profit": -100,
+      "social_security_wages": 160200,
+      "self_employment_tax": -2.9000000000000004
+    },
+    {
+      "net_profit": -100,
+      "social_security_wages": 160201,
+      "self_employment_tax": -2.9000000000000004
+    },
+    {
+      "net_profit": 0,
+      "social_security_wages": 160199,
+      "self_employment_tax": 0.0
+    },
+    {
+      "net_profit": 0,
+      "social_security_wages": 160200,
+      "self_employment_tax": 0.0
+    },
+    {
+      "net_profit": 0,
+      "social_security_wages": 160201,
+      "self_employment_tax": 0.0
+    },
+    {
+      "net_profit": 100,
+      "social_security_wages": 160199,
+      "self_employment_tax": 2.80215
+    },
+    {
+      "net_profit": 100,
+      "social_security_wages": 160200,
+      "self_employment_tax": 2.67815
+    },
+    {
+      "net_profit": 100,
+      "social_security_wages": 160201,
+      "self_employment_tax": 2.67815
+    },
+    {
+      "net_profit": 432.0519761775853,
+      "social_security_wages": 160199,
+      "self_employment_tax": 11.695
+    },
+    {
+      "net_profit": 432.0519761775853,
+      "social_security_wages": 160200,
+      "self_employment_tax": 11.571
+    },
+    {
+      "net_profit": 432.0519761775853,
+      "social_security_wages": 160201,
+      "self_employment_tax": 11.571
+    },
+    {
+      "net_profit": 433.1348132106118,
+      "social_security_wages": 160199,
+      "self_employment_tax": 11.724000000000002
+    },
+    {
+      "net_profit": 433.1348132106118,
+      "social_security_wages": 160200,
+      "self_employment_tax": 11.600000000000001
+    },
+    {
+      "net_profit": 433.1348132106118,
+      "social_security_wages": 160201,
+      "self_employment_tax": 11.600000000000001
+    },
+    {
+      "net_profit": 434.21765024363833,
+      "social_security_wages": 160199,
+      "self_employment_tax": 11.753000000000002
+    },
+    {
+      "net_profit": 434.21765024363833,
+      "social_security_wages": 160200,
+      "self_employment_tax": 11.629000000000001
+    },
+    {
+      "net_profit": 434.21765024363833,
+      "social_security_wages": 160201,
+      "self_employment_tax": 11.629000000000001
+    }
+  ],
+  "negative_other_tax_case_ids": [
+    "tax/comp_1/13",
+    "tax/comp_1/17",
+    "tax/comp_1/49",
+    "tax/comp_1/94",
+    "tax/comp_2/17",
+    "tax/comp_2/40",
+    "tax/comp_2/58",
+    "tax/comp_2/60",
+    "tax/comp_2/61",
+    "tax/comp_2/65",
+    "tax/comp_2/70",
+    "tax/comp_2/73",
+    "tax/comp_2/84",
+    "tax/comp_2/86",
+    "tax/comp_2/92"
+  ],
+  "negative_total_tax_case_ids": [
+    "tax/comp_1/13",
+    "tax/comp_2/17",
+    "tax/comp_2/61",
+    "tax/comp_2/86",
+    "tax/comp_2/92"
+  ]
+}

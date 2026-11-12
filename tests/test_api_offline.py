@@ -19,16 +19,16 @@ from _support import checkout, package_dir
 
 
 class Versions(unittest.TestCase):
-    def test_versions_are_distinct_and_enumerated(self):
-        self.assertEqual(bp.ASSET_RELEASE, "0.2.0")
-        self.assertEqual(bp.SUPPORTED_RELEASES, ("0.2.0",))
-        self.assertNotEqual(bp.__version__, bp.ASSET_RELEASE)
+    def test_shared_version_and_historical_releases(self):
+        self.assertEqual(bp.ASSET_RELEASE, "0.3.0")
+        self.assertEqual(bp.SUPPORTED_RELEASES, ("0.2.0", "0.3.0"))
+        self.assertEqual(bp.__version__, bp.ASSET_RELEASE)
         info = bp.release_info()
-        self.assertEqual(info["version"], "0.2.0")
+        self.assertEqual(info["version"], "0.3.0")
         self.assertEqual(len(info["components"]), 7)
 
     def test_unknown_releases_fail_without_fallback(self):
-        for release in ("0.1.0", "0.3.0", "latest", "v0.2.0", "", "0.2"):
+        for release in ("0.1.0", "0.4.0", "latest", "v0.2.0", "", "0.2"):
             with self.subTest(release=release):
                 with self.assertRaises(bp.UnsupportedError):
                     bp.load_dataset("rulearena-tax", "/nonexistent", release=release)
@@ -40,8 +40,8 @@ class Versions(unittest.TestCase):
 
     def test_component_revisions_and_manifests(self):
         tax = bp.get_component("rulearena-tax")
-        self.assertEqual(tax.revision, "line22-only-2")
-        self.assertEqual(tax.release, "0.2.0")
+        self.assertEqual(tax.revision, "t1-t2-1")
+        self.assertEqual(tax.release, "0.3.0")
         self.assertEqual(tax.source_repository,
                          "SkyRiver-2000/RuleArena@59f60f6b4eb93a9b6d187ec781349d4f15618903")
         self.assertEqual(len(tax.manifest_sha256), 64)
@@ -69,7 +69,7 @@ class Assets(unittest.TestCase):
     def test_references_bundled(self):
         tax = bp.load_references("rulearena-tax")
         self.assertEqual(len(tax), 300)
-        self.assertEqual(sum(r["changed"] for r in tax), 27)
+        self.assertEqual(sum(r["changed"] for r in tax), 43)
         airline = bp.load_references("rulearena-airline-objective")
         self.assertEqual(len(airline), 300)
         self.assertEqual(sum(r["allocation_sensitive"] for r in airline), 94)

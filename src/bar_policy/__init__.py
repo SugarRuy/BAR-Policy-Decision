@@ -42,14 +42,14 @@ from .scoring import (
     score_tax_response,
 )
 
-__version__ = "1.0.0.dev1"  # Python package version; distinct from ASSET_RELEASE.
+__version__ = ASSET_RELEASE  # One version for the repository, package and current assets.
 
 
 def release_info(*, release=ASSET_RELEASE):
     """The bundled ``release.json`` of one pinned asset release."""
     from . import _assets
     _assets.check_release(release)
-    return _assets.release_metadata()
+    return _assets.release_metadata(release)
 
 
 __all__ = [

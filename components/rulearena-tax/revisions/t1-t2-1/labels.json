@@ -1,0 +1,4555 @@
+{
+  "upstream_repository": "SkyRiver-2000/RuleArena",
+  "upstream_commit": "59f60f6b4eb93a9b6d187ec781349d4f15618903",
+  "repair_version": "t1-t2-1",
+  "scope": "T1 Form 1040 line 22 zero floor and T2 self-employment calculation using the supplied formulas without the unstated $400 branch; downstream fields recomputed. T3 Schedule 3 line 15 retains its zero default.",
+  "sign_convention": "Positive = owed; negative = refund.",
+  "dependency_definitions": {
+    "T3_schedule3_line15_default_zero": "Reference assumes zero for an input absent from the case schema; preserved in every floor-repaired amount."
+  },
+  "records": [
+    {
+      "case_id": "tax/comp_0/0",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 0,
+      "case_sha256": "6aafa55ac5e22d60bc01487a59aad7c352bf30e17cda779ebe2761c3c7e3de33",
+      "original_signed_answer": -16734.0,
+      "line22_repaired_signed_answer": -16734.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -16734.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/1",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 1,
+      "case_sha256": "daf7999bea9c044db3a36c195151b8138f00586d489db18a1105cde16978050c",
+      "original_signed_answer": 3241.6800000000003,
+      "line22_repaired_signed_answer": 3241.6800000000003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3241.6800000000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/2",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 2,
+      "case_sha256": "67e0d140642d0dc8e9ba3dfd75ba8165816c7a9f3c24231394d694997600dc12",
+      "original_signed_answer": 11074.559999999998,
+      "line22_repaired_signed_answer": 11074.559999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11074.559999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/3",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 3,
+      "case_sha256": "d295bd36be74f2389f05f007834d6bbf7769d54a6be738a8613d73ef0f8c182d",
+      "original_signed_answer": -2188.0,
+      "line22_repaired_signed_answer": -2188.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2188.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/4",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 4,
+      "case_sha256": "705da04311b3f1eb68a86b4e04997198e83b0c787a6494e9ca4ff8a87b735dfa",
+      "original_signed_answer": 17470.72,
+      "line22_repaired_signed_answer": 17470.72,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17470.72,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/5",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 5,
+      "case_sha256": "96c9d73b03dc4423a3ee1fd97541d753a83fd8dc8a6fa9fd04fa9dc655e958ef",
+      "original_signed_answer": 10762.559999999998,
+      "line22_repaired_signed_answer": 10762.559999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10762.559999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/6",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 6,
+      "case_sha256": "9e22022640258806510862330a09183750c77039f57274e4a53fa6aed859b9e8",
+      "original_signed_answer": 21231.96,
+      "line22_repaired_signed_answer": 21231.96,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 21231.96,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/7",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 7,
+      "case_sha256": "768e4cab1205cdc450480562156eb4cb8cdc8e86189e36579a280b0d62c2ad85",
+      "original_signed_answer": 12186.96,
+      "line22_repaired_signed_answer": 12186.96,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12186.96,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/8",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 8,
+      "case_sha256": "cd55d650c0c906fe5492fa7952acb5844ff974ce4b1c8cf588d94af4aa733e22",
+      "original_signed_answer": 4859.18,
+      "line22_repaired_signed_answer": 4859.18,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4859.18,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/9",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 9,
+      "case_sha256": "fd3646f0e982a82e1996e38aae0425a9ee92091d33dbadfa85a0a60c8633d1a2",
+      "original_signed_answer": -5576.299999999999,
+      "line22_repaired_signed_answer": -5576.299999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5576.299999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/10",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 10,
+      "case_sha256": "bae8fa3a28cb09c40e64293d3e62756f9b2819427315e004074e0676d3466d0d",
+      "original_signed_answer": 12841.48,
+      "line22_repaired_signed_answer": 12841.48,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12841.48,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/11",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 11,
+      "case_sha256": "d1ea41fc3e932f650b246497366cdf010bf72c48c00caee2f93bd78497e42cd1",
+      "original_signed_answer": -1628.9599999999991,
+      "line22_repaired_signed_answer": -1628.9599999999991,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1628.9599999999991,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/12",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 12,
+      "case_sha256": "faf75ce4c0cbec9f1ce3cbdd140594e261d5a47b4332b667c28ed88e72bd4d70",
+      "original_signed_answer": 26687.04,
+      "line22_repaired_signed_answer": 26687.04,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 26687.04,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/13",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 13,
+      "case_sha256": "116aebe3cb6c7a78d57fb9d7c29fab9d6424e21e49b72ef29f7dcba743247edd",
+      "original_signed_answer": 15023.239999999998,
+      "line22_repaired_signed_answer": 15023.239999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15023.239999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/14",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 14,
+      "case_sha256": "6fba18b84a59d34f899e8f0f01f7ae26874de2b345d5259b548c9ad6d4bf71b8",
+      "original_signed_answer": 18545.32,
+      "line22_repaired_signed_answer": 18545.32,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18545.32,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/15",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 15,
+      "case_sha256": "37f63088f279c9668bfb28f36165713d4ea710a7bd3b5a82d01e3e8d397a2672",
+      "original_signed_answer": 10911.0,
+      "line22_repaired_signed_answer": 10911.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10911.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/16",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 16,
+      "case_sha256": "8bc8d07a3598b38d95287433fa9b9c5fe58f701eca1fbf889e83aa33cb0cd167",
+      "original_signed_answer": 4671.860000000001,
+      "line22_repaired_signed_answer": 4671.860000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4671.860000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/17",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 17,
+      "case_sha256": "c3a43d1cf709b89d1cb0ff74df7df72d611cabff3eee267b9f09a6def8b2311a",
+      "original_signed_answer": -387.0,
+      "line22_repaired_signed_answer": 703.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 703.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/18",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 18,
+      "case_sha256": "d19f628dc48c48d2ad23187e3792af7a7c480906e0da688c1ac4a93e9af63b8a",
+      "original_signed_answer": 28968.64,
+      "line22_repaired_signed_answer": 28968.64,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 28968.64,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/19",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 19,
+      "case_sha256": "6483ee0c3cbaff8f1754d1c66023c9b8e80d0812e5dd42f0965d6dcbb9092f6d",
+      "original_signed_answer": 11982.84,
+      "line22_repaired_signed_answer": 11982.84,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11982.84,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/20",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 20,
+      "case_sha256": "cd78d2072c375a8165d5ac1010027d31685f396d5b7e913bc5322a1dc31264c3",
+      "original_signed_answer": 8123.200000000001,
+      "line22_repaired_signed_answer": 8123.200000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8123.200000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/21",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 21,
+      "case_sha256": "290ac441a8a3b16849247ccf3ab02898efdf4622c86593e126fd0c1cc15fbf57",
+      "original_signed_answer": -7628.0,
+      "line22_repaired_signed_answer": -4465.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4465.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/22",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 22,
+      "case_sha256": "01ab6e648bde789c6297168431e2d35e7f8c9f8eb24541d641cdee21493cdb10",
+      "original_signed_answer": 6411.52,
+      "line22_repaired_signed_answer": 6411.52,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6411.52,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/23",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 23,
+      "case_sha256": "3d599043adb5545678dc918ca8619044a19e785803b15199f540c46a0bb184ef",
+      "original_signed_answer": 18218.92,
+      "line22_repaired_signed_answer": 18218.92,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18218.92,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/24",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 24,
+      "case_sha256": "942720a2e60d2f4e77d70245268933f3d6db7fdf70259212e7409fbb1106fe52",
+      "original_signed_answer": 1010.880000000001,
+      "line22_repaired_signed_answer": 1010.880000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1010.880000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/25",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 25,
+      "case_sha256": "4794429da427fee3de98af382a462644355ad72b377dea3c7ec5353e655e6826",
+      "original_signed_answer": 9972.5,
+      "line22_repaired_signed_answer": 9972.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9972.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/26",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 26,
+      "case_sha256": "8ff88a045cc0a0bf4d162eb415ae63c464e802a1140acf73443dd04c098094bc",
+      "original_signed_answer": -5471.0,
+      "line22_repaired_signed_answer": -5471.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5471.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/27",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 27,
+      "case_sha256": "e0c9ef243e4b1146e5041fd7f47e4a16a1add4f79aec694101a9c5ed682a0843",
+      "original_signed_answer": 19810.72,
+      "line22_repaired_signed_answer": 19810.72,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 19810.72,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/28",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 28,
+      "case_sha256": "380ea408d4331335d41f067de8e12f6a8554a8fa8e38aa3c3c114dabc8031f6e",
+      "original_signed_answer": 6705.519999999997,
+      "line22_repaired_signed_answer": 6705.519999999997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6705.519999999997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/29",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 29,
+      "case_sha256": "63f4da13ad700461cd8b83fd4eba06e30c5985cd3d6b118a9c34af3d698be125",
+      "original_signed_answer": 217.5,
+      "line22_repaired_signed_answer": 217.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 217.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/30",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 30,
+      "case_sha256": "3c1413116badccd2d152a2e639c11841f193d802d6a4a94f757a597bd6bbaf4a",
+      "original_signed_answer": 5145.0,
+      "line22_repaired_signed_answer": 5145.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 5145.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/31",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 31,
+      "case_sha256": "2c74942a195c3f117017915de1c2f1848fc898f0f56b99a25003f2eb179cda57",
+      "original_signed_answer": 8263.66,
+      "line22_repaired_signed_answer": 8263.66,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8263.66,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/32",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 32,
+      "case_sha256": "b58c1171830077e756ad835faf3d044053b1e41a4298e530d71e1be84bf846c5",
+      "original_signed_answer": 6025.959999999999,
+      "line22_repaired_signed_answer": 6025.959999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6025.959999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/33",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 33,
+      "case_sha256": "3ac60429d670680a8a3c729ec20fa0bcb2b90eccbd5e2817510589542e4b26af",
+      "original_signed_answer": 2964.1399999999994,
+      "line22_repaired_signed_answer": 2964.1399999999994,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2964.1399999999994,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/34",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 34,
+      "case_sha256": "2388a6dd92f1019fef26defc576e37b926cfacef4efae4160764a45eb28c8a5b",
+      "original_signed_answer": -16552.0,
+      "line22_repaired_signed_answer": -16387.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -16387.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/35",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 35,
+      "case_sha256": "52b488d18fc62d335f2bcb179083f7d3dbdf915437141a06bbeb4c8974bd673f",
+      "original_signed_answer": -2777.0,
+      "line22_repaired_signed_answer": -2777.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2777.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/36",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 36,
+      "case_sha256": "a24de067b798bcbf2d9f2f369895eb6329c7bafe068738d64bc495c67e65bfd3",
+      "original_signed_answer": -5029.0,
+      "line22_repaired_signed_answer": -5029.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5029.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/37",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 37,
+      "case_sha256": "e49aa00df502aafd81ff71116bef4915904578c0b349094d88069969adc09ef9",
+      "original_signed_answer": 7031.220000000001,
+      "line22_repaired_signed_answer": 7031.220000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 7031.220000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/38",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 38,
+      "case_sha256": "3734bbd65cf707f5f8c044603bff0bf8e412fde03bac7a39600360b20e8cbfc2",
+      "original_signed_answer": 5437.5,
+      "line22_repaired_signed_answer": 5437.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 5437.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/39",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 39,
+      "case_sha256": "84323df2d296d8a6691e6ba56a215c79ac3aadd9f4c431c99834120495638f3d",
+      "original_signed_answer": 11962.8,
+      "line22_repaired_signed_answer": 11962.8,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11962.8,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/40",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 40,
+      "case_sha256": "1b33d65d79bd1dc0240a816d70b4aae40e64ec838271a89e646b08865af8f777",
+      "original_signed_answer": -9069.0,
+      "line22_repaired_signed_answer": -9069.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9069.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/41",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 41,
+      "case_sha256": "802946db2d066fb5aa7873f12197948984bd9966fa5057550bd8bcc8527b5985",
+      "original_signed_answer": -8523.0,
+      "line22_repaired_signed_answer": -8523.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8523.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/42",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 42,
+      "case_sha256": "b71488f11b8ac292b265e3728b6b04b6288863e60424cbf2e087ee275d28d38c",
+      "original_signed_answer": 8441.279999999999,
+      "line22_repaired_signed_answer": 8441.279999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8441.279999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/43",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 43,
+      "case_sha256": "da654246db305c1a28a338139f49c3301f1d82747af7a3eafca1f2dfef9ec155",
+      "original_signed_answer": 516.3600000000006,
+      "line22_repaired_signed_answer": 516.3600000000006,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 516.3600000000006,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/44",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 44,
+      "case_sha256": "52afa1a4342b2dd27e1a006915bb48476855517b41e0fad7ce3eb9b768531f5a",
+      "original_signed_answer": 14014.0,
+      "line22_repaired_signed_answer": 14014.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14014.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/45",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 45,
+      "case_sha256": "44beed5854e381d2839d5636e94965a66829e28f4d375627a4ec7d5650b5bea9",
+      "original_signed_answer": -3687.0,
+      "line22_repaired_signed_answer": -3687.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3687.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/46",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 46,
+      "case_sha256": "57fddab7a9d3f9321973314581a5548b9bb0789df122ac03dac48e1025f88253",
+      "original_signed_answer": -5021.0,
+      "line22_repaired_signed_answer": -5021.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5021.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/47",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 47,
+      "case_sha256": "95b7010ac409841a96879c221d1d0a6a6eb069f5d1d1f6aa8034acd9a83cb1bd",
+      "original_signed_answer": -8503.5,
+      "line22_repaired_signed_answer": -8503.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8503.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/48",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 48,
+      "case_sha256": "4a9066f4d35420bb3118c76ce2b9759c5f3ed7f9562ddfac9b7e38f2b041562c",
+      "original_signed_answer": 10981.099999999999,
+      "line22_repaired_signed_answer": 10981.099999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10981.099999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/49",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 49,
+      "case_sha256": "2da522b2704461b2aa6966c7be07b55321098fb7c6ab5f93f83926f51b2f2460",
+      "original_signed_answer": 8984.779999999999,
+      "line22_repaired_signed_answer": 8984.779999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8984.779999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/50",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 50,
+      "case_sha256": "522707b6dcf1f1e3d20e642f55207a7c143dd834c64a23bdf39c615534987f38",
+      "original_signed_answer": 7772.279999999999,
+      "line22_repaired_signed_answer": 7772.279999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 7772.279999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/51",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 51,
+      "case_sha256": "9fe39423b2fc4882767304d4764fcbcd3b53b070d78ebed89abd3181a2676b72",
+      "original_signed_answer": 15531.559999999998,
+      "line22_repaired_signed_answer": 15531.559999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15531.559999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/52",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 52,
+      "case_sha256": "3a5deea3a3dfea513e396a8b69acdaf1658c2dfb6d97c28403bdcc95555ed3b6",
+      "original_signed_answer": -3420.4000000000015,
+      "line22_repaired_signed_answer": -3420.4000000000015,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3420.4000000000015,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/53",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 53,
+      "case_sha256": "72dda27232d03524d62479a0ef1ab6bb2a6e5b246bbc5818108d46ec7bed38ce",
+      "original_signed_answer": -368.26000000000204,
+      "line22_repaired_signed_answer": -368.26000000000204,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -368.26000000000204,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/54",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 54,
+      "case_sha256": "ad3485d147d3236dcf5643ffa5691d0f401ef0a17320d1651049a09795b1c560",
+      "original_signed_answer": 11544.479999999996,
+      "line22_repaired_signed_answer": 11544.479999999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11544.479999999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/55",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 55,
+      "case_sha256": "7dcbd002a9228f0b106a57e99068ab150ef99a6fff54c1b67320e7f78f717222",
+      "original_signed_answer": 10124.0,
+      "line22_repaired_signed_answer": 10124.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10124.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/56",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 56,
+      "case_sha256": "b886a8bc7dbae004d8919b63ecf1f368d0eb374c43e66095bfde6b45ceb7af92",
+      "original_signed_answer": 3919.5599999999977,
+      "line22_repaired_signed_answer": 3919.5599999999977,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3919.5599999999977,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/57",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 57,
+      "case_sha256": "e13d5dbfe9c73df1afa69b1713a4bfaf9dac2058487e606ec07cfaaaab2d0909",
+      "original_signed_answer": 17897.559999999998,
+      "line22_repaired_signed_answer": 17897.559999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17897.559999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/58",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 58,
+      "case_sha256": "28c2538101492bbdb24e0229ce875899d8d5fd699a6c6a2fdd3a7a034784e318",
+      "original_signed_answer": -12477.0,
+      "line22_repaired_signed_answer": -12477.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -12477.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/59",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 59,
+      "case_sha256": "092a47237cf2818d8f6dbb3f28b41045dc7b891d368c8cc558b1e344319ad956",
+      "original_signed_answer": 4275.68,
+      "line22_repaired_signed_answer": 4275.68,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4275.68,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/60",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 60,
+      "case_sha256": "44efdf5ff1f7e91697e065d26907c87c9d0abd9611925173509979b2a5e46d83",
+      "original_signed_answer": 25502.32,
+      "line22_repaired_signed_answer": 25502.32,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 25502.32,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/61",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 61,
+      "case_sha256": "f8b4731154f57e53c3ddc8f2a9fabf75c0b0207ed31893fc285f359ad11974e9",
+      "original_signed_answer": 8327.32,
+      "line22_repaired_signed_answer": 8327.32,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8327.32,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/62",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 62,
+      "case_sha256": "9dfb31755ad36fa1b065852cefa547bb708584188311976c7c53ded1eb0114f7",
+      "original_signed_answer": -7005.5,
+      "line22_repaired_signed_answer": -7005.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -7005.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/63",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 63,
+      "case_sha256": "ee3094cd2d5426958d0c9b8468668ac3510ee84edd1097c9c0d5104d0859aa6d",
+      "original_signed_answer": 22976.28,
+      "line22_repaired_signed_answer": 22976.28,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 22976.28,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/64",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 64,
+      "case_sha256": "53cc4548103ee263bf7863c01e3e0699ec98c339f80d8750103c382f11eead1f",
+      "original_signed_answer": 13351.96,
+      "line22_repaired_signed_answer": 13351.96,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13351.96,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/65",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 65,
+      "case_sha256": "1442155f6bacf070ca2b3dd78fb1720fe0f84cb49eb7f352de3d26b85ed14a8c",
+      "original_signed_answer": -5808.880000000001,
+      "line22_repaired_signed_answer": -5808.880000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5808.880000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/66",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 66,
+      "case_sha256": "f44986fa5c256c7c93d6f46c8c019849b3c4bd504fc847540c4cf2b278967a1a",
+      "original_signed_answer": 16805.0,
+      "line22_repaired_signed_answer": 16805.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 16805.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/67",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 67,
+      "case_sha256": "56c572eae1762f87ed4b811006006fbec3647fa12f1888aaeb1b06de2e7730e7",
+      "original_signed_answer": 15130.919999999998,
+      "line22_repaired_signed_answer": 15130.919999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15130.919999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/68",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 68,
+      "case_sha256": "636cec72f985e20af85e24cf5b4adb567f91f400334a4959ae67dbca9a3245c5",
+      "original_signed_answer": 8301.0,
+      "line22_repaired_signed_answer": 8301.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8301.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/69",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 69,
+      "case_sha256": "a175ac272261cb94fd1a0a50d41ba85c7d6efb638b041e71e155d80e09e63b9d",
+      "original_signed_answer": 11905.440000000002,
+      "line22_repaired_signed_answer": 11905.440000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11905.440000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/70",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 70,
+      "case_sha256": "501ce82503cda57ad7508cec0b0d0a39cb74e54a95ad01719b302d9836234b82",
+      "original_signed_answer": 20739.440000000002,
+      "line22_repaired_signed_answer": 20739.440000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20739.440000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/71",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 71,
+      "case_sha256": "e08d25852a598d3e8092284421c276ea0ee8d4775d62d5e0daa80f13f73e1044",
+      "original_signed_answer": 12202.119999999999,
+      "line22_repaired_signed_answer": 12202.119999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12202.119999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/72",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 72,
+      "case_sha256": "84128a1224708207f663a21d3611fdeedb6e7d38fa11f56f44d4e67d6cac57c5",
+      "original_signed_answer": 14021.720000000001,
+      "line22_repaired_signed_answer": 14021.720000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14021.720000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/73",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 73,
+      "case_sha256": "b5b830867360efeb0b7a52dfd3d557f412e11619303574ecc88227aeff2aea61",
+      "original_signed_answer": 26033.760000000002,
+      "line22_repaired_signed_answer": 26033.760000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 26033.760000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/74",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 74,
+      "case_sha256": "d1d6de4c487a244fa321413ec35de9a94698daa2ff7fe136c711c650c174ee71",
+      "original_signed_answer": 11284.86,
+      "line22_repaired_signed_answer": 11284.86,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11284.86,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/75",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 75,
+      "case_sha256": "48c6b44fdf1ed8d94ea7ed78f494aa55ae2d98479d458d4154fea08daf1ce006",
+      "original_signed_answer": 16621.4,
+      "line22_repaired_signed_answer": 16621.4,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 16621.4,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/76",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 76,
+      "case_sha256": "f654577338e60d76d798ed03a24e2aef23745dd6b0dc633e3ef1a6ef51d751f1",
+      "original_signed_answer": -2678.0,
+      "line22_repaired_signed_answer": -2678.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2678.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/77",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 77,
+      "case_sha256": "2576ffdd035c0a390589671ae9f41a5129f50e75bfcaca167d281993ff4ba051",
+      "original_signed_answer": 18842.48,
+      "line22_repaired_signed_answer": 18842.48,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18842.48,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/78",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 78,
+      "case_sha256": "0e2f0c5936c2a807e3ff3f5fbcc61393cc7561d9840e79ee003afa8050ec1a1c",
+      "original_signed_answer": 19910.68,
+      "line22_repaired_signed_answer": 19910.68,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 19910.68,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/79",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 79,
+      "case_sha256": "7a3b4b0c947ac88af941911a0133aa38c79fe008e7ff2addef2b28aca945f8fb",
+      "original_signed_answer": 11933.82,
+      "line22_repaired_signed_answer": 11933.82,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11933.82,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/80",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 80,
+      "case_sha256": "bf45328fc74ed1b31f56a5494d43d32e5c43a95614904025d1037a8bfd7a7ae2",
+      "original_signed_answer": 15218.0,
+      "line22_repaired_signed_answer": 15218.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15218.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/81",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 81,
+      "case_sha256": "b2d15b3171c3ad6fca93769ad5b677431582cb39efda942cadf9b5155f46dc42",
+      "original_signed_answer": -16678.0,
+      "line22_repaired_signed_answer": -16678.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -16678.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/82",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 82,
+      "case_sha256": "f481191aceeb7b2c5895c5707b6ef049532ed0f2f07d9b327b770cf9e8a94cd3",
+      "original_signed_answer": 11837.3,
+      "line22_repaired_signed_answer": 11837.3,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11837.3,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/83",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 83,
+      "case_sha256": "dbd7560a5cee60413f9c1c0083ee347d838560a36b3bc22f935b0d3841053dfc",
+      "original_signed_answer": -4068.0,
+      "line22_repaired_signed_answer": -4068.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4068.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/84",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 84,
+      "case_sha256": "fc7b710c646811e7f99d8d9066480686c06bb0e3fb72615bb5fb4db6abf7f6f2",
+      "original_signed_answer": 25100.64,
+      "line22_repaired_signed_answer": 25100.64,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 25100.64,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/85",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 85,
+      "case_sha256": "42135cb878e4fbd50864d7a64a2debbab4f82bd1e95da0d582cce444476c1f01",
+      "original_signed_answer": 20480.0,
+      "line22_repaired_signed_answer": 20480.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20480.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/86",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 86,
+      "case_sha256": "746455667c31e5b95f0bd138d09572946d97e0780f78954bb1639a1a7d176516",
+      "original_signed_answer": -13320.5,
+      "line22_repaired_signed_answer": -13320.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -13320.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/87",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 87,
+      "case_sha256": "d4c0063225b05dd3ad27065dc10e71e8adb22ce5a59f23e24aead987169a006e",
+      "original_signed_answer": -3771.0,
+      "line22_repaired_signed_answer": -3771.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3771.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/88",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 88,
+      "case_sha256": "a510af6162fa55b743edb595fbe8d7b042b7dac9ccb48c717529a562313ca914",
+      "original_signed_answer": -11141.64,
+      "line22_repaired_signed_answer": -11141.64,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -11141.64,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/89",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 89,
+      "case_sha256": "cb280374a92c8814119fb312cd0e526bc780d8da6d481f4e04f100c245ab322b",
+      "original_signed_answer": 4747.5,
+      "line22_repaired_signed_answer": 4747.5,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4747.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/90",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 90,
+      "case_sha256": "3dc431ed3f3715a0976966deff0805f67b90fb18be8e41f9538ac56da39b24e9",
+      "original_signed_answer": 6835.82,
+      "line22_repaired_signed_answer": 6835.82,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6835.82,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/91",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 91,
+      "case_sha256": "3baaefad6544439f4c25614a8bf91f203c6d124372bf66a8199eb1c27ba6cc6a",
+      "original_signed_answer": 20684.0,
+      "line22_repaired_signed_answer": 20684.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20684.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/92",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 92,
+      "case_sha256": "2e6bc40dcde4910cb78822e7db8bc168e1b5841cb4653d157777dca6bc099c68",
+      "original_signed_answer": 18456.64,
+      "line22_repaired_signed_answer": 18456.64,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18456.64,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/93",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 93,
+      "case_sha256": "4fc6c42369fbd7962374663935d5776d831d3cc6bc1dc68442d05398529a1f79",
+      "original_signed_answer": 15781.68,
+      "line22_repaired_signed_answer": 15781.68,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15781.68,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/94",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 94,
+      "case_sha256": "fe146d09c615ea31f40dd2a0557cadcbf8c2d84476df9e4e50ea0102365917ff",
+      "original_signed_answer": 1980.119999999999,
+      "line22_repaired_signed_answer": 1980.119999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1980.119999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/95",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 95,
+      "case_sha256": "426630ac4b6092ea9301d6d382f4687b6667fda9a216f071ed34db5238627946",
+      "original_signed_answer": 14475.68,
+      "line22_repaired_signed_answer": 14475.68,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14475.68,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/96",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 96,
+      "case_sha256": "33b0f0a0faf128486dba3390c7e4ab8be5375deb531355b79bc8542a8dc4031e",
+      "original_signed_answer": -6074.0,
+      "line22_repaired_signed_answer": -6074.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6074.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/97",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 97,
+      "case_sha256": "ac2660d67749ccf1f800ca9b5cfd05c486c74207733154fbafe5c176ed2e91cd",
+      "original_signed_answer": 16020.739999999998,
+      "line22_repaired_signed_answer": 16020.739999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 16020.739999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/98",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 98,
+      "case_sha256": "0ea19a4b3ef0e31f9b2ffcab4c3a7f4e1622a09647c1d5ecd2fbdbfc75548fef",
+      "original_signed_answer": -12098.0,
+      "line22_repaired_signed_answer": -12098.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -12098.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_0/99",
+      "source_file": "tax/synthesized_problems/comp_0.json",
+      "source_index": 99,
+      "case_sha256": "8478d7187f431cc197d56132df5b3a0861beff1ad8414bd65ca449772918e38c",
+      "original_signed_answer": 12442.760000000002,
+      "line22_repaired_signed_answer": 12442.760000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12442.760000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/0",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 0,
+      "case_sha256": "7bd9f5d5abdb0eb286344aa045330a2b160c5b30bc873a88e649925ff84c0d4e",
+      "original_signed_answer": 28939.41910292,
+      "line22_repaired_signed_answer": 28939.41910292,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 28939.41910292,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/1",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 1,
+      "case_sha256": "44b2405c3badf558804c4a2e51d64bee0f8d042b7947ceb68f4b23d386cf57aa",
+      "original_signed_answer": 11795.879494134999,
+      "line22_repaired_signed_answer": 11795.879494134999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11795.879494134999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/2",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 2,
+      "case_sha256": "cdd137eac752d4842853a3eb0d1e6ebbc5f07340cc79b3b009fe7fced73e7e5f",
+      "original_signed_answer": 23018.59851464,
+      "line22_repaired_signed_answer": 23018.59851464,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 23018.59851464,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/3",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 3,
+      "case_sha256": "12653c1eb862a1e7350affb787fa183a870a161e522aa7fa847832286a3a79da",
+      "original_signed_answer": 8260.52,
+      "line22_repaired_signed_answer": 8260.52,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8260.52,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/4",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 4,
+      "case_sha256": "da92d917fafbfa45583b73627325a16b5e4ad6a9760f54c0c552426828d8569d",
+      "original_signed_answer": 11163.40064028,
+      "line22_repaired_signed_answer": 11163.40064028,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11163.40064028,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/5",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 5,
+      "case_sha256": "b5aa5d5b04063e3617d9001842d68331c26ba729e9831339fbc8895dc6997037",
+      "original_signed_answer": 2016.1499999999996,
+      "line22_repaired_signed_answer": 2016.1499999999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2016.1499999999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/6",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 6,
+      "case_sha256": "2f8a01c19795b65c13f094fe752cdadd3c37382c57bfc5fdbc2fecfd14d47e92",
+      "original_signed_answer": 1536.3999999999996,
+      "line22_repaired_signed_answer": 1536.3999999999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1536.3999999999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/7",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 7,
+      "case_sha256": "d18b1f5f5acfabe7fc0a05d51ad58f856b537b5ff3c2fac03f24f3338ec5cf5e",
+      "original_signed_answer": -12726.0,
+      "line22_repaired_signed_answer": -10579.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -10579.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/8",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 8,
+      "case_sha256": "c3bae6dc933a7f1b3e04d53f8aa3255a5ff9e09eeab469af713b823af7573c71",
+      "original_signed_answer": 4206.0,
+      "line22_repaired_signed_answer": 4206.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4206.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/9",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 9,
+      "case_sha256": "45718d557059d509fa581108fdca0526ad57dcc99c3001feed66280999cfe5a7",
+      "original_signed_answer": 13540.57,
+      "line22_repaired_signed_answer": 13540.57,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13540.57,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/10",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 10,
+      "case_sha256": "7af35166863a7979b6eb20040f1aa507d7666dcf8b9d4af744f9236d7dccb4d5",
+      "original_signed_answer": -11123.660000000002,
+      "line22_repaired_signed_answer": -11123.660000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -11123.660000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/11",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 11,
+      "case_sha256": "d0069c4705989c2c62a8a47c52a3e75e478f6823860dcee5d47a5de3ba8ee94a",
+      "original_signed_answer": 13755.895276079998,
+      "line22_repaired_signed_answer": 13755.895276079998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13755.895276079998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/12",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 12,
+      "case_sha256": "3a72f794f6b85493286c115fb5794fd3c7063fee7004be8a5797a35af2644ca0",
+      "original_signed_answer": 11016.34,
+      "line22_repaired_signed_answer": 11016.34,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11016.34,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/13",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 13,
+      "case_sha256": "bbfbf2a7c480d4657d3642886fb302f5a5be54928a597cc7748c6050b7605b24",
+      "original_signed_answer": -20088.2,
+      "line22_repaired_signed_answer": -15561.2,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -17377.168475,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/14",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 14,
+      "case_sha256": "73f723de6dd9eb0ba839dfae3162062f2a5a5aa6c8c25850b7bc43799aad5dfc",
+      "original_signed_answer": -6423.4,
+      "line22_repaired_signed_answer": -6423.4,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6423.4,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/15",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 15,
+      "case_sha256": "1197479f128a6780fb391f3f12c345294cfcc127e4f271d718286adba9b0655b",
+      "original_signed_answer": 2297.7747865650017,
+      "line22_repaired_signed_answer": 2297.7747865650017,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2297.7747865650017,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/16",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 16,
+      "case_sha256": "139505ac67d92eb0ee5151e58ca0bfd57c17cc398258a01ecd2dba4fd1ccddf3",
+      "original_signed_answer": -10719.9,
+      "line22_repaired_signed_answer": -10719.9,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -10719.9,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/17",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 17,
+      "case_sha256": "4abcf0a9fbe521b095c59731465233a49aea04d5abd32401a9bde1e6b0c9327a",
+      "original_signed_answer": -6600.990000000002,
+      "line22_repaired_signed_answer": -6600.990000000002,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -7458.108239999998,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/18",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 18,
+      "case_sha256": "6ec5386ce566104919c72916f8b170da84e905b5d3c8a53199af41b26e4fd0b4",
+      "original_signed_answer": 18480.699999999997,
+      "line22_repaired_signed_answer": 18480.699999999997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18480.699999999997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/19",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 19,
+      "case_sha256": "84739984fc8b26dad3724edc24356b27c04a3cc887de22c4ef69e6f5bf74ba75",
+      "original_signed_answer": -2959.0517905000015,
+      "line22_repaired_signed_answer": -2959.0517905000015,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2959.0517905000015,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/20",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 20,
+      "case_sha256": "416585de5002399542133e1d7082d9fbde5337f7eff1ad091850185c9fdd3a46",
+      "original_signed_answer": 4627.999272454996,
+      "line22_repaired_signed_answer": 4627.999272454996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4627.999272454996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/21",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 21,
+      "case_sha256": "80e07e048fb0ac411551cf776f5f1fdf1d52f01bd3d191e1fcafb331cad9d4db",
+      "original_signed_answer": 3964.887978724997,
+      "line22_repaired_signed_answer": 3964.887978724997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3964.887978724997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/22",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 22,
+      "case_sha256": "423b7cbdb5f3cba5287668ca7cbfd6539043fee8c29e04f314a7ebe79570bdc4",
+      "original_signed_answer": -9926.6,
+      "line22_repaired_signed_answer": -9926.6,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9926.6,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/23",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 23,
+      "case_sha256": "ce13e8761c3c8eabba9afb0180b0069727e09cc00ca5d65052104fb5ebe84235",
+      "original_signed_answer": 6348.369999999995,
+      "line22_repaired_signed_answer": 6348.369999999995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6348.369999999995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/24",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 24,
+      "case_sha256": "476142a14011ba1810ab815a545e41219855747a1db0b25a8af4b773c267cec0",
+      "original_signed_answer": 6336.540000000001,
+      "line22_repaired_signed_answer": 6336.540000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6336.540000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/25",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 25,
+      "case_sha256": "c833546ea66d1a3aff289827c00d9dc033a3fb29c07e546edfe16cbf36d18522",
+      "original_signed_answer": 14774.32,
+      "line22_repaired_signed_answer": 14774.32,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14774.32,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/26",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 26,
+      "case_sha256": "519505be34f76d119d9080b5688304bf511a1dbabc8c0c500aa3d9416f59eede",
+      "original_signed_answer": 21486.085976799994,
+      "line22_repaired_signed_answer": 21486.085976799994,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 21486.085976799994,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/27",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 27,
+      "case_sha256": "4ecb1371a7e66dc0c81e04b64dd69481b1cd0658d23070ab80805d0d169f8094",
+      "original_signed_answer": 12358.04,
+      "line22_repaired_signed_answer": 12358.04,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12358.04,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/28",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 28,
+      "case_sha256": "f36cb844fc83c4aa29bfc8221f8615137d7e4630bd64650ae4b2bb357b702fea",
+      "original_signed_answer": 24335.1071382,
+      "line22_repaired_signed_answer": 24335.1071382,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 24335.1071382,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/29",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 29,
+      "case_sha256": "0bd100e9dfb5f211696a87c5e9a709d2d2edfcc0e3338d80783856d5b9358519",
+      "original_signed_answer": 33098.58286112,
+      "line22_repaired_signed_answer": 33098.58286112,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 33098.58286112,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/30",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 30,
+      "case_sha256": "e081cf9b57c52b94ff0c3fac3528ba51be5881523caaf3d990ff67988ee03c7c",
+      "original_signed_answer": 5122.480000000003,
+      "line22_repaired_signed_answer": 5122.480000000003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 5122.480000000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/31",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 31,
+      "case_sha256": "b36135b16f6f02b3ee1adcb9850ba23891e92feff6c18104676000efa105985b",
+      "original_signed_answer": 1522.9900000000016,
+      "line22_repaired_signed_answer": 1522.9900000000016,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1522.9900000000016,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/32",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 32,
+      "case_sha256": "ff46222670fdcc5863f37fe70ad7e88cc93776e111d3eee9224ac92465e643a3",
+      "original_signed_answer": 11394.242201,
+      "line22_repaired_signed_answer": 11394.242201,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11394.242201,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/33",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 33,
+      "case_sha256": "1b4f1a3f9339934c7714a73309ce9600152594573ee6f3d98d51279ccbd37e14",
+      "original_signed_answer": 4319.709999999999,
+      "line22_repaired_signed_answer": 4319.709999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4319.709999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/34",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 34,
+      "case_sha256": "e3aaf8e445bb049f60c6d37334cada6868c5199f35581b91445efa7b1ca46e2a",
+      "original_signed_answer": 1004.4400000000005,
+      "line22_repaired_signed_answer": 1004.4400000000005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1004.4400000000005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/35",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 35,
+      "case_sha256": "bd14c6c994ed91d673a053dacb10f4f54cda269391e6a2ee699f85429ae98a96",
+      "original_signed_answer": 14035.544905559997,
+      "line22_repaired_signed_answer": 14035.544905559997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14035.544905559997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/36",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 36,
+      "case_sha256": "b7f31118b605f368122a434f1dc39c815150162b9f8fd71a0a54c2b2b4817f12",
+      "original_signed_answer": 824.2000000000007,
+      "line22_repaired_signed_answer": 824.2000000000007,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 824.2000000000007,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/37",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 37,
+      "case_sha256": "119a63d0e2f66146da3c18fa80e46ade1d1b5db1f8344d08d09ecb41ecc5683c",
+      "original_signed_answer": 923.6399999999994,
+      "line22_repaired_signed_answer": 923.6399999999994,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 923.6399999999994,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/38",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 38,
+      "case_sha256": "11908a18b6e9967d799678628346fb3f679df3cdcff372486fc19aff3908064a",
+      "original_signed_answer": 22405.095565,
+      "line22_repaired_signed_answer": 22405.095565,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 22405.095565,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/39",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 39,
+      "case_sha256": "65bc3e042847e326f7118c41e776feb8b5db28008d9b50ea3b0d23a6af7c937f",
+      "original_signed_answer": 21891.92,
+      "line22_repaired_signed_answer": 21891.92,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 21891.92,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/40",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 40,
+      "case_sha256": "7e5aa0794c2232ca9fd3365e5d5ab6516372feafd5e56b7f167e57feef97434e",
+      "original_signed_answer": 13505.96,
+      "line22_repaired_signed_answer": 13505.96,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13505.96,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/41",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 41,
+      "case_sha256": "523fc9d9e85ea8bce24f33b9fa7973d1e1347f97a92ead49c0bd5b7587a490ad",
+      "original_signed_answer": 18429.480000000003,
+      "line22_repaired_signed_answer": 18429.480000000003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18429.480000000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/42",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 42,
+      "case_sha256": "5d27897e1d86d3510cbd6d09f5050b2290a708532bf1a2534ae514adb985b1f6",
+      "original_signed_answer": -9204.0,
+      "line22_repaired_signed_answer": -6486.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6486.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/43",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 43,
+      "case_sha256": "892c5833a9b975b7b01e149be3ed9dfc4a93283afc49595f8fbbb793ae17b963",
+      "original_signed_answer": -11708.85,
+      "line22_repaired_signed_answer": -11708.85,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -11708.85,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/44",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 44,
+      "case_sha256": "0aaa975f93464ab02521b421adf0755a0742e9c7c8a7aca5e6a26c890535f94a",
+      "original_signed_answer": -2089.2000000000007,
+      "line22_repaired_signed_answer": -2089.2000000000007,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2089.2000000000007,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/45",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 45,
+      "case_sha256": "480a7f1999f51a1c0512b06ded1c8b7613a7fb47addbed2f2662eba96278dac1",
+      "original_signed_answer": 8017.75,
+      "line22_repaired_signed_answer": 8017.75,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8017.75,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/46",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 46,
+      "case_sha256": "0ce3ee1e5db8909a4ebe20e966578bcee9a4ef435570b8f9c1d0e3e49f5e502f",
+      "original_signed_answer": -8741.0,
+      "line22_repaired_signed_answer": -8741.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8741.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/47",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 47,
+      "case_sha256": "c8ddd764f580e13759c595530c334377ddc5c4e81ea3a2224dc49b11d9d6cb9d",
+      "original_signed_answer": 12698.492000000002,
+      "line22_repaired_signed_answer": 12698.492000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12698.492000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/48",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 48,
+      "case_sha256": "870d0067f3cdf8be67c08eefa811019d2bcf5addb492f2f0c01f72e632140920",
+      "original_signed_answer": -24981.0,
+      "line22_repaired_signed_answer": -18293.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18293.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/49",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 49,
+      "case_sha256": "7b886d7fcc29f890781ce93ddcf077e64edd8f769bf041676f7786738d2a4ae2",
+      "original_signed_answer": 2856.869999999999,
+      "line22_repaired_signed_answer": 2856.869999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 342.49094999999943,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/50",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 50,
+      "case_sha256": "98eb42de166b107ab18a7dbfc2d9568055a3064c46fdf4c89b8c979b8673b781",
+      "original_signed_answer": 5349.9271389199985,
+      "line22_repaired_signed_answer": 5349.9271389199985,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 5349.9271389199985,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/51",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 51,
+      "case_sha256": "aeb00fe0124d87223922322f5d7e970ac27e7e871969db9c6b7cc453c8fb603a",
+      "original_signed_answer": 13178.200000000004,
+      "line22_repaired_signed_answer": 13178.200000000004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13178.200000000004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/52",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 52,
+      "case_sha256": "26a500811be18891e267f8df518459dde99e13744c2601cc39bdfb479f8bf324",
+      "original_signed_answer": 4307.915672080002,
+      "line22_repaired_signed_answer": 4307.915672080002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4307.915672080002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/53",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 53,
+      "case_sha256": "a05ea9ca0e00d5a0482e633849a0f42d3e6c3ae289bad4924c4607b70eb4fa97",
+      "original_signed_answer": -14074.6,
+      "line22_repaired_signed_answer": -12890.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -12890.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/54",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 54,
+      "case_sha256": "7070e9b4502dddcb092910354ce21836f9a6ca5e98fb62192da549f33a943c36",
+      "original_signed_answer": -8070.0,
+      "line22_repaired_signed_answer": -6604.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6604.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/55",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 55,
+      "case_sha256": "e9f5b430f177cda2a9eeebd8edab5d63d31abb93608ba0766ed2fbe47cea8108",
+      "original_signed_answer": -2034.880000000001,
+      "line22_repaired_signed_answer": -2034.880000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -2034.880000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/56",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 56,
+      "case_sha256": "b2f692c231361a2c3b577dcd392facfa4e2281088c6bbd0d128498765a0beeae",
+      "original_signed_answer": 13870.112863860002,
+      "line22_repaired_signed_answer": 13870.112863860002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13870.112863860002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/57",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 57,
+      "case_sha256": "dc3956c320888f2618e486ab796e3098e4b1901e0d32ee52ec6aed21d3502066",
+      "original_signed_answer": 819.4099999999999,
+      "line22_repaired_signed_answer": 819.4099999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 819.4099999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/58",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 58,
+      "case_sha256": "6f533f5d8f5dea649036b84995d3657ab5e552194407843df53b6584cc64a54e",
+      "original_signed_answer": -5479.18,
+      "line22_repaired_signed_answer": -5479.18,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5479.18,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/59",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 59,
+      "case_sha256": "17b0331de2217e24a8a417fef23b8f5a654720c3635b0c88b2aceb5965ae574a",
+      "original_signed_answer": 33652.799999999996,
+      "line22_repaired_signed_answer": 33652.799999999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 33652.799999999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/60",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 60,
+      "case_sha256": "4489478d9004c54503d51d47e603b6372b6124fcb8db4e65835fc4021a3fd14c",
+      "original_signed_answer": 6511.5999999999985,
+      "line22_repaired_signed_answer": 6511.5999999999985,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6511.5999999999985,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/61",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 61,
+      "case_sha256": "a035cff3ac169590fc3a075f98a9dc741b067c75f08939b703375154a8fea657",
+      "original_signed_answer": 4163.419999999998,
+      "line22_repaired_signed_answer": 4163.419999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4163.419999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/62",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 62,
+      "case_sha256": "6046296dae56d90337f018ed094453833839e6ff1ec5b69ff56df81c22020bdf",
+      "original_signed_answer": -9423.317164419997,
+      "line22_repaired_signed_answer": -9423.317164419997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9423.317164419997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/63",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 63,
+      "case_sha256": "22560f12e31b6c2f6a3696c4dfa5b0ac3f6f3d1064336ca377d50f475cb39f1a",
+      "original_signed_answer": -432.5799999999999,
+      "line22_repaired_signed_answer": -432.5799999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -432.5799999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/64",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 64,
+      "case_sha256": "b3db1bbbbda883105dc6214f68fd5393bec3d1853ea58bc67a1f80b0ca42f0d0",
+      "original_signed_answer": 7450.720000000001,
+      "line22_repaired_signed_answer": 7450.720000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 7450.720000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/65",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 65,
+      "case_sha256": "61040d15ccfdc1a2cf43bd44d3516dee7808d7c2d6de027c74ad8ee7dad217ad",
+      "original_signed_answer": 9873.677395360002,
+      "line22_repaired_signed_answer": 9873.677395360002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9873.677395360002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/66",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 66,
+      "case_sha256": "0521f6cedbce7aa9ef2bb6b2cf85c75becbe510fbd0961c5e6676d4ec46f1efa",
+      "original_signed_answer": -22560.0,
+      "line22_repaired_signed_answer": -18587.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18587.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/67",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 67,
+      "case_sha256": "6f53cb0888b5f354ce5397094fbb5ea566edbc9ca0c0d82eb2580973d5ffd9a4",
+      "original_signed_answer": 13897.058799999997,
+      "line22_repaired_signed_answer": 13897.058799999997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 13897.058799999997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/68",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 68,
+      "case_sha256": "7dbc4d923b6588392c69e6cbd03a70b014a8b09abd2e003b5033a95d777ca39c",
+      "original_signed_answer": 2876.2542398399964,
+      "line22_repaired_signed_answer": 2876.2542398399964,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2876.2542398399964,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/69",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 69,
+      "case_sha256": "7347162564b7e86cf37138c1185f69e9dc09f85d0979a68168f752548515b2dd",
+      "original_signed_answer": -10771.0,
+      "line22_repaired_signed_answer": -8528.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8528.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/70",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 70,
+      "case_sha256": "ed08d67872c34ceb7395dd120c4e0c8336527cdbb89efa5799edcc16202fbfbb",
+      "original_signed_answer": 2624.500000000001,
+      "line22_repaired_signed_answer": 2624.500000000001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2624.500000000001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/71",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 71,
+      "case_sha256": "c90e31f46d54495d6354663a43f9b3ef8be83de51fd98783c5c3cd9b710ed0be",
+      "original_signed_answer": -14967.898049,
+      "line22_repaired_signed_answer": -14967.898049,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -14967.898049,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/72",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 72,
+      "case_sha256": "ae0cd33d88de25e1ca67fb5a2c261e9d8b55a162544b79663b13b740bdfd56c2",
+      "original_signed_answer": 24136.890000000003,
+      "line22_repaired_signed_answer": 24136.890000000003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 24136.890000000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/73",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 73,
+      "case_sha256": "739eee1beaf5124b1e04bc05317b01b92d8cbc1bb0cb3de7427b1c18fa25efb4",
+      "original_signed_answer": -6625.0,
+      "line22_repaired_signed_answer": -5414.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5414.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/74",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 74,
+      "case_sha256": "8fee33ae47079e9261fb8f40e820439e79ddf9008509243ef7b27dff99ebba9b",
+      "original_signed_answer": 6142.779999999999,
+      "line22_repaired_signed_answer": 6142.779999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6142.779999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/75",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 75,
+      "case_sha256": "8bb057c3261d4cd99de53f8d0eff7f68dcee34353b666dabcc1e1b129e66992d",
+      "original_signed_answer": 11576.291474849997,
+      "line22_repaired_signed_answer": 11576.291474849997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11576.291474849997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/76",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 76,
+      "case_sha256": "7c90f4083cf51bfe818003b3a86cf85c710527735eb0093e600602d9fbe81ffd",
+      "original_signed_answer": -5469.7497255,
+      "line22_repaired_signed_answer": -5469.7497255,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5469.7497255,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/77",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 77,
+      "case_sha256": "cc47114db31e3f52c17a3dbae0d94946919cc876720ac97c2697174b6117e560",
+      "original_signed_answer": 20627.202690880004,
+      "line22_repaired_signed_answer": 20627.202690880004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20627.202690880004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/78",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 78,
+      "case_sha256": "d1d43fe57a7b14de3e011665c2e2da2a38eefbbd2acbbac5dfc4c9a1883126ec",
+      "original_signed_answer": 1448.5,
+      "line22_repaired_signed_answer": 1448.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1055.0569999999998,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/79",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 79,
+      "case_sha256": "635b6491d10f19cc6c3ba351d897ed1a7a30c0c50472c3603086a1a44cbd9a46",
+      "original_signed_answer": -653.4400000000023,
+      "line22_repaired_signed_answer": -653.4400000000023,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -653.4400000000023,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/80",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 80,
+      "case_sha256": "734cf13f62d7aea973ea9a58e7410c21584787e48e518917873a88eb1fa04ec6",
+      "original_signed_answer": 17776.107654675005,
+      "line22_repaired_signed_answer": 17776.107654675005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17776.107654675005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/81",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 81,
+      "case_sha256": "e505d1573043eb2a1baeaf02c45d2ed7a9f4ede463da6dbd063cf506b0449bc6",
+      "original_signed_answer": 12424.809714404997,
+      "line22_repaired_signed_answer": 12424.809714404997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12424.809714404997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/82",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 82,
+      "case_sha256": "a3b8661d45c0890c0de6c5e400b5bbe75820e4534d215cf701147192bf958b05",
+      "original_signed_answer": 4179.089026019996,
+      "line22_repaired_signed_answer": 4179.089026019996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4179.089026019996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/83",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 83,
+      "case_sha256": "b8f2a383fd6ceafbc96d2f4fd313572b83efab1496ce0d3993c5bdac709b4af5",
+      "original_signed_answer": 32615.713109879995,
+      "line22_repaired_signed_answer": 32615.713109879995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 32615.713109879995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/84",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 84,
+      "case_sha256": "5e5ea6cef409ec9a4efad8ecd3c58b2112e137ebf73402fd386d2c85ce9738b5",
+      "original_signed_answer": -1190.0,
+      "line22_repaired_signed_answer": -1190.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1190.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/85",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 85,
+      "case_sha256": "d3afba224e1b1497897be548572188a08bcef60cc093a9c8b6fe08397148e95f",
+      "original_signed_answer": 3460.529699440005,
+      "line22_repaired_signed_answer": 3460.529699440005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3460.529699440005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/86",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 86,
+      "case_sha256": "282721426ceb01bb75926b62c8e59b5c1c111c24f2ffa5a2f8faf72f0c7974e3",
+      "original_signed_answer": -9977.4,
+      "line22_repaired_signed_answer": -9977.4,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9977.4,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/87",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 87,
+      "case_sha256": "da0332f08ea86aab6ecf6d9e385801d2827b39c35092a9bf2920a9bb8b91024d",
+      "original_signed_answer": -15321.0,
+      "line22_repaired_signed_answer": -14200.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -14200.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/88",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 88,
+      "case_sha256": "71b1668e0f0706b28325fa585e3db5102bc2fae5a07cb63929d796d1a7792d74",
+      "original_signed_answer": 3421.759234639998,
+      "line22_repaired_signed_answer": 3421.759234639998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3421.759234639998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/89",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 89,
+      "case_sha256": "2472afa8645ff4d62016610c413c056a600ac9f18553b971ee4260199c5a6412",
+      "original_signed_answer": 9189.68,
+      "line22_repaired_signed_answer": 9189.68,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9189.68,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/90",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 90,
+      "case_sha256": "a051367fee48f85e9cafafd099d4037f8fd1b6b4d14d58c5724e896b2fd2b4fc",
+      "original_signed_answer": 38842.59913360001,
+      "line22_repaired_signed_answer": 38842.59913360001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 38842.59913360001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/91",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 91,
+      "case_sha256": "1dc2444713222a8d426d69e990e19296f33ad35189d495cec537506ac9cc41e1",
+      "original_signed_answer": 4564.2485314000005,
+      "line22_repaired_signed_answer": 4564.2485314000005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4564.2485314000005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/92",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 92,
+      "case_sha256": "3218580eaaece3769cc8f149a7224f99dcba98c85f5adc0878d35275f4ffff95",
+      "original_signed_answer": -1901.6399999999994,
+      "line22_repaired_signed_answer": -1901.6399999999994,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1901.6399999999994,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/93",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 93,
+      "case_sha256": "75aec66c7bf52bb9c739e2dbe245bf48a85c0f235912542303d51a7be92ca743",
+      "original_signed_answer": 17417.21,
+      "line22_repaired_signed_answer": 17417.21,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17417.21,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/94",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 94,
+      "case_sha256": "888add109687a44181f0a0f89df05d5af3f9b1ca1460cd36f48338740d40e579",
+      "original_signed_answer": -4880.860000000001,
+      "line22_repaired_signed_answer": -4880.860000000001,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -7396.46458,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/95",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 95,
+      "case_sha256": "271204467c6674d319ef4c3c89e60b23888bac858f7c1febd5f57585d9d583b6",
+      "original_signed_answer": -18033.6,
+      "line22_repaired_signed_answer": -13621.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -13621.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/96",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 96,
+      "case_sha256": "426c1400ca1c73c0fa75dc466ff784f6a2c65683df027658174f50a5472a1730",
+      "original_signed_answer": -3617.959999999999,
+      "line22_repaired_signed_answer": -3617.959999999999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3617.959999999999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/97",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 97,
+      "case_sha256": "5dea8ed9195debf50dd2d24130f35d9a3f66d48dc447e39c371201d412339f6c",
+      "original_signed_answer": 192.76819999999861,
+      "line22_repaired_signed_answer": 192.76819999999861,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 192.76819999999861,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/98",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 98,
+      "case_sha256": "47a4de5023fd516ce88f79ea8e2ccef6d8064c62fcc61193ff3176bc6d55ed59",
+      "original_signed_answer": 8846.263199999996,
+      "line22_repaired_signed_answer": 8846.263199999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8846.263199999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_1/99",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 99,
+      "case_sha256": "2f6a6e8ad8042260e3ef7e986a1534a625414d04268568f8ff921a0bd3711eeb",
+      "original_signed_answer": 6555.0,
+      "line22_repaired_signed_answer": 6555.0,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6555.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/0",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 0,
+      "case_sha256": "936ddf06a17ea54a38930e4efdf87ac853ced684fd489c2c5497513dde5e27e7",
+      "original_signed_answer": 28517.603227734995,
+      "line22_repaired_signed_answer": 28517.603227734995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 28517.603227734995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/1",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 1,
+      "case_sha256": "f57000df2782971e6ff8be4b332e2c626f6711680f483346dd1bc136e9d48693",
+      "original_signed_answer": -7982.5,
+      "line22_repaired_signed_answer": -7982.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8149.084,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/2",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 2,
+      "case_sha256": "4f04642e8090428444007a47df791535be3a8f2d0172fcb1fde1ea2db711ccc2",
+      "original_signed_answer": 26495.502378519996,
+      "line22_repaired_signed_answer": 26495.502378519996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 26495.502378519996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/3",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 3,
+      "case_sha256": "cd40c4b6be407431d3ab9d45bca4cb19d1582bee3d07a11de9524e16b5dc52c3",
+      "original_signed_answer": 20961.905168585003,
+      "line22_repaired_signed_answer": 20961.905168585003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20961.905168585003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/4",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 4,
+      "case_sha256": "9a8c2ef7d6c993ac5262e1af18f28e74b02c34ab58a7673e1407f2b9589011cf",
+      "original_signed_answer": -16751.149999999998,
+      "line22_repaired_signed_answer": -16751.149999999998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -16751.149999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/5",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 5,
+      "case_sha256": "ef3c4325ba580de67234ab4a1c08e3485405e1d133509cb47e87b2f977a9dd71",
+      "original_signed_answer": 3626.1989571950035,
+      "line22_repaired_signed_answer": 3626.1989571950035,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3626.1989571950035,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/6",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 6,
+      "case_sha256": "c1f23b9965ef5edf74324f392d84ea8dd60667d70b3d56056d6bb4d00fee7cc4",
+      "original_signed_answer": 26754.674013985,
+      "line22_repaired_signed_answer": 26754.674013985,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 26754.674013985,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/7",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 7,
+      "case_sha256": "2f37ab4cf9c15ac7455c425dfbd3be7d67d240c6bf6782fe4f707ef66577123a",
+      "original_signed_answer": 20361.451841320002,
+      "line22_repaired_signed_answer": 20361.451841320002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20361.451841320002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/8",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 8,
+      "case_sha256": "6e8e8656e66822dda2885dece01521b51a92c52a6f78c68135fc06bc12d74c55",
+      "original_signed_answer": 23634.312636049995,
+      "line22_repaired_signed_answer": 23634.312636049995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 23634.312636049995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/9",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 9,
+      "case_sha256": "73e7211b8ed4d1b73ae09a8bd257fa0efbfd5e1c38fcfcb7ff2a404c4e01b76f",
+      "original_signed_answer": 16821.236549114998,
+      "line22_repaired_signed_answer": 16821.236549114998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 16821.236549114998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/10",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 10,
+      "case_sha256": "d9773df33cdfca697f95bf13f2b599619a900f57748c1effabe8997fac37d1d0",
+      "original_signed_answer": 11557.290771620002,
+      "line22_repaired_signed_answer": 11557.290771620002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 11557.290771620002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/11",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 11,
+      "case_sha256": "84e3ca45ef8753e193dde1620a98e16308c46efe59ec9f160ef6c0d3aaf75cf5",
+      "original_signed_answer": 6343.042494549998,
+      "line22_repaired_signed_answer": 6343.042494549998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6343.042494549998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/12",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 12,
+      "case_sha256": "ca435d0a3914c68e8994b75f99ddc65991e27b252251b025b27cf9be9dba387d",
+      "original_signed_answer": 31573.440655560007,
+      "line22_repaired_signed_answer": 31573.440655560007,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 31573.440655560007,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/13",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 13,
+      "case_sha256": "34bd654f79adaf208136c693037cf17c0ded514d87309995ae3546c87548dc4f",
+      "original_signed_answer": 7172.036948850004,
+      "line22_repaired_signed_answer": 7172.036948850004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 7172.036948850004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/14",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 14,
+      "case_sha256": "c44299e47205f954639a2e6a17c9c608020c9d8f89a71d6e0194d0d3df2da98f",
+      "original_signed_answer": 28822.5291478,
+      "line22_repaired_signed_answer": 28822.5291478,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 28822.5291478,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/15",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 15,
+      "case_sha256": "6cbd594d6bbbc86d8e365db5a132fa7aee3e5dc4e960b310a65c8cf1c00a9b78",
+      "original_signed_answer": 20111.66,
+      "line22_repaired_signed_answer": 20111.66,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20111.66,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/16",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 16,
+      "case_sha256": "ca7288299bd53a558022b90a4b2dfd79668578f290a1e3330f500b990d25fef7",
+      "original_signed_answer": 12831.201169609996,
+      "line22_repaired_signed_answer": 12831.201169609996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12831.201169609996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/17",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 17,
+      "case_sha256": "7235e6d0ac9ab50a29f842cb1b7a5f4b344335ecd78128da816fbd778d3a9cd6",
+      "original_signed_answer": -1748.7799999999988,
+      "line22_repaired_signed_answer": -1748.7799999999988,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6365.742830000003,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/18",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 18,
+      "case_sha256": "ca5b41eff887f12c26d332fd0f3d4489a97b78906096b7a9abc86c7cf60b8277",
+      "original_signed_answer": 23066.58010844,
+      "line22_repaired_signed_answer": 23066.58010844,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 23066.58010844,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/19",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 19,
+      "case_sha256": "9730e4ade191772b21a2305fe68c60435f8bb7e6c16d262c418e4beb25e4f2eb",
+      "original_signed_answer": 52817.563909360004,
+      "line22_repaired_signed_answer": 52817.563909360004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 52817.563909360004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/20",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 20,
+      "case_sha256": "d30037b425c3cec7ab86241c5e63446f1f2f09ba401faccf83d8d26d45ae0113",
+      "original_signed_answer": 19238.099721699997,
+      "line22_repaired_signed_answer": 19238.099721699997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 19238.099721699997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/21",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 21,
+      "case_sha256": "2fcc6e27a94e2392d6cf38510719e075932c3e19d49276a2fdfc8072aefc73c7",
+      "original_signed_answer": 22817.086700235,
+      "line22_repaired_signed_answer": 22817.086700235,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 22817.086700235,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/22",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 22,
+      "case_sha256": "1e475ecc782501997d6250eacdb39d2ee1e9a8db37823dca453340177447afd1",
+      "original_signed_answer": 30287.568456965,
+      "line22_repaired_signed_answer": 30287.568456965,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 30287.568456965,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/23",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 23,
+      "case_sha256": "a1aa42973c515d2df6d510ecb6a203099036c32bb2c59049110e9f7d8f1e13c9",
+      "original_signed_answer": 9318.92181774,
+      "line22_repaired_signed_answer": 9318.92181774,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9318.92181774,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/24",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 24,
+      "case_sha256": "ee44d612255424c189281afe98e3576650d743b6f409b5e5d01ba1db41363ff6",
+      "original_signed_answer": -77.66253691999736,
+      "line22_repaired_signed_answer": -77.66253691999736,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -77.66253691999736,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/25",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 25,
+      "case_sha256": "3d5351410de0a9ed2e20e9d2eed0da242b885b711f034319014f8d884060551d",
+      "original_signed_answer": 19243.8755512,
+      "line22_repaired_signed_answer": 19243.8755512,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 19243.8755512,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/26",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 26,
+      "case_sha256": "e5cda2fab9c6c49cd46076357c348193d6527327617b72417e96c10210a282ef",
+      "original_signed_answer": 8623.970612425,
+      "line22_repaired_signed_answer": 8623.970612425,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8623.970612425,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/27",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 27,
+      "case_sha256": "10b294294bf88350a20c9196ebea600f52c1bceb6dbe5d81eefae3283caf6171",
+      "original_signed_answer": 17209.83666632,
+      "line22_repaired_signed_answer": 17209.83666632,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17209.83666632,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/28",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 28,
+      "case_sha256": "7fb633999543c62a408ccfb7c2e65bc21ee90aab443fb04018f0090f0bb8b31c",
+      "original_signed_answer": 20259.20414676,
+      "line22_repaired_signed_answer": 20259.20414676,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20259.20414676,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/29",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 29,
+      "case_sha256": "77daba85b4bef6deaa3e6691a6343439375b08d7d748623b0c912a303f5439e7",
+      "original_signed_answer": 24973.184087679994,
+      "line22_repaired_signed_answer": 24973.184087679994,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 24973.184087679994,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/30",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 30,
+      "case_sha256": "4b3147bfe755211136f7b7ef59b32fddfd0932047ca5c0dc40e09e86a686dec0",
+      "original_signed_answer": 4966.822115350005,
+      "line22_repaired_signed_answer": 4966.822115350005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 4966.822115350005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/31",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 31,
+      "case_sha256": "b45b2252a4be922f4af87c948f778b0cd1c4d6fe128120988aa40e5c058ad8f7",
+      "original_signed_answer": 19330.01722908,
+      "line22_repaired_signed_answer": 19330.01722908,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 19330.01722908,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/32",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 32,
+      "case_sha256": "20f01b3a3aa826e55cd2a2f43438c047a9e4917dfbf1a24f2d22fd0aa33c30b7",
+      "original_signed_answer": 24615.894978640004,
+      "line22_repaired_signed_answer": 24615.894978640004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 24615.894978640004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/33",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 33,
+      "case_sha256": "3006c26366c81fe599bca600365b2ad69ba97bb24261f6ba553a46070d213b96",
+      "original_signed_answer": -3580.128938500001,
+      "line22_repaired_signed_answer": -3580.128938500001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3580.128938500001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/34",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 34,
+      "case_sha256": "c5951c296d6ff840b8aa6a9e8edb01eba05ae9f7151a38a7f495d6ca68529e92",
+      "original_signed_answer": -11251.600000000002,
+      "line22_repaired_signed_answer": -11251.600000000002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -11251.600000000002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/35",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 35,
+      "case_sha256": "862902306c7d9b3587bec8cc09c8291836626c44f3755b923ca78e5d6e732b7d",
+      "original_signed_answer": 1643.6600000000017,
+      "line22_repaired_signed_answer": 1643.6600000000017,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1643.6600000000017,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/36",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 36,
+      "case_sha256": "11aac835c935c1f910ddc1347412581c93b4b079ec10a86b45ada78211f1daa6",
+      "original_signed_answer": -21040.6,
+      "line22_repaired_signed_answer": -18928.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18928.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/37",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 37,
+      "case_sha256": "d7fd51cfa8059120f5ef768d85fcbd4b6a82c9d0b7fdce5e2d566c6cac3db5d7",
+      "original_signed_answer": 28920.310788920004,
+      "line22_repaired_signed_answer": 28920.310788920004,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 28920.310788920004,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/38",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 38,
+      "case_sha256": "01dcc50de3d48ff416e10270d34c718f8d91a7170910f3b8255c2083128cd2c4",
+      "original_signed_answer": 12070.039927585,
+      "line22_repaired_signed_answer": 12070.039927585,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12070.039927585,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/39",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 39,
+      "case_sha256": "a9ef01a2085c6941f35351eea1ff90eecbfa8fb8bf43cf5d02b5478a79ce7b66",
+      "original_signed_answer": 21246.392322680003,
+      "line22_repaired_signed_answer": 21246.392322680003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 21246.392322680003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/40",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 40,
+      "case_sha256": "ddd1a9bea455de325151974a642d4cb4a4089d8009bc4fc7db2eca2716c3a4f5",
+      "original_signed_answer": -3541.26,
+      "line22_repaired_signed_answer": -3541.26,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6094.4475,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/41",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 41,
+      "case_sha256": "edd325b788f3d67313ec8f86cad84b95339685cf2621cbbd33c2d3253df28491",
+      "original_signed_answer": -12327.0,
+      "line22_repaired_signed_answer": -4748.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4748.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/42",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 42,
+      "case_sha256": "584d7e6af388e54e8cfdcd99dca5978365d9b8ff63d125dc6bdb5e7a60c89cea",
+      "original_signed_answer": -21521.8210215,
+      "line22_repaired_signed_answer": -18583.8210215,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18583.8210215,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/43",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 43,
+      "case_sha256": "e6ce2769a3d427a135a29994f4f4e56c234a2c1f701fdec48a82890c8ffbc1ba",
+      "original_signed_answer": 210.53078199999982,
+      "line22_repaired_signed_answer": 210.53078199999982,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 210.53078199999982,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/44",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 44,
+      "case_sha256": "9bd09b4a729231b15da6c48bcf64af902423daecc8d6e0102ab3277607fd6162",
+      "original_signed_answer": 10706.771141605,
+      "line22_repaired_signed_answer": 10706.771141605,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10706.771141605,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/45",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 45,
+      "case_sha256": "f6970a536687e03a43a0ae95f11a1df84879beb62cda66e8975aab18f8baa9b4",
+      "original_signed_answer": 9019.834164210002,
+      "line22_repaired_signed_answer": 9019.834164210002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9019.834164210002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/46",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 46,
+      "case_sha256": "5b55804c7a480aec196acd02c4c36c938e9fee041e3890b50d0e3a01933f1ad1",
+      "original_signed_answer": 2149.5756000000038,
+      "line22_repaired_signed_answer": 2149.5756000000038,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 2149.5756000000038,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/47",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 47,
+      "case_sha256": "4294044ec1b05a6c53c8d15324a7a6ab5d9ae5094bdb20a9df5da522a1263b9e",
+      "original_signed_answer": -8714.782185885002,
+      "line22_repaired_signed_answer": -8714.782185885002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8714.782185885002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/48",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 48,
+      "case_sha256": "362b42d139efcd9d399a4cf864148ca9ae03d3c97e80f3d2bdf22ee9d4acf840",
+      "original_signed_answer": 40920.08214276,
+      "line22_repaired_signed_answer": 40920.08214276,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 40920.08214276,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/49",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 49,
+      "case_sha256": "58d2def41df4f6d0de318e65518344da67613d533a5821b04080161f6c6f262b",
+      "original_signed_answer": -5070.9412795,
+      "line22_repaired_signed_answer": -5070.9412795,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5070.9412795,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/50",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 50,
+      "case_sha256": "d5f715e38e0d0233b90c286c5c43521909cc19b4fa4ccab4af20b08fdd910d21",
+      "original_signed_answer": 3482.9532763199986,
+      "line22_repaired_signed_answer": 3482.9532763199986,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3482.9532763199986,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/51",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 51,
+      "case_sha256": "6ed11f3e9e10e5c8e4fd0f8488fdd6c60c544bec936ac2a956adbcf6d4733d1a",
+      "original_signed_answer": 15124.590369045,
+      "line22_repaired_signed_answer": 15124.590369045,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15124.590369045,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/52",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 52,
+      "case_sha256": "07602d5e0129d4625d9450e95c94a3a4c52898835846e5b8615ca60f4bf365f0",
+      "original_signed_answer": -1869.6500000000015,
+      "line22_repaired_signed_answer": -1869.6500000000015,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1869.6500000000015,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/53",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 53,
+      "case_sha256": "aceb8abd4c52bc975b9eaae2654660098cb24026e7ecb9460fa3673267ed1c2c",
+      "original_signed_answer": -5550.5820415,
+      "line22_repaired_signed_answer": -5550.5820415,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5550.5820415,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/54",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 54,
+      "case_sha256": "72aff64806d3649a79eb825af0c7fe3bcef24344b5ecffb8836a1fad13090a7f",
+      "original_signed_answer": -3945.4000000000005,
+      "line22_repaired_signed_answer": -1188.1999999999998,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1188.1999999999998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/55",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 55,
+      "case_sha256": "c44bdbccc5f1f98a59da2c51511e7c9571811ef5740eb4bfbb88fec0e880b510",
+      "original_signed_answer": 22266.366684839995,
+      "line22_repaired_signed_answer": 22266.366684839995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 22266.366684839995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/56",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 56,
+      "case_sha256": "0a0cd705ad17e36cae465e0520ddcb0b6a15bdb5dce5f0a596ceff90cd48b382",
+      "original_signed_answer": -9570.31809,
+      "line22_repaired_signed_answer": -3297.7180900000003,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3297.7180900000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/57",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 57,
+      "case_sha256": "413ee388838a7f74cebe3a7303480f9c8448bda123a635f4f60bd5f289ee8274",
+      "original_signed_answer": 24751.760853999996,
+      "line22_repaired_signed_answer": 24751.760853999996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 24751.760853999996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/58",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 58,
+      "case_sha256": "4ba8c5b84cb000e9fa9fb2f1f205c01389a025ff897cdc5093ba9188b2f00d95",
+      "original_signed_answer": 3250.016999999999,
+      "line22_repaired_signed_answer": 3250.016999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1526.4999600000046,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/59",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 59,
+      "case_sha256": "7ec9a377f6f05a3372f6bb9f8b43c11ed85202b2ceabd166fd27f23e83c4cad2",
+      "original_signed_answer": 6745.742829524999,
+      "line22_repaired_signed_answer": 6745.742829524999,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6745.742829524999,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/60",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 60,
+      "case_sha256": "89dff51b0787290587f9eabef9cf8d312052fed56042bb9c94720cf9015d6eed",
+      "original_signed_answer": 6680.959999999999,
+      "line22_repaired_signed_answer": 6680.959999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3514.190480000003,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/61",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 61,
+      "case_sha256": "37945cb84881d03f55ec59a9a5a1f6ac3bf2d660f2497b5702ebb05d02c98c6a",
+      "original_signed_answer": -8109.0,
+      "line22_repaired_signed_answer": -3157.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6146.926,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/62",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 62,
+      "case_sha256": "e1432c7087cfcce787f5fa5ac5b076557c021c1d7dbcd5731f6ccf58c3f59cac",
+      "original_signed_answer": 8071.710000000003,
+      "line22_repaired_signed_answer": 8071.710000000003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8071.710000000003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/63",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 63,
+      "case_sha256": "40025fd53463691d6d6883c81602b9d82fa41f1ef02c0d7a51ddf239ddde703e",
+      "original_signed_answer": 20941.831519,
+      "line22_repaired_signed_answer": 20941.831519,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20941.831519,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/64",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 64,
+      "case_sha256": "a26d70fe0e8a4264c02375c487249b88ead80b021ef6715c4887a6a8134ebb8e",
+      "original_signed_answer": 5785.810068415001,
+      "line22_repaired_signed_answer": 5785.810068415001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 5785.810068415001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/65",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 65,
+      "case_sha256": "1b0a57ffd0e5255561dcea2186b465c1996f00af7893a8f3f92f3008966b4390",
+      "original_signed_answer": 494.5200000000041,
+      "line22_repaired_signed_answer": 494.5200000000041,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1874.9741699999977,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/66",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 66,
+      "case_sha256": "b0f50125bd722e381868ea6cc8b21414515da929960358ec818313303d1adf9a",
+      "original_signed_answer": 20114.64173188,
+      "line22_repaired_signed_answer": 20114.64173188,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20114.64173188,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/67",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 67,
+      "case_sha256": "8bb8d177af0c440e9ec16bfbc530847f2153aa46b9370928df0ecc24aa1428cc",
+      "original_signed_answer": -3198.0,
+      "line22_repaired_signed_answer": 870.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 870.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/68",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 68,
+      "case_sha256": "5233b4a5d28b57bde27910e936881337fe679dcba17e5e4f6e9eb81e45f78c81",
+      "original_signed_answer": 26185.218516610003,
+      "line22_repaired_signed_answer": 26185.218516610003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 26185.218516610003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/69",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 69,
+      "case_sha256": "4692df98aba4795018e6d3c8f38a42e6fac43be7bbe0aa600e5ae43cb678b1ad",
+      "original_signed_answer": -19796.5,
+      "line22_repaired_signed_answer": -13414.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -13414.5,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/70",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 70,
+      "case_sha256": "59b09fe5338023e28abea54708151ee417d3f83b1274bb8b61b3e0363f18ed82",
+      "original_signed_answer": 844.3999999999996,
+      "line22_repaired_signed_answer": 844.3999999999996,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -71.88792999999896,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/71",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 71,
+      "case_sha256": "96ebcd66efccb30f388dfb30da301767c572f3cf1ea05d2beb52581b699fffc7",
+      "original_signed_answer": -9699.32468,
+      "line22_repaired_signed_answer": -4307.32468,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4307.32468,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/72",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 72,
+      "case_sha256": "bfb412a80729ee923e14e60020cd009fd5dbc222592ebbf3ca067f52a0b853d4",
+      "original_signed_answer": 21040.045951074997,
+      "line22_repaired_signed_answer": 21040.045951074997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 21040.045951074997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/73",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 73,
+      "case_sha256": "3b520338eb4e6b890420dea060c5eca51f24fb5bb12c27eae8940272de9f764a",
+      "original_signed_answer": -10877.57,
+      "line22_repaired_signed_answer": -10877.57,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -12416.971850000002,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/74",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 74,
+      "case_sha256": "d2c67a33ac89738eca2f2c0c32dd65afc827ac08fec654bfdb46fcd9cb1e6ad6",
+      "original_signed_answer": -6878.200000000001,
+      "line22_repaired_signed_answer": -5181.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5442.018,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/75",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 75,
+      "case_sha256": "1f0a1c39ca1b6f74006b79a06269645a35e9756ddb77938ab1369f77eda69759",
+      "original_signed_answer": -13704.774117784997,
+      "line22_repaired_signed_answer": -13704.774117784997,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -13704.774117784997,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/76",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 76,
+      "case_sha256": "7edc4a0a50927bc0e9130a9adaefd5a8c9fa08af3a8152ed3969b85628a530f1",
+      "original_signed_answer": 9167.206950505002,
+      "line22_repaired_signed_answer": 9167.206950505002,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 9167.206950505002,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/77",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 77,
+      "case_sha256": "48c08f14a28d5d5c95b6f00bf846fbbf375113abf12dab3c27c132732dfda1fe",
+      "original_signed_answer": -13458.7,
+      "line22_repaired_signed_answer": -9070.7,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9654.548,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/78",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 78,
+      "case_sha256": "cdf573ecbb81b0d2ce021fdf7155d16b06e96f677d77950b1e7b1edf4b1dc800",
+      "original_signed_answer": -3751.0122295099954,
+      "line22_repaired_signed_answer": -3751.0122295099954,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -3751.0122295099954,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/79",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 79,
+      "case_sha256": "a97ceb428a99028b3b54fe11df3195771553fee82171abbef94c3566f834972a",
+      "original_signed_answer": 15955.823127284995,
+      "line22_repaired_signed_answer": 15955.823127284995,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15955.823127284995,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/80",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 80,
+      "case_sha256": "76dab8416688aeb3c08d2bb9be7521de8edbaecae4f53461d4e9d1b78b874233",
+      "original_signed_answer": 10007.723122679996,
+      "line22_repaired_signed_answer": 10007.723122679996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10007.723122679996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/81",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 81,
+      "case_sha256": "0e3cfbfba680134ff2339f103d9c9e9b1bfa1b498577cae5dcc11fe830f147e8",
+      "original_signed_answer": 975.1500000000015,
+      "line22_repaired_signed_answer": 975.1500000000015,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1010.5813729875008,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/82",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 82,
+      "case_sha256": "33229b4144a3e94362b40ad4212a833e480dbf247cf6814e3fabe25d0b42d668",
+      "original_signed_answer": 34955.70626372,
+      "line22_repaired_signed_answer": 34955.70626372,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 34955.70626372,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/83",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 83,
+      "case_sha256": "353908bfb03911c0b5648de43caaf7a2a7442ea27f88c31004cdef677f001d1c",
+      "original_signed_answer": 6316.567572859996,
+      "line22_repaired_signed_answer": 6316.567572859996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 6316.567572859996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/84",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 84,
+      "case_sha256": "1d125c453209c7ed9aded5e2001d308d62754a1a10e0e1e16a07362c1e3b01a0",
+      "original_signed_answer": -667.630000000001,
+      "line22_repaired_signed_answer": -667.630000000001,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4309.776639999996,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/85",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 85,
+      "case_sha256": "a4d84fa1d537277f98570fc46e6183bc95b106f69705f7e4e6e3dfa49f25a168",
+      "original_signed_answer": -19803.0,
+      "line22_repaired_signed_answer": -18544.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18544.0,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/86",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 86,
+      "case_sha256": "d5a0cfb32b733fa7891f54c06da46f81598e01c648dafec60a6dcb72b6bdd909",
+      "original_signed_answer": -20257.75,
+      "line22_repaired_signed_answer": -20257.75,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -22060.096119999995,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/87",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 87,
+      "case_sha256": "a58405d857cda4dff8bcfb3038daf8021fd0180e4a3b5f6d8369da7d9b601dc4",
+      "original_signed_answer": 22193.6389548,
+      "line22_repaired_signed_answer": 22193.6389548,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 22193.6389548,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/88",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 88,
+      "case_sha256": "28a7233688c50958e95014a1a76769937971721298a40591f2b879dff1be8b2e",
+      "original_signed_answer": 20204.232643590003,
+      "line22_repaired_signed_answer": 20204.232643590003,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 20204.232643590003,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/89",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 89,
+      "case_sha256": "0d303588629ea5cdee1acc5c3ea4427d6180d20911eb8dfe7acca20a83aed32c",
+      "original_signed_answer": 8373.759999999998,
+      "line22_repaired_signed_answer": 8373.759999999998,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8300.772879999997,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/90",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 90,
+      "case_sha256": "553ef1ffdb7a30dcbc29786d492833b4cbd17711b96281799465079e0415eeb3",
+      "original_signed_answer": 15548.390598040001,
+      "line22_repaired_signed_answer": 15548.390598040001,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 15548.390598040001,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/91",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 91,
+      "case_sha256": "9283678514fd345d79ddc5f7a51e4b5be50438095266e66dace5accf8bb2cc64",
+      "original_signed_answer": 14254.772507199996,
+      "line22_repaired_signed_answer": 14254.772507199996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 14254.772507199996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/92",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 92,
+      "case_sha256": "f58e73b198d558e7c8a04b95212730730dc3a89a0d8b6d41f6c4b76ecb94237d",
+      "original_signed_answer": -15027.8,
+      "line22_repaired_signed_answer": -14421.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18830.766,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/93",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 93,
+      "case_sha256": "71c543b7a2f2c80ce178dc5fbabecb25b95a1605faba33cfc7af1632583386bd",
+      "original_signed_answer": 55291.644206259996,
+      "line22_repaired_signed_answer": 55291.644206259996,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 55291.644206259996,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/94",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 94,
+      "case_sha256": "6015b8f48894fcc271e0464ae8a8fe1404f46fa2e2ec3a09a39e08fafd882760",
+      "original_signed_answer": -6679.617279745005,
+      "line22_repaired_signed_answer": -6679.617279745005,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6679.617279745005,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/95",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 95,
+      "case_sha256": "d275bb12cb6dc6710b2976f10d149ad34d70b6d24a9d58ddbc2cda5f20d51f3a",
+      "original_signed_answer": 12125.960425175006,
+      "line22_repaired_signed_answer": 12125.960425175006,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 12125.960425175006,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/96",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 96,
+      "case_sha256": "a9794ca5bddc7c1361d8b363a36f6cd9130e45a9a9e43d65af89b71a8a2b2768",
+      "original_signed_answer": 10897.751683939998,
+      "line22_repaired_signed_answer": 10897.751683939998,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 10897.751683939998,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/97",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 97,
+      "case_sha256": "562bcdf18deeff63d2e6edd804166469a65fbf66fc5cf9600c6069de825d8e7b",
+      "original_signed_answer": 34832.906041145,
+      "line22_repaired_signed_answer": 34832.906041145,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 34832.906041145,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/98",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 98,
+      "case_sha256": "529fea2e62b5d6fbce593218342412d29bec552f7eaf75ad5b94fd76ccbb23ad",
+      "original_signed_answer": 17319.205731275,
+      "line22_repaired_signed_answer": 17319.205731275,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 17319.205731275,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    },
+    {
+      "case_id": "tax/comp_2/99",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 99,
+      "case_sha256": "25e8424273d532d4a1ffe90a7f50d4f8cc70a5f84862ebec8df1b4ec55108a3d",
+      "original_signed_answer": 18344.73108176,
+      "line22_repaired_signed_answer": 18344.73108176,
+      "changed": false,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 18344.73108176,
+      "changed_from_line22": false,
+      "resolved_dependencies": []
+    }
+  ],
+  "previous_revision": "line22-only-2"
+}

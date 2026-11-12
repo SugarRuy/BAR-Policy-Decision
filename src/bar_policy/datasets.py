@@ -22,10 +22,10 @@ INSTRUCTION, POLICY, CASE, QUESTION, AMENDMENT = (
 
 _DATASETS = {
     "rulearena-tax": {
-        "description": "RuleArena Tax, 300 native cases with the scoped line-22 reference revision.",
+        "description": "RuleArena Tax, 300 native cases with versioned reference revisions.",
         "default_variant": "revised",
         "variants": {
-            "revised": "Native inputs; line-22 floor-revised references.",
+            "revised": "Native inputs; T1 line-22 floor and T2 supplied-policy formula revisions.",
             "original": "Native inputs; original RuleArena references.",
         },
         "modes": ("zero-shot",),
@@ -83,7 +83,7 @@ _NOT_DATASETS = {
 }
 
 
-def dataset_capabilities():
+def dataset_capabilities(release=_assets.ASSET_RELEASE):
     result = {}
     for name, spec in _DATASETS.items():
         result[name] = {
@@ -95,6 +95,9 @@ def dataset_capabilities():
             "unsupported_modes": dict(spec["unsupported_modes"]),
             "components": list(spec["components"]),
         }
+    if release == "0.2.0":
+        result["rulearena-tax"]["variants"]["revised"] = (
+            "Native inputs; line-22 floor-revised references.")
     return result
 
 
@@ -335,22 +338,22 @@ def _checked(messages, segments, identifier):
     return [s for s in segments if s.text]
 
 
-def _component_info(identifier, role, applied, effect=None):
-    info = _assets_component(identifier)
+def _component_info(identifier, role, applied, effect=None, *, release=_assets.ASSET_RELEASE):
+    info = _assets_component(identifier, release)
     info.update({"role": role, "applied": applied})
     if effect:
         info["model_visible_effect"] = effect
     return info
 
 
-def _assets_component(identifier):
+def _assets_component(identifier, release=_assets.ASSET_RELEASE):
     from .components import get_component
-    return get_component(identifier).provenance()
+    return get_component(identifier, release=release).provenance()
 
 
-def _tax(source, variant, scorer):
+def _tax(source, variant, scorer, release):
     root = _assets.root()
-    manifest = _assets.manifest("rulearena-tax")
+    manifest = _assets.manifest("rulearena-tax", release)
     spec = manifest["dataset"]
     expected = manifest["source_repository"]
     source = _sources.source_root(source, expected)
@@ -396,17 +399,27 @@ def _tax(source, variant, scorer):
         ], row["id"])
         references = {"original": row["original_reference"], "revised": row["revised_reference"],
                       "changed": row["reference_changed"]}
+        metadata = {"remaining_dependencies": row["remaining_dependencies"]}
+        if "previous_reference" in row:
+            references.update({"previous": row["previous_reference"],
+                               "changed_from_previous": row["reference_changed_from_previous"]})
+            metadata.update({"previous_revision": row["previous_revision"],
+                             "resolved_dependencies": (row["resolved_dependencies"]
+                                                       if variant == "revised" else [])})
+            if variant == "original":
+                metadata["remaining_dependencies"] = (
+                    row["remaining_dependencies"] + row["resolved_dependencies"])
         reference = references["revised" if variant == "revised" else "original"]
         examples.append(Example(
             row["id"], messages, segments, reference, references,
-            {"remaining_dependencies": row["remaining_dependencies"]},
+            metadata,
             {**_upstream(manifest, row["source_file"], sources, record=row["source_index"]),
              "case_sha256": row["case_sha256"]},
             row["native_case"], partial(scoring.score_tax_response, scorer=scorer)))
     is_native = scorer == scoring.TAX_NATIVE_SCORER
     info = {
         "components": [_component_info("rulearena-tax", "reference revision",
-                                       variant == "revised")],
+                                       variant == "revised", release=release)],
         "amendments": [],
         "scorer": {
             "id": scorer,
@@ -418,7 +431,8 @@ def _tax(source, variant, scorer):
             "answer_selection": ("first matching native final-answer pattern" if is_native
                                  else "first native answer phrase; reject an invalid amount"),
         },
-        "reference_kind": ("line22_repaired_signed_answer" if variant == "revised"
+        "reference_kind": (spec.get("revised_reference_field", "line22_repaired_signed_answer")
+                           if variant == "revised"
                            else "original_signed_answer"),
         "record_count": len(examples),
         "changed_references": sum(e._references["changed"] for e in examples),
@@ -432,12 +446,14 @@ def _tax(source, variant, scorer):
         "not_complete_ground_truth_certification": True,
         "model_calls": 0,
     }
+    if variant == "original":
+        info["dependency_definitions"].update(spec.get("resolved_dependency_definitions", {}))
     return examples, info, scorer
 
 
-def _verify_errata_no_effect(sources, rows, objective):
+def _verify_errata_no_effect(sources, rows, objective, release):
     """Apply the prompt errata in memory and prove Markdown zero-shot is unchanged."""
-    manifest = _assets.manifest("rulearena-airline-prompt-errata")
+    manifest = _assets.manifest("rulearena-airline-prompt-errata", release)
     patched = dict(sources)
     applied = []
     for patch in manifest["patches"]:
@@ -461,9 +477,9 @@ def _verify_errata_no_effect(sources, rows, objective):
     return applied
 
 
-def _airline(source, variant, scorer):
+def _airline(source, variant, scorer, release):
     root = _assets.root()
-    manifest = _assets.manifest("rulearena-airline-objective")
+    manifest = _assets.manifest("rulearena-airline-objective", release)
     expected = manifest["source_repository"]
     source = _sources.source_root(source, expected)
     sources = _sources.read_pins(source, manifest["source_files"], expected)
@@ -471,7 +487,7 @@ def _airline(source, variant, scorer):
     _sources.unchanged(source, sources)
     objective = _core.airline_objective(root)
     revised = variant == "revised"
-    errata = _verify_errata_no_effect(sources, rows, objective) if revised else None
+    errata = _verify_errata_no_effect(sources, rows, objective, release) if revised else None
     template = _core.literals(sources["airline/auto_test.py"].decode(),
                               {"system_prompt", "prompt_template"})
     head, rest = _split_once(template["prompt_template"], "$reference_rules")
@@ -546,10 +562,10 @@ def _airline(source, variant, scorer):
         "components": [
             _component_info("rulearena-airline-objective",
                             "input amendment and source-bound reference records", revised,
-                            "adds the minimum-cost objective" if revised else None),
+                            "adds the minimum-cost objective" if revised else None, release=release),
             _component_info("rulearena-airline-prompt-errata", "prompt errata", revised,
-                            errata_effect if revised else None),
-            _component_info("rulearena-airline-scoring", "amount scorer", True),
+                            errata_effect if revised else None, release=release),
+            _component_info("rulearena-airline-scoring", "amount scorer", True, release=release),
         ],
         "amendments": ([{"component": "rulearena-airline-objective", "kind": "objective amendment",
                          "text": objective, "changes_model_visible_input": True,
@@ -566,9 +582,9 @@ def _airline(source, variant, scorer):
         "flag_counts": counts,
         "question_segments": "Native system and template task directives, plus the BAR "
                              "minimum-cost objective when the revised variant is selected.",
-        "accepted_scope": {c: _assets.manifest(c)["accepted_scope"]
+        "accepted_scope": {c: _assets.manifest(c, release)["accepted_scope"]
                            for c in _DATASETS["rulearena-airline"]["components"]},
-        "remaining_limits": {c: _assets.manifest(c)["remaining_limits"]
+        "remaining_limits": {c: _assets.manifest(c, release)["remaining_limits"]
                              for c in _DATASETS["rulearena-airline"]["components"]},
         "source": {"repository": expected, "files": copy.deepcopy(manifest["source_files"])},
         "not_complete_ground_truth_certification": True,
@@ -587,8 +603,8 @@ def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, m
     ``source`` is the local root of the pinned upstream checkout. The default
     ``variant`` is the final integrated revised configuration. Unsupported
     releases, variants, modes and scorers raise before any source is read.
-    Tax defaults to ``rulearena-tax-numeric-v1``; select
-    ``rulearena-tax-native`` to reproduce published scores.
+    Tax defaults to ``rulearena-tax-numeric-v1``. To reproduce published
+    scores, select both ``release="0.2.0"`` and ``scorer="rulearena-tax-native"``.
     """
     if not isinstance(name, str):
         raise _core.ConfigurationError("dataset name must be a string")
@@ -619,7 +635,7 @@ def load_dataset(name, source, *, release=_assets.ASSET_RELEASE, variant=None, m
         raise _core.UnsupportedError(
             f"Unsupported scorer {scorer!r} for {name}; supported: {', '.join(spec['scorers'])}")
     _assets.verify()
-    examples, info, scorer = _BUILDERS[name](source, variant, scorer)
+    examples, info, scorer = _BUILDERS[name](source, variant, scorer, release)
     info.update({"dataset": name, "release": release, "variant": variant, "mode": mode,
-                 "variant_description": spec["variants"][variant]})
+                 "variant_description": dataset_capabilities(release)[name]["variants"][variant]})
     return Dataset(name, release, variant, mode, examples, info, scorer)

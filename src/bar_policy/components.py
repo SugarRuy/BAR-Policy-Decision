@@ -14,7 +14,7 @@ _CAPABILITIES = {
         "operations": ("load_references", "component_rows", "write_component_dataset",
                        "prepare_component"),
         "datasets": ("rulearena-tax",),
-        "notes": "Reference revision; Tax datasets use the original/native RuleArena scorer.",
+        "notes": "Versioned reference revision; numeric-v1 scoring by default, native scoring optional.",
     },
     "legalbench-sara-numeric": {
         "operations": ("score_sara_numeric", "load_legalbench_evaluator", "prepare_component"),
@@ -56,7 +56,7 @@ class Component:
 
     def __init__(self, identifier, release):
         _assets.check_release(release)
-        entry = next((c for c in _core.catalog(_assets.root()) if c["id"] == identifier), None)
+        entry = next((c for c in _core.catalog(_assets.root(), release) if c["id"] == identifier), None)
         if entry is None:
             known = ", ".join(c["id"] for c in _core.catalog(_assets.root()))
             raise _core.ConfigurationError(f"Unknown component {identifier!r}; known: {known}")
@@ -99,7 +99,8 @@ class Component:
 
     def read_bytes(self, name):
         """Read one of this component's packaged files after hash verification."""
-        allowed = {self.manifest_path, f"components/{self.id}/README.md", *self.payload_files,
+        allowed = {self.manifest_path, str(Path(self.manifest_path).parent / "README.md"),
+                   *self.payload_files,
                    *(p["patch"] for p in self._manifest["patches"])}
         if name not in allowed:
             raise _core.ConfigurationError(f"{name!r} is not a file of component {self.id}")
@@ -123,7 +124,7 @@ def _release(release):
 def list_components(*, release=_assets.ASSET_RELEASE):
     """All components of one pinned asset release."""
     _release(release)
-    return [Component(c["id"], release) for c in _core.catalog(_assets.root())]
+    return [Component(c["id"], release) for c in _core.catalog(_assets.root(), release)]
 
 
 def get_component(component_id, *, release=_assets.ASSET_RELEASE):
@@ -153,7 +154,7 @@ def load_references(component_id, *, release=_assets.ASSET_RELEASE):
     component = _supporting(component_id, "load_references", release)
     _assets.verify()
     if component_id == "rulearena-tax":
-        return json.loads(component.read_bytes("components/rulearena-tax/labels.json"))["records"]
+        return json.loads(component.read_bytes(component.manifest()["dataset"]["reference_file"]))["records"]
     if component_id == "rulearena-airline-objective":
         data = component.read_bytes("components/rulearena-airline-objective/references.jsonl")
         return [json.loads(line) for line in data.decode("utf-8").splitlines()]
@@ -185,7 +186,8 @@ def write_component_dataset(component_id, source, output, *, release=_assets.ASS
     component = _supporting(component_id, "write_component_dataset", release)
     source = _sources.source_root(source, component.source_repository)
     destination = Path(output)
-    _core.dataset(_assets.root(), component_id, source, destination, _assets.locate())
+    _core.dataset(_assets.root(), component_id, source, destination, _assets.locate(),
+                  release=release)
     return destination.absolute()
 
 
@@ -196,7 +198,8 @@ def prepare_component(component_id, source, output, *, release=_assets.ASSET_REL
     """
     component = _supporting(component_id, "prepare_component", release)
     source = _sources.source_root(source, component.source_repository)
-    return _core.prepare(_assets.root(), component_id, source, Path(output), _assets.locate())
+    return _core.prepare(_assets.root(), component_id, source, Path(output), _assets.locate(),
+                         release=release)
 
 
 def capabilities(*, release=_assets.ASSET_RELEASE):
@@ -205,6 +208,6 @@ def capabilities(*, release=_assets.ASSET_RELEASE):
     _release(release)
     return {
         "release": release,
-        "datasets": dataset_capabilities(),
+        "datasets": dataset_capabilities(release),
         "components": {c.id: c.capabilities() for c in list_components(release=release)},
     }

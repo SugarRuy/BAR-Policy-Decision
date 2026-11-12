@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "status": "passed",
+  "recorded_at_utc": "2026-11-12T21:12:57.336406+00:00",
+  "scope": "Offline calculator replay, public API and CLI parity, historical compatibility, source and installed-wheel tests. No model performance experiments.",
+  "component_count": 7,
+  "pinned_component_sources_checked": 57,
+  "source_preservation": {
+    "checked_files": 57,
+    "all_unchanged": true
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "pydantic": "2.13.1",
+    "pandas": "2.3.3"
+  },
+  "tax_revision": {
+    "revision": "t1-t2-1",
+    "records": 300,
+    "original_exact_replay": 300,
+    "line22_exact_replay": 300,
+    "revised_exact_replay": 300,
+    "changed_from_line22": 21,
+    "unchanged_from_line22": 279,
+    "changed_from_original": 43,
+    "t1_t2_overlap": 5,
+    "negative_earnings_affected": 20,
+    "positive_earnings_below_400_affected": 1,
+    "negative_self_employment_tax": 20,
+    "negative_other_taxes": 15,
+    "negative_total_tax": 5,
+    "owed_to_refund_from_line22": 3,
+    "native_inputs_unchanged": 300,
+    "unmarked_intermediates_unchanged": 279,
+    "changed_ids_equal_t2_flags": true,
+    "only_t2_branch_removed_from_t1": true,
+    "remaining_dependency": "T3_schedule3_line15_default_zero",
+    "model_calls": 0
+  },
+  "tests": {
+    "source_and_packaging": {
+      "tests": 81,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "installed_wheel": {
+      "tests": 78,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "compatibility": {
+    "historical_release": "0.2.0",
+    "historical_manifest_and_metadata_preserved": true,
+    "native_model_messages_unchanged": 300,
+    "saved_tax_responses_reproduced": 900,
+    "protected_tracked_files_unchanged": 76,
+    "study_archives_unchanged": 4,
+    "scorer_implementation_ast_unchanged": true
+  },
+  "review": {
+    "model": "claude-opus-5-5",
+    "status": "accepted_after_fixes",
+    "scope": "Independent original/T1/T1+T2 replay, patch and API compatibility review, followed by review of corrections."
+  },
+  "verification_code_sha256": {
+    "src/bar_policy/__init__.py": "45e92e26a45c578bd20183be616beee2ecdc6a6d2bbe1eaa5b1c8bd53c011edf",
+    "src/bar_policy/_assets.py": "f9924e1c56851b52391bae24fb31da98eba43dd23b8be0484d23c4053b1b65e3",
+    "src/bar_policy/_core.py": "8d7a813ca731768cce78712986655d6e2d303e7c128cf26396d72e6443e743a2",
+    "src/bar_policy/_sources.py": "063e3e7e7406b10940225827b1261fa38f53d82e23ce6265145d3f80218feed5",
+    "src/bar_policy/cli.py": "9fc80a55d6b804fcea11cdf67e60818562c8d3580ca43e6a06423fd26b54aa81",
+    "src/bar_policy/components.py": "8880921b48c156a53cab8a614a8e4f0b3d398743a5d84e6369206abc2a488268",
+    "src/bar_policy/datasets.py": "c7654fa8bf45cab6988245951f61b374579bb94bdc644290ad4f0b644018dca3",
+    "src/bar_policy/errors.py": "5745bc467e90b4caa2d97356fb544a085813d7cce9d166f23e0600f388beab9d",
+    "src/bar_policy/scoring.py": "a11895a7492d43f85e0d81929ad28e0606ce6e326046b144d6f5ec457464868f"
+  },
+  "checker_sha256": {
+    "scripts/check_components.py": "3e47be246ea16dcd381570e82264a244e2534b8911779e0cbdb0761feb08c3dc",
+    "scripts/check_tax_t2.py": "1f734c54bf7a57e179dbeebb5a6243037cb5fb9969a4d65a008f8bb8f1ac2861"
+  },
+  "tax_validation_sha256": "773ed661bca8538c0c8ae0b6c81857064f552124a4fbdd764d78368b08db00c7",
+  "model_performance_experiments_added": 0,
+  "distribution_binding": "The wheel and source archive are identified by SHA256SUMS in GitHub Release v0.3.0."
+}

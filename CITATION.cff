@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite the BAR paper and original benchmark, and identify the component version used. This is the v0.2.0 release."
+message: "Please cite the BAR paper and original benchmark, and identify the component version used. This is the v0.3.0 release."
 type: software
 title: "BAR: Benchmark Audit and Revision"
-version: 0.2.0
-date-released: 2026-11-04
+version: 0.3.0
+date-released: 2026-11-12
 authors:
   - family-names: Xiao
     given-names: Yanru

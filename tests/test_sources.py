@@ -54,11 +54,11 @@ def check_segments(test, example):
 class Tax(unittest.TestCase):
     def setUp(self):
         self.source = require("BAR_TEST_RULEARENA")
-        self.revised = _Cached.dataset("rulearena-tax")
-        self.original = _Cached.dataset("rulearena-tax", variant="original")
+        self.revised = _Cached.dataset("rulearena-tax", release="0.2.0")
+        self.original = _Cached.dataset("rulearena-tax", variant="original", release="0.2.0")
 
     def test_population_references_and_segments(self):
-        labels = bp.load_references("rulearena-tax")
+        labels = bp.load_references("rulearena-tax", release="0.2.0")
         self.assertEqual(len(self.revised), 300)
         self.assertEqual(list(self.revised.ids), [r["case_id"] for r in labels])
         native = {f"tax/synthesized_problems/comp_{i}.json":
@@ -263,7 +263,7 @@ class ComponentRows(unittest.TestCase):
                 ("rulearena-nba-location-errata", lambda r: canonical(r) + b"\n")):
             with self.subTest(identifier=identifier):
                 expected = golden(f"{identifier}/data.jsonl").read_bytes()
-                rows = bp.component_rows(identifier, source)
+                rows = bp.component_rows(identifier, source, release="0.2.0")
                 self.assertEqual(b"".join(encode(r) for r in rows), expected)
 
     def test_nba_records(self):
@@ -286,7 +286,9 @@ class Patches(unittest.TestCase):
                  "conditionalqa": require("BAR_TEST_CONDITIONALQA")}
         results = env_path("BAR_TEST_BASELINE_RESULTS")
         checked = 0
-        for component in bp.list_components():
+        # These golden programs belong to the paper's asset release.
+        # The new T2 patch has separate full-replay/preparation checks.
+        for component in bp.list_components(release="0.2.0"):
             for patch in component.patches():
                 root = roots["conditionalqa" if component.id.startswith("conditionalqa")
                              else "rulearena"]

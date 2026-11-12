@@ -33,12 +33,12 @@ def verify():
     _core.verify(ROOT, echo=print)
 
 
-def prepare(identifier, source, output):
-    _core.prepare(ROOT, identifier, source, output, echo=print)
+def prepare(identifier, source, output, *, release=None):
+    _core.prepare(ROOT, identifier, source, output, echo=print, release=release)
 
 
-def dataset(identifier, source, output):
-    _core.dataset(ROOT, identifier, source, output, echo=print)
+def dataset(identifier, source, output, *, release=None):
+    _core.dataset(ROOT, identifier, source, output, echo=print, release=release)
 
 
 def main():

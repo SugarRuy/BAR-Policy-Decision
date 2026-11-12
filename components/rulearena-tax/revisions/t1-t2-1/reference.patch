@@ -1,0 +1,35 @@
+--- a/tax/micro_evaluation.py
++++ b/tax/micro_evaluation.py
+@@ -368,16 +368,13 @@
+         tax_payer.tentative_profit = tax_payer.gross_income - tax_payer.total_expenses
+         tax_payer.net_profit = tax_payer.tentative_profit - tax_payer.expenses_of_home
+         tax_payer.sche_se_line_4c = tax_payer.net_profit * 0.9235 if tax_payer.net_profit > 0 else tax_payer.net_profit
+-        if tax_payer.sche_se_line_4c < 400:
+-            tax_payer.self_employment_tax = tax_payer.self_employment_deductible = 0
+-        else:
+-            if tax_payer.total_social_security_wages >= 160200:
+-                tax_payer.sche_se_line_10 = 0
+-            else:
+-                tax_payer.sche_se_line_9 = 160200 - tax_payer.total_social_security_wages
+-                tax_payer.sche_se_line_10 = min(tax_payer.sche_se_line_4c, tax_payer.sche_se_line_9) * 0.124
+-            tax_payer.self_employment_tax = tax_payer.sche_se_line_4c * 0.029 + tax_payer.sche_se_line_10
+-            tax_payer.self_employment_deductible = tax_payer.self_employment_tax * 0.5
++        if tax_payer.total_social_security_wages >= 160200:
++            tax_payer.sche_se_line_10 = 0
++        else:
++            tax_payer.sche_se_line_9 = 160200 - tax_payer.total_social_security_wages
++            tax_payer.sche_se_line_10 = min(tax_payer.sche_se_line_4c, tax_payer.sche_se_line_9) * 0.124
++        tax_payer.self_employment_tax = tax_payer.sche_se_line_4c * 0.029 + tax_payer.sche_se_line_10
++        tax_payer.self_employment_deductible = tax_payer.self_employment_tax * 0.5
+     else:
+         tax_payer.gross_receipts = tax_payer.net_profit = tax_payer.self_employment_tax = tax_payer.self_employment_deductible = 0
+     
+@@ -449,7 +446,7 @@
+     
+     tax_payer.computed_accumulated_credits = tax_payer.schedule_3_line_8 + tax_payer.computed_ctc_or_other_dependent_credit
+ 
+-    tax_payer.computed_taxes_after_credits = tax_payer.f1040_line_18 - tax_payer.computed_accumulated_credits
++    tax_payer.computed_taxes_after_credits = max(0, tax_payer.f1040_line_18 - tax_payer.computed_accumulated_credits)
+ 
+     tax_payer.computed_other_taxes = tax_payer.other_additional_taxes + tax_payer.self_employment_tax
+     

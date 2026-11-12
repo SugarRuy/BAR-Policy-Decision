@@ -95,8 +95,9 @@ def score_tax_response(response, reference, *, scorer=TAX_SCORER):
     ``rulearena-tax-numeric-v1`` fixes truncated amounts and malformed grouping.
     It retains the native phrase, sign and tolerance. The amount after the
     first such phrase must be valid; a malformed amount is not skipped.
-    Pass ``scorer="rulearena-tax-native"`` to reproduce the published studies
-    with the unchanged ``decode_tax``/``tax_accept`` implementation.
+    For the published studies, use references from asset release ``0.2.0``
+    and pass ``scorer="rulearena-tax-native"`` for the unchanged
+    ``decode_tax``/``tax_accept`` implementation.
     Both scorers use rtol=1e-5, atol=1e-8 and need no NumPy.
     """
     if not isinstance(scorer, str):

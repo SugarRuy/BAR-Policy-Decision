@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "name": "BAR: Benchmark Audit and Revision",
-  "version": "0.2.0",
-  "tag": "v0.2.0",
+  "version": "0.3.0",
+  "tag": "v0.3.0",
   "repository": "https://github.com/SugarRuy/BAR-Policy-Decision",
   "visibility_at_creation": "private",
   "created_at_utc": "2026-11-01T07:04:18.039433+00:00",
@@ -39,15 +39,19 @@
     "OpenExempt study targets use amended premises and are not a replacement native key.",
     "TAC runtime observations use constructed replies and trajectory input; no live-agent frequency or price correctness is measured.",
     "Airline objective amendment changes model-visible inputs but retains conditional native reference amounts.",
-    "NBA changes two localization fields only; Airline amount-scoring probes are constructed, not model performance."
+    "NBA changes two localization fields only; Airline amount-scoring probes are constructed, not model performance.",
+    "T3 Schedule 3 line 15 remains a preserved zero default for an unavailable input.",
+    "The supplied formulas yield negative self-employment tax and deductions in 20 loss cases, negative other taxes in 15 cases, negative total tax in five cases, and three owed-to-refund changes. No extra floor is introduced; this follows the supplied policy packet, not a complete real-world tax policy."
   ],
   "status": "released",
-  "based_on_release": "v0.1.0",
-  "prepared_at_utc": "2026-11-03T16:59:02.417622+00:00",
-  "paper_binding_scope": "Current 28-page arXiv manuscript, PDF and source package. Earlier paper binding is preserved in releases/v0.1.0.json. Airline/NBA component validation adds no model-performance results.",
-  "validation_record": "releases/v0.2.0-validation.json",
-  "validation_completed_at_utc": "2026-11-04T18:15:01.677182+00:00",
+  "based_on_release": "v0.2.0",
+  "paper_binding_scope": "The published paper and its frozen studies are unchanged. Tax t1-t2-1 is a post-publication reference revision; use asset release 0.2.0 and native scoring for the paper Tax results.",
+  "validation_record": "releases/v0.3.0-validation.json",
+  "validation_completed_at_utc": "2026-11-12T21:12:57.336406+00:00",
   "implementation_review": "accepted_after_fixes",
-  "release_date": "2026-11-04",
-  "historical_inventory_amendment": "releases/v0.1.0-inventory-amendment.json"
+  "release_date": "2026-11-12",
+  "historical_inventory_amendment": "releases/v0.1.0-inventory-amendment.json",
+  "python_package_version": "0.3.0",
+  "released_at_utc": "2026-11-12T21:12:57.336406+00:00",
+  "component_validation_record": "components/rulearena-tax/revisions/t1-t2-1/validation.json"
 }

@@ -65,7 +65,7 @@ def quiet(function, *args):
 
 
 def manifest(identifier):
-    return bar.read_json(ROOT / "components" / identifier / "component.json")
+    return bar._core.component_manifest(ROOT, identifier)
 
 
 def snapshots(directory, fetch=False):
@@ -105,7 +105,9 @@ def calculator(source, program):
 
 def tax(source, work):
     destination = work / "tax-revised"
-    quiet(bar.prepare, "rulearena-tax", source, destination)
+    # Preserve the published T1-only scientific controls. T2 is checked below
+    # using its independently recomputed SE arithmetic and all downstream fields.
+    quiet(lambda *args: bar.prepare(*args, release="0.2.0"), "rulearena-tax", source, destination)
     old, _ = calculator(source, source / "tax/micro_evaluation.py")
     new, nodes = calculator(source, destination / "tax/micro_evaluation.py")
     expected = bar.read_json(ROOT / "components/rulearena-tax/labels.json")["records"]
@@ -158,7 +160,7 @@ def tax(source, work):
                 "Tax floor boundary")
         boundaries.append([line18, line21, obj.computed_taxes_after_credits])
     dataset = work / "tax-data"
-    quiet(bar.dataset, "rulearena-tax", source, dataset)
+    quiet(lambda *args: bar.dataset(*args, release="0.2.0"), "rulearena-tax", source, dataset)
     rows = [json.loads(line) for line in (dataset / "data.jsonl").read_text().splitlines()]
     # Compare reconstructed inputs with a separately extracted native renderer.
     namespace = {"args": SimpleNamespace(distractor=False, textual=False)}
@@ -186,7 +188,10 @@ def tax(source, work):
         require(row["remaining_dependencies"] == by_id[row["id"]]["other_unresolved_dependencies"],
                 "Tax dependency flags changed")
     require(len(rows) == 300 and len({r["id"] for r in rows}) == 300, "Tax dataset coverage")
+    import check_tax_t2
+    t2 = quiet(check_tax_t2.check, source)
     return {"replayed": 300, "changed": 27, "unchanged": 273, "branches": dict(branches),
+            "t1_t2_revision": t2["summary"],
             "boundary_controls": boundaries, "native_inputs_preserved": 300,
             "native_grading_ast_unchanged": True, "changed_references_rejected_by_native_grader": 27,
             "dataset_sha256": sha(dataset / "data.jsonl"), "records": records}
@@ -388,7 +393,8 @@ def hash_rejections(roots, work):
             dst = package / relative
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, dst)
-        path = package / "components" / identifier / "component.json"
+        selected = next(c for c in bar._core.catalog(package) if c["id"] == identifier)
+        path = package / selected["manifest"]
         spec = bar.read_json(path)
         (spec.get("replacement") or spec["patches"][0])["after_sha256"] = "0" * 64
         path.write_text(json.dumps(spec))

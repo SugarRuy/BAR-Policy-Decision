@@ -115,7 +115,7 @@ class Packaging(unittest.TestCase):
             metadata = email.message_from_bytes(
                 archive.read(next(n for n in info if n.endswith("METADATA"))))
         self.assertEqual(metadata["Name"], "bar-policy-decision")
-        self.assertEqual(metadata["Version"], "1.0.0.dev1")
+        self.assertEqual(metadata["Version"], "0.3.0")
         self.assertEqual(metadata["License-Expression"], "MIT AND BSD-2-Clause")
         self.assertClean(names)
 

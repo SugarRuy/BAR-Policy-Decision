@@ -2,6 +2,7 @@ include LICENSE THIRD_PARTY.md README.md CHANGELOG.md CITATION.cff
 include inventory.json components.json release.json
 include docs/API.md docs/COMPONENTS.md
 recursive-include components *
+recursive-include asset-metadata *.json
 recursive-include scripts *.py
 recursive-include tests *.py
 global-exclude __pycache__ *.py[cod]

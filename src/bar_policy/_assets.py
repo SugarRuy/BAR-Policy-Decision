@@ -13,8 +13,8 @@ import types
 from . import _core
 
 PACKAGE_DIR = Path(__file__).resolve().parent
-ASSET_RELEASE = "0.2.0"
-SUPPORTED_RELEASES = ("0.2.0",)
+ASSET_RELEASE = "0.3.0"
+SUPPORTED_RELEASES = ("0.2.0", "0.3.0")
 _PACKAGE_PREFIX = "src/bar_policy/"
 
 
@@ -65,7 +65,7 @@ def check_release(release):
             f"BAR asset release {release!r} is not available in this package. "
             f"Supported releases: {', '.join(SUPPORTED_RELEASES)}. "
             "Releases are never resolved remotely or by 'latest'.")
-    bundled = _core.read_json(root() / "release.json")["version"]
+    bundled = release_metadata(release)["version"]
     if bundled != release:
         raise _core.AssetIntegrityError(
             f"Bundled release metadata is {bundled!r}, expected {release!r}")
@@ -88,8 +88,9 @@ def read_verified(name):
     return data
 
 
-def manifest(identifier):
-    return _core.component_manifest(root(), identifier)
+def manifest(identifier, release=ASSET_RELEASE):
+    entry = next(c for c in _core.catalog(root(), release) if c["id"] == identifier)
+    return json.loads(read_verified(entry["manifest"]))
 
 
 @functools.lru_cache(maxsize=None)
@@ -125,5 +126,8 @@ def sara_evaluator():
     return _module(spec["implementation"], spec["after_sha256"], "_bar_policy_sara_numeric")
 
 
-def release_metadata():
-    return json.loads(read_verified("release.json"))
+def release_metadata(release=ASSET_RELEASE):
+    # The catalog binds historical component manifests and release metadata.
+    read_verified("components.json")
+    spec = _core.release_spec(root(), release)
+    return json.loads(read_verified(spec["metadata"]))

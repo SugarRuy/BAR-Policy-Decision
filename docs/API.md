@@ -35,21 +35,20 @@ study archives, audit evidence, figures or upstream source files.
 
 ## Versions
 
-Three identifiers are kept separate:
+BAR uses one version for the repository, Python package and current data:
+**0.3.0**. `bar_policy.__version__`, `bar_policy.ASSET_RELEASE` and
+`release_info()["version"]` all identify this release.
 
-| Identifier | Where | Current value |
-| --- | --- | --- |
-| Python package version | `bar_policy.__version__` | `1.0.0.dev1` |
-| BAR asset release | `bar_policy.ASSET_RELEASE`, `release_info()["version"]` | `0.2.0` |
-| Component revision and manifest hash | `get_component(id).revision`, `.manifest_sha256` | e.g. Tax `line22-only-2` |
+Component revision names (such as Tax `t1-t2-1`) and manifest hashes identify
+particular materials within a release. Some components have no named revision;
+their source pins and manifest hash identify them instead. These are provenance
+identifiers, not separate package releases.
 
-Some upstream-bound components have no named revision (`revision is None`);
-their manifest hash and source pins identify the material. No revision is
-inferred. Report the package version, asset release and selected scorer with
-new results: package scoring can evolve without changing the frozen assets.
+Report the BAR version and selected scorer with results. When explicitly
+loading historical data, also report the selected historical release.
 
 Every loader accepts `release=`. Only the releases in
-`bar_policy.SUPPORTED_RELEASES` (`("0.2.0",)`) are accepted; anything else,
+`bar_policy.SUPPORTED_RELEASES` (`("0.2.0", "0.3.0")`) are accepted; anything else,
 including `"latest"` or `"v0.2.0"`, raises `UnsupportedError`. There is no
 remote resolution. `release_info()` returns the bundled `release.json`
 (paper binding, component list and boundaries).
@@ -80,14 +79,14 @@ tax = bar.load_dataset("rulearena-tax", "/data/RuleArena")
 airline = bar.load_dataset("rulearena-airline", "/data/RuleArena")
 ```
 
-`load_dataset(name, source, *, release="0.2.0", variant=None, mode=None, scorer=None)`.
+`load_dataset(name, source, *, release="0.3.0", variant=None, mode=None, scorer=None)`.
 The default variant is the final integrated revised configuration; users do
 not combine components themselves. Release, variant and mode are validated
 before any source is read.
 
 | Dataset | Variant | Model-visible input | Reference | Scorer |
 | --- | --- | --- | --- | --- |
-| `rulearena-tax` | `revised` (default) | Native | Line-22 floor revision (27 of 300 differ) | BAR numeric parser (native scorer optional) |
+| `rulearena-tax` | `revised` (default) | Native | T1+T2 (`0.3.0`: 43 of 300 differ from original); T1 only (`0.2.0`: 27 differ) | BAR numeric parser (native scorer optional) |
 | `rulearena-tax` | `original` | Native | Original RuleArena reference | BAR numeric parser (native scorer optional) |
 | `rulearena-airline` | `revised` (default) | Native + minimum-cost objective amendment; prompt errata applied | Native amounts (unchanged) | BAR exact amount scorer |
 | `rulearena-airline` | `original-input` | Native, without the objective | Native amounts (unchanged) | BAR exact amount scorer |
@@ -96,6 +95,17 @@ Scorer selection is independent of reference selection. Tax accepts
 `rulearena-tax-numeric-v1` (default) and `rulearena-tax-native`; Airline accepts
 only `rulearena-airline-scoring`. `capabilities()["datasets"]` lists each
 default and its supported scorers.
+
+For Tax, `release="0.3.0"` selects `t1-t2-1`; `release="0.2.0"` selects
+`line22-only-2`. There are 21 changes between them, including five cases
+already affected by T1. New example references also expose `previous` and
+`changed_from_previous`; metadata identifies `previous_revision` and
+`resolved_dependencies`. `remaining_dependencies` retains T3. The 20 loss
+cases follow the supplied formulas and therefore have negative self-employment
+tax and deductions. See the [T2 revision record](../components/rulearena-tax/revisions/t1-t2-1/README.md).
+Other component payloads are identical across the two releases.
+BAR scores final Tax amounts. The upstream model-assisted `analyze_response`
+is not exposed and retains its old stepwise threshold check.
 
 Supported modes are `zero-shot` for Tax (native `distractor=False`,
 `textual=False`, no example) and `markdown-zero-shot` for Airline. The Tax
@@ -221,14 +231,15 @@ paper's Tax scores, select the unchanged native scorer explicitly:
 
 ```python
 tax_native = bar.load_dataset(
-    "rulearena-tax", "/data/RuleArena", scorer="rulearena-tax-native"
+    "rulearena-tax", "/data/RuleArena", release="0.2.0", scorer="rulearena-tax-native"
 )
 bar.score_tax_response(
     "The total tax owed is $1234.", 1234, scorer="rulearena-tax-native"
 )  # parsed=123.0, accepted=False: an inherited native parsing defect
 ```
 
-Native mode calls `decode_tax` and `tax_accept` from
+Reproducing the paper requires both the `0.2.0` reference release and native
+scoring. Native mode calls `decode_tax` and `tax_accept` from
 `scripts/reproduce_results.py` unchanged, including partial-number matching.
 The published reproduction scripts and saved results retain this mode.
 
@@ -375,7 +386,15 @@ selection options or scorer IDs raise `ConfigurationError`.
 `scripts/bar.py` (from a checkout) and the installed `bar-policy` command
 share one implementation with the API and accept the same commands:
 `list`, `verify`, `prepare <component> --source DIR --output NEW_DIR` and
-`dataset <component> --source DIR --output NEW_DIR`. See the
+`dataset <component> --source DIR --output NEW_DIR`. Each command accepts
+`--release 0.2.0` or `--release 0.3.0` (the default); for example:
+
+```bash
+bar-policy dataset rulearena-tax --release 0.2.0 \
+  --source /data/RuleArena --output /tmp/paper-tax-data
+```
+
+See the
 [component guide](COMPONENTS.md).
 
 ## Running the tests

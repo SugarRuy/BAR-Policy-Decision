@@ -6,7 +6,7 @@
       "id": "rulearena-tax",
       "kind": "reference",
       "payload_status": "reference_pairs_native_input_builder_and_code_patch",
-      "manifest": "components/rulearena-tax/component.json"
+      "manifest": "components/rulearena-tax/revisions/t1-t2-1/component.json"
     },
     {
       "id": "legalbench-sara-numeric",
@@ -46,5 +46,17 @@
     }
   ],
   "inventory_scope": "Component payloads, component documentation and component scripts only.",
-  "model_calls": 0
+  "model_calls": 0,
+  "release_overrides": {
+    "0.2.0": {
+      "metadata": "asset-metadata/0.2.0.json",
+      "components": {
+        "rulearena-tax": "components/rulearena-tax/component.json"
+      }
+    },
+    "0.3.0": {
+      "metadata": "release.json",
+      "components": {}
+    }
+  }
 }

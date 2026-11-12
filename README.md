@@ -22,7 +22,7 @@ BAR publishes the audit evidence behind these findings, along with scoped
 revisions for reevaluating models.
 
 **[Paper — arXiv:2611.07042](https://arxiv.org/abs/2611.07042)**
-· [Download v0.2.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.2.0)
+· [Download v0.3.0](https://github.com/SugarRuy/BAR-Policy-Decision/releases/tag/v0.3.0)
 · [Usage and setup](docs/COMPONENTS.md)
 · [Python API](docs/API.md)
 · [Audit evidence](evidence/README.md)
@@ -42,11 +42,17 @@ scorer or task text; usage and scope are in the
 
 | Benchmark / task | What BAR provides |
 |---|---|
-| RuleArena Tax | 300 original/revised reference pairs (27 changed amounts), an input builder and a scoped correction to the reference program |
+| RuleArena Tax | 300 original/T1/T1+T2 references, unchanged native inputs and a reference-program patch; the latest revision changes 21 amounts beyond T1 |
 | LegalBench SARA numeric | A revised numeric scorer; original labels unchanged |
 | ConditionalQA | A revised scorer that counts missing predictions as zero instead of dropping them; original labels unchanged |
 | RuleArena Airline | Separate revisions for policy transcription and examples, amount scoring, and an explicit minimum-cost objective that amends the task specification |
 | RuleArena NBA | Corrections to two team/operation localization fields among 216 records; all binary verdicts unchanged |
+
+Tax `v0.3.0` additionally removes a calculator branch absent from the supplied
+policy. It differs from the original key in 43 cases; the paper's T1-only
+revision changed 27. The [revision record](components/rulearena-tax/revisions/t1-t2-1/README.md)
+explains the negative values produced by the supplied formulas and the remaining
+zero-default convention. The paper and its model results are unchanged.
 
 ## Python API
 
@@ -71,7 +77,8 @@ example.score("The total cost is $1,245.")
 See the [API guide](docs/API.md) for datasets, scoring, versions and errors.
 The API also checks ConditionalQA prediction IDs and answer structure, and
 defaults to complete numeric parsing for Tax. An explicit native Tax mode
-preserves reproduction of the paper's scores; see the [change log](CHANGELOG.md).
+with `release="0.2.0"` preserves reproduction of the paper's scores; see the
+[change log](CHANGELOG.md).
 
 ## Audit evidence
 

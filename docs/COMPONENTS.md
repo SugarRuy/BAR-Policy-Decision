@@ -7,7 +7,7 @@ documented separately and are not part of this component inventory.
 
 | Component ID | Delivered material | Accepted scope |
 | --- | --- | --- |
-| `rulearena-tax` | MIT native patch, 300 reference pairs, unchanged native-input builder | Form 1040 line 22 is floored at zero; 27 references change and 273 do not. Earlier intermediates and T2/T3 dependencies remain conditional. |
+| `rulearena-tax` | MIT native patch, 300 three-way references, unchanged native-input builder | T1 line-22 floor plus T2 supplied-policy calculation: 21 changes beyond T1, 43 from the original key. T3's zero default remains. |
 | `legalbench-sara-numeric` | BAR-original MIT numeric evaluator, in-memory adapter, synthetic conformance vectors | Signed decimal parsing and zero-reference handling; original reference labels retained. The 100 label echoes comprise 4 train and 96 test rows; performance scope is the 96 test rows. |
 | `conditionalqa-scoring` | BSD-2-Clause evaluator patch and upstream notice | All reference IDs remain in denominators; absent predictions contribute zero; empty categories return JSON `null`. Per-item answer and condition metrics remain native. |
 | `rulearena-airline-prompt-errata` | Two native prompt patches | Example attribution and textual-policy transcription; 900/1,200 prompt variants change, amounts do not. |
@@ -19,7 +19,7 @@ The [Python API](API.md) provides the same operations from Python and loads
 the Tax and Airline revisions as integrated datasets; `scripts/bar.py` and the
 API share one implementation.
 
-Each `components/<id>/component.json` binds the exact upstream revision and
+The manifests selected by `components.json` bind the exact upstream revision and
 SHA-256 of all source inputs, patches and prepared programs. Preparation rejects
 wrong source versions, changed payloads, wrong result hashes, existing output
 directories and output paths inside source or artifact trees.
@@ -81,7 +81,8 @@ python3 scripts/bar.py dataset rulearena-tax \
 Preparation writes the revised `tax/micro_evaluation.py`, license notice and a
 hash receipt into a new directory. It does not run the upstream experiment
 entrypoint. `labels.json` and `reference_pairs.jsonl` contain the same 300
-source-bound records; `corrections.json` contains the 27 changed records.
+source-bound records. In release `0.3.0`, `corrections.json` contains the 21
+changes relative to T1; the final key differs from the original in 43 cases.
 Positive signed answers mean amounts owed; negative answers mean refunds.
 Original IDs and source indices are preserved.
 
@@ -92,9 +93,30 @@ reconstructs the native zero-shot messages with `distractor=False` and
 `revised_reference`, `reference_changed` and `remaining_dependencies`.
 It changes neither the native case nor policy/question/prompt text.
 `dataset.json` records the source and output hashes and sign convention.
-T3 denotes the preserved zero default for unavailable Schedule 3 line 15;
-T2 denotes the low-self-employment threshold not fully exposed in the input.
-Native `np.isclose` grading is unchanged.
+T3 denotes the preserved zero default for unavailable Schedule 3 line 15.
+T2 is resolved by removing the calculator's unsupported `$400` branch and
+recomputing downstream fields with the supplied formulas. This produces
+negative self-employment tax and deductions in 20 loss cases; no additional
+zero floor is introduced. Native `np.isclose` grading is unchanged.
+
+The new rows also include `previous_reference`, `previous_revision`,
+`reference_changed_from_previous` and `resolved_dependencies`.
+All three reference sets, source-bound field differences and validation are
+in the [T2 revision record](../components/rulearena-tax/revisions/t1-t2-1/README.md).
+Use `--release 0.2.0` on `prepare` or `dataset` to retain the original T1-only
+patch and its 27 changes. The same version selector is available in the API.
+
+```bash
+python3 scripts/check_tax_t2.py \
+  --source /tmp/bar-pinned-sources/rulearena-tax-code --output /tmp/bar-tax-t2-check
+```
+
+This independently checks SE arithmetic, all 300 calculator replays, preserved
+inputs and unmarked intermediates, the T1 floor, the T3 default and 18 boundary
+controls. It requires NumPy and Pydantic, and makes no network or model calls.
+The patch revises `compute_answer`; the upstream model-assisted
+`analyze_response` retains its old stepwise checks and is not supported for
+scoring the revised intermediates. Use BAR's final-amount scorers.
 
 ## LegalBench SARA numeric
 

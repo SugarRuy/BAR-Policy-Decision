@@ -57,6 +57,8 @@ class CLIParity(unittest.TestCase):
         results = {}
         for name, command in self.runners.items():
             argv = list(args)
+            if name != "baseline":
+                argv += ["--release", "0.2.0"]
             if output:
                 argv += ["--output", str(self.tmp / name / output)]
                 (self.tmp / name).mkdir(exist_ok=True)
@@ -101,9 +103,11 @@ class CLIParity(unittest.TestCase):
                     api = self.tmp / "api" / out
                     api.parent.mkdir(exist_ok=True)
                     if command == "dataset":
-                        bp.write_component_dataset(identifier, source_for(identifier), api)
+                        bp.write_component_dataset(identifier, source_for(identifier), api,
+                                                   release="0.2.0")
                     else:
-                        bp.prepare_component(identifier, source_for(identifier), api)
+                        bp.prepare_component(identifier, source_for(identifier), api,
+                                             release="0.2.0")
                     self.assertTrue(same_tree(self.tmp / "baseline" / out, api))
                     golden = env_path("BAR_TEST_BASELINE_RESULTS")
                     stored = (golden / (identifier + ("-prepared" if command == "prepare" else ""))

@@ -84,12 +84,30 @@ def canonical(value):
                       separators=(",", ":")).encode("utf-8")
 
 
-def catalog(root):
-    return read_json(root / "components.json")["components"]
+def release_spec(root, release=None):
+    config = read_json(root / "components.json")
+    current = read_json(root / "release.json")["version"]
+    release = current if release is None else release
+    if not isinstance(release, str):
+        raise ConfigurationError("release must be a version string")
+    versions = config.get("release_overrides", {current: {"metadata": "release.json"}})
+    if release not in versions:
+        raise UnsupportedError(f"Unsupported BAR asset release {release!r}; "
+                               f"available: {', '.join(versions)}")
+    return versions[release]
 
 
-def component_manifest(root, identifier):
-    matches = [c for c in catalog(root) if c["id"] == identifier]
+def catalog(root, release=None):
+    entries = copy.deepcopy(read_json(root / "components.json")["components"])
+    overrides = release_spec(root, release).get("components", {})
+    for entry in entries:
+        if entry["id"] in overrides:
+            entry["manifest"] = overrides[entry["id"]]
+    return entries
+
+
+def component_manifest(root, identifier, release=None):
+    matches = [c for c in catalog(root, release) if c["id"] == identifier]
     if len(matches) != 1:
         raise ConfigurationError(f"Unknown component: {identifier}")
     return read_json(child(root, matches[0]["manifest"]))
@@ -117,9 +135,19 @@ def verify(root, locate=None, echo=None):
     if actual != {name for name in inventory if name.startswith("components/")}:
         raise AssetIntegrityError("Component file inventory differs from the release")
     declared = set()
-    for component in catalog(root):
+    versions = read_json(root / "components.json").get(
+        "release_overrides", {read_json(root / "release.json")["version"]: {}})
+    manifests = {}
+    for release in versions:
+        metadata = read_json(child(root, release_spec(root, release)["metadata"]))
+        if metadata["version"] != release or set(metadata["components"]) != set(ids):
+            raise AssetIntegrityError(f"Release metadata mismatch: {release}")
+        for entry in catalog(root, release):
+            manifests[entry["manifest"]] = entry
+    for component in manifests.values():
         manifest = read_json(child(root, component["manifest"]))
-        declared.update({component["manifest"], f"components/{component['id']}/README.md"})
+        declared.update({component["manifest"],
+                         str(PurePosixPath(component["manifest"]).parent / "README.md")})
         declared.update(manifest["payload_files"])
         for patch in manifest["patches"]:
             declared.add(patch["patch"])
@@ -145,10 +173,10 @@ def check_new_output(root, source, output):
         raise ConfigurationError("Output must be outside this artifact tree.")
 
 
-def prepare(root, identifier, source, output, locate=None, echo=None):
+def prepare(root, identifier, source, output, locate=None, echo=None, *, release=None):
     """Apply one component's existing patches/replacement to a new directory."""
     verify(root, locate, echo)
-    manifest = component_manifest(root, identifier)
+    manifest = component_manifest(root, identifier, release)
     replacement = manifest.get("replacement")
     if not manifest["patches"] and not replacement:
         raise UnsupportedError("This component has no portable code patch; read its status.")
@@ -370,7 +398,8 @@ def tax_rows(root, spec, sources):
         case = native[name][index]
         if digest(json.dumps(case, sort_keys=True).encode()) != reference["case_sha256"]:
             raise SourceMismatchError(f"Case/reference mismatch: {identifier}")
-        changed = reference["original_signed_answer"] != reference["line22_repaired_signed_answer"]
+        reference_field = spec.get("revised_reference_field", "line22_repaired_signed_answer")
+        changed = reference["original_signed_answer"] != reference[reference_field]
         if changed != reference["changed"]:
             raise AssetIntegrityError(f"Changed-reference flag mismatch: {identifier}")
         rows.append({
@@ -384,21 +413,36 @@ def tax_rows(root, spec, sources):
                 {"role": "user", "content": render(copy.deepcopy(case["dict"])).replace("$example", "")},
             ],
             "original_reference": reference["original_signed_answer"],
-            "revised_reference": reference["line22_repaired_signed_answer"],
+            "revised_reference": reference[reference_field],
             "reference_changed": changed,
             "remaining_dependencies": reference["other_unresolved_dependencies"],
         })
+        if "previous_revision" in spec:
+            previous = reference["line22_repaired_signed_answer"]
+            previous_changed = previous != reference[reference_field]
+            if previous_changed != reference["changed_from_line22"]:
+                raise AssetIntegrityError(f"Previous-reference flag mismatch: {identifier}")
+            rows[-1].update({
+                "previous_reference": previous,
+                "previous_revision": spec["previous_revision"],
+                "reference_changed_from_previous": previous_changed,
+                "resolved_dependencies": reference["resolved_dependencies"],
+            })
     all_locations = {(name, i) for name, cases in native.items() for i in range(len(cases))}
     if len(rows) != spec["record_count"] or seen_locations != all_locations:
         raise SourceMismatchError("Reference pairs do not cover the complete pinned dataset.")
     if sum(row["reference_changed"] for row in rows) != spec["changed_reference_count"]:
         raise AssetIntegrityError("Changed-reference count mismatch.")
+    if ("previous_revision" in spec
+            and sum(row["reference_changed_from_previous"] for row in rows)
+            != spec["changed_from_previous_count"]):
+        raise AssetIntegrityError("Changed-reference count from previous revision mismatch.")
     return rows, references["sign_convention"]
 
 
-def tax_dataset(root, source, output, locate=None, echo=None):
+def tax_dataset(root, source, output, locate=None, echo=None, *, release=None):
     verify(root, locate, echo)
-    manifest = component_manifest(root, "rulearena-tax")
+    manifest = component_manifest(root, "rulearena-tax", release)
     spec = manifest["dataset"]
     source = source.resolve(strict=True)
     output = output.absolute()
@@ -532,9 +576,9 @@ RULEARENA_BUILDERS = {
 }
 
 
-def rulearena_dataset(root, identifier, source, output, locate=None, echo=None):
+def rulearena_dataset(root, identifier, source, output, locate=None, echo=None, *, release=None):
     verify(root, locate, echo)
-    manifest = read_json(root / "components" / identifier / "component.json")
+    manifest = component_manifest(root, identifier, release)
     source = source.resolve(strict=True)
     output = output.absolute()
     if output.exists() or output.is_symlink() or not output.parent.is_dir():
@@ -560,14 +604,14 @@ def rulearena_dataset(root, identifier, source, output, locate=None, echo=None):
     return output
 
 
-def dataset(root, identifier, source, output, locate=None, echo=None):
+def dataset(root, identifier, source, output, locate=None, echo=None, *, release=None):
     """Write one component's dataset directory; return its absolute path."""
     if identifier in RULEARENA_BUILDERS:
-        return rulearena_dataset(root, identifier, source, output, locate, echo)
+        return rulearena_dataset(root, identifier, source, output, locate, echo, release=release)
     if identifier != "rulearena-tax":
         raise UnsupportedError("This component has no dataset builder. "
                                "Scorer corrections retain the upstream dataset labels.")
-    return tax_dataset(root, source, output, locate, echo)
+    return tax_dataset(root, source, output, locate, echo, release=release)
 
 
 CLI_DESCRIPTION = "Inspect BAR artifacts, prepare revised data, and apply pinned code patches."
@@ -577,8 +621,8 @@ def cli_main(root, locate=None, argv=None, prog=None):
     """Command-line interface shared by scripts/bar.py and ``bar-policy``."""
     parser = argparse.ArgumentParser(prog=prog, description=CLI_DESCRIPTION)
     actions = parser.add_subparsers(dest="command", required=True)
-    actions.add_parser("list")
-    actions.add_parser("verify")
+    listing = actions.add_parser("list")
+    verification = actions.add_parser("verify")
     patch = actions.add_parser("prepare")
     patch.add_argument("component")
     patch.add_argument("--source", type=Path, required=True)
@@ -587,16 +631,21 @@ def cli_main(root, locate=None, argv=None, prog=None):
     data.add_argument("component")
     data.add_argument("--source", type=Path, required=True)
     data.add_argument("--output", type=Path, required=True)
+    for action in (listing, verification, patch, data):
+        action.add_argument("--release", help="Pinned asset release (default: current release)")
     args = parser.parse_args(argv)
     try:
+        release_spec(root, args.release)
         if args.command == "list":
-            for entry in catalog(root):
+            for entry in catalog(root, args.release):
                 print(f"{entry['id']}\t{entry['kind']}\t{entry['payload_status']}")
         elif args.command == "verify":
             verify(root, locate, echo=print)
         elif args.command == "prepare":
-            prepare(root, args.component, args.source, args.output, locate, echo=print)
+            prepare(root, args.component, args.source, args.output, locate, echo=print,
+                    release=args.release)
         else:
-            dataset(root, args.component, args.source, args.output, locate, echo=print)
+            dataset(root, args.component, args.source, args.output, locate, echo=print,
+                    release=args.release)
     except (ValueError, OSError, RuntimeError) as error:
         raise SystemExit(str(error))

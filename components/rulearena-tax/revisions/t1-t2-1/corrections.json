@@ -1,0 +1,364 @@
+{
+  "revision": "t1-t2-1",
+  "comparison_revision": "line22-only-2",
+  "changed_count": 21,
+  "records": [
+    {
+      "case_id": "tax/comp_1/13",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 13,
+      "case_sha256": "bbfbf2a7c480d4657d3642886fb302f5a5be54928a597cc7748c6050b7605b24",
+      "original_signed_answer": -20088.2,
+      "line22_repaired_signed_answer": -15561.2,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -17377.168475,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/17",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 17,
+      "case_sha256": "4abcf0a9fbe521b095c59731465233a49aea04d5abd32401a9bde1e6b0c9327a",
+      "original_signed_answer": -6600.990000000002,
+      "line22_repaired_signed_answer": -6600.990000000002,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -7458.108239999998,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/49",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 49,
+      "case_sha256": "7b886d7fcc29f890781ce93ddcf077e64edd8f769bf041676f7786738d2a4ae2",
+      "original_signed_answer": 2856.869999999999,
+      "line22_repaired_signed_answer": 2856.869999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 342.49094999999943,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/78",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 78,
+      "case_sha256": "d1d43fe57a7b14de3e011665c2e2da2a38eefbbd2acbbac5dfc4c9a1883126ec",
+      "original_signed_answer": 1448.5,
+      "line22_repaired_signed_answer": 1448.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1055.0569999999998,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_1/94",
+      "source_file": "tax/synthesized_problems/comp_1.json",
+      "source_index": 94,
+      "case_sha256": "888add109687a44181f0a0f89df05d5af3f9b1ca1460cd36f48338740d40e579",
+      "original_signed_answer": -4880.860000000001,
+      "line22_repaired_signed_answer": -4880.860000000001,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -7396.46458,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/1",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 1,
+      "case_sha256": "f57000df2782971e6ff8be4b332e2c626f6711680f483346dd1bc136e9d48693",
+      "original_signed_answer": -7982.5,
+      "line22_repaired_signed_answer": -7982.5,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -8149.084,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/17",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 17,
+      "case_sha256": "7235e6d0ac9ab50a29f842cb1b7a5f4b344335ecd78128da816fbd778d3a9cd6",
+      "original_signed_answer": -1748.7799999999988,
+      "line22_repaired_signed_answer": -1748.7799999999988,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6365.742830000003,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/40",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 40,
+      "case_sha256": "ddd1a9bea455de325151974a642d4cb4a4089d8009bc4fc7db2eca2716c3a4f5",
+      "original_signed_answer": -3541.26,
+      "line22_repaired_signed_answer": -3541.26,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6094.4475,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/58",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 58,
+      "case_sha256": "4ba8c5b84cb000e9fa9fb2f1f205c01389a025ff897cdc5093ba9188b2f00d95",
+      "original_signed_answer": 3250.016999999999,
+      "line22_repaired_signed_answer": 3250.016999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1526.4999600000046,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/60",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 60,
+      "case_sha256": "89dff51b0787290587f9eabef9cf8d312052fed56042bb9c94720cf9015d6eed",
+      "original_signed_answer": 6680.959999999999,
+      "line22_repaired_signed_answer": 6680.959999999999,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 3514.190480000003,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/61",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 61,
+      "case_sha256": "37945cb84881d03f55ec59a9a5a1f6ac3bf2d660f2497b5702ebb05d02c98c6a",
+      "original_signed_answer": -8109.0,
+      "line22_repaired_signed_answer": -3157.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -6146.926,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/65",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 65,
+      "case_sha256": "1b0a57ffd0e5255561dcea2186b465c1996f00af7893a8f3f92f3008966b4390",
+      "original_signed_answer": 494.5200000000041,
+      "line22_repaired_signed_answer": 494.5200000000041,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -1874.9741699999977,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/70",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 70,
+      "case_sha256": "59b09fe5338023e28abea54708151ee417d3f83b1274bb8b61b3e0363f18ed82",
+      "original_signed_answer": 844.3999999999996,
+      "line22_repaired_signed_answer": 844.3999999999996,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -71.88792999999896,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/73",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 73,
+      "case_sha256": "3b520338eb4e6b890420dea060c5eca51f24fb5bb12c27eae8940272de9f764a",
+      "original_signed_answer": -10877.57,
+      "line22_repaired_signed_answer": -10877.57,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -12416.971850000002,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/74",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 74,
+      "case_sha256": "d2c67a33ac89738eca2f2c0c32dd65afc827ac08fec654bfdb46fcd9cb1e6ad6",
+      "original_signed_answer": -6878.200000000001,
+      "line22_repaired_signed_answer": -5181.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -5442.018,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/77",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 77,
+      "case_sha256": "48c08f14a28d5d5c95b6f00bf846fbbf375113abf12dab3c27c132732dfda1fe",
+      "original_signed_answer": -13458.7,
+      "line22_repaired_signed_answer": -9070.7,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -9654.548,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/81",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 81,
+      "case_sha256": "0e3cfbfba680134ff2339f103d9c9e9b1bfa1b498577cae5dcc11fe830f147e8",
+      "original_signed_answer": 975.1500000000015,
+      "line22_repaired_signed_answer": 975.1500000000015,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 1010.5813729875008,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/84",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 84,
+      "case_sha256": "1d125c453209c7ed9aded5e2001d308d62754a1a10e0e1e16a07362c1e3b01a0",
+      "original_signed_answer": -667.630000000001,
+      "line22_repaired_signed_answer": -667.630000000001,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -4309.776639999996,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/86",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 86,
+      "case_sha256": "d5a0cfb32b733fa7891f54c06da46f81598e01c648dafec60a6dcb72b6bdd909",
+      "original_signed_answer": -20257.75,
+      "line22_repaired_signed_answer": -20257.75,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -22060.096119999995,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/89",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 89,
+      "case_sha256": "0d303588629ea5cdee1acc5c3ea4427d6180d20911eb8dfe7acca20a83aed32c",
+      "original_signed_answer": 8373.759999999998,
+      "line22_repaired_signed_answer": 8373.759999999998,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": 8300.772879999997,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    },
+    {
+      "case_id": "tax/comp_2/92",
+      "source_file": "tax/synthesized_problems/comp_2.json",
+      "source_index": 92,
+      "case_sha256": "f58e73b198d558e7c8a04b95212730730dc3a89a0d8b6d41f6c4b76ecb94237d",
+      "original_signed_answer": -15027.8,
+      "line22_repaired_signed_answer": -14421.0,
+      "changed": true,
+      "other_unresolved_dependencies": [
+        "T3_schedule3_line15_default_zero"
+      ],
+      "policy_repaired_signed_answer": -18830.766,
+      "changed_from_line22": true,
+      "resolved_dependencies": [
+        "T2_unstated_self_employment_threshold"
+      ]
+    }
+  ]
+}
